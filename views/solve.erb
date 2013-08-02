@@ -15,9 +15,15 @@
     <div class="container">
       <h1><%= @solve.time %> by <%= @solve.solver %></h1>
 
-      <%= @solve.scramble %> <br><br>
+      <h2>Scramble</h2>
+      <code>
+        <%= @solve.scramble %> <br><br>
+      </code>
 
-      <%= @solve.solution.gsub("\n","<br>") %> <br>
+      <h2>Solution</h2>
+      <code>
+        <%= @solve.solution.gsub("\n","<br>") %> <br>
+      </code>
     </div>
   </body>
 </html>
