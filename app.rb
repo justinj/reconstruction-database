@@ -1,5 +1,4 @@
 require "sinatra"
-require "sequel"
 
 require_relative "lib/solve"
 require_relative "lib/solves"
