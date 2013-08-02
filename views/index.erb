@@ -15,6 +15,22 @@
     <div class="container">
       <h1>Reconstruction Database</h1>
 
+      <div class="btn-group filters">
+
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <%= @solver %> <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+            <li><a href="/">Everyone</a></li>
+          <% @solvers.each do |solver| %>
+            <li><a href="?solver=<%= solver %>"><%= solver %></a></li>
+          <% end %>
+        </ul>
+
+      </div>
+      <br><br>
+
       <% @solves.each do |solve| %>
         <a href="<%= solve.id %>">
           <%= solve.solver %> : <%= solve.time %> <br>

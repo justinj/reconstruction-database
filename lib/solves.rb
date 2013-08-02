@@ -24,3 +24,10 @@ U' R2' D' R U2 R' D R U2 R // COLL
 R' U' R U' R U R U' R' U R U R2 U' R' U' // EPLL",
   time: "7.95"
 }))
+
+Solve.add(Solve.new ({
+  solver: "Rob Stuart",
+  scramble: "R U R' U'",
+  solution: "U R U' R'",
+  time: "0.123456789"
+}))

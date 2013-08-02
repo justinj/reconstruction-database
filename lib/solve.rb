@@ -15,7 +15,7 @@ class Solve
   class << self
     @@solves = []
     def all
-      @@solves
+      @@solves.dup
     end
 
     def add(solve)
@@ -25,6 +25,15 @@ class Solve
 
     def get(id)
       @@solves[id]
+    end
+
+    def by(who)
+      who = who
+      @@solves.select { |solve| solve.solver == who }
+    end
+
+    def solvers
+      @@solves.map(&:solver).uniq
     end
   end
 end
