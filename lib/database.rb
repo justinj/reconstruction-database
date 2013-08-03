@@ -6,8 +6,7 @@ module ReconDatabase
 
       def init
         # @db = Sequel.sqlite
-        p ENV
-        @db = Sequel.connect(ENV['DATABASE_URL'])
+        @db = Sequel.connect(ENV['HEROKU_POSTGRESQL_VIOLET_URL'])
 
         @db.create_table :solves do
           primary_key :id
