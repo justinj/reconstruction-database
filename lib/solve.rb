@@ -1,11 +1,17 @@
 class Solve
-  attr_accessor :solver, :scramble, :solution, :time, :id
+  attr_accessor :solver, 
+                :scramble, 
+                :solution, 
+                :time, 
+                :youtube,
+                :competition,
+                :id,
+                :puzzle
 
   def initialize(args)
-    @solver = args[:solver]
-    @scramble = args[:scramble]
-    @solution = args[:solution]
-    @time = args[:time]
+    args.each do |field, value|
+      send((field.to_s + "=").to_sym, value)
+    end
   end
 
   def inspect
@@ -32,8 +38,18 @@ class Solve
       @@solves.select { |solve| solve.solver == who }
     end
 
-    def solvers
-      @@solves.map(&:solver).uniq
+    def values_for_field(field)
+      @@solves.map(&field).uniq.reject(&:nil?)
+    end
+
+    def queryable_fields
+      %i(solver puzzle competition)
+    end
+
+    def matching(fields)
+      fields.reduce(@@solves) do |result, (field, value)|
+        result.select { |solve| value == "" || solve.send(field) == value }
+      end
     end
   end
 end

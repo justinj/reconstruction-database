@@ -1,29 +1,14 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<div class="container">
+  <% location = @solve.competition.nil? ? "" : "at #{@solve.competition}" %>
+  <h1><%= @solve.time %> by <%= @solve.solver %> <%= location %></h1>
 
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <h2>Scramble</h2>
+  <code>
+    <%= @solve.scramble %> <br><br>
+  </code>
 
-    <title>Reconstruction Database</title>
-
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-
-  </head>
-  <body>
-    <div class="container">
-      <h1><%= @solve.time %> by <%= @solve.solver %></h1>
-
-      <h2>Scramble</h2>
-      <code>
-        <%= @solve.scramble %> <br><br>
-      </code>
-
-      <h2>Solution</h2>
-      <code>
-        <%= @solve.solution.gsub("\n","<br>") %> <br>
-      </code>
-    </div>
-  </body>
-</html>
+  <h2>Solution</h2>
+  <code>
+    <%= @solve.solution.gsub("\n","<br>") %> <br>
+  </code>
+</div>

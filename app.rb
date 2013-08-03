@@ -5,22 +5,29 @@ require_relative "lib/solves"
 
 get "/" do
   get_solves(params)
-  @solvers = Solve.solvers
-  erb :index
+  get_fields(params)
+  erb :site do
+    erb :index
+  end
 end
 
 def get_solves(params)
-  specified = params.has_key?("solver") && !params["solver"].empty?
-  @solves = if specified
-    Solve.by params["solver"]
-  else
-    Solve.all
-  end
-
-  @solver = specified ? params["solver"] : "Everyone"
+  @solves = Solve.matching(params)
 end
 
-get "/:id" do
+def get_fields(params)
+  @fields = Solve.queryable_fields.map do |field|
+    {
+      name: field,
+      all_values: Solve.values_for_field(field),
+      default_value: params[field]
+    }
+  end
+end
+
+get "/solve/:id" do
   @solve = Solve.get(params[:id].to_i)
-  erb :solve
+  erb :site do
+    erb :solve
+  end
 end
