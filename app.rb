@@ -6,9 +6,12 @@ require_relative "lib/solves"
 get "/" do
   get_solves(params)
   get_fields(params)
-  erb :site do
-    erb :index
-  end
+  erb :index
+end
+
+get "/solve/:id" do
+  @solve = Solve.get(params[:id].to_i)
+  erb :solve
 end
 
 def get_solves(params)
@@ -22,12 +25,5 @@ def get_fields(params)
       all_values: Solve.values_for_field(field),
       default_value: params[field]
     }
-  end
-end
-
-get "/solve/:id" do
-  @solve = Solve.get(params[:id].to_i)
-  erb :site do
-    erb :solve
   end
 end
