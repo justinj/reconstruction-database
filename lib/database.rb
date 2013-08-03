@@ -1,5 +1,5 @@
 require "sequel"
-require_relative "lib/solves"
+require_relative "solves"
 
 module ReconDatabase
   class SolveDatabase
