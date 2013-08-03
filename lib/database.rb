@@ -6,6 +6,7 @@ module ReconDatabase
 
       def init
         # @db = Sequel.sqlite
+        p ENV
         @db = Sequel.connect(ENV['DATABASE_URL'])
 
         @db.create_table :solves do
