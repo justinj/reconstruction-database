@@ -5,7 +5,6 @@ require_relative "lib/database"
 ReconDatabase::SolveDatabase.init
 
 require_relative "lib/solve"
-require_relative "lib/solves"
 
 get "/" do
   get_solves(params)

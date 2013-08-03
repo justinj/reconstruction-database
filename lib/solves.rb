@@ -1,7 +1,10 @@
 module ReconDatabase
-  Solve.add({ solver: "Feliks Zemdegs",
-            scramble: "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'",
-            solution: "x' y // inspection
+  class SeedData
+    class << self
+      def seed_database
+        Solve.add({ solver: "Feliks Zemdegs",
+                  scramble: "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'",
+                  solution: "x' y // inspection
 D2 R' D F R u' R u' // cross
 U' R U' R' y' L U L' // 1st pair
 L' U L R U2' R2' U' R // 2nd pair
@@ -12,12 +15,12 @@ time: "8.39",
 competition: "WC2013",
 youtube: "m250xEA3mM4",
 puzzle: "3x3x3"
-  })
+        })
 
-  Solve.add({
-    solver: "Feliks Zemdegs",
-    scramble: "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'",
-    solution: "y x // inspection
+        Solve.add({
+          solver: "Feliks Zemdegs",
+          scramble: "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'",
+          solution: "y x // inspection
 r' U' r' R' D2 R // cross
 y' R U' R' // 1st pair
 d' U' R U2' R' U R U' R' // 2nd pair
@@ -29,19 +32,19 @@ time: "7.95",
 competition: "WC2013",
 youtube: "m250xEA3mM4",
 puzzle: "3x3x3"
-  })
+        })
 
-  Solve.add({
-    solver: "Rob Stuart",
-    scramble: "R U R' U'",
-    solution: "U R U' R'",
-    time: "0.123456789",
-    puzzle: "3x3x3"
-  })
+        Solve.add({
+          solver: "Rob Stuart",
+          scramble: "R U R' U'",
+          solution: "U R U' R'",
+          time: "0.123456789",
+          puzzle: "3x3x3"
+        })
 
-  Solve.add({
-    solver: "Kristopher De Asis",
-    scramble: "L2 B2 U' f' F2 b2 U u2 l f' R' u F2 D2
+        Solve.add({
+          solver: "Kristopher De Asis",
+          scramble: "L2 B2 U' f' F2 b2 U u2 l f' R' u F2 D2
   u' f d' l' F2 R D f2 U d r' U L2 F u f
   F2 d b' u' L' U2 L u D B u' F U2 u2 D2
   f R' D' U B2 U' f2 B d U u2 b B' l' r",
@@ -84,5 +87,8 @@ U2 R' U' R U' R' F' R U R' U' R' F R U2 R // PLL",
 time: "49.15",
 youtube: "GDWPIfMfja8",
 puzzle: "5x5x5"
-  })
+        })
+      end
+    end
+  end
 end

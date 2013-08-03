@@ -1,4 +1,5 @@
 require "sequel"
+require_relative "lib/solves"
 
 module ReconDatabase
   class SolveDatabase
@@ -8,19 +9,23 @@ module ReconDatabase
         # @db = Sequel.sqlite
         @db = Sequel.connect(ENV['HEROKU_POSTGRESQL_VIOLET_URL'])
 
-        @db.create_table :solves do
-          primary_key :id
-          String :scramble
-          String :solution
-          String :solver
-          Float :time
+        unless @db.table_exists? :solves
+          @db.create_table :solves do
+            primary_key :id
+            String :scramble
+            String :solution
+            String :solver
+            Float :time
 
-          String :youtube
-          String :competition
-          String :puzzle
+            String :youtube
+            String :competition
+            String :puzzle
+          end
+
+          ReconDatabase::SeedData.seed_database
+
         end
-
-        @solves = @db[:solves]
+          @solves = @db[:solves]
       end
 
       def add(solve)
