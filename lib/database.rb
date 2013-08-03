@@ -5,7 +5,8 @@ module ReconDatabase
     class << self
 
       def init
-        @db = Sequel.sqlite
+        # @db = Sequel.sqlite
+        @db = DB = Sequel.connect(ENV['DATABASE_URL'])
 
         @db.create_table :solves do
           primary_key :id
