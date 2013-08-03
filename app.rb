@@ -1,5 +1,9 @@
 require "sinatra"
 
+require_relative "lib/database"
+
+ReconDatabase::SolveDatabase.init
+
 require_relative "lib/solve"
 require_relative "lib/solves"
 
@@ -10,19 +14,19 @@ get "/" do
 end
 
 get "/solve/:id" do
-  @solve = Solve.get(params[:id].to_i)
+  @solve = ReconDatabase::Solve.get(params[:id].to_i)
   erb :solve
 end
 
 def get_solves(params)
-  @solves = Solve.matching(params)
+  @solves = ReconDatabase::Solve.query(params)
 end
 
 def get_fields(params)
-  @fields = Solve.queryable_fields.map do |field|
+  @fields = ReconDatabase::Solve.queryable_fields.map do |field|
     {
       name: field,
-      all_values: Solve.values_for_field(field),
+      all_values: ReconDatabase::Solve.possible_values_for(field),
       default_value: params[field]
     }
   end

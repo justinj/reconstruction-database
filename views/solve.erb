@@ -1,14 +1,14 @@
 <div class="container">
-  <% location = @solve.competition.nil? ? "" : "at #{@solve.competition}" %>
-  <h1><%= @solve.time %> by <%= @solve.solver %> <%= location %></h1>
+  <% location = @solve[:competition].nil? ? "" : "at #{@solve[:competition]}" %>
+  <h1><%= @solve[:time] %> by <%= @solve[:solver] %> <%= location %></h1>
 
   <h2>Scramble</h2>
   <code>
-    <%= @solve.scramble %> <br><br>
+    <%= @solve[:scramble] %> <br><br>
   </code>
 
   <h2>Solution</h2>
   <code>
-    <%= @solve.solution.gsub("\n","<br>") %> <br>
+    <%= @solve[:solution].gsub("\n","<br>") %> <br>
   </code>
 </div>

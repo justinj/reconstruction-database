@@ -35,18 +35,18 @@
       <% @solves.each do |solve| %>
         <tr>
           <td>
-            <%= solve.solver %> <br>
+            <%= solve[:solver] %> <br>
           </td>
           <td>
-            <%= solve.puzzle %>
+            <%= solve[:puzzle] %>
           </td>
           <td>
-            <a href="/solve/<%= solve.id %>">
-              <%= solve.time %>
+            <a href="/solve/<%= solve[:id] %>">
+              <%= solve[:time] %>
             </a>
           </td>
           <td>
-            <%= solve.competition %>
+            <%= solve[:competition] %>
           </td>
         </tr>
       <% end %>
