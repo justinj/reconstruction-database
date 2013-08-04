@@ -5,7 +5,7 @@ module ReconDatabase
     class << self
 
       def init
-        @db = Sequel.sqlite "./db/db.sqlite"
+        @db = get_db
 
         unless @db.table_exists? :solves
           @db.create_table :solves do
@@ -46,6 +46,20 @@ module ReconDatabase
       def every(field)
         init
         @solves.select(field).distinct.map { |hsh| hsh[field] }
+      end
+
+      def test
+        @testing = true
+      end
+
+      private
+
+      def get_db
+        if @testing
+          Sequel.sqlite "./testdb"
+        else
+          Sequel.sqlite "./db/db.sqlite"
+        end
       end
     end
   end

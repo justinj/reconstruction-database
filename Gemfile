@@ -11,6 +11,7 @@ end
 
 group :test, :development do
   gem 'minitest'
+  gem 'nokogiri'
 end
 
 ruby '2.0.0'

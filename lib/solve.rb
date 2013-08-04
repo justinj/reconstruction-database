@@ -1,6 +1,7 @@
 module ReconDatabase
   class Solve
-    attr_accessor :solver, 
+    attr_accessor 
+      :solver, 
       :scramble, 
       :solution, 
       :time, 

@@ -5,6 +5,7 @@ module ReconDatabase
   class DatabaseTest < MiniTest::Test
 
     def setup
+      SolveDatabase.test
       SolveDatabase.clear
     end
 

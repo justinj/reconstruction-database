@@ -1,0 +1,54 @@
+[QUOTE=Brest;881898][B]Feliks Zemdegs[/B] - 8.18 av5 - World Rubik's Cube Championship 2013
+
+[SPOILER=Video][youtubehd]m250xEA3mM4[/youtubehd][/SPOILER]     [SPOILER=1st solve]B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'
+
+x' y [COLOR="gray"]// inspection[/COLOR]
+D2 R' D F R u' R u' [COLOR="gray"]// cross[/COLOR]
+U' R U' R' y' L U L' [COLOR="gray"]// 1st pair[/COLOR]
+L' U L R U2' R2' U' R [COLOR="gray"]// 2nd pair[/COLOR]
+y' U' R U2' R' U R U' R2' U' R [COLOR="gray"]// 3rd / 4th pair[/COLOR]
+U l' U2 L U L' U l [COLOR="gray"]// OLL[/COLOR]
+U2' R2' F2 R U2' R U2' R' F R U R' U' R' F R2 [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y_//_inspection%0AD2_R-_D_F_R_u-_R_u-_//_cross%0AU-_R_U-_R-_y-_L_U_L-_//_1st_pair%0AL-_U_L_R_U2-_R2-_U-_R_//_2nd_pair%0Ay-_U-_R_U2-_R-_U_R_U-_R2-_U-_R_//_3rd_/_4th_pair%0AU_l-_U2_L_U_L-_U_l_//_OLL%0AU2-_R2-_F2_R_U2-_R_U2-_R-_F_R_U_R-_U-_R-_F_R2_//_PLL&ini=B2_U2_R2_D_U2_F2_L-_D-_B2_L2_R-_B2_F-_D_L_B-_U-_B_U-"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="Red"]Total	8.39	59	7.03	66	7.87	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	2.27	15	6.61	16	7.05		Cross+1/F2L	48.3%	46.9%	44.4%
+F2L	4.70	32	6.81	36	7.66		F2L/Total	56.0%	54.2%	54.5%
+LL	3.69	27	7.32	30	8.13		LL/Total	44.0%	45.8%	45.5%[/CODE]     [SPOILER=View as executed]B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'
+
+x' y [COLOR="gray"]// inspection[/COLOR]
+D2 R' D F R u' R u' [COLOR="gray"]// cross[/COLOR]
+U' R U' R' y' L U L' [COLOR="gray"]// 1st pair[/COLOR]
+L' U L R U2' R2' U' R [COLOR="gray"]// 2nd pair[/COLOR]
+y' U' R U' U' R' U R U' R2' U' R [COLOR="gray"]// 3rd / 4th pair[/COLOR]
+U l' U L L' U L U L' U l [COLOR="gray"]// OLL[/COLOR]
+U' U' R2' F2 R U' U' R U' U' R' F R U R' U' R' F R2 [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y_//_inspection%0AD2_R-_D_F_R_u-_R_u-_//_cross%0AU-_R_U-_R-_y-_L_U_L-_//_1st_pair%0AL-_U_L_R_U2-_R2-_U-_R_//_2nd_pair%0Ay-_U-_R_U-_U-_R-_U_R_U-_R2-_U-_R_//_3rd_/_4th_pair%0AU_l-_U_L_L-_U_L_U_L-_U_l_//_OLL%0AU-_U-_R2-_F2_R_U-_U-_R_U-_U-_R-_F_R_U_R-_U-_R-_F_R2_//_PLL&ini=B2_U2_R2_D_U2_F2_L-_D-_B2_L2_R-_B2_F-_D_L_B-_U-_B_U-"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     [SPOILER=2nd solve]D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'
+
+y x [COLOR="gray"]// inspection[/COLOR]
+r' U' r' R' D2 R [COLOR="gray"]// cross[/COLOR]
+y' R U' R' [COLOR="gray"]// 1st pair[/COLOR]
+d' U' R U2' R' U R U' R' [COLOR="gray"]// 2nd pair[/COLOR]
+y U2' R' U R2 U' R' [COLOR="gray"]// 3rd pair[/COLOR]
+y U2 R U2' R' U R U R' U R U' R' [COLOR="gray"]// 4th pair[/COLOR]
+U' R2' D' R U2 R' D R U2 R [COLOR="gray"]// COLL[/COLOR]
+R' U' R U' R U R U' R' U R U R2 U' R' U' [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x_//_inspection%0Ar-_U-_r-_R-_D2_R_//_cross%0Ay-_R_U-_R-_//_1st_pair%0Ad-_U-_R_U2-_R-_U_R_U-_R-_//_2nd_pair%0Ay_U2-_R-_U_R2_U-_R-_//_3rd_pair%0Ay_U2_R_U2-_R-_U_R_U_R-_U_R_U-_R-_//_4th_pair%0AU-_R2-_D-_R_U2_R-_D_R_U2_R_//_COLL%0AR-_U-_R_U-_R_U_R_U-_R-_U_R_U_R2_U-_R-_U-_//_EPLL&ini=D2_F-_U2_L2_R-_F-_D-_L-_D_L-_R2_F2_R_D_L-_R2_U_F-"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="Red"]Total	7.95	67	8.43	74	9.31	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	1.59	9	5.66	10	6.29		Cross+1/F2L	32.4%	25.0%	23.3%
+F2L	4.90	36	7.35	43	8.78		F2L/Total	61.6%	53.7%	58.1%
+LL	3.05	31	10.16	31	10.16		LL/Total	38.4%	46.3%	41.9%[/CODE]     [SPOILER=View as executed]D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'
+
+y x [COLOR="gray"]// inspection[/COLOR]
+r' U' r' R' D2 R [COLOR="gray"]// cross[/COLOR]
+y' R U' R' [COLOR="gray"]// 1st pair[/COLOR]
+d' U' R U' U' R' U R U' R' [COLOR="gray"]// 2nd pair[/COLOR]
+y U' U' R' U R2 U' R' [COLOR="gray"]// 3rd pair[/COLOR]
+y U U R U' U' R' U R U R' U R U' R' [COLOR="gray"]// 4th pair[/COLOR]
+U' R2' D' R U2 R' D R U2 R [COLOR="gray"]// COLL[/COLOR]
+R' U' R U' R U R U' R' U R U R U' R R' U R U' R' U' [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x_//_inspection%0Ar-_U-_r-_R-_D2_R_//_cross%0Ay-_R_U-_R-_//_1st_pair%0Ad-_U-_R_U-_U-_R-_U_R_U-_R-_//_2nd_pair%0Ay_U-_U-_R-_U_R2_U-_R-_//_3rd_pair%0Ay_U_U_R_U-_U-_R-_U_R_U_R-_U_R_U-_R-_//_4th_pair%0AU-_R2-_D-_R_U2_R-_D_R_U2_R_//_COLL%0AR-_U-_R_U-_R_U_R_U-_R-_U_R_U_R_U-_R_R-_U_R_U-_R-_U-_//_EPLL&ini=D2_F-_U2_L2_R-_F-_D-_L-_D_L-_R2_F2_R_D_L-_R2_U_F-"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     
+[/QUOTE]
