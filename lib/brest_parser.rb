@@ -61,7 +61,7 @@ class BrestParser
   end
 
   def parse_competition(post)
-    summary_line(post).fetch(2, "").strip
+    summary_line(post).fetch(2, "Unofficial").strip
   end
 
   def parse_puzzle(tree)
