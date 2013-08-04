@@ -1,6 +1,5 @@
 require "sinatra"
 
-require_relative "lib/solves"
 require_relative "lib/database"
 require_relative "lib/solve"
 ReconDatabase::SolveDatabase.init

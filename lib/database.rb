@@ -19,28 +19,33 @@ module ReconDatabase
             String :competition
             String :puzzle
           end
-
-          @solves = @db[:solves]
-          ReconDatabase::SeedData.seed_database
-
         end
-          @solves = @db[:solves]
+        @solves = @db[:solves]
+      end
+
+      def clear
+        init
+        @db.drop_table :solves
       end
 
       def add(solve)
+        init
         @solves.insert solve
       end
 
       def all
+        init
         @solves.all
       end
 
       def where(params)
+        init
         @solves.where(params)
       end
 
       def every(field)
-        @solves.all.map { |solve| solve[field] }.uniq.reject(&:nil?)
+        init
+        @solves.select(field).distinct.map { |hsh| hsh[field] }
       end
     end
   end
