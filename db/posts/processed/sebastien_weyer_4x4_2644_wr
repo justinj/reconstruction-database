@@ -1,0 +1,77 @@
+[QUOTE=Brest;826352][B]Sebastian Weyer[/B] - 26.44 4x4x4 WR single - Velbert Open 2013
+
+[SPOILER=Video][youtubehd]D1n7s26SjqI[/youtubehd][/SPOILER]     D F2 U L2 D' L2 F2 D2 L U F U2 R' F' D2 L F L r2 U2 f2 F r2 B' L B' L' D2 f2 F2 u' r2 u2 U2 R' B r' u' f L2 F r2 B'
+
+z' [COLOR="gray"]// inspection
+1st 2 centres[/COLOR]
+U l D' r2' [COLOR="gray"]// yellow[/COLOR]
+u U l' U2 l [COLOR="gray"]// white
+3 cross dedges[/COLOR]
+z' 3r U' r2' F' [COLOR="gray"]// WG[/COLOR]
+3l U 2L' F' [COLOR="gray"]// WR[/COLOR]
+U 2r2 U' L [COLOR="gray"]// WB
+last 4 centres[/COLOR]
+U 3R U' 3r U2 2r' U' 2r' [COLOR="gray"]// orange[/COLOR]
+3R2' U 2r U 2r [COLOR="gray"]// green / red / blue
+finish cross[/COLOR]
+z' y d U R U' R' d' [COLOR="gray"]// WO[/COLOR]
+D' R' D2' [COLOR="gray"]// cross
+finish edges[/COLOR]
+u' U2 y' R U' R' [COLOR="gray"]// YO[/COLOR]
+y' L' U' 3r U R' U' 3l [COLOR="gray"]// RB[/COLOR]
+y' R U' R' u [COLOR="gray"]// GO / GR[/COLOR]
+L' U L R U' R' 2U' [COLOR="gray"]// YR[/COLOR]
+R U' R' u [COLOR="gray"]// YB[/COLOR]
+R U' R' u' R U R' F R' F' R 2U [COLOR="gray"]// YG / OB
+3x3x3[/COLOR]
+L' U L2 U' L' [COLOR="gray"]// wOB[/COLOR]
+y' L U L' [COLOR="gray"]// wGO[/COLOR]
+U2 R U' R2' U R [COLOR="gray"]// wGR[/COLOR]
+U2 R U' R' U2 R U' R' [COLOR="gray"]// wRB[/COLOR]
+3r U' 3r2' U 3r2 U 3r2' U' 3r [COLOR="gray"]// OLL[/COLOR]
+y' U F' U' F R2 3u R' U R U' R 3u' R2' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z-_//_inspection%0A//_1st_2_centres%0AU_l_D-_r2-_//_yellow%0Au_U_l-_U2_l_//_white%0A//_3_cross_dedges%0Az-_3r_U-_r2-_F-_//_WG%0A3l_U_2L-_F-_//_WR%0AU_2r2_U-_L_//_WB%0A//_last_4_centres%0AU_3R_U-_3r_U2_2r-_U-_2r-_//_orange%0A3R2-_U_2r_U_2r_//_green_/_red_/_blue%0A//_finish_cross%0Az-_y_d_U_R_U-_R-_d-_//_WO%0AD-_R-_D2-_//_cross%0A//_finish_edges%0Au-_U2_y-_R_U-_R-_//_YO%0Ay-_L-_U-_3r_U_R-_U-_3l_//_RB%0Ay-_R_U-_R-_u_//_GO_/_GR%0AL-_U_L_R_U-_R-_2U-_//_YR%0AR_U-_R-_u_//_YB%0AR_U-_R-_u-_R_U_R-_F_R-_F-_R_2U_//_YG_/_OB%0A//_3x3x3%0AL-_U_L2_U-_L-_//_wOB%0Ay-_L_U_L-_//_wGO%0AU2_R_U-_R2-_U_R_//_wGR%0AU2_R_U-_R-_U2_R_U-_R-_//_wRB%0A3r_U-_3r2-_U_3r2_U_3r2-_U-_3r_//_OLL%0Ay-_U_F-_U-_F_R2_3u_R-_U_R_U-_R_3u-_R2-_//_PLL&ini=D_F2_U_L2_D-_L2_F2_D2_L_U_F_U2_R-_F-_D2_L_F_L_r2_U2_f2_F_r2_B-_L_B-_L-_D2_f2_F2_u-_r2_u2_U2_R-_B_r-_u-_f_L2_F_r2_B-&cube=4x4x4&displines=0"]alg.garron.us[/url][/COLOR]
+[CODE][B]Step	Time	STM	stps	ETM	etps[/b]
+[COLOR="red"]Total	26.44	126	4.77	143	5.41	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Step 1	2.42	9	3.72	9	3.72		Step 1/Redux	13.2%	11.0%	9.4%
+Step 2	4.50	12	2.67	16	3.56		Step 2/Redux	24.5%	14.6%	16.7%
+Step 3	3.21	13	4.05	16	4.98		Step 3/Redux	17.5%	15.9%	16.7%
+Step 4	2.38	9	3.78	11	4.62		Step 4/Redux	13.0%	11.0%	11.5%
+Step 5	5.82	39	6.70	44	7.56		Step 5/Redux	31.8%	47.6%	45.8%
+[COLOR="blue"]Redux	18.33	82	4.47	96	5.24	[/COLOR]	[COLOR="blue"]Redux/Total	69.3%	65.1%	67.1%[/COLOR]
+
+F2L	3.73	22	5.90	24	6.43		F2L/3x3		46.0%	50.0%	51.1%
+LL	4.38	22	5.02	23	5.25		LL/3x3		54.0%	50.0%	48.9%
+[COLOR="blue"]3x3x3	8.11	44	5.43	47	5.80	[/COLOR]	[COLOR="blue"]3x3x3/Total	30.7%	34.9%	32.9%[/COLOR][/CODE]     [SPOILER=View as executed]D F2 U L2 D' L2 F2 D2 L U F U2 R' F' D2 L F L r2 U2 f2 F r2 B' L B' L' D2 f2 F2 u' r2 u2 U2 R' B r' u' f L2 F r2 B'
+
+z' [COLOR="gray"]// inspection
+1st 2 centres [/COLOR]
+U l D' r2' [COLOR="gray"]// yellow[/COLOR]
+u U l' U2 l [COLOR="gray"]// white
+3 cross dedges[/COLOR]
+z' x' x 3r U' r2' F' [COLOR="gray"]// WG[/COLOR]
+3l U 2l' L F' [COLOR="gray"]// WR[/COLOR]
+U 2r2 U' L [COLOR="gray"]// WB
+last 4 centres[/COLOR]
+U 3r 2r' U' 3r U2 2r' U' 2r' [COLOR="gray"]// orange[/COLOR]
+3r 3r 2r2' U 2r U 2r [COLOR="gray"]// green / red / blue
+finish cross[/COLOR]
+z' y d U R U' R' d' [COLOR="gray"]// WO[/COLOR]
+D' R' D2' [COLOR="gray"]// cross
+finish edges[/COLOR]
+u' U2 y' R U' R' [COLOR="gray"]// YO[/COLOR]
+y' L' U' 3r U R' U' 3l [COLOR="gray"]// RB[/COLOR]
+y' R U' R' u [COLOR="gray"]// GO / GR[/COLOR]
+L' U L R U' R' u' [COLOR="gray"]// YR[/COLOR]
+U R U' R' u [COLOR="gray"]// YB[/COLOR]
+R U' R' u' R U R' F R' F' R u U' [COLOR="gray"]// YG / OB
+3x3x3[/COLOR]
+L' U L L U' L' [COLOR="gray"]// wOB[/COLOR]
+y' L U L' [COLOR="gray"]// wGO[/COLOR]
+U2 R U' R2' U R [COLOR="gray"]// wGR[/COLOR]
+U2 R U' R' U2 R U' R' [COLOR="gray"]// wRB[/COLOR]
+3r U' 3r2' U 3r2 U 3r2' U' 3r [COLOR="gray"]// OLL[/COLOR]
+U y' F' U' F R2 3u R' U R U' R 3u' R2' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z-_//_inspection%0A//_1st_2_centres_%0AU_l_D-_r2-_//_yellow%0Au_U_l-_U2_l_//_white%0A//_3_cross_dedges%0Az-_x-_x_3r_U-_r2-_F-_//_WG%0A3l_U_2l-_L_F-_//_WR%0AU_2r2_U-_L_//_WB%0A//_last_4_centres%0AU_3r_2r-_U-_3r_U2_2r-_U-_2r-_//_orange%0A3r_3r_2r2-_U_2r_U_2r_//_green_/_red_/_blue%0A//_finish_cross%0Az-_y_d_U_R_U-_R-_d-_//_WO%0AD-_R-_D2-_//_cross%0A//_finish_edges%0Au-_U2_y-_R_U-_R-_//_YO%0Ay-_L-_U-_3r_U_R-_U-_3l_//_RB%0Ay-_R_U-_R-_u_//_GO_/_GR%0AL-_U_L_R_U-_R-_u-_//_YR%0AU_R_U-_R-_u_//_YB%0AR_U-_R-_u-_R_U_R-_F_R-_F-_R_u_U-_//_YG_/_OB%0A//_3x3x3%0AL-_U_L_L_U-_L-_//_wOB%0Ay-_L_U_L-_//_wGO%0AU2_R_U-_R2-_U_R_//_wGR%0AU2_R_U-_R-_U2_R_U-_R-_//_wRB%0A3r_U-_3r2-_U_3r2_U_3r2-_U-_3r_//_OLL%0AU_y-_F-_U-_F_R2_3u_R-_U_R_U-_R_3u-_R2-_//_PLL&ini=D_F2_U_L2_D-_L2_F2_D2_L_U_F_U2_R-_F-_D2_L_F_L_r2_U2_f2_F_r2_B-_L_B-_L-_D2_f2_F2_u-_r2_u2_U2_R-_B_r-_u-_f_L2_F_r2_B-&cube=4x4x4&displines=0"]alg.garron.us[/url][/COLOR][/SPOILER][/QUOTE]
+
