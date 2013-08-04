@@ -7,8 +7,17 @@ task :default do
   sh "ruby app.rb"
 end
 
-task :import, [:post] do |t, args|
-  filename = args[:post] 
+task :process do
+  unprocessed_posts = Dir.glob("db/posts/unprocessed/*")
+  unprocessed_posts.each do |unprocessed_post|
+    process_post(unprocessed_post)
+    mv unprocessed_post, "db/posts/processed"
+  end
+
+  puts "#{unprocessed_posts.count} posts processed and moved to the processed folder."
+end
+
+def process_post(filename)
   parser = BrestParser.new(filename)
   parser.save_to(ReconDatabase::SolveDatabase)
   puts parser.name

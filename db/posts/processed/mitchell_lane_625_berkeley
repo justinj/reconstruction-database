@@ -1,0 +1,20 @@
+[QUOTE=Brest;883667][B]Mitch Lane[/B] - 6.25 single - Berkeley Summer 2013
+
+[SPOILER=Video][youtubehd]tfP1OmYbfIQ[/youtubehd][/SPOILER]     D2 L2 F2 D U2 R2 U' R' F2 L' U F2 R B' L2 D' B2 L2 R2
+
+z [COLOR="gray"]// inspection[/COLOR]
+U' r' u R' u' [COLOR="gray"]// cross[/COLOR]
+U L' U L2 U' L' [COLOR="gray"]// 1st pair[/COLOR]
+U' y' R U' R2' U R [COLOR="gray"]// 2nd pair[/COLOR]
+U R U R' U' L U' L' [COLOR="gray"]// 3rd pair[/COLOR]
+U R U' R' U R U' R' [COLOR="gray"]// 4th pair[/COLOR]
+U' R' F' r U R U' L' U x' [COLOR="gray"]// COLL[/COLOR]
+U2 [COLOR="gray"]// AUF[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z_//_inspection%0AU-_r-_u_R-_u-_//_cross%0AU_L-_U_L2_U-_L-_//_1st_pair%0AU-_y-_R_U-_R2-_U_R_//_2nd_pair%0AU_R_U_R-_U-_L_U-_L-_//_3rd_pair%0AU_R_U-_R-_U_R_U-_R-_//_4th_pair%0AU-_R-_F-_r_U_R_U-_L-_U_x-_//_COLL%0AU2_//_AUF&ini=D2_L2_F2_D_U2_R2_U-_R-_F2_L-_U_F2_R_B-_L2_D-_B2_L2_R2"]alg.garron.us[/url][/COLOR]
+[CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="red"]Total	6.25	43	6.88	45	7.20	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	1.98	11	5.56	11	5.56		Cross+1/F2L	43.2%	33.3%	32.4%
+F2L	4.58	33	7.21	34	7.42		F2L/Total	73.3%	76.7%	75.6%
+LL	1.67	10	5.99	11	6.59		LL/Total	26.7%	23.3%	24.4%[/CODE][/QUOTE]
+

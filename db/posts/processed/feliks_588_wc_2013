@@ -1,0 +1,30 @@
+[QUOTE=Brest;883083][B]Feliks Zemdegs[/B] - 5.88 single - World Rubik's Cube Championship 2013
+
+[SPOILER=Video][youtubehd]VF30pZM-twA[/youtubehd][/SPOILER]     U' B2 L2 D2 F2 U L2 D' B' L' U' R F2 D2 F U' R D'
+
+x' [COLOR="gray"]// inspection[/COLOR]
+R D R D R' [COLOR="gray"]// cross[/COLOR]
+U R U R' y' U' R' U R [COLOR="gray"]// 1st pair[/COLOR]
+d R' F R F' R' U' R [COLOR="gray"]// 2nd pair[/COLOR]
+U R U R' [COLOR="gray"]// 3rd pair[/COLOR]
+U' L' U2 L U L' U2 L [COLOR="gray"]// 4th pair[/COLOR]
+r U2' R' U' R U' r' [COLOR="gray"]// OLL(CP)[/COLOR]
+U' R U' R U R U R U' R' U' R2 U' [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_//_inspection%0AR_D_R_D_R-_//_cross%0AU_R_U_R-_y-_U-_R-_U_R_//_1st_pair%0Ad_R-_F_R_F-_R-_U-_R_//_2nd_pair%0AU_R_U_R-_//_3rd_pair%0AU-_L-_U2_L_U_L-_U2_L_//_4th_pair%0Ar_U2-_R-_U-_R_U-_r-_//_OLL(CP)%0AU-_R_U-_R_U_R_U_R_U-_R-_U-_R2_U-_//_EPLL&ini=U-_B2_L2_D2_F2_U_L2_D-_B-_L-_U-_R_F2_D2_F_U-_R_D-"]alg.garron.us[/url][/COLOR]
+[CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="red"]Total	5.88	53	9.01	57	9.69	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	1.62	13	8.02	14	8.64		Cross+1/F2L	40.2%	39.4%	38.9%
+F2L	4.03	33	8.19	36	8.93		F2L/Total	68.5%	62.3%	63.2%
+LL	1.85	20	10.81	21	11.35		LL/Total	31.5%	37.7%	36.8%[/CODE]     [SPOILER=View as executed]U2 F' R2 D2 B2 F' U2 B2 U2 R' D F2 L B' D' F' D L R
+
+x' [COLOR="gray"]// inspection[/COLOR]
+R D R D R' [COLOR="gray"]// cross[/COLOR]
+U R U R' y' U' R' U R [COLOR="gray"]// 1st pair[/COLOR]
+d R' F R F' R' U' R [COLOR="gray"]// 2nd pair[/COLOR]
+U R U R' [COLOR="gray"]// 3rd pair[/COLOR]
+U' L' U U L U L' U U L [COLOR="gray"]// 4th pair[/COLOR]
+r U' U' R' U' R U' r' [COLOR="gray"]// OLL(CP)[/COLOR]
+U' R U' R U R U R U' R' U' R2 U' [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_//_inspection%0AR_D_R_D_R-_//_cross%0AU_R_U_R-_y-_U-_R-_U_R_//_1st_pair%0Ad_R-_F_R_F-_R-_U-_R_//_2nd_pair%0AU_R_U_R-_//_3rd_pair%0AU-_L-_U_U_L_U_L-_U_U_L_//_4th_pair%0Ar_U-_U-_R-_U-_R_U-_r-_//_OLL(CP)%0AU-_R_U-_R_U_R_U_R_U-_R-_U-_R2_U-_//_EPLL&ini=U2_F-_R2_D2_B2_F-_U2_B2_U2_R-_D_F2_L_B-_D-_F-_D_L_R"]alg.garron.us[/url][/COLOR][/SPOILER][/QUOTE]
+
