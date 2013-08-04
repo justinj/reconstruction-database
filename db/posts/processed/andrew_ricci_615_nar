@@ -1,0 +1,35 @@
+[QUOTE=Brest;769152][B]Andrew Ricci[/B] - 6.15 3x3 single - US Nationals 2012
+
+U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
+
+y x2 [COLOR="gray"]// inspection[/COLOR]
+R' F D L D [COLOR="gray"]// cross[/COLOR]
+R U R' U' y R' U' R [COLOR="gray"]// 1st pair[/COLOR]
+R U' R' U2 R U' R' [COLOR="gray"]// 2nd pair[/COLOR]
+U2' L' U L [COLOR="gray"]// 3rd pair[/COLOR]
+U' L U2 L' U L U' L' [COLOR="gray"]// 4th pair[/COLOR]
+U R U R' U' R' F R F' [COLOR="gray"]// OLL[/COLOR]
+U' R U R' F' R U R' U' R' F R2 U' R' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x2_//_inspection%0AR-_F_D_L_D_//_cross%0AR_U_R-_U-_y_R-_U-_R_//_1st_pair%0AR_U-_R-_U2_R_U-_R-_//_2nd_pair%0AU2-_L-_U_L_//_3rd_pair%0AU-_L_U2_L-_U_L_U-_L-_//_4th_pair%0AU_R_U_R-_U-_R-_F_R_F-_//_OLL%0AU-_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2"]alg.garron.us[/url][/COLOR]
+[CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="red"]Total	6.15	54	8.78	56	9.11[/COLOR]
+
+Cross+1	1.79	12	6.70	13	7.26
+F2L	3.95	31	7.85	33	8.35
+LL	2.20	23	10.45	23	10.45
+
+[B][SIZE="4"]%[/SIZE]
+Step		Time	STM	ETM[/B]
+Cross+1/F2L	45%	39%	39%
+F2L/Total	64%	57%	59%[/CODE]     [SPOILER=View as executed]U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
+
+y x2 [COLOR="gray"]// inspection[/COLOR]
+R' F D L D [COLOR="gray"]// cross[/COLOR]
+R U R' U' y R' U' R [COLOR="gray"]// 1st pair[/COLOR]
+R U' R' U2 R U' R' [COLOR="gray"]// 2nd pair[/COLOR]
+U' U' L' U L [COLOR="gray"]// 3rd pair[/COLOR]
+U' L U2 L' U L U' L' [COLOR="gray"]// 4th pair[/COLOR]
+U R U R' U' R' F R F' [COLOR="gray"]// OLL[/COLOR]
+U' R U R' F' R U R' U' R' F R2 U' R' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x2_//_inspection%0AR-_F_D_L_D_//_cross%0AR_U_R-_U-_y_R-_U-_R_//_1st_pair%0AR_U-_R-_U2_R_U-_R-_//_2nd_pair%0AU-_U-_L-_U_L_//_3rd_pair%0AU-_L_U2_L-_U_L_U-_L-_//_4th_pair%0AU_R_U_R-_U-_R-_F_R_F-_//_OLL%0AU-_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2"]alg.garron.us[/url][/COLOR][/SPOILER][/QUOTE]
+
