@@ -2,7 +2,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.0.4)
-    pg (0.16.0)
     rack (1.5.2)
     rake (10.1.0)
     sequel (4.0.0)
@@ -17,7 +16,6 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  pg
   rake
   sequel
   sinatra

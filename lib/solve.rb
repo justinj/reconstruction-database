@@ -42,8 +42,6 @@ module ReconDatabase
 
       def query(params)
         params = params.reject{ |_, s| s.empty? }.map { |k, v| [k.to_sym, v] }
-        p "MY PARAMS ARE:"
-        p params
         SolveDatabase.where(params)
       end
     end
