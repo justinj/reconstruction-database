@@ -1,0 +1,113 @@
+[QUOTE=Brest;882809][B]Kristopher De Asis[/B] - 49.15 5x5 single (unofficial)
+
+[SPOILER=Video][youtubehd]GDWPIfMfja8[/youtubehd][/SPOILER]     [SPOILER=Scramble]L2 B2 U' f' F2 b2 U u2 l f' R' u F2 D2
+u' f d' l' F2 R D f2 U d r' U L2 F u f
+F2 d b' u' L' U2 L u D B u' F U2 u2 D2
+f R' D' U B2 U' f2 B d U u2 b B' l' r[/SPOILER]     y' [COLOR="gray"]// inspection[/COLOR]
+
+[COLOR="gray"]// centres[/COLOR]
+U 2r U 3l' U' 3r' [COLOR="gray"]// white 2x2x3[/COLOR]
+(z x') 2r U (y x') 2r' F' 2r' [COLOR="gray"]// white[/COLOR]
+3U' 2l' U' 2l y 3l' U 3l [COLOR="gray"]// yellow 2x2x3[/COLOR]
+z' 3R U2 3R' U2 (y x') 2l' U2 2l [COLOR="gray"]// yellow[/COLOR]
+(z' x') F U' 2r U' 2r' [COLOR="gray"]// orange 2x2x3[/COLOR]
+x' U 3R U 3l 2l [COLOR="gray"]// orange[/COLOR]
+x' U2 3l2' U2 3l2 [COLOR="gray"]// blue 2x2x3[/COLOR]
+D' U 2l' U 2l' U2 2l2 [COLOR="gray"]// blue[/COLOR]
+x U 2l U 2l' [COLOR="gray"]// green 2x2x3[/COLOR]
+2r' U' 2r U 2r' U2 z' [COLOR="gray"]// green / red[/COLOR]
+
+[COLOR="gray"]// edges[/COLOR]
+y' U L' U L 3U [COLOR="gray"]// RG[/COLOR]
+y' U2 R U' R' 3u 2u [COLOR="gray"]// YG[/COLOR]
+U2 R U' R' 2u2 U' L' U L 3U' [COLOR="gray"]// WG[/COLOR]
+U' R U' R' 2u R U 4l' U R' U' 4l 3U [COLOR="gray"]// RB[/COLOR]
+U2 R U' R' z2' 2d U' L' U L 3u' [COLOR="gray"]// YB[/COLOR]
+L' U L 3d' [COLOR="gray"]// YR[/COLOR]
+y L' U L 2u 2d2 [COLOR="gray"]// GO[/COLOR]
+L' U L 2u' [COLOR="gray"]// WO[/COLOR]
+L' U' L 2u' [COLOR="gray"]// fix centres[/COLOR]
+R' U R 3U [COLOR="gray"]// WB[/COLOR]
+L' U L 3U' L U' L' 2d [COLOR="gray"]// YO[/COLOR]
+R U' R' 2u' R U 4l' U R' U' 4l 3U' [COLOR="gray"]// OB / WR[/COLOR]
+
+[COLOR="gray"]// 3x3x3[/COLOR]
+L (y x) L U x' R' D R2 [COLOR="gray"]// white cross[/COLOR]
+R U2 R' U L U L' [COLOR="gray"]// wOB[/COLOR]
+y' U2 R' U' R [COLOR="gray"]// wGR[/COLOR]
+U R U' R' [COLOR="gray"]// wRB[/COLOR]
+y U2' R' U2 R U' R' U R [COLOR="gray"]// wGO[/COLOR]
+U2' R U R' U R U' R' U' x R' U R U' x' [COLOR="gray"]// OLL[/COLOR]
+U2 R' U' R U' R' F' R U R' U' R' F R U2 R [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y-_//_inspection%0A%0A//_centres%0AU_2r_U_3l-_U-_3r-_//_white_2x2x3%0A(z_x-)_2r_U_(y_x-)_2r-_F-_2r-_//_white%0A3U-_2l-_U-_2l_y_3l-_U_3l_//_yellow_2x2x3%0Az-_3R_U2_3R-_U2_(y_x-)_2l-_U2_2l_//_yellow%0A(z-_x-)_F_U-_2r_U-_2r-_//_orange_2x2x3%0Ax-_U_3R_U_3l_2l_//_orange%0Ax-_U2_3l2-_U2_3l2_//_blue_2x2x3%0AD-_U_2l-_U_2l-_U2_2l2_//_blue%0Ax_U_2l_U_2l-_//_green_2x2x3%0A2r-_U-_2r_U_2r-_U2_z-_//_green_/_red%0A%0A//_edges%0Ay-_U_L-_U_L_3U_//_RG%0Ay-_U2_R_U-_R-_3u_2u_//_YG%0AU2_R_U-_R-_2u2_U-_L-_U_L_3U-_//_WG%0AU-_R_U-_R-_2u_R_U_4l-_U_R-_U-_4l_3U_//_RB%0AU2_R_U-_R-_z2-_2d_U-_L-_U_L_3u-_//_YB%0AL-_U_L_3d-_//_YR%0Ay_L-_U_L_2u_2d2_//_GO%0AL-_U_L_2u-_//_WO%0AL-_U-_L_2u-_//_fix_centres%0AR-_U_R_3U_//_WB%0AL-_U_L_3U-_L_U-_L-_2d_//_YO%0AR_U-_R-_2u-_R_U_4l-_U_R-_U-_4l_3U-_//_OB_/_WR%0A%0A//_3x3x3%0AL_(y_x)_L_U_x-_R-_D_R2_//_white_cross%0AR_U2_R-_U_L_U_L-_//_wOB%0Ay-_U2_R-_U-_R_//_wGR%0AU_R_U-_R-_//_wRB%0Ay_U2-_R-_U2_R_U-_R-_U_R_//_wGO%0AU2-_R_U_R-_U_R_U-_R-_U-_x_R-_U_R_U-_x-_//_OLL%0AU2_R-_U-_R_U-_R-_F-_R_U_R-_U-_R-_F_R_U2_R_//_PLL&ini=L2_B2_U-_f-_F2_b2_U_u2_l_f-_R-_u_F2_D2_u-_f_d-_l-_F2_R_D_f2_U_d_r-_U_L2_F_u_f_F2_d_b-_u-_L-_U2_L_u_D_B_u-_F_U2_u2_D2_f_R-_D-_U_B2_U-_f2_B_d_U_u2_b_B-_l-_r&cube=5x5x5&displines=0"]alg.garron.us[/url][/COLOR]     [SPOILER=Statistics][CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="red"]Total	49.15	198	4.03	231	4.70[/COLOR]
+
+1st	3.24	11	3.40	13	4.01
+2nd	4.64	14	3.02	20	4.31
+3rd	2.33	10	4.29	13	5.58
+4th	3.31	10	3.02	15	4.53
+last2	2.37	10	4.22	12	5.06
+[COLOR="blue"]Centres	15.89	55	3.46	73	4.59[/COLOR]
+
+F8E	14.48	57	3.94	62	4.28
+L4E	5.71	28	4.90	29	5.08
+Edges	20.19	85	4.21	91	4.51
+
+[COLOR="blue"]Redux	36.08	140	3.88	164	4.55[/COLOR]
+
+cross+1	4.26	13	3.05	15	3.52
+F2L	7.43	29	3.90	35	4.71
+LL	5.64	29	5.14	32	5.67
+[COLOR="blue"]3x3x3	13.07	58	4.44	67	5.13[/COLOR]
+
+[B][SIZE="4"]%[/SIZE] compared to total[/B]
+Step		Time	STM	ETM
+Centres/Total	32%	28%	32%
+Edges/Total	41%	43%	39%
+3x3x3/Total	27%	29%	29%
+
+[B][SIZE="4"]%[/SIZE]
+Step		Time	STM	ETM[/B]
+L4E/Edges	28%	33%	32%
+cross+1/3x3x3	57%	45%	43%
+F2L/3x3x3	57%	50%	52%[/CODE][/SPOILER]     [SPOILER=View as executed]     [SPOILER=Scramble]L2 B2 U' f' F2 b2 U u2 l f' R' u F2 D2
+u' f d' l' F2 R D f2 U d r' U L2 F u f
+F2 d b' u' L' U2 L u D B u' F U2 u2 D2
+f R' D' U B2 U' f2 B d U u2 b B' l' r[/SPOILER]     y' [COLOR="gray"]// inspection[/COLOR]
+
+[COLOR="gray"]// centres[/COLOR]
+U 2r U 3l' U' 3r' [COLOR="gray"]// white 2x2x3[/COLOR]
+(z x') 2r U (y x') 2r' F' 2r' [COLOR="gray"]// white[/COLOR]
+3U' 2l' U' 2l y 3l' U 3l [COLOR="gray"]// yellow 2x2x3[/COLOR]
+z' 3r 2r' U2 2r 3r' U2 (y x') 2l' U U 2l [COLOR="gray"]// yellow[/COLOR]
+(z' x') F U' 2r U' 2r' [COLOR="gray"]// orange 2x2x3[/COLOR]
+x' U 3r 2r' U 3l 2l [COLOR="gray"]// orange[/COLOR]
+x' U U 3l2' U U 3l2 [COLOR="gray"]// blue 2x2x3[/COLOR]
+D' U 2l' U 2l' U U 2l2 [COLOR="gray"]// blue[/COLOR]
+x U 2l U 2l' [COLOR="gray"]// green 2x2x3[/COLOR]
+2r' U' 2r U 2r' U2 z' [COLOR="gray"]// green / red[/COLOR]
+
+[COLOR="gray"]// edges[/COLOR]
+U y' L' U L 3U [COLOR="gray"]// RG[/COLOR]
+U2 y' R U' R' 3u 2u [COLOR="gray"]// YG[/COLOR]
+U2 R U' R' 2u2 U' L' U L 3d 2d' [COLOR="gray"]// WG[/COLOR]
+U' R U' R' 2u R U 4l' U R' U' 4l 3U [COLOR="gray"]// RB[/COLOR]
+U2 R U' R' z2' 2d U' L' U L 3u' [COLOR="gray"]// YB[/COLOR]
+L' U L 3d' [COLOR="gray"]// YR[/COLOR]
+y L' U L 2u 2d2 [COLOR="gray"]// GO[/COLOR]
+L' U L 2u' [COLOR="gray"]// WO[/COLOR]
+L' U' L 2u' [COLOR="gray"]// fix centres[/COLOR]
+R' U R 3U L' U L 3d 2d' [COLOR="gray"]// WB[/COLOR]
+L U' L' 2d [COLOR="gray"]// YO[/COLOR]
+R U' R' 2u' R U 4l' U R' U' 4l 3U' [COLOR="gray"]// OB / WR[/COLOR]
+
+[COLOR="gray"]// 3x3x3[/COLOR]
+L (y x) L U x' R' D R2 [COLOR="gray"]// white cross[/COLOR]
+R U2 R' U L U L' [COLOR="gray"]// wOB[/COLOR]
+U y' U R' U' R [COLOR="gray"]// wGR[/COLOR]
+U R U' R' [COLOR="gray"]// wRB[/COLOR]
+y U' U' R' U2 R U' R' U R [COLOR="gray"]// wGO[/COLOR]
+U' U' R U R' U R U' R' U' x R' U R U' x' [COLOR="gray"]// OLL[/COLOR]
+U2 R' U' R U' R' F' R U R' U' R' F R U2 R [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y-_//_inspection%0A%0A//_centres%0AU_2r_U_3l-_U-_3r-_//_white_2x2x3%0A(z_x-)_2r_U_(y_x-)_2r-_F-_2r-_//_white%0A3U-_2l-_U-_2l_y_3l-_U_3l_//_yellow_2x2x3%0Az-_3r_2r-_U2_2r_3r-_U2_(y_x-)_2l-_U_U_2l_//_yellow%0A(z-_x-)_F_U-_2r_U-_2r-_//_orange_2x2x3%0Ax-_U_3r_2r-_U_3l_2l_//_orange%0Ax-_U_U_3l2-_U_U_3l2_//_blue_2x2x3%0AD-_U_2l-_U_2l-_U_U_2l2_//_blue%0Ax_U_2l_U_2l-_//_green_2x2x3%0A2r-_U-_2r_U_2r-_U2_z-_//_green_/_red%0A%0A//_edges%0AU_y-_L-_U_L_3U_//_RG%0AU2_y-_R_U-_R-_3u_2u_//_YG%0AU2_R_U-_R-_2u2_U-_L-_U_L_3d_2d-_//_WG%0AU-_R_U-_R-_2u_R_U_4l-_U_R-_U-_4l_3U_//_RB%0AU2_R_U-_R-_z2-_2d_U-_L-_U_L_3u-_//_YB%0AL-_U_L_3d-_//_YR%0Ay_L-_U_L_2u_2d2_//_GO%0AL-_U_L_2u-_//_WO%0AL-_U-_L_2u-_//_fix_centres%0AR-_U_R_3U_L-_U_L_3d_2d-_//_WB%0AL_U-_L-_2d_//_YO%0AR_U-_R-_2u-_R_U_4l-_U_R-_U-_4l_3U-_//_OB_/_WR%0A%0A//_3x3x3%0AL_(y_x)_L_U_x-_R-_D_R2_//_white_cross%0AR_U2_R-_U_L_U_L-_//_wOB%0AU_y-_U_R-_U-_R_//_wGR%0AU_R_U-_R-_//_wRB%0Ay_U-_U-_R-_U2_R_U-_R-_U_R_//_wGO%0AU-_U-_R_U_R-_U_R_U-_R-_U-_x_R-_U_R_U-_x-_//_OLL%0AU2_R-_U-_R_U-_R-_F-_R_U_R-_U-_R-_F_R_U2_R_//_PLL&ini=L2_B2_U-_f-_F2_b2_U_u2_l_f-_R-_u_F2_D2_u-_f_d-_l-_F2_R_D_f2_U_d_r-_U_L2_F_u_f_F2_d_b-_u-_L-_U2_L_u_D_B_u-_F_U2_u2_D2_f_R-_D-_U_B2_U-_f2_B_d_U_u2_b_B-_l-_r&cube=5x5x5&displines=0"]alg.garron.us[/url][/COLOR][/SPOILER][/QUOTE]
+

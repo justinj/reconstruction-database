@@ -1,15 +1,9 @@
-require "nokogiri"
-
 class BrestParser
   attr_reader :post, :name, :solves
 
   def initialize(filepath)
     @filepath = filepath
     parse
-  end
-
-  def puzzle
-    @puzzle || "3x3"
   end
 
   def save_to(db)
@@ -30,8 +24,13 @@ class BrestParser
 
   def parse
     @post = File.read(@filepath)
-    number_of_solves = @post.scan("View as executed").count
     @solves = (0...number_of_solves).map { |i| parse_single_solve(@post, i) }
+  end
+
+  def number_of_solves
+    count = @post.scan(/SPOILER=[^\]]*?\ssolve/).count
+    count = 1 if count == 0
+    count
   end
 
   def parse_single_solve(post, which)
@@ -67,10 +66,27 @@ class BrestParser
   def parse_puzzle(tree)
     description = summary_line(tree)[1]
     if description.split(" ").count > 2
-      extract_puzzle description
+      fix_puzzle_name(extract_puzzle description)
     else
-      "3x3"
+      default_puzzle
     end
+  end
+
+  def fix_puzzle_name(puzzle_name)
+    return default_puzzle if puzzle_name.nil?
+    if /^\dx\dx\d$/ =~ puzzle_name
+      puzzle_name[0..2]
+    else
+      puzzle_name
+    end
+  end
+
+  def extract_puzzle(description)
+    description.split(" ")[1]
+  end
+
+  def default_puzzle
+    "3x3"
   end
 
   def summary_line(post)
@@ -92,8 +108,9 @@ class BrestParser
   end
 
   def nth_garron_link(post, n)
-    n = n * 2 # each link appears twice
-    post.scan(/\[url=(.*?)\]/)[n]
+    garron_links = post.scan(/\[url=(.*?)\]/)
+    n = n * 2 if garron_links.count > number_of_solves # sometimes, every garron link appears twice
+    garron_links[n]
   end
 
   def solution_from_garron_link(link)
@@ -111,10 +128,6 @@ class BrestParser
     parameter.gsub!("%0A", "\n")
     parameter.gsub!('"', "")
     parameter.tr("-_","' ")
-  end
-
-  def extract_puzzle(description)
-    description.split(" ")[1]
   end
 
   def youtube_and_scramble_line(tree)

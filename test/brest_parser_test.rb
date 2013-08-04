@@ -91,3 +91,17 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     assert_equal 7.95, multiple.solves[1][:time]
   end
 end
+
+class TwobyTwoTest < Minitest::Test
+  attr_reader :parser, :solves
+  # These didn't parse properly at first
+
+  def setup
+    @parser = BrestParser.new("test/fixtures/5_2x2_solves")
+    @solves = @parser.solves
+  end
+
+  def test_5_solves
+    assert_equal 5, solves.count
+  end
+end
