@@ -31,7 +31,8 @@ class BrestParser
       solver: name,
       time: time,
       youtube: youtube,
-      competition: competition
+      competition: competition,
+      puzzle: "3x3x3" # assume this until we have a better way
     })
   end
 
