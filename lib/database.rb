@@ -5,7 +5,7 @@ module ReconDatabase
     class << self
 
       def init
-        @db = Sequel.sqlite
+        @db = Sequel.sqlite "./db.sqlite"
 
         unless @db.table_exists? :solves
           @db.create_table :solves do

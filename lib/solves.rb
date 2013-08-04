@@ -2,6 +2,7 @@ module ReconDatabase
   class SeedData
     class << self
       def seed_database
+        return
         Solve.add({ solver: "Feliks Zemdegs",
                   scramble: "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'",
                   solution: "x' y // inspection
