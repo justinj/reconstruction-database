@@ -17,7 +17,7 @@ class BrestParser
       db.add({
         scramble: solve[:scramble],
         solution: solve[:solution],
-        solver: solve[:name],
+        solver: solve[:solver],
         time: solve[:time],
         youtube: solve[:youtube],
         competition: solve[:competition],
@@ -37,13 +37,12 @@ class BrestParser
   def parse_single_solve(post, which)
     solve = {}
 
-    solve[:time]        = parse_time(post)
     solve[:youtube]     = parse_youtube(post)
     solve[:puzzle]      = parse_puzzle(post)
     solve[:competition] = parse_competition(post)
-
     solve[:solver]      = parse_solver(post)
 
+    solve[:time]        = parse_time(post, which)
     solve[:scramble]    = parse_scramble(post, which)
     solve[:solution]    = parse_solution(post,which)
 
@@ -54,8 +53,11 @@ class BrestParser
     summary_line(post)[0]
   end
   
-  def parse_time(post)
-    summary_line(post)[1][/\d+\.\d+/].to_f
+  def parse_time(post, which)
+    times = post.scan /Total\s+(\d+\.\d+)[^%]/
+    if times && times[which]
+      times[which][0].to_f
+    end
   end
 
   def parse_competition(post)

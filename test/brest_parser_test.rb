@@ -51,7 +51,7 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     expected_hash = {
       scramble: solve[:scramble],
       solution: solve[:solution],
-      solver: solve[:name],
+      solver: solve[:solver],
       time: solve[:time],
       youtube: solve[:youtube],
       competition: solve[:competition],
@@ -76,8 +76,18 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     assert_equal 2, multiple.solves.count
   end
 
-  def test_multiple_finds
+  def test_multiple_finds_scrambles
     assert_equal "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'", multiple.solves[0][:scramble]
     assert_equal "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'", multiple.solves[1][:scramble]
+  end
+
+  def test_multiple_name
+    assert_equal "Feliks Zemdegs", multiple.solves[0][:solver]
+    assert_equal "Feliks Zemdegs", multiple.solves[1][:solver]
+  end
+
+  def test_multiple_times
+    assert_equal 8.39, multiple.solves[0][:time]
+    assert_equal 7.95, multiple.solves[1][:time]
   end
 end
