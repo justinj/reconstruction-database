@@ -29,7 +29,7 @@ module ReconDatabase
       end
 
       def get(id)
-        SolveDatabase.where(id: id).first
+        new(SolveDatabase.where(id: id).first)
       end
 
       def possible_values_for(field)
@@ -42,7 +42,12 @@ module ReconDatabase
 
       def query(params)
         params = params.reject{ |_, s| s.empty? }.map { |k, v| [k.to_sym, v] }
-        SolveDatabase.where(params)
+        hashes_returned = SolveDatabase.where(params)
+        hashes_returned.map { |result| new(Hash[result]) }
+      end
+
+      def delete_all
+        SolveDatabase.clear
       end
     end
   end
