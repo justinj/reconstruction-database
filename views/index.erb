@@ -1,35 +1,34 @@
-<div class="container">
-  <div class="row">
+</div>
+<div class="row">
 
-    <form action="/" method="GET" >
+  <form action="/" method="GET" >
 
-      <% @fields.each do |field| %>
-        <%= field.html %>
-      <% end %>
+    <% @fields.each do |field| %>
+      <%= field.html %>
+    <% end %>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
 
-    </form>
+  </form>
 
-    <br><br>
-  </div>
-  <div class="row">
+  <br><br>
+</div>
+<div class="row">
 
-    <table class="table table-bordered table-striped table-hover span8">
+  <table class="table table-bordered table-striped table-hover span8">
+    <tr>
+      <th> Solver </th>
+      <th> Event </th>
+      <th> Time </th>
+      <th> Competition </th>
+    </tr>
+    <% @solves.each do |solve| %>
       <tr>
-        <th> Solver </th>
-        <th> Event </th>
-        <th> Time </th>
-        <th> Competition </th>
+        <td> <%= solve.solver %> <br> </td>
+        <td> <%= solve.puzzle %> </td>
+        <td> <a href="/solve/<%= solve.id %>"> <%= format_time(solve.time) %> </a> </td>
+        <td> <%= solve.competition %> </td>
       </tr>
-      <% @solves.each do |solve| %>
-        <tr>
-          <td> <%= solve.solver %> <br> </td>
-          <td> <%= solve.puzzle %> </td>
-          <td> <a href="/solve/<%= solve.id %>"> <%= format_time(solve.time) %> </a> </td>
-          <td> <%= solve.competition %> </td>
-        </tr>
-      <% end %>
-    </table>
-  </div>
+    <% end %>
+  </table>
 </div>

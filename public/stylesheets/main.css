@@ -2,6 +2,10 @@ h1 {
   color: black;
 }
 
+.content {
+  background-color: white;
+}
+
 .comment {
   color: grey;
 }

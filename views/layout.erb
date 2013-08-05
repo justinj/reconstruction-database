@@ -13,11 +13,13 @@
 
   </head>
   <body>
-    <div class="container">
-      <a href="/">
-        <h1>Reconstruction Database</h1>
-      </a>
+    <div class="navbar">
+      <a class="navbar-brand" href="/">Reconstruction&nbsp;Database</a>
     </div>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
