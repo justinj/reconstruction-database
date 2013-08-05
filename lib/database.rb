@@ -13,7 +13,10 @@ module ReconDatabase
       end
 
       def where(params)
-        solves.where(params)
+        params = symbolize_keys(params)
+        result = solves.where(static_filters(params))
+        result = filter_times(result, params)
+        result.entries
       end
 
       def every(field)
@@ -25,6 +28,45 @@ module ReconDatabase
       end
 
       private
+
+      def filter_times(result, params)
+        specifier = params.fetch(:"time-specifier", "")
+        time = params.fetch(:"time-value", "")
+        if specifier.empty? || time.empty?
+          result
+        else
+          result.where("? #{sign_for(specifier)} ?", :time, time)
+        end
+      end
+
+      def sign_for(comparison)
+        case comparison
+        when "less"
+          "<"
+        when "greater"
+          ">"
+        when "equal"
+          "="
+        else
+          raise "bad comparison"
+        end
+      end
+
+      def static_filters(filters)
+        remove_blanks(filters).select { |k, v| static_fields.include? k }
+      end
+
+      def symbolize_keys(hash)
+        Hash[hash.map{ |k,v| [k.to_sym, v]}]
+      end
+
+      def static_fields
+        %i(solver puzzle competition)
+      end
+
+      def remove_blanks(filters)
+        filters.reject { |_, v| v.nil? || v == "" }
+      end
 
       def solves
         add_solves_table unless db.table_exists? :solves

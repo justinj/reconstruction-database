@@ -5,9 +5,6 @@ require_relative "lib/solve"
 require_relative "helpers/view_helpers"
 require_relative "lib/form/dropdown"
 require_relative "lib/form/input"
-ReconDatabase::SolveDatabase.init
-
-
 
 get "/" do
   get_solves(params)
@@ -16,8 +13,10 @@ get "/" do
 end
 
 get "/:id" do
-  @solve = ReconDatabase::Solve.get(params[:id].to_i)
-  erb :solve
+  if params[:id] =~ /\d+/
+    @solve = ReconDatabase::Solve.get(params[:id].to_i)
+    erb :solve
+  end
 end
 
 def get_solves(params)
@@ -35,6 +34,6 @@ def get_fields(params)
   @fields << ReconDatabase::Form::Input.new({
     title: "Time",
     default_specifier: params["time-specifier"],
-    default_time: params["time"]
+    default_time: params["time-value"]
   })
 end
