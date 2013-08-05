@@ -9,8 +9,7 @@
           <option value="">All</option>
           <% field[:all_values].each do |value| %>
             <option value="<%= value %>"
-            <%= field[:default_value] == value ? ' selected="selected"' : "" %>
-            ><%= value %></option>
+            <%= field[:default_value] == value ? ' selected="selected"' : "" %> ><%= value %></option>
           <% end %>
         </select> 
       </label>
@@ -34,20 +33,10 @@
       </tr>
       <% @solves.each do |solve| %>
         <tr>
-          <td>
-            <%= solve[:solver] %> <br>
-          </td>
-          <td>
-            <%= solve[:puzzle] %>
-          </td>
-          <td>
-            <a href="/solve/<%= solve[:id] %>">
-              <%= solve[:time] %>
-            </a>
-          </td>
-          <td>
-            <%= solve[:competition] %>
-          </td>
+          <td> <%= solve[:solver] %> <br> </td>
+          <td> <%= solve[:puzzle] %> </td>
+          <td> <a href="/<%= solve[:id] %>"> <%= solve[:time] %> </a> </td>
+          <td> <%= solve[:competition] %> </td>
         </tr>
       <% end %>
     </table>

@@ -3,12 +3,20 @@
   <h1><%= @solve[:time] %> by <%= @solve[:solver] %> <%= location %></h1>
 
   <h2>Scramble</h2>
-  <code>
+  <div class="algorithm">
     <%= @solve[:scramble] %> <br><br>
-  </code>
+  </div>
 
   <h2>Solution</h2>
-  <code>
-    <%= @solve[:solution].gsub("\n","<br>") %> <br>
-  </code>
+  <div class="algorithm">
+    <%= format_solution(@solve[:solution]) %> <br>
+  </div>
+
+  <div class="youtube">
+    <% unless @solve[:youtube].empty? %>
+      <a href="http://www.youtube.com/watch?v=<%= @solve[:youtube] %>" >
+        View on youtube
+      </a>
+    <% end %>
+  </div>
 </div>

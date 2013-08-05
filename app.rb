@@ -2,6 +2,7 @@ require "sinatra"
 
 require_relative "lib/database"
 require_relative "lib/solve"
+require_relative "helpers/view_helpers"
 ReconDatabase::SolveDatabase.init
 
 
@@ -12,7 +13,7 @@ get "/" do
   erb :index
 end
 
-get "/solve/:id" do
+get "/:id" do
   @solve = ReconDatabase::Solve.get(params[:id].to_i)
   erb :solve
 end
