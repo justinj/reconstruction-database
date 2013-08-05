@@ -1,5 +1,18 @@
-<% location = @solve.competition.nil? ? "" : "at #{@solve.competition}" %>
-<h2><%= format_time(@solve.time) %> <%= @solve.puzzle %> solve by <%= @solve.solver %> <%= location %></h2>
+<h2>
+  <%= format_time(@solve.time) %>
+  <%= @solve.puzzle %>
+  solve by
+  <%= @solve.solver %>
+  <%= at @solve.competition %>
+</h2>
+
+<div class="youtube">
+  <% unless @solve.youtube.nil? || @solve.youtube.empty? %>
+    <a href="http://www.youtube.com/watch?v=<%= @solve.youtube %>" >
+      View on youtube
+    </a>
+  <% end %>
+</div>
 
 <h3>Scramble</h3>
 <div class="algorithm well">
@@ -9,12 +22,4 @@
 <h3>Solution</h3>
 <div class="algorithm well">
   <%= format_solution(@solve.solution) %> <br>
-</div>
-
-<div class="youtube">
-  <% unless @solve.youtube.nil? || @solve.youtube.empty? %>
-    <a href="http://www.youtube.com/watch?v=<%= @solve.youtube %>" >
-      View on youtube
-    </a>
-  <% end %>
 </div>

@@ -14,6 +14,14 @@ module ReconDatabase
       end
     end
 
+    def at(location)
+      if location.nil? || location == "Unofficial"
+        ""
+      else
+        "at #{location}"
+      end
+    end
+
     private
 
     def minutes(time)
