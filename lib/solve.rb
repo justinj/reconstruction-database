@@ -47,7 +47,7 @@ module ReconDatabase class Solve
       end
 
       def filter_times(params, dataset)
-        operation = params["time-specifier"].to_sym
+        operation = params.fetch("time-specifier", "").to_sym
         valid_query = [:less, :greater, :equal].include?(operation)
         valid_query &&= params.fetch("time", 0.0).to_f != 0.0
         return dataset unless valid_query
