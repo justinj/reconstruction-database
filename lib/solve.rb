@@ -40,15 +40,9 @@ module ReconDatabase class Solve
       end
 
       def query(params)
-        p "PARAMS ARE"
-        p params
         query_params = params.reject{ |field, s| !queryable_fields.include?(field.to_sym) || s.empty? }.map { |k, v| [k.to_sym, v] }
         results = SolveDatabase.where(query_params)
-        p "QUERY IS"
-        p results.sql
         results = filter_times(params, results)
-        p "QUERY IS"
-        p results.sql
         results.map { |result| new(Hash[result]) }
       end
 
