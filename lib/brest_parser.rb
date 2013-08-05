@@ -108,7 +108,7 @@ class BrestParser
   end
 
   def nth_garron_link(post, n)
-    garron_links = post.scan(/\[url=(.*?)\]/)
+    garron_links = post.scan(/View at \[url=(.*?)\]/)
     n = n * 2 if garron_links.count > number_of_solves # sometimes, every garron link appears twice
     garron_links[n]
   end
