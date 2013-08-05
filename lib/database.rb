@@ -61,7 +61,7 @@ module ReconDatabase
       end
 
       def static_fields
-        %i(solver puzzle competition)
+        %i(solver puzzle competition id)
       end
 
       def remove_blanks(filters)

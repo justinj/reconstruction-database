@@ -12,11 +12,14 @@ get "/" do
   erb :index
 end
 
-get "/:id" do
-  if params[:id] =~ /\d+/
-    @solve = ReconDatabase::Solve.get(params[:id].to_i)
-    erb :solve
-  end
+get "/solve" do
+  redirect "/"
+end
+
+get "/solve/:id" do
+
+  @solve = ReconDatabase::Solve.get(params[:id].to_i)
+  erb :solve
 end
 
 def get_solves(params)
