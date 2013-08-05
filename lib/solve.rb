@@ -1,5 +1,4 @@
-module ReconDatabase
-  class Solve
+module ReconDatabase class Solve
     attr_accessor :solver, 
       :scramble, 
       :solution, 
@@ -41,13 +40,25 @@ module ReconDatabase
       end
 
       def query(params)
-        params = params.reject{ |_, s| s.empty? }.map { |k, v| [k.to_sym, v] }
-        hashes_returned = SolveDatabase.where(params)
-        hashes_returned.map { |result| new(Hash[result]) }
+        simple_params = params.reject{ |field, s| s.empty? || !queryable_fields.include?(field) }.map { |k, v| [k.to_sym, v] }
+        results = SolveDatabase.where(simple_params)
+        results = filter_times(params, results)
+        results.map { |result| new(Hash[result]) }
       end
 
-      def delete_all
-        SolveDatabase.clear
+      def filter_times(params, dataset)
+        operation = params["time-specifier"].to_sym
+        valid_query = [:less, :greater, :equal].include?(operation)
+        valid_query &&= params.fetch("time", 0.0).to_f != 0.0
+        return dataset unless valid_query
+        case operation
+        when :less
+          dataset.where{time < params.fetch("time")}
+        when :greater
+          dataset.where{time > params.fetch("time")}
+        when :equal
+          dataset.where(time: params.fetch("time"))
+        end
       end
     end
   end

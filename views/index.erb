@@ -1,19 +1,10 @@
 <div class="container">
   <div class="row">
 
-    <form action="/" method="GET" class="form-inline">
-      <% @fields.each do |field| %>
-      <label>
-        <%= field[:name].capitalize %>
-        <select name="<%= field[:name] %>" class="form-control">
-          <option value="">All</option>
-          <% field[:all_values].each do |value| %>
-            <option value="<%= value %>"
-            <%= field[:default_value] == value ? ' selected="selected"' : "" %> ><%= value %></option>
-          <% end %>
-        </select> 
-      </label>
+    <form action="/" method="GET" >
 
+      <% @fields.each do |field| %>
+        <%= field.html %>
       <% end %>
 
       <button type="submit" class="btn btn-primary">Submit</button>

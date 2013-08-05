@@ -1,0 +1,10 @@
+<label>
+  <%= title.capitalize %>
+  <select name="<%= title %>" class="form-control">
+    <option value="">All</option>
+    <% potential_values.each do |value| %>
+      <option value="<%= value %>"
+      <%= default_value == value ? ' selected="selected"' : "" %> ><%= value %></option>
+    <% end %>
+  </select> 
+</label>

@@ -1,0 +1,19 @@
+<label>
+  <%= title.capitalize %> <br>
+    <select name="time-specifier" class="form-control" >
+      <option value="">All</option>
+      <% [["equal", "Equal to"],
+          ["less", "Less than"],
+          ["greater", "Greater than"]].each do |key, name| %>
+            <option 
+            <% if default_specifier == key %>
+              selected="selected"
+            <% end %>
+            value="<%= key %>"><%= name %></option>
+    <% end %>
+    </select> 
+</label>
+<label>
+  <input cols="10" name="time" class="form-control small" type="text"
+  value="<%= default_time %>"></input>
+</label>
