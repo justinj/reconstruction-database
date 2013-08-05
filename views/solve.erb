@@ -1,6 +1,6 @@
 <div class="container">
   <% location = @solve[:competition].nil? ? "" : "at #{@solve[:competition]}" %>
-  <h1><%= @solve[:time] %> by <%= @solve[:solver] %> <%= location %></h1>
+  <h1><%= @solve[:time] %> <%= @solve[:puzzle] %> solve by <%= @solve[:solver] %> <%= location %></h1>
 
   <h2>Scramble</h2>
   <div class="algorithm">
