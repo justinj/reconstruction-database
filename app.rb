@@ -6,6 +6,8 @@ require_relative "helpers/view_helpers"
 require_relative "lib/form/dropdown"
 require_relative "lib/form/input"
 
+helpers ReconDatabase::ViewHelpers
+
 get "/" do
   get_solves(params)
   get_fields(params)
