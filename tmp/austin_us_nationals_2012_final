@@ -1,0 +1,181 @@
+<spoiler (9th) Austin Moore><B>Austin Moore</B> (USA) - 11.05 average -US Nationals 2012
+
+<spoiler 1st solve - 11.15>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
+
+y' <COLOR="gray">// inspection</COLOR>
+M' u U F' L U x2 <COLOR="gray">// LF block</COLOR>
+U' M' L F' r' U x <COLOR="gray">// LB pair</COLOR>
+U M' U R' U' r' U' M2' U2 R U' R' <COLOR="gray">// RB block</COLOR>
+U R' U R U2' M' U' R' <COLOR="gray">// RF pair</COLOR>
+R U R' U R U2' r' <COLOR="gray">// CMLL</COLOR>
+U M' <COLOR="gray">// EO</COLOR>
+U' M2' U' M' U2 M U' <COLOR="gray">// UL/UR</COLOR>
+M' U2 M U2' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_//_inspection%0AM-_u_U_F-_L_U_x2_//_LF_block%0AU-_M-_L_F-_r-_U_x_//_LB_pair%0AU_M-_U_R-_U-_r-_U-_M2-_U2_R_U-_R-_//_RB_block%0AU_R-_U_R_U2-_M-_U-_R-_//_RF_pair%0AR_U_R-_U_R_U2-_r-_//_CMLL%0AU_M-_//_EO%0AU-_M2-_U-_M-_U2_M_U-_//_UL/UR%0AM-_U2_M_U2-_//_EP&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D">alg.garron.us</url></COLOR>
+<CODE><B>Step	time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	11.15	60	5.38	76	6.82	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		time	STM	ETM</B>
+Lblock	2.83	12	4.24	15	5.30		Lblock/F2B	47%	38%	39%
+Rblock	3.21	20	6.23	23	7.17		Rblock/F2B	53%	63%	61%
+<COLOR="blue">F2B	6.04	32	5.30	38	6.29	</COLOR>	<COLOR="blue">F2B/Total	54%	53%	50%</COLOR>
+
+CMLL	1.29	7	5.43	8	6.20		CMLL/Total	12%	12%	11%
+<COLOR="indigo">LSE	3.82	21	5.50	30	7.85	</COLOR>	<COLOR="indigo">LSE/Total	34%	35%	39%</COLOR>
+L10P	5.11	28	5.48	38	7.44		L10P/Total	46%	47%	50%</CODE>     <spoiler View as executed>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
+
+y' <COLOR="gray">// inspection</COLOR>
+r R' u U F' L U x2 <COLOR="gray">// LF block</COLOR>
+U' r L R' F' r' U x <COLOR="gray">// LB pair</COLOR>
+U M' U R' U' r' U' (r L) l' R' U2 l F' l' <COLOR="gray">// RB block</COLOR>
+U R' U R U' U' M' U' R' <COLOR="gray">// RF pair</COLOR>
+R U R' U R U' U' r' <COLOR="gray">// CMLL</COLOR>
+U r R' <COLOR="gray">// EO</COLOR>
+U' r R' U U' r R' U' r R' U2 L' l U' <COLOR="gray">// UL/UR</COLOR>
+r R' r' S' f x U' L U2 r' R U' U' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_//_inspection%0Ar_R-_u_U_F-_L_U_x2_//_LF_block%0AU-_r_L_R-_F-_r-_U_x_//_LB_pair%0AU_M-_U_R-_U-_r-_U-_(r_L)_l-_R-_U2_l_F-_l-_//_RB_block%0AU_R-_U_R_U-_U-_M-_U-_R-_//_RF_pair%0AR_U_R-_U_R_U-_U-_r-_//_CMLL%0AU_r_R-_//_EO%0AU-_r_R-_U_U-_r_R-_U-_r_R-_U2_L-_l_U-_//_UL/UR%0Ar_R-_r-_S-_f_x_U-_L_U2_r-_R_U-_U-_//_EP&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 2nd solve - 11.18>D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
+
+z <COLOR="gray">// inspection</COLOR>
+r D L U x <COLOR="gray">// LB block</COLOR>
+R' F' r' F' <COLOR="gray">// LF pair</COLOR>
+U' M2' U R2 U2' r' U' r <COLOR="gray">// RB block</COLOR>
+U2' r M' U' r' U2 r U r' <COLOR="gray">// RF pair</COLOR>
+U r' F R F' r U2 R' U' r' F R F' <COLOR="gray">// CMLL</COLOR>
+U' M U' M' U M' <COLOR="gray">// EO</COLOR>
+U2 M' U2 M' U M2' <COLOR="gray">// UL/UR</COLOR>
+U M U2 M' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_//_inspection%0Ar_D_L_U_x_//_LB_block%0AR-_F-_r-_F-_//_LF_pair%0AU-_M2-_U_R2_U2-_r-_U-_r_//_RB_block%0AU2-_r_M-_U-_r-_U2_r_U_r-_//_RF_pair%0AU_r-_F_R_F-_r_U2_R-_U-_r-_F_R_F-_//_CMLL%0AU-_M_U-_M-_U_M-_//_EO%0AU2_M-_U2_M-_U_M2-_//_UL/UR%0AU_M_U2_M-_//_EP&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-">alg.garron.us</url></COLOR>
+<CODE><B>Step	time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	11.18	58	5.19	74	6.62	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		time	STM	ETM</B>
+Lblock	1.67	8	4.79	9	5.39		Lblock/F2B	33%	33%	30%
+Rblock	3.42	16	4.68	21	6.14		Rblock/F2B	67%	67%	70%
+<COLOR="blue">F2B	5.09	24	4.72	30	5.89	</COLOR>	<COLOR="blue">F2B/Total	46%	41%	41%</COLOR>
+
+CMLL	2.54	14	5.51	15	5.91		CMLL/Total	23%	24%	20%
+<COLOR="indigo">LSE	3.55	20	5.63	29	8.17	</COLOR>	<COLOR="indigo">LSE/Total	32%	34%	39%</COLOR>
+L10P	6.09	34	5.58	44	7.22			54%	59%	59%</CODE>     <spoiler View as executed>D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
+
+z <COLOR="gray">// inspection</COLOR>
+r D L U x <COLOR="gray">// LB block</COLOR>
+R' F' r' F' <COLOR="gray">// LF pair</COLOR>
+U' r R' L l' U R2 U' U' r' U' r <COLOR="gray">// RB block</COLOR>
+U' U' r L l' U' r' U2 r U r' <COLOR="gray">// RF pair</COLOR>
+U' U U r' F R F' r U2 R' U' r' F R F' <COLOR="gray">// CMLL</COLOR>
+M' L' l U' r' R U' r R' U r R' <COLOR="gray">// EO</COLOR>
+U2 r R' U2 r R' U' U2 r L R' l' <COLOR="gray">// UL/UR</COLOR>
+U L' l U2 r' r L l' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_//_inspection%0Ar_D_L_U_x_//_LB_block%0AR-_F-_r-_F-_//_LF_pair%0AU-_r_R-_L_l-_U_R2_U-_U-_r-_U-_r_//_RB_block%0AU-_U-_r_L_l-_U-_r-_U2_r_U_r-_//_RF_pair%0AU-_U_U_r-_F_R_F-_r_U2_R-_U-_r-_F_R_F-_//_CMLL%0AM-_L-_l_U-_r-_R_U-_r_R-_U_r_R-_//_EO%0AU2_r_R-_U2_r_R-_U-_U2_r_L_R-_l-_//_UL/UR%0AU_L-_l_U2_r-_r_L_l-_//_EP&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 3rd solve - (11.30)>U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
+
+x y' <COLOR="gray">// inspection</COLOR>
+D U l F' U l' <COLOR="gray">// LF block</COLOR>
+U R' U r' U' r U x <COLOR="gray">// LB pair</COLOR>
+U M' U R U' R U M U' R U R' U M2' R' U R2 <COLOR="gray">// RB block</COLOR>
+U' M U' M' U' R' <COLOR="gray">// RF pair</COLOR>
+U2 R' U' R U' R' U2 R <COLOR="gray">// CMLL</COLOR>
+U M U' M' U M U M' <COLOR="gray">// EO</COLOR>
+M' U2 M' U' M2' U <COLOR="gray">// UL/UR</COLOR>
+M' U2 M U2' M U2 M' U2 M2' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=x_y-_//_inspection%0AD_U_l_F-_U_l-_//_LF_block%0AU_R-_U_r-_U-_r_U_x_//_LB_pair%0AU_M-_U_R_U-_R_U_M_U-_R_U_R-_U_M2-_R-_U_R2_//_RB_block%0AU-_M_U-_M-_U-_R-_//_RF_pair%0AU2_R-_U-_R_U-_R-_U2_R_//_CMLL%0AU_M_U-_M-_U_M_U_M-_//_EO%0AM-_U2_M-_U-_M2-_U_//_UL/UR%0AM-_U2_M_U2-_M_U2_M-_U2_M2-_//_EP&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-">alg.garron.us</url></COLOR>
+<CODE><B>Step	time	STM	stps	ETM	etps</B>						
+<COLOR="red">Total	11.30	72	6.37	90	7.96	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		time	STM	ETM</B>
+Lblock	1.87	13	6.95	14	7.49		Lblock/F2B	31%	36%	35%
+Rblock	4.13	23	5.57	26	6.30		Rblock/F2B	69%	64%	65%
+<COLOR="blue">F2B	6.00	36	6.00	40	6.67	</COLOR>	<COLOR="blue">F2B/Total	53%	50%	44%</COLOR>
+
+CMLL	1.23	8	6.50	9	7.32		CMLL/Total	11%	11%	10%
+<COLOR="indigo">LSE	4.07	28	6.88	41	10.07	</COLOR>	<COLOR="indigo">LSE/Total	36%	39%	46%</COLOR>
+L10P	5.30	36	6.79	50	9.43			47%	50%	56%</CODE>     <spoiler View as executed>U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
+
+x y' <COLOR="gray">// inspection</COLOR>
+D U l F' U l' <COLOR="gray">// LF block</COLOR>
+U R' U r' U' r U x <COLOR="gray">// LB pair</COLOR>
+U M' U R U' R U r' R U' R U R' U L M' l' R' U R2 <COLOR="gray">// RB block</COLOR>
+U' r' R U' M' U' R' <COLOR="gray">// RF pair</COLOR>
+U U R' U' R U' R' U2 R <COLOR="gray">// CMLL</COLOR>
+U r' R U' M' U r' R U L l' <COLOR="gray">// EO</COLOR>
+r R' U2 r R' U' U2 L2 L2' U2 L2 l2' U <COLOR="gray">// UL/UR</COLOR>
+r R' U2 r' R U' U' M' L M' l' U2 L l' U2 L' M l <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=x_y-_//_inspection%0AD_U_l_F-_U_l-_//_LF_block%0AU_R-_U_r-_U-_r_U_x_//_LB_pair%0AU_M-_U_R_U-_R_U_r-_R_U-_R_U_R-_U_L_M-_l-_R-_U_R2_//_RB_block%0AU-_r-_R_U-_M-_U-_R-_//_RF_pair%0AU_U_R-_U-_R_U-_R-_U2_R_//_CMLL%0AU_r-_R_U-_M-_U_r-_R_U_L_l-_//_EO%0Ar_R-_U2_r_R-_U-_U2_L2_L2-_U2_L2_l2-_U_//_UL/UR%0Ar_R-_U2_r-_R_U-_U-_M-_L_M-_l-_U2_L_l-_U2_L-_M_l_//_EP&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 4th solve - (8.65)>U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
+
+x' y <COLOR="gray">// inspection</COLOR>
+x' U2 F' U l' <COLOR="gray">// LF block</COLOR>
+U R r U' x <COLOR="gray">// LB pair</COLOR>
+R' U M' U R' U R2' U R2 r' U M' R' U' R <COLOR="gray">// RF block</COLOR>
+U2 R U' r R2' U r <COLOR="gray">// RB pair</COLOR>
+R U R' U R U2' R' <COLOR="gray">// CMLL</COLOR>
+U M2' U M U2 M U' M2' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=x-_y_//_inspection%0Ax-_U2_F-_U_l-_//_LF_block%0AU_R_r_U-_x_//_LB_pair%0AR-_U_M-_U_R-_U_R2-_U_R2_r-_U_M-_R-_U-_R_//_RF_block%0AU2_R_U-_r_R2-_U_r_//_RB_pair%0AR_U_R-_U_R_U2-_R-_//_CMLL%0AU_M2-_U_M_U2_M_U-_M2-_//_EP&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2">alg.garron.us</url></COLOR>
+<CODE><B>Step	time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	8.65	50	5.78	60	6.94	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		time	STM	ETM</B>
+Lblock	1.79	8	4.47	10	5.59		Lblock/F2B	33%	27%	29%
+Rblock	3.68	22	5.98	25	6.79		Rblock/F2B	67%	73%	71%
+<COLOR="blue">F2B	5.47	30	5.48	35	6.40	</COLOR>	<COLOR="blue">F2B/Total	63%	60%	58%</COLOR>
+
+CMLL	1.08	9	8.33	10	9.26		CMLL/Total	12%	18%	17%
+<COLOR="indigo">LSE	2.10	11	5.24	15	7.14	</COLOR>	<COLOR="indigo">LSE/Total	24%	22%	25%</COLOR>
+L10P	3.18	20	6.29	25	7.86			37%	40%	42%</CODE>     <spoiler View as executed>U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
+
+x' y <COLOR="gray">// inspection</COLOR>
+x' U2 F' U l' <COLOR="gray">// LF block</COLOR>
+U R r U' x <COLOR="gray">// LB pair</COLOR>
+R' U M' U R' U R' R' U R r' R U M' R' U' R <COLOR="gray">// RF block</COLOR>
+U U R U' r R2' U r <COLOR="gray">// RB pair</COLOR>
+U U' R U R' U R U' U' R' <COLOR="gray">// CMLL</COLOR>
+U L M' l' U r' R U r' r U r' R U' L M' l' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=x-_y_//_inspection%0Ax-_U2_F-_U_l-_//_LF_block%0AU_R_r_U-_x_//_LB_pair%0AR-_U_M-_U_R-_U_R-_R-_U_R_r-_R_U_M-_R-_U-_R_//_RF_block%0AU_U_R_U-_r_R2-_U_r_//_RB_pair%0AU_U-_R_U_R-_U_R_U-_U-_R-_//_CMLL%0AU_L_M-_l-_U_r-_R_U_r-_r_U_r-_R_U-_L_M-_l-_//_EP&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 5th solve - 10.83>U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
+
+z y2 <COLOR="gray">// inspection</COLOR>
+U x' U2 F' U x2 <COLOR="gray">// LB block</COLOR>
+r' U' r R' U x' <COLOR="gray">// LF pair</COLOR>
+r' U' R' U' R' r' U' r <COLOR="gray">// RB block</COLOR>
+U' R U L2 l2' U R' U' r U R' <COLOR="gray">// RF pair</COLOR>
+U2 f (R U R' U')2 f' <COLOR="gray">// CLLEO</COLOR>
+U2 M' U2 M' U <COLOR="gray">// UL/UR</COLOR>
+M U2 M U2' M2' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_y2_//_inspection%0AU_x-_U2_F-_U_x2_//_LB_block%0Ar-_U-_r_R-_U_x-_//_LF_pair%0Ar-_U-_R-_U-_R-_r-_U-_r_//_RB_block%0AU-_R_U_L2_l2-_U_R-_U-_r_U_R-_//_RF_pair%0AU2_f_(R_U_R-_U-)2_f-_//_CLLEO%0AU2_M-_U2_M-_U_//_UL/UR%0AM_U2_M_U2-_M2-_//_EP&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR>
+<CODE><B>Step	time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	10.83	52	4.80	65	6.00	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		time	STM	ETM</B>
+Lblock	2.06	8	3.88	11	5.34		Lblock/F2B	34%	28%	33%
+Rblock	4.00	21	5.25	22	5.50		Rblock/F2B	66%	72%	67%
+<COLOR="blue">F2B	6.06	29	4.79	33	5.45	</COLOR>	<COLOR="blue">F2B/Total	56%	56%	51%</COLOR>
+
+CMLL	2.00	13	6.50	14	7.00		CMLL/Total	18%	25%	22%
+<COLOR="indigo">LSE	2.77	10	3.61	18	6.50	</COLOR>	<COLOR="indigo">LSE/Total	26%	19%	28%</COLOR>
+L10P	4.77	23	4.82	32	6.71			44%	44%	49%</CODE>     <spoiler View as executed>U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
+
+z y2 <COLOR="gray">// inspection</COLOR>
+U x' U2 F' U x2 <COLOR="gray">// LB block</COLOR>
+r' U' r R' U x' <COLOR="gray">// LF pair</COLOR>
+r' U' R2 U U' R U' R' r' U' r <COLOR="gray">// RB block</COLOR>
+U' R U L2 l2' U R' U' r U R' <COLOR="gray">// RF pair</COLOR>
+U U f R U R' R R' U' R U R' U' f' <COLOR="gray">// CLLEO</COLOR>
+U U r R' U U L l' U <COLOR="gray">// UL/UR</COLOR>
+r' R U2 r' R U' U' L M' l' <COLOR="gray">// EP</COLOR>
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_y2_//_inspection%0AU_x-_U2_F-_U_x2_//_LB_block%0Ar-_U-_r_R-_U_x-_//_LF_pair%0Ar-_U-_R2_U_U-_R_U-_R-_r-_U-_r_//_RB_block%0AU-_R_U_L2_l2-_U_R-_U-_r_U_R-_//_RF_pair%0AU_U_f_R_U_R-_R_R-_U-_R_U_R-_U-_f-_//_CLLEO%0AU_U_r_R-_U_U_L_l-_U_//_UL/UR%0Ar-_R_U2_r-_R_U-_U-_L_M-_l-_//_EP&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>Average (removing fastest and slowest solve)
+
+<B>Step	time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	11.05	56.67	5.13	71.67	6.48	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		time	STM	ETM</B>
+Lblock	2.19	9	4.27	11.67	5.34		Lblock/F2B	38%	33%	35%
+Rblock	3.54	19.00	5.36	22.00	6.21		Rblock/F2B	62%	67%	65%
+<COLOR="blue">F2B	5.73	28	4.94	33.67	5.88	</COLOR>	<COLOR="blue">F2B/Total	52%	50%	47%</COLOR>
+
+CMLL	1.94	11.33	5.83	12.33	6.35		CMLL/Total	18%	20%	17%
+<COLOR="indigo">LSE	3.38	17.00	5.03	27.00	7.99	</COLOR>	<COLOR="indigo">LSE/Total	31%	30%	38%</COLOR>
+L10P	5.32	28.33	5.32	39.33	7.39			48%	50%	55%</CODE>
+
+<CODE>Best from each field
+						
+<B>Step	time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	8.65	50	6.37	60	7.96</COLOR>
+	
+Lblock	1.67	8	6.95	9	7.49
+Rblock	3.21	16	6.23	21	7.17
+<COLOR="blue">F2B	5.09	24	6.00	30	6.67</COLOR>
+	
+CMLL	1.08	7	8.33	8	9.26
+<COLOR="indigo">LSE	2.10	10	6.88	15	10.07	</COLOR>
+L10P	3.18	20	6.79	25	9.43	</CODE></spoiler></spoiler>
