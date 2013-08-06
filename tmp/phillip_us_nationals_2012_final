@@ -1,147 +1,147 @@
-<spoiler (2nd) Phillip Espinoza>Phillip Espinoza  - 9.64 3x3 - US Nationals 2012
+[spoiler (2nd) Phillip Espinoza]Phillip Espinoza  - 9.64 3x3 - US Nationals 2012
 
-<spoiler 1st solve - (12.21)>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
+[spoiler 1st solve - (12.21)]F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
 
-z y2 <COLOR="gray">// inspection</COLOR>
-r' R U x U' x U' x U' r' <COLOR="gray">// cross</COLOR>
-R' x R' U' R2' U R U' R' U <COLOR="gray">// 1st pair</COLOR>
-x' R' l' U R U' x2' R2 U' R' U <COLOR="gray">// 2nd pair</COLOR>
-l' U' R2 U R U' R' U <COLOR="gray">// 3rd pair</COLOR>
-x3' z' U R U' R' y' U' R' U R <COLOR="gray">// 4th pair</COLOR>
-U' r' U' r R' U' R U r' U r <COLOR="gray">// OLL</COLOR>
-U' R U R' F' R U R' U' R' F R2 U' R' U <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_y2_//_inspection%0Ar-_R_U_x_U-_x_U-_x_U-_r-_//_cross%0AR-_x_R-_U-_R2-_U_R_U-_R-_U_//_1st_pair%0Ax-_R-_l-_U_R_U-_x2-_R2_U-_R-_U_//_2nd_pair%0Al-_U-_R2_U_R_U-_R-_U_//_3rd_pair%0Ax3-_z-_U_R_U-_R-_y-_U-_R-_U_R_//_4th_pair%0AU-_r-_U-_r_R-_U-_R_U_r-_U_r_//_OLL%0AU-_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_U_//_PLL&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	12.21	69	5.65	80	6.55	</COLOR>	<SIZE="4">%</SIZE>
+z y2 [COLOR="gray"]// inspection[/COLOR]
+r' R U x U' x U' x U' r' [COLOR="gray"]// cross[/COLOR]
+R' x R' U' R2' U R U' R' U [COLOR="gray"]// 1st pair[/COLOR]
+x' R' l' U R U' x2' R2 U' R' U [COLOR="gray"]// 2nd pair[/COLOR]
+l' U' R2 U R U' R' U [COLOR="gray"]// 3rd pair[/COLOR]
+x3' z' U R U' R' y' U' R' U R [COLOR="gray"]// 4th pair[/COLOR]
+U' r' U' r R' U' R U r' U r [COLOR="gray"]// OLL[/COLOR]
+U' R U R' F' R U R' U' R' F R2 U' R' U [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z_y2_//_inspection%0Ar-_R_U_x_U-_x_U-_x_U-_r-_//_cross%0AR-_x_R-_U-_R2-_U_R_U-_R-_U_//_1st_pair%0Ax-_R-_l-_U_R_U-_x2-_R2_U-_R-_U_//_2nd_pair%0Al-_U-_R2_U_R_U-_R-_U_//_3rd_pair%0Ax3-_z-_U_R_U-_R-_y-_U-_R-_U_R_//_4th_pair%0AU-_r-_U-_r_R-_U-_R_U_r-_U_r_//_OLL%0AU-_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_U_//_PLL&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D"]alg.garron.us[/url][/COLOR]
+[Code]Step	Time	STM	stps	ETM	etps
+[COLOR="Red"]Total	12.21	69	5.65	80	6.55	[/COLOR]	[SIZE="4"]%[/SIZE]
 							Step		Time	STM	ETM
 Cross+1	3.62	19	5.25	23	6.35		Cross+1/F2L	42.8%	43.2%	42.6%
 F2L	8.46	44	5.20	54	6.38		F2L/Total	69.3%	63.8%	67.5%
-LL	3.75	25	6.67	26	6.93		LL/Total	30.7%	36.2%	32.5%</CODE>     <spoiler View as executed>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
+LL	3.75	25	6.67	26	6.93		LL/Total	30.7%	36.2%	32.5%[/CODE]     [spoiler View as executed]F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
 
-z y2 <COLOR="gray">// inspection</COLOR>
-r' R U x U' x U' x U' r' <COLOR="gray">// cross</COLOR>
-R' x R' U' R' U U' R' U R U' R' U <COLOR="gray">// 1st pair</COLOR>
-x' R' l' U R U' x2' R2 U' R' U <COLOR="gray">// 2nd pair</COLOR>
-l' U' R2 U R U' R' U <COLOR="gray">// 3rd pair</COLOR>
-x' x' (x' z') U R U' R' y' U' R' U R <COLOR="gray">// 4th pair</COLOR>
-U' r' U' r R' U' R U r' U r <COLOR="gray">// OLL</COLOR>
-U' R U R' F' R U R' U' R' F R2 U' R' U <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_y2_//_inspection%0Ar-_R_U_x_U-_x_U-_x_U-_r-_//_cross%0AR-_x_R-_U-_R-_U_U-_R-_U_R_U-_R-_U_//_1st_pair%0Ax-_R-_l-_U_R_U-_x2-_R2_U-_R-_U_//_2nd_pair%0Al-_U-_R2_U_R_U-_R-_U_//_3rd_pair%0Ax-_x-_(x-_z-)_U_R_U-_R-_y-_U-_R-_U_R_//_4th_pair%0AU-_r-_U-_r_R-_U-_R_U_r-_U_r_//_OLL%0AU-_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_U_//_PLL&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 2nd solve - 8.80>D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
+z y2 [COLOR="gray"]// inspection[/COLOR]
+r' R U x U' x U' x U' r' [COLOR="gray"]// cross[/COLOR]
+R' x R' U' R' U U' R' U R U' R' U [COLOR="gray"]// 1st pair[/COLOR]
+x' R' l' U R U' x2' R2 U' R' U [COLOR="gray"]// 2nd pair[/COLOR]
+l' U' R2 U R U' R' U [COLOR="gray"]// 3rd pair[/COLOR]
+x' x' (x' z') U R U' R' y' U' R' U R [COLOR="gray"]// 4th pair[/COLOR]
+U' r' U' r R' U' R U r' U r [COLOR="gray"]// OLL[/COLOR]
+U' R U R' F' R U R' U' R' F R2 U' R' U [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z_y2_//_inspection%0Ar-_R_U_x_U-_x_U-_x_U-_r-_//_cross%0AR-_x_R-_U-_R-_U_U-_R-_U_R_U-_R-_U_//_1st_pair%0Ax-_R-_l-_U_R_U-_x2-_R2_U-_R-_U_//_2nd_pair%0Al-_U-_R2_U_R_U-_R-_U_//_3rd_pair%0Ax-_x-_(x-_z-)_U_R_U-_R-_y-_U-_R-_U_R_//_4th_pair%0AU-_r-_U-_r_R-_U-_R_U_r-_U_r_//_OLL%0AU-_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_U_//_PLL&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D"]alg.garron.us[/url][/COLOR][/spoiler][/spoiler]     [spoiler 2nd solve - 8.80]D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
 
-x' y <COLOR="gray">// inspection</COLOR>
-D U' r U' x' R' U r' D' r2' <COLOR="gray">// cross</COLOR>
-x' R' U R' U' R U R (U' x) <COLOR="gray">// 1st pair</COLOR>
-R' U' R U2 R' U' <COLOR="gray">// 2nd pair</COLOR>
-x U' R' U l' U R U' <COLOR="gray">// 3rd pair</COLOR>
-x' l U' R' U l' U R' U' R U R' U' <COLOR="gray">// 4th pair</COLOR>
-z' U' R' U' F U R U' R' F' R <COLOR="gray">// OLL(CP)</COLOR>
-U R' U R' U' R' U' R' U R U R2 U' <COLOR="gray">// EPLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=x-_y_//_inspection%0AD_U-_r_U-_x-_R-_U_r-_D-_r2-_//_cross%0Ax-_R-_U_R-_U-_R_U_R_(U-_x)_//_1st_pair%0AR-_U-_R_U2_R-_U-_//_2nd_pair%0Ax_U-_R-_U_l-_U_R_U-_//_3rd_pair%0Ax-_l_U-_R-_U_l-_U_R-_U-_R_U_R-_U-_//_4th_pair%0Az-_U-_R-_U-_F_U_R_U-_R-_F-_R_//_OLL(CP)%0AU_R-_U_R-_U-_R-_U-_R-_U_R_U_R2_U-_//_EPLL&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	8.80	65	7.39	71	8.07	</COLOR>	<SIZE="4">%</SIZE>
+x' y [COLOR="gray"]// inspection[/COLOR]
+D U' r U' x' R' U r' D' r2' [COLOR="gray"]// cross[/COLOR]
+x' R' U R' U' R U R (U' x) [COLOR="gray"]// 1st pair[/COLOR]
+R' U' R U2 R' U' [COLOR="gray"]// 2nd pair[/COLOR]
+x U' R' U l' U R U' [COLOR="gray"]// 3rd pair[/COLOR]
+x' l U' R' U l' U R' U' R U R' U' [COLOR="gray"]// 4th pair[/COLOR]
+z' U' R' U' F U R U' R' F' R [COLOR="gray"]// OLL(CP)[/COLOR]
+U R' U R' U' R' U' R' U R U R2 U' [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y_//_inspection%0AD_U-_r_U-_x-_R-_U_r-_D-_r2-_//_cross%0Ax-_R-_U_R-_U-_R_U_R_(U-_x)_//_1st_pair%0AR-_U-_R_U2_R-_U-_//_2nd_pair%0Ax_U-_R-_U_l-_U_R_U-_//_3rd_pair%0Ax-_l_U-_R-_U_l-_U_R-_U-_R_U_R-_U-_//_4th_pair%0Az-_U-_R-_U-_F_U_R_U-_R-_F-_R_//_OLL(CP)%0AU_R-_U_R-_U-_R-_U-_R-_U_R_U_R2_U-_//_EPLL&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-"]alg.garron.us[/url][/COLOR]
+[Code]Step	Time	STM	stps	ETM	etps
+[COLOR="Red"]Total	8.80	65	7.39	71	8.07	[/COLOR]	[SIZE="4"]%[/SIZE]
 							Step		Time	STM	ETM
 Cross+1	3.04	17	5.59	20	6.58		Cross+1/F2L	54.9%	40.5%	42.6%
 F2L	5.54	42	7.58	47	8.48		F2L/Total	63.0%	64.6%	66.2%
-LL	3.26	23	7.06	24	7.36		LL/Total	37.0%	35.4%	33.8%</CODE>     <spoiler View as executed>D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
+LL	3.26	23	7.06	24	7.36		LL/Total	37.0%	35.4%	33.8%[/CODE]     [spoiler View as executed]D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
 
-x' y <COLOR="gray">// inspection</COLOR>
-D U' r U' x' R' U r' D' r' r' <COLOR="gray">// cross</COLOR>
-x' R' U R' U' R U R (U' x) <COLOR="gray">// 1st pair</COLOR>
-R' U' R U2 R' U' <COLOR="gray">// 2nd pair</COLOR>
-x U' R' U l' U R U' <COLOR="gray">// 3rd pair</COLOR>
-x' l U' R' U l' U R' U' R U R' U' <COLOR="gray">// 4th pair</COLOR>
-z' U' R' U' F U R U' R' F' R <COLOR="gray">// OLL</COLOR>
-U R' U R' U' R' U' R' U R U R2 U' <COLOR="gray">// EPLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=x-_y_//_inspection%0AD_U-_r_U-_x-_R-_U_r-_D-_r-_r-_//_cross%0Ax-_R-_U_R-_U-_R_U_R_(U-_x)_//_1st_pair%0AR-_U-_R_U2_R-_U-_//_2nd_pair%0Ax_U-_R-_U_l-_U_R_U-_//_3rd_pair%0Ax-_l_U-_R-_U_l-_U_R-_U-_R_U_R-_U-_//_4th_pair%0Az-_U-_R-_U-_F_U_R_U-_R-_F-_R_//_OLL%0AU_R-_U_R-_U-_R-_U-_R-_U_R_U_R2_U-_//_EPLL&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 3rd solve - 10.19>U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
+x' y [COLOR="gray"]// inspection[/COLOR]
+D U' r U' x' R' U r' D' r' r' [COLOR="gray"]// cross[/COLOR]
+x' R' U R' U' R U R (U' x) [COLOR="gray"]// 1st pair[/COLOR]
+R' U' R U2 R' U' [COLOR="gray"]// 2nd pair[/COLOR]
+x U' R' U l' U R U' [COLOR="gray"]// 3rd pair[/COLOR]
+x' l U' R' U l' U R' U' R U R' U' [COLOR="gray"]// 4th pair[/COLOR]
+z' U' R' U' F U R U' R' F' R [COLOR="gray"]// OLL[/COLOR]
+U R' U R' U' R' U' R' U R U R2 U' [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y_//_inspection%0AD_U-_r_U-_x-_R-_U_r-_D-_r-_r-_//_cross%0Ax-_R-_U_R-_U-_R_U_R_(U-_x)_//_1st_pair%0AR-_U-_R_U2_R-_U-_//_2nd_pair%0Ax_U-_R-_U_l-_U_R_U-_//_3rd_pair%0Ax-_l_U-_R-_U_l-_U_R-_U-_R_U_R-_U-_//_4th_pair%0Az-_U-_R-_U-_F_U_R_U-_R-_F-_R_//_OLL%0AU_R-_U_R-_U-_R-_U-_R-_U_R_U_R2_U-_//_EPLL&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-"]alg.garron.us[/url][/COLOR][/spoiler][/spoiler]     [spoiler 3rd solve - 10.19]U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
 
-z y2 <COLOR="gray">// inspection</COLOR>
-U x U l' U2 x U2 <COLOR="gray">// cross</COLOR>
-x' R' x' l' R2' U' R U R2 U R' (U' x) <COLOR="gray">// 1st pair</COLOR>
-R U' R U R' U' R U <COLOR="gray">// 2nd pair</COLOR>
-x' l U R' U' D R' D' <COLOR="gray">// 3rd pair</COLOR>
-U R' (U' z') <COLOR="gray">// 4th pair</COLOR>
-U' F R U R' U' F' f R U R' U' (z' y) R' <COLOR="gray">// OLL(CP)</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_y2_//_inspection%0AU_x_U_l-_U2_x_U2_//_cross%0Ax-_R-_x-_l-_R2-_U-_R_U_R2_U_R-_(U-_x)_//_1st_pair%0AR_U-_R_U_R-_U-_R_U_//_2nd_pair%0Ax-_l_U_R-_U-_D_R-_D-_//_3rd_pair%0AU_R-_(U-_z-)_//_4th_pair%0AU-_F_R_U_R-_U-_F-_f_R_U_R-_U-_(z-_y)_R-_//_OLL(CP)&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	10.19	48	4.71	59	5.79	</COLOR>	<SIZE="4">%</SIZE>
+z y2 [COLOR="gray"]// inspection[/COLOR]
+U x U l' U2 x U2 [COLOR="gray"]// cross[/COLOR]
+x' R' x' l' R2' U' R U R2 U R' (U' x) [COLOR="gray"]// 1st pair[/COLOR]
+R U' R U R' U' R U [COLOR="gray"]// 2nd pair[/COLOR]
+x' l U R' U' D R' D' [COLOR="gray"]// 3rd pair[/COLOR]
+U R' (U' z') [COLOR="gray"]// 4th pair[/COLOR]
+U' F R U R' U' F' f R U R' U' (z' y) R' [COLOR="gray"]// OLL(CP)[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z_y2_//_inspection%0AU_x_U_l-_U2_x_U2_//_cross%0Ax-_R-_x-_l-_R2-_U-_R_U_R2_U_R-_(U-_x)_//_1st_pair%0AR_U-_R_U_R-_U-_R_U_//_2nd_pair%0Ax-_l_U_R-_U-_D_R-_D-_//_3rd_pair%0AU_R-_(U-_z-)_//_4th_pair%0AU-_F_R_U_R-_U-_F-_f_R_U_R-_U-_(z-_y)_R-_//_OLL(CP)&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-"]alg.garron.us[/url][/COLOR]
+[Code]Step	Time	STM	stps	ETM	etps
+[COLOR="Red"]Total	10.19	48	4.71	59	5.79	[/COLOR]	[SIZE="4"]%[/SIZE]
 							Step		Time	STM	ETM
 Cross+1	4.23	16	3.78	21	4.96		Cross+1/F2L	52.7%	44.4%	46.7%
 F2L	8.02	36	4.49	45	5.61		F2L/Total	78.7%	75.0%	76.3%
-LL	2.17	12	5.53	14	6.45		LL/Total	21.3%	25.0%	23.7%</CODE>     <spoiler View as executed>U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
+LL	2.17	12	5.53	14	6.45		LL/Total	21.3%	25.0%	23.7%[/CODE]     [spoiler View as executed]U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
 
-z y2 <COLOR="gray">// inspection</COLOR>
-U x U l' U2 x U2 <COLOR="gray">// cross</COLOR>
-x' R' x' l' R' R' U' R2 R' U R2 U R' (U' x) <COLOR="gray">// 1st pair</COLOR>
-R U' R U R' U' R U <COLOR="gray">// 2nd pair</COLOR>
-x' l U R' U' D R' D' <COLOR="gray">// 3rd pair</COLOR>
-x' R' R x U R' U' z' <COLOR="gray">// 4th pair</COLOR>
-U' F R U R' U' F' f R U R' U' (z' y) R' <COLOR="gray">// OLL(CP)</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=z_y2_//_inspection%0AU_x_U_l-_U2_x_U2_//_cross%0Ax-_R-_x-_l-_R-_R-_U-_R2_R-_U_R2_U_R-_(U-_x)_//_1st_pair%0AR_U-_R_U_R-_U-_R_U_//_2nd_pair%0Ax-_l_U_R-_U-_D_R-_D-_//_3rd_pair%0Ax-_R-_R_x_U_R-_U-_z-_//_4th_pair%0AU-_F_R_U_R-_U-_F-_f_R_U_R-_U-_(z-_y)_R-_//_OLL(CP)&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 4th solve - 9.94>U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
+z y2 [COLOR="gray"]// inspection[/COLOR]
+U x U l' U2 x U2 [COLOR="gray"]// cross[/COLOR]
+x' R' x' l' R' R' U' R2 R' U R2 U R' (U' x) [COLOR="gray"]// 1st pair[/COLOR]
+R U' R U R' U' R U [COLOR="gray"]// 2nd pair[/COLOR]
+x' l U R' U' D R' D' [COLOR="gray"]// 3rd pair[/COLOR]
+x' R' R x U R' U' z' [COLOR="gray"]// 4th pair[/COLOR]
+U' F R U R' U' F' f R U R' U' (z' y) R' [COLOR="gray"]// OLL(CP)[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z_y2_//_inspection%0AU_x_U_l-_U2_x_U2_//_cross%0Ax-_R-_x-_l-_R-_R-_U-_R2_R-_U_R2_U_R-_(U-_x)_//_1st_pair%0AR_U-_R_U_R-_U-_R_U_//_2nd_pair%0Ax-_l_U_R-_U-_D_R-_D-_//_3rd_pair%0Ax-_R-_R_x_U_R-_U-_z-_//_4th_pair%0AU-_F_R_U_R-_U-_F-_f_R_U_R-_U-_(z-_y)_R-_//_OLL(CP)&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-"]alg.garron.us[/url][/COLOR][/spoiler][/spoiler]     [spoiler 4th solve - 9.94]U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
 
-x' y <COLOR="gray">// inspection</COLOR>
-U' x' U x' L U r <COLOR="gray">// cross</COLOR>
-U' R' U R' U' R U <COLOR="gray">// 1st pair</COLOR>
-x (U' R' U R)2 U' R' U <COLOR="gray">// 2nd pair</COLOR>
-l' x U' R' U <COLOR="gray">// 3rd pair</COLOR>
-R' U R' U' R U R U' z' <COLOR="gray">// 4th pair</COLOR>
-U' r U2 R' U' R U' r' <COLOR="gray">// OLL</COLOR>
-U2 U' R2 u R' U R' U' R u' R2 y' R' U R U <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=x-_y_//_inspection%0AU-_x-_U_x-_L_U_r_//_cross%0AU-_R-_U_R-_U-_R_U_//_1st_pair%0Ax_(U-_R-_U_R)2_U-_R-_U_//_2nd_pair%0Al-_x_U-_R-_U_//_3rd_pair%0AR-_U_R-_U-_R_U_R_U-_z-_//_4th_pair%0AU-_r_U2_R-_U-_R_U-_r-_//_OLL%0AU2_U-_R2_u_R-_U_R-_U-_R_u-_R2_y-_R-_U_R_U_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	9.94	58	5.84	67	6.74	</COLOR>	<SIZE="4">%</SIZE>
+x' y [COLOR="gray"]// inspection[/COLOR]
+U' x' U x' L U r [COLOR="gray"]// cross[/COLOR]
+U' R' U R' U' R U [COLOR="gray"]// 1st pair[/COLOR]
+x (U' R' U R)2 U' R' U [COLOR="gray"]// 2nd pair[/COLOR]
+l' x U' R' U [COLOR="gray"]// 3rd pair[/COLOR]
+R' U R' U' R U R U' z' [COLOR="gray"]// 4th pair[/COLOR]
+U' r U2 R' U' R U' r' [COLOR="gray"]// OLL[/COLOR]
+U2 U' R2 u R' U R' U' R u' R2 y' R' U R U [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y_//_inspection%0AU-_x-_U_x-_L_U_r_//_cross%0AU-_R-_U_R-_U-_R_U_//_1st_pair%0Ax_(U-_R-_U_R)2_U-_R-_U_//_2nd_pair%0Al-_x_U-_R-_U_//_3rd_pair%0AR-_U_R-_U-_R_U_R_U-_z-_//_4th_pair%0AU-_r_U2_R-_U-_R_U-_r-_//_OLL%0AU2_U-_R2_u_R-_U_R-_U-_R_u-_R2_y-_R-_U_R_U_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2"]alg.garron.us[/url][/COLOR]
+[Code]Step	Time	STM	stps	ETM	etps
+[COLOR="Red"]Total	9.94	58	5.84	67	6.74	[/COLOR]	[SIZE="4"]%[/SIZE]
 							Step		Time	STM	ETM
 Cross+1	2.70	12	4.44	16	5.93		Cross+1/F2L	50.8%	34.3%	38.1%
 F2L	5.32	35	6.58	42	7.89		F2L/Total	53.5%	60.3%	62.7%
-LL	4.62	23	4.98	25	5.41		LL/Total	46.5%	39.7%	37.3%</CODE>     <spoiler View as executed>U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
+LL	4.62	23	4.98	25	5.41		LL/Total	46.5%	39.7%	37.3%[/CODE]     [spoiler View as executed]U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
 
-x' y <COLOR="gray">// inspection</COLOR>
-U' x' U x' L U r <COLOR="gray">// cross</COLOR>
-U' R' U R' U' R U <COLOR="gray">// 1st pair</COLOR>
-x (U' R' U R)2 U' R' U <COLOR="gray">// 2nd pair</COLOR>
-l' x U' R' U <COLOR="gray">// 3rd pair</COLOR>
-R' U R' U' R U R U' z' <COLOR="gray">// 4th pair</COLOR>
-U' r U2 R' U' R U' r' <COLOR="gray">// OLL</COLOR>
-U2 U' R2 u R' U R' U' R u' R2 y' R' U R U <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=x-_y_//_inspection%0AU-_x-_U_x-_L_U_r_//_cross%0AU-_R-_U_R-_U-_R_U_//_1st_pair%0Ax_(U-_R-_U_R)2_U-_R-_U_//_2nd_pair%0Al-_x_U-_R-_U_//_3rd_pair%0AR-_U_R-_U-_R_U_R_U-_z-_//_4th_pair%0AU-_r_U2_R-_U-_R_U-_r-_//_OLL%0AU2_U-_R2_u_R-_U_R-_U-_R_u-_R2_y-_R-_U_R_U_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler 5th solve - (8.43)>U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
+x' y [COLOR="gray"]// inspection[/COLOR]
+U' x' U x' L U r [COLOR="gray"]// cross[/COLOR]
+U' R' U R' U' R U [COLOR="gray"]// 1st pair[/COLOR]
+x (U' R' U R)2 U' R' U [COLOR="gray"]// 2nd pair[/COLOR]
+l' x U' R' U [COLOR="gray"]// 3rd pair[/COLOR]
+R' U R' U' R U R U' z' [COLOR="gray"]// 4th pair[/COLOR]
+U' r U2 R' U' R U' r' [COLOR="gray"]// OLL[/COLOR]
+U2 U' R2 u R' U R' U' R u' R2 y' R' U R U [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y_//_inspection%0AU-_x-_U_x-_L_U_r_//_cross%0AU-_R-_U_R-_U-_R_U_//_1st_pair%0Ax_(U-_R-_U_R)2_U-_R-_U_//_2nd_pair%0Al-_x_U-_R-_U_//_3rd_pair%0AR-_U_R-_U-_R_U_R_U-_z-_//_4th_pair%0AU-_r_U2_R-_U-_R_U-_r-_//_OLL%0AU2_U-_R2_u_R-_U_R-_U-_R_u-_R2_y-_R-_U_R_U_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2"]alg.garron.us[/url][/COLOR][/spoiler][/spoiler]     [spoiler 5th solve - (8.43)]U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
 
-y' z' <COLOR="gray">// inspection</COLOR>
-(D U) x U' <COLOR="gray">// cross</COLOR>
-R' U R' U' R U R' U' <COLOR="gray">// 1st pair</COLOR>
-x2 R' U' R2 U R2' U' R U <COLOR="gray">// 2nd pair</COLOR>
-x' R U' R2 U R' U' R U <COLOR="gray">// 3rd pair</COLOR>
-x' R U' R U R' U' R U <COLOR="gray">// 4th pair</COLOR>
-z' U' R U2 (R' l') U R U' x' U2 l' U R U' x' <COLOR="gray">// OLL</COLOR>
-U R U R' F' R U R' U' R' F R2 U' R' <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_z-_//_inspection%0A(D_U)_x_U-_//_cross%0AR-_U_R-_U-_R_U_R-_U-_//_1st_pair%0Ax2_R-_U-_R2_U_R2-_U-_R_U_//_2nd_pair%0Ax-_R_U-_R2_U_R-_U-_R_U_//_3rd_pair%0Ax-_R_U-_R_U_R-_U-_R_U_//_4th_pair%0Az-_U-_R_U2_(R-_l-)_U_R_U-_x-_U2_l-_U_R_U-_x-_//_OLL%0AU_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	8.43	62	7.35	68	8.07	</COLOR>	<SIZE="4">%</SIZE>
+y' z' [COLOR="gray"]// inspection[/COLOR]
+(D U) x U' [COLOR="gray"]// cross[/COLOR]
+R' U R' U' R U R' U' [COLOR="gray"]// 1st pair[/COLOR]
+x2 R' U' R2 U R2' U' R U [COLOR="gray"]// 2nd pair[/COLOR]
+x' R U' R2 U R' U' R U [COLOR="gray"]// 3rd pair[/COLOR]
+x' R U' R U R' U' R U [COLOR="gray"]// 4th pair[/COLOR]
+z' U' R U2 (R' l') U R U' x' U2 l' U R U' x' [COLOR="gray"]// OLL[/COLOR]
+U R U R' F' R U R' U' R' F R2 U' R' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y-_z-_//_inspection%0A(D_U)_x_U-_//_cross%0AR-_U_R-_U-_R_U_R-_U-_//_1st_pair%0Ax2_R-_U-_R2_U_R2-_U-_R_U_//_2nd_pair%0Ax-_R_U-_R2_U_R-_U-_R_U_//_3rd_pair%0Ax-_R_U-_R_U_R-_U-_R_U_//_4th_pair%0Az-_U-_R_U2_(R-_l-)_U_R_U-_x-_U2_l-_U_R_U-_x-_//_OLL%0AU_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R"]alg.garron.us[/url][/COLOR]
+[Code]Step	Time	STM	stps	ETM	etps
+[COLOR="Red"]Total	8.43	62	7.35	68	8.07	[/COLOR]	[SIZE="4"]%[/SIZE]
 							Step		Time	STM	ETM
 Cross+1	1.68	11	6.55	11	6.55		Cross+1/F2L	35.3%	31.4%	28.2%
 F2L	4.76	35	7.35	39	8.19		F2L/Total	56.5%	56.5%	57.4%
-LL	3.67	27	7.36	29	7.90		LL/Total	43.5%	43.5%	42.6%</CODE>     <spoiler View as executed>U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
+LL	3.67	27	7.36	29	7.90		LL/Total	43.5%	43.5%	42.6%[/CODE]     [spoiler View as executed]U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
 
-y' z' <COLOR="gray">// inspection</COLOR>
-(D U) x U' <COLOR="gray">// cross</COLOR>
-R' U R' U' R U R' U' <COLOR="gray">// 1st pair</COLOR>
-x x R' U' R2 U R2' U' R U <COLOR="gray">// 2nd pair</COLOR>
-x' R U' R2 U R' U' R U <COLOR="gray">// 3rd pair</COLOR>
-x' R U' R U R' U' R U <COLOR="gray">// 4th pair</COLOR>
-z' U' R U2 (R' l') U R U' x' U2 l' U R U' x' <COLOR="gray">// OLL</COLOR>
-U R U R' F' R U R' U' R' F R2 U' R' <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_z-_//_inspection%0A(D_U)_x_U-_//_cross%0AR-_U_R-_U-_R_U_R-_U-_//_1st_pair%0Ax_x_R-_U-_R2_U_R2-_U-_R_U_//_2nd_pair%0Ax-_R_U-_R2_U_R-_U-_R_U_//_3rd_pair%0Ax-_R_U-_R_U_R-_U-_R_U_//_4th_pair%0Az-_U-_R_U2_(R-_l-)_U_R_U-_x-_U2_l-_U_R_U-_x-_//_OLL%0AU_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>3x3 (removing fastest and slowest solve)
+y' z' [COLOR="gray"]// inspection[/COLOR]
+(D U) x U' [COLOR="gray"]// cross[/COLOR]
+R' U R' U' R U R' U' [COLOR="gray"]// 1st pair[/COLOR]
+x x R' U' R2 U R2' U' R U [COLOR="gray"]// 2nd pair[/COLOR]
+x' R U' R2 U R' U' R U [COLOR="gray"]// 3rd pair[/COLOR]
+x' R U' R U R' U' R U [COLOR="gray"]// 4th pair[/COLOR]
+z' U' R U2 (R' l') U R U' x' U2 l' U R U' x' [COLOR="gray"]// OLL[/COLOR]
+U R U R' F' R U R' U' R' F R2 U' R' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y-_z-_//_inspection%0A(D_U)_x_U-_//_cross%0AR-_U_R-_U-_R_U_R-_U-_//_1st_pair%0Ax_x_R-_U-_R2_U_R2-_U-_R_U_//_2nd_pair%0Ax-_R_U-_R2_U_R-_U-_R_U_//_3rd_pair%0Ax-_R_U-_R_U_R-_U-_R_U_//_4th_pair%0Az-_U-_R_U2_(R-_l-)_U_R_U-_x-_U2_l-_U_R_U-_x-_//_OLL%0AU_R_U_R-_F-_R_U_R-_U-_R-_F_R2_U-_R-_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R"]alg.garron.us[/url][/COLOR][/spoiler][/spoiler]     [spoiler Statistics][CODE]3x3 (removing fastest and slowest solve)
 
 Step	Time	STM	stps	ETM	etps
-<COLOR="red">Total	9.64	57.00	5.91	65.67	6.81	</COLOR>	<SIZE="4">%</SIZE>
+[COLOR="red"]Total	9.64	57.00	5.91	65.67	6.81	[/COLOR]	[SIZE="4"]%[/SIZE]
 							Step		Time	STM	ETM
 Cross+1	3.32	15.00	4.51	19.00	5.72		Cross+1/F2L	52.8%	39.8%	42.5%
 F2L	6.29	37.67	5.99	44.67	7.10		F2L/Total	65.3%	66.1%	68.0%
-LL	3.35	19.33	5.77	21.00	6.27		LL/Total	34.7%	33.9%	32.0%</CODE>
+LL	3.35	19.33	5.77	21.00	6.27		LL/Total	34.7%	33.9%	32.0%[/CODE]
 
-<CODE>Best from each field
+[CODE]Best from each field
 								
 Step	Time	STM	stps	ETM	etps
-<COLOR="red">Total	8.43	48	7.39	59	8.07</COLOR>
+[COLOR="red"]Total	8.43	48	7.39	59	8.07[/COLOR]
 			
 Cross+1	1.68	11	6.55	11	6.58
 F2L	4.76	35	7.58	39	8.48
-LL	2.17	12	7.36	14	7.90	</CODE></spoiler></spoiler>
+LL	2.17	12	7.36	14	7.90	[/CODE][/spoiler][/spoiler]
