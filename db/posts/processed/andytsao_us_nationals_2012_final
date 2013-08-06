@@ -1,4 +1,4 @@
-<spoiler (12th) AndyTsao Tsao>Andy Tsao  - 11.21 3x3 - US Nationals 2012
+<spoiler (12th) AndyTsao Tsao>Andy Tsao  - 11.21 average - US Nationals 2012
 
 <spoiler 1st solve - 10.68>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
 
@@ -130,7 +130,7 @@ y R' U' R U y' R U R' <COLOR="gray">// 3rd pair</COLOR>
 y U2 R' U2 R U2' R' U R <COLOR="gray">// 4th pair</COLOR>
 U F' x L U R' U' r' F R <COLOR="gray">// OLL</COLOR>
 U U R' U R' d' R' F' R2 U' R' U l' U R U <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=y_x2_//_inspection%0AL_F-_U_U_R_//_cross%0Ay-_U-_R-_U_R_//_1st_pair%0Ay-_U-_R-_U2_R_d-_L-_L_L-_U_L_//_2nd_pair%0Ay_R-_U-_R_U_y-_R_U_R-_//_3rd_pair%0Ay_U2_R-_U2_R_U2-_R-_U_R_//_4th_pair%0AU_F-_x_L_U_R-_U-_r-_F_R_//_OLL%0AU_U_R-_U_R-_d-_R-_F-_R2_U-_R-_U_l-_U_R_U_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>    <spoiler Statistics><CODE>3x3 (removing fastest and slowest solve)
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=y_x2_//_inspection%0AL_F-_U_U_R_//_cross%0Ay-_U-_R-_U_R_//_1st_pair%0Ay-_U-_R-_U2_R_d-_L-_L_L-_U_L_//_2nd_pair%0Ay_R-_U-_R_U_y-_R_U_R-_//_3rd_pair%0Ay_U2_R-_U2_R_U2-_R-_U_R_//_4th_pair%0AU_F-_x_L_U_R-_U-_r-_F_R_//_OLL%0AU_U_R-_U_R-_d-_R-_F-_R2_U-_R-_U_l-_U_R_U_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>    <spoiler Statistics><CODE>Average (removing fastest and slowest solve)
 
 Step	Time	STM	stps	ETM	etps
 <COLOR="red">Total	11.20	59.67	5.33	67.00	5.98	</COLOR>	<SIZE="4">%</SIZE>

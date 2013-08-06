@@ -1,4 +1,4 @@
-<spoiler (5th) Jong-Ho Jeong>Jong-Ho Jeong  - 10.47 NR 3x3 - US Nationals 2012
+<spoiler (5th) Jong-Ho Jeong>Jong-Ho Jeong  - 10.47 NR average -US Nationals 2012
 
 <spoiler 1st solve - (11.75)>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
 
@@ -130,7 +130,7 @@ U y' R' U2 R U' R' U R <COLOR="gray">// 3rd pair</COLOR>
 y' U R' U x' R2 U' R' U x <COLOR="gray">// 4th pair</COLOR>
 U' U L' U' L U' L' U L U r U' r' F <COLOR="gray">// OLL</COLOR>
 x U2 r' U' r U2 l' U R' U' R2 u <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=y2_x_//_inspection%0AU_D_l-_//_cross%0AU-_R_U-_R-_U_R_U-_R-_//_1st_pair%0Ay2-_U-_R-_U_R_R-_U_R_U-_U-_R-_U_R_//_2nd_pair%0AU_y-_R-_U2_R_U-_R-_U_R_//_3rd_pair%0Ay-_U_R-_U_x-_R2_U-_R-_U_x_//_4th_pair%0AU-_U_L-_U-_L_U-_L-_U_L_U_r_U-_r-_F_//_OLL%0Ax_U2_r-_U-_r_U2_l-_U_R-_U-_R2_u_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>3x3 (removing fastest and slowest solve)
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=y2_x_//_inspection%0AU_D_l-_//_cross%0AU-_R_U-_R-_U_R_U-_R-_//_1st_pair%0Ay2-_U-_R-_U_R_R-_U_R_U-_U-_R-_U_R_//_2nd_pair%0AU_y-_R-_U2_R_U-_R-_U_R_//_3rd_pair%0Ay-_U_R-_U_x-_R2_U-_R-_U_x_//_4th_pair%0AU-_U_L-_U-_L_U-_L-_U_L_U_r_U-_r-_F_//_OLL%0Ax_U2_r-_U-_r_U2_l-_U_R-_U-_R2_u_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>Average (removing fastest and slowest solve)
 
 Step	Time	STM	stps	ETM	etps
 <COLOR="red">Total	10.47	62.00	5.92	69.67	6.65	</COLOR>	<SIZE="4">%</SIZE>

@@ -1,4 +1,4 @@
-<spoiler (16th) Louis Cormier>Louis Cormier  - 11.83 3x3 - US Nationals 2012
+<spoiler (16th) Louis Cormier>Louis Cormier  - 11.83 average - US Nationals 2012
 
 <spoiler 1st solve - 13.71>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
 
@@ -123,7 +123,7 @@ U L' U L d' L U L' <COLOR="gray">// 3rd pair</COLOR>
 U U R U' R' d' L' U L <COLOR="gray">// 4th pair</COLOR>
 U U R' U' R' F R F' U R <COLOR="gray">// OLL</COLOR>
 U' R' U2 R' d' R' F' R2 U' R' U R' F R U' F U <COLOR="gray">// PLL</COLOR>
-<COLOR="gray">View at <url="http://alg.garron.us/?alg=z-_//_inspection%0AL2-_U-_R-_U_x-_D_//_cross%0Ad_U_U_U-_L-_U_L_R_U_R-_//_1st_pair%0AR-_U_R_U-_U-_L_U_L-_//_2nd_pair%0AU_L-_U_L_d-_L_U_L-_//_3rd_pair%0AU_U_R_U-_R-_d-_L-_U_L_//_4th_pair%0AU_U_R-_U-_R-_F_R_F-_U_R_//_OLL%0AU-_R-_U2_R-_d-_R-_F-_R2_U-_R-_U_R-_F_R_U-_F_U_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>3x3 (removing fastest and slowest solve)
+<COLOR="gray">View at <url="http://alg.garron.us/?alg=z-_//_inspection%0AL2-_U-_R-_U_x-_D_//_cross%0Ad_U_U_U-_L-_U_L_R_U_R-_//_1st_pair%0AR-_U_R_U-_U-_L_U_L-_//_2nd_pair%0AU_L-_U_L_d-_L_U_L-_//_3rd_pair%0AU_U_R_U-_R-_d-_L-_U_L_//_4th_pair%0AU_U_R-_U-_R-_F_R_F-_U_R_//_OLL%0AU-_R-_U2_R-_d-_R-_F-_R2_U-_R-_U_R-_F_R_U-_F_U_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>Average (removing fastest and slowest solve)
 
 Step	Time	STM	stps	ETM	etps
 <COLOR="red">Total	11.83	62.67	5.30	70.67	5.97	</COLOR>	<SIZE="4">%</SIZE>
