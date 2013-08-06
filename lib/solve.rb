@@ -1,4 +1,5 @@
-module ReconDatabase class Solve
+module ReconDatabase 
+  class Solve
     attr_accessor :solver, 
       :scramble, 
       :solution, 
