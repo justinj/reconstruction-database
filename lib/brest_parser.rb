@@ -28,7 +28,7 @@ class BrestParser
   end
 
   def number_of_solves
-    count = @post.scan(/SPOILER=[^\]]*?\ssolve/).count
+    count = @post.scan(/SPOILER[^\]]*?solve/).count
     count = 1 if count == 0
     count
   end
