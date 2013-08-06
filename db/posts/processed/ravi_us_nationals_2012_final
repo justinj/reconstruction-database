@@ -1,4 +1,4 @@
-<spoiler (8th) Ravi Fernando>Ravi Fernando  - 10.63 average -US Nationals 2012
+<spoiler (8th) Ravi Fernando><B>Ravi Fernando</B> (USA) - 10.63 average -US Nationals 2012
 
 <spoiler 1st solve - (13.80)>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
 
@@ -11,9 +11,9 @@ x' R U' R U x R2' U R U' z' U (x' y') (z' y') R2 U2' F R2 F' U2 R' U R' <COLOR="
 U3' F R U R' U' F' <COLOR="gray">// OLL</COLOR>
 U2' R U R' y' R2 u' R U' R' U R' u R2 U2 <COLOR="gray">// PLL</COLOR>
 <COLOR="gray">View at <url="http://alg.garron.us/?alg=y_x_//_inspection%0AD_R-_U-_L-_z_r-_U-_F_U-_//_cross%0A(z-_r)_U_R_U-_M_U_R-_U-__//_1st_pair%0Ax_l-_U-_R-_U_//_2nd_pair%0AL_U_R2_U-_r-_//_3rd_pair%0Ax-_R_U-_R_U_x_R2-_U_R_U-_z-_U_(x-_y-)_(z-_y-)_R2_U2-_F_R2_F-_U2_R-_U_R-_//_4th_pair%0AU3-_F_R_U_R-_U-_F-_//_OLL%0AU2-_R_U_R-_y-_R2_u-_R_U-_R-_U_R-_u_R2_U2_//_PLL&ini=F2_R-_F2_L-_B2_R_D2_F2_L2_B_R-_D_R-_D2_L-_U2_B-_L2_R-_D">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	13.80	65	4.71	79	5.72	</COLOR>	<SIZE="4">%</SIZE>
-							Step		Time	STM	ETM
+<Code><B>Step	Time	STM	stps	ETM	etps</B>
+<COLOR="Red">Total	13.80	65	4.71	79	5.72	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		Time	STM	ETM</B>
 Cross+1	3.21	16	4.98	18	5.61		Cross+1/F2L	32.5%	36.4%	34.0%
 F2L	9.87	44	4.46	53	5.37		F2L/Total	71.5%	67.7%	67.1%
 LL	3.93	21	5.34	26	6.62		LL/Total	28.5%	32.3%	32.9%</CODE>     <spoiler View as executed>F2 R' F2 L' B2 R D2 F2 L2 B R' D R' D2 L' U2 B' L2 R' D
@@ -37,9 +37,9 @@ R' U' R U2' R' U R <COLOR="gray">// 4th pair</COLOR>
 U F R U R' U' F' <COLOR="gray">// OLL</COLOR>
 U' (R' l') U2 l U2 R U2' R' F R U R' U' R' F R2 U' <COLOR="gray">// PLL</COLOR>
 <COLOR="gray">View at <url="http://alg.garron.us/?alg=y_x_//_inspection%0AL_U_x-_U-_(y_x)_D-_z-_U_L-_B-_y-_l_U_//_cross%0Ax_L-_U_l_F-_L_//_1st_pair%0AR_U-_R_U_x-_U-_R-_U_z-_//_2nd_pair%0AR_U-_R-_(x-_y-)_U-_R-_(U_z-)_//_3rd_pair%0AR-_U-_R_U2-_R-_U_R_//_4th_pair%0AU_F_R_U_R-_U-_F-_//_OLL%0AU-_(R-_l-)_U2_l_U2_R_U2-_R-_F_R_U_R-_U-_R-_F_R2_U-_//_PLL&ini=D-_B2_L2_F2_R2_U2_R2_U-_F2_U-_B2_R_B-_L-_B_D-_U2_B_D_F-_D-">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	10.88	60	5.51	70	6.43	</COLOR>	<SIZE="4">%</SIZE>
-							Step		Time	STM	ETM
+<Code><B>Step	Time	STM	stps	ETM	etps</B>
+<COLOR="Red">Total	10.88	60	5.51	70	6.43	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		Time	STM	ETM</B>
 Cross+1	3.82	14	3.66	19	4.97		Cross+1/F2L	51.3%	41.2%	44.2%
 F2L	7.44	34	4.57	43	5.78		F2L/Total	68.4%	56.7%	61.4%
 LL	3.44	26	7.56	27	7.85		LL/Total	31.6%	43.3%	38.6%</CODE>     <spoiler View as executed>D' B2 L2 F2 R2 U2 R2 U' F2 U' B2 R B' L' B D' U2 B D F' D'
@@ -63,9 +63,9 @@ z R' U' R2 U R' U' R U z' <COLOR="gray">// 4th pair</COLOR>
 U l' U l U l' U' l F U' F' <COLOR="gray">// OLL</COLOR>
 U R' U2 R U2' R' F R U R' U' R' F' R2 U2' <COLOR="gray">// PLL</COLOR>
 <COLOR="gray">View at <url="http://alg.garron.us/?alg=z-_//_inspection%0Au_l_u-_x_U2_l_R_z-_//_cross%0AU_R_U-_R-_F-_R-_F_//_1st_pair%0AR-_U_R_U-_R-_U_R_U-_//_2nd_pair%0AU-_R_U_R-_z-_R-_U-_R_//_3rd_pair%0Az_R-_U-_R2_U_R-_U-_R_U_z-_//_4th_pair%0AU_l-_U_l_U_l-_U-_l_F_U-_F-_//_OLL%0AU_R-_U2_R_U2-_R-_F_R_U_R-_U-_R-_F-_R2_U2-_//_PLL&ini=U2_B2_D2_B-_L2_B_U2_F2_R2_B-_L-_B_F_D_F2_R_D2_F-_L-_D_B-">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	10.97	66	6.02	73	6.65	</COLOR>	<SIZE="4">%</SIZE>
-							Step		Time	STM	ETM
+<Code><B>Step	Time	STM	stps	ETM	etps</B>
+<COLOR="Red">Total	10.97	66	6.02	73	6.65	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		Time	STM	ETM</B>
 Cross+1	2.82	13	4.61	15	5.32		Cross+1/F2L	46.5%	34.2%	34.9%
 F2L	6.07	38	6.26	43	7.08		F2L/Total	55.3%	57.6%	58.9%
 LL	4.90	28	5.71	30	6.12		LL/Total	44.7%	42.4%	41.1%</CODE>     <spoiler View as executed>U2 B2 D2 B' L2 B U2 F2 R2 B' L' B F D F2 R D2 F' L' D B'
@@ -88,9 +88,9 @@ x' R' U' R2 U R U R U2' R U z' <COLOR="gray">// 3rd/4th pairs</COLOR>
 U l' U2 L U L' U l <COLOR="gray">// OLL</COLOR>
 U y' R' U R' U' R' U' R' U R U R2 <COLOR="gray">// PLL</COLOR>
 <COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_x_//_inspection%0Ar-_F_U_R_U_(x_y-_x)_//_cross%0AU_R_U-_R-_F-_R-_F_//_1st_pair%0AU-_R-_U_R2_U-_R-_U_//_2nd_pair%0Ax-_R-_U-_R2_U_R_U_R_U2-_R_U_z-_//_3rd/4th_pairs%0AU_l-_U2_L_U_L-_U_l_//_OLL%0AU_y-_R-_U_R-_U-_R-_U-_R-_U_R_U_R2_//_PLL&ini=U2_L2_U2_B2_U-_B2_U2_B2_U_F_U_B-_U_L-_B_U2_L2_B-_D-_B2">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps						
-<COLOR="Red">Total	8.40	49	5.83	54	6.43	</COLOR>	<SIZE="4">%</SIZE>
-							Step		Time	STM	ETM
+<Code><B>Step	Time	STM	stps	ETM	etps</B>						
+<COLOR="Red">Total	8.40	49	5.83	54	6.43	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		Time	STM	ETM</B>
 Cross+1	2.24	12	5.36	13	5.80		Cross+1/F2L	43.2%	41.4%	39.4%
 F2L	5.19	29	5.59	33	6.36		F2L/Total	61.8%	59.2%	61.1%
 LL	3.21	20	6.23	21	6.54		LL/Total	38.2%	40.8%	38.9%</CODE>     <spoiler View as executed>U2 L2 U2 B2 U' B2 U2 B2 U F U B' U L' B U2 L2 B' D' B2
@@ -113,9 +113,9 @@ R U R' U' x' R2 U' R' U z' <COLOR="gray">// 4th pair</COLOR>
 U M U M' U2 M U M' <COLOR="gray">// OLL</COLOR>
 y' U R' U' R U' R U R U' R' U R U R2 U' R' U <COLOR="gray">// PLL</COLOR>
 <COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_x_//_inspection%0AL_R_U-_y-_//_cross%0AR2_U-_R_U_R-_U-_R_U_//_1st_pair%0AR-_U_R-_U-_R_U_R-_U-_//_2nd_pair%0Ax2-_R_U-_R-_U_R-_U-_R_U_//_3rd_pair%0AR_U_R-_U-_x-_R2_U-_R-_U_z-_//_4th_pair%0AU_M_U_M-_U2_M_U_M-_//_OLL%0Ay-_U_R-_U-_R_U-_R_U_R_U-_R-_U_R_U_R2_U-_R-_U_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR>
-<Code>Step	Time	STM	stps	ETM	etps
-<COLOR="Red">Total	10.05	60	5.97	68	6.77	</COLOR>	<SIZE="4">%</SIZE>
-							Step		Time	STM	ETM
+<Code><B>Step	Time	STM	stps	ETM	etps</B>
+<COLOR="Red">Total	10.05	60	5.97	68	6.77	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		Time	STM	ETM</B>
 Cross+1	1.67	11	6.59	12	7.19		Cross+1/F2L	30.1%	31.4%	30.8%
 F2L	5.55	35	6.31	39	7.03		F2L/Total	55.2%	58.3%	57.4%
 LL	4.50	25	5.56	29	6.44		LL/Total	44.8%	41.7%	42.6%</CODE>     <spoiler View as executed>U2 R' U2 R F2 U2 B2 D2 L2 R F D2 R B L B2 F' D' F2 R
@@ -130,16 +130,16 @@ U R' R2 r' U M' U2 L' l U M' <COLOR="gray">// OLL</COLOR>
 y' U R' U' R U' R U R U' R' U R U R2 U' R' U <COLOR="gray">// PLL</COLOR>
 <COLOR="gray">View at <url="http://alg.garron.us/?alg=y-_x_//_inspection%0AL_R_U-_y-_//_cross%0AR2_U-_R_U_R-_U-_R_U_//_1st_pair%0AR_(l_R)_x_U_R-_U-_R_U_R-_U-_//_2nd_pair%0Ax-_l_U-_R-_U_R-_U-_R_U_//_3rd_pair%0AR_U_R-_U-_(l_R)_U-_R-_U_z-_//_4th_pair%0AU_R-_R2_r-_U_M-_U2_L-_l_U_M-_//_OLL%0Ay-_U_R-_U-_R_U-_R_U_R_U-_R-_U_R_U_R2_U-_R-_U_//_PLL&ini=U2_R-_U2_R_F2_U2_B2_D2_L2_R_F_D2_R_B_L_B2_F-_D-_F2_R">alg.garron.us</url></COLOR></spoiler></spoiler>     <spoiler Statistics><CODE>Average (removing fastest and slowest solve)
 
-Step	Time	STM	stps	ETM	etps
-<COLOR="red">Total	10.63	62.00	5.83	70.33	6.61	</COLOR>	<SIZE="4">%</SIZE>
-							Step		Time	STM	ETM
+<B>Step	Time	STM	stps	ETM	etps</B>
+<COLOR="red">Total	10.63	62.00	5.83	70.33	6.61	</COLOR>	<B><SIZE="4">%</SIZE>
+							Step		Time	STM	ETM</B>
 Cross+1	2.77	12.67	4.57	15.33	5.54		Cross+1/F2L	43.6%	35.5%	36.8%
 F2L	6.35	35.67	5.61	41.67	6.56		F2L/Total	59.7%	57.5%	59.2%
 LL	4.28	26.33	6.15	28.67	6.70		LL/Total	40.3%	42.5%	40.8%</CODE>
 
 <CODE>Best from each field
 								
-Step	Time	STM	stps	ETM	etps
+<B>Step	Time	STM	stps	ETM	etps</B>
 <COLOR="red">Total	8.40	49	6.02	54	6.77</COLOR>
 			
 Cross+1	1.67	11	6.59	12	7.19
