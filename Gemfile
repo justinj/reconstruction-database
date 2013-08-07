@@ -8,7 +8,7 @@ gem 'sqlite3'
 
 group :test, :development do
   gem 'minitest'
-  gem 'pry'
+  # gem 'pry'
 end
 
 ruby '2.0.0'
