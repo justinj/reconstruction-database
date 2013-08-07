@@ -1,5 +1,5 @@
-require "sequel"
-require "logger"
+require "minitest/autorun"
+
 require_relative "../recondb"
 
 Sequel.extension :migration

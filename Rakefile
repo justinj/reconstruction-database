@@ -1,7 +1,6 @@
 require "rake/testtask"
 require_relative "recondb"
 
-require_relative "test/test_helper"
 require_relative "lib/brest_parser"
 
 task :default do

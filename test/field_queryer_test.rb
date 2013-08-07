@@ -1,5 +1,3 @@
-require "sinatra"
-
 module ReconDatabase
   module Form
     class DropdownTest < Minitest::Test

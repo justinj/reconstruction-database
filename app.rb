@@ -1,15 +1,11 @@
 require "sinatra"
-require "sequel"
-require_relative "lib/database"
-require_relative "lib/solve"
-require_relative "helpers/view_helpers"
-require_relative "lib/form/dropdown"
-require_relative "lib/form/input"
+
+require_relative "recondb"
 
 helpers ReconDatabase::ViewHelpers
 
 get "/" do
-  get_solves(params)
+  @solves = ReconDatabase::Solve.request(params)
   get_fields(params)
   erb :index
 end
@@ -21,10 +17,6 @@ end
 get "/solve/:id" do
   @solve = ReconDatabase::Solve.where(id: params[:id]).first
   erb :solve
-end
-
-def get_solves(params)
-  @solves = ReconDatabase::Solve.request(params)
 end
 
 def get_fields(params)
