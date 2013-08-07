@@ -13,6 +13,8 @@ Sequel.migration do
 
       String :original_post
       Integer :average
+
+      Time :date_added
     end
   end
 end
