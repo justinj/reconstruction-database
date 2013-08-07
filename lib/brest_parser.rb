@@ -1,9 +1,10 @@
 module ReconDatabase
   class BrestParser
-    attr_reader :post, :name, :solves
+    attr_reader :post, :name, :solves, :average
 
-    def initialize(filepath)
+    def initialize(filepath, average=0)
       @filepath = filepath
+      @average = average
       parse
     end
 
@@ -31,6 +32,9 @@ module ReconDatabase
       solve.time        = parse_time(post, which)
       solve.scramble    = parse_scramble(post, which)
       solve.solution    = parse_solution(post,which)
+
+      solve.original_post = post
+      solve.average = average
 
       solve
     end

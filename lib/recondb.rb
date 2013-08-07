@@ -1,4 +1,5 @@
 require "sequel"
+require "yaml"
 
 require_relative "database"
 require_relative "solve"

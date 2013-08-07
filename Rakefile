@@ -1,6 +1,6 @@
 require "rake/testtask"
+require "json"
 require_relative "lib/recondb"
-
 require_relative "lib/brest_parser"
 
 task :default do
@@ -19,25 +19,26 @@ def migrate
 end
 
 task :migrate do
+  migrate
 end
 
-def process_all_posts
+task :jsonify do
   unprocessed_posts = Dir.glob("db/posts/unprocessed/*")
-  unprocessed_posts.each do |unprocessed_post|
-    process_post(unprocessed_post)
-    mv unprocessed_post, "db/posts/processed"
+  mkdir "db/json" unless Dir.exist? "db/json"
+  unprocessed_posts.each_with_index do |post, average|
+    mv post, "db/posts/processed"
+    ReconDatabase::BrestParser.new(post, average).solves.each do |solve|
+      json = JSON.pretty_generate(solve.to_hash)
+      index = 0
+      while File.exist?("db/json/#{solve.filename}_#{index}")
+        index += 1
+      end
+      File.write("db/json/#{solve.filename}_#{index}", json)
+    end
   end
-
-  puts "#{unprocessed_posts.count} posts processed and moved to the processed folder."
 end
 
-def process_post(filename)
-  parser = ReconDatabase::BrestParser.new(filename)
-  parser.solves.each { |solve| solve.save }
-  puts parser.name
-end
-
-task :reprocess do
+task :reimport => :jsonify do
   database_file = "db/db.sqlite"
   rm database_file if File.exist? database_file
   migrate
@@ -45,10 +46,8 @@ task :reprocess do
   Sequel::Model.db = Sequel.sqlite database_file
   ReconDatabase::Solve.db = Sequel::Model.db
 
-  processed_posts = Dir.glob("db/posts/processed/*")
-  processed_posts.each do |post|
-    mv post, "db/posts/unprocessed"
+  jsons = Dir.glob("db/json/*")
+  jsons.each do |post|
+    ReconDatabase::Solve.from_json(File.read(post)).save
   end
-
-  process_all_posts
 end

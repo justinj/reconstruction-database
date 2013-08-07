@@ -10,6 +10,9 @@ Sequel.migration do
       String :youtube
       String :competition
       String :puzzle
+
+      String :original_post
+      Integer :average
     end
   end
 end

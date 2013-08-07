@@ -5,6 +5,16 @@ module ReconDatabase
       "#@time:#@solver"
     end
 
+    def filename
+      "#{fileize solver}_#{fileize puzzle}_#{fileize time}_#{fileize competition}"
+    end
+
+    private
+
+    def fileize(string)
+      string.to_s.downcase.tr " .", "_"
+    end
+
     class << self
       def possible_values_for(field)
         select(field).group_by(field).map{|entry| entry[field]}.to_a
