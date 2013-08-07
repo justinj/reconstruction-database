@@ -1,5 +1,5 @@
 require "sinatra"
-
+require "sequel"
 require_relative "lib/database"
 require_relative "lib/solve"
 require_relative "helpers/view_helpers"
@@ -19,13 +19,12 @@ get "/solve" do
 end
 
 get "/solve/:id" do
-
-  @solve = ReconDatabase::Solve.get(params[:id].to_i)
+  @solve = ReconDatabase::Solve.where(id: params[:id]).first
   erb :solve
 end
 
 def get_solves(params)
-  @solves = ReconDatabase::Solve.query(params)
+  @solves = ReconDatabase::Solve.request(params)
 end
 
 def get_fields(params)

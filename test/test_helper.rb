@@ -1,4 +1,11 @@
-require_relative "../lib/database"
+require "sequel"
+require "logger"
+require_relative "../recondb"
+
+Sequel.extension :migration
+Sequel::Model.db = Sequel.sqlite
+Sequel::Migrator.apply Sequel::Model.db, "db/migrations"
+
 require_relative "../lib/brest_parser"
 require_relative "../lib/solve"
 require_relative "../lib/form/dropdown"

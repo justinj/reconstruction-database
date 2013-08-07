@@ -1,25 +1,25 @@
 require "rake/testtask"
+require_relative "recondb"
 
+require_relative "test/test_helper"
 require_relative "lib/brest_parser"
-require_relative "lib/database"
 
 task :default do
   sh "ruby app.rb"
 end
 
-DATABASE_FILE = "db/db.sqlite"
-
-task :reprocess do
-  rm DATABASE_FILE if File.exist? DATABASE_FILE
-  processed_posts = Dir.glob("db/posts/processed/*")
-  processed_posts.each do |post|
-    mv post, "db/posts/unprocessed"
-  end
-  process_all_posts
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.test_files = FileList['test/*_test.rb']
 end
 
-task :process do
-  process_all_posts
+def migrate
+  Sequel.extension :migration
+  db = Sequel.sqlite "db/db.sqlite"
+  Sequel::Migrator.apply db, "db/migrations"
+end
+
+task :migrate do
 end
 
 def process_all_posts
@@ -33,12 +33,24 @@ def process_all_posts
 end
 
 def process_post(filename)
-  parser = BrestParser.new(filename)
-  parser.save_to(ReconDatabase::SolveDatabase)
+  parser = ReconDatabase::BrestParser.new(filename)
+  parser.solves.each { |solve| solve.save }
   puts parser.name
 end
 
-Rake::TestTask.new do |t|
-  t.libs << "test"
-  t.test_files = FileList['test/*_test.rb']
+task :reprocess do
+  database_file = "db/db.sqlite"
+  rm database_file if File.exist? database_file
+  migrate
+
+  Sequel::Model.db = Sequel.sqlite database_file
+  ReconDatabase::Solve.db = Sequel::Model.db
+
+
+  processed_posts = Dir.glob("db/posts/processed/*")
+  processed_posts.each do |post|
+    mv post, "db/posts/unprocessed"
+  end
+
+  process_all_posts
 end
