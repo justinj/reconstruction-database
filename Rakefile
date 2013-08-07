@@ -45,7 +45,6 @@ task :reprocess do
   Sequel::Model.db = Sequel.sqlite database_file
   ReconDatabase::Solve.db = Sequel::Model.db
 
-
   processed_posts = Dir.glob("db/posts/processed/*")
   processed_posts.each do |post|
     mv post, "db/posts/unprocessed"
