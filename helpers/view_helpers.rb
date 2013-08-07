@@ -1,5 +1,10 @@
 module ReconDatabase
   module ViewHelpers
+    def date_added(solve)
+      p solve
+      solve.date_added.strftime("%b %-d, %Y")
+    end
+
     def format_solution(solution)
       solution = solution.to_s.gsub("\n", "<br>")
       solution.gsub(/(\/\/.*?(<br>|$))/,

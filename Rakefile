@@ -24,7 +24,7 @@ end
 
 task :clean_json do
   rm_rf "db/json"
-  mv "db/processed/*", "db/unprocessed"
+  Dir.glob("db/posts/processed/*").each { |file| mv file, "db/posts/unprocessed" }
 end
 
 task :jsonify do
@@ -34,7 +34,6 @@ task :jsonify do
 end
 
 def jsonify_post(post, average)
-  mv post, "db/posts/processed"
   ReconDatabase::BrestParser.new(post, average).solves.each do |solve|
     hash = solve.to_hash
     hash[:date_added] = Time.now.to_i
@@ -45,6 +44,7 @@ def jsonify_post(post, average)
     end
     File.write("db/json/#{solve.filename}_#{index}", json)
   end
+  mv post, "db/posts/processed"
 end
 
 task :reimport => :jsonify do

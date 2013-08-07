@@ -21,6 +21,7 @@
       <th> Event </th>
       <th> Time </th>
       <th> Competition </th>
+      <th> Date Added </th>
     </tr>
     <% @solves.each do |solve| %>
       <tr>
@@ -28,6 +29,7 @@
         <td> <%= solve.puzzle %> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%= format_time(solve.time) %> </a> </td>
         <td> <%= solve.competition %> </td>
+        <td> <%= date_added(solve) %> </td>
       </tr>
     <% end %>
   </table>
