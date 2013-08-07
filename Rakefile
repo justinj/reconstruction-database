@@ -1,5 +1,5 @@
 require "rake/testtask"
-require_relative "recondb"
+require_relative "lib/recondb"
 
 require_relative "lib/brest_parser"
 

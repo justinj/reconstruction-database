@@ -1,6 +1,6 @@
 require "minitest/autorun"
 
-require_relative "../recondb"
+require_relative "../lib/recondb"
 
 Sequel.extension :migration
 Sequel::Model.db = Sequel.sqlite
