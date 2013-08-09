@@ -1,7 +1,6 @@
 module ReconDatabase
   module ViewHelpers
     def date_added(solve)
-      p solve
       solve.date_added.strftime("%b %-d, %Y")
     end
 
@@ -27,6 +26,14 @@ module ReconDatabase
       end
     end
 
+    def parenthesize_if(words, parenthesize)
+      if parenthesize
+        "(#{words})"
+      else
+        words
+      end
+    end
+
     private
 
     def minutes(time)
@@ -41,16 +48,16 @@ module ReconDatabase
       time.to_s.split(".").last
     end
 
-    def pad_left(num)
+    def pad_left(num, num_digits = 2)
       num = num.to_s
-      num = "0" + num until num.length >= 2
-      num
+      num = "0" + num until num.length >= num_digits
+      num[0...num_digits]
     end
 
-    def pad_right(num)
+    def pad_right(num, num_digits = 2)
       num = num.to_s
-      num = num + "0" until num.length >= 2
-      num
+      num = num + "0" until num.length >= num_digits
+      num[0...num_digits]
     end
   end
 end

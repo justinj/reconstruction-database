@@ -1,9 +1,7 @@
 module ReconDatabase 
   Sequel.extension :blank
   class Solve < Sequel::Model
-    def inspect
-      "#@time:#@solver"
-    end
+    many_to_one :average
 
     def filename
       "#{fileize solver}_#{fileize puzzle}_#{fileize time}_#{fileize competition}"

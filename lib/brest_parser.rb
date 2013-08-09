@@ -33,8 +33,9 @@ module ReconDatabase
       solve.scramble    = parse_scramble(post, which)
       solve.solution    = parse_solution(post,which)
 
-      solve.original_post = post
-      solve.average = average
+      solve.reconstructor = "Brest"
+      solve.source = "brest_post"
+      solve.source_content = post
 
       solve
     end

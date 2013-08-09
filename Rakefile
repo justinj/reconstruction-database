@@ -27,36 +27,18 @@ task :clean_json do
   Dir.glob("db/posts/processed/*").each { |file| mv file, "db/posts/unprocessed" }
 end
 
-task :jsonify do
-  unprocessed_posts = Dir.glob("db/posts/unprocessed/*")
-  mkdir "db/json" unless Dir.exist? "db/json"
-  unprocessed_posts.each_with_index { |post, average| jsonify_post(post, average) }
-end
-
-def jsonify_post(post, average)
+def handle_post(post, average)
+  average = ReconDatabase::Average.new
+  average.save
   ReconDatabase::BrestParser.new(post, average).solves.each do |solve|
-    hash = solve.to_hash
-    hash[:date_added] = Time.now.to_i
-    json = JSON.pretty_generate(solve.to_hash)
-    index = 0
-    while File.exist?("db/json/#{solve.filename}_#{index}")
-      index += 1
-    end
-    File.write("db/json/#{solve.filename}_#{index}", json)
+    solve.date_added = Time.now.to_i
+    average.add_solve(solve)
   end
   mv post, "db/posts/processed"
 end
 
-task :reimport => :jsonify do
-  database_file = "db/db.sqlite"
-  rm database_file if File.exist? database_file
-  migrate
-
-  Sequel::Model.db = Sequel.sqlite database_file
-  ReconDatabase::Solve.db = Sequel::Model.db
-
-  jsons = Dir.glob("db/json/*")
-  jsons.each do |post|
-    ReconDatabase::Solve.from_json(File.read(post)).save
-  end
+task :reimport do
+  unprocessed_posts = Dir.glob("db/posts/unprocessed/*")
+  mkdir "db/json" unless Dir.exist? "db/json"
+  unprocessed_posts.each_with_index { |post, average| handle_post(post, average) }
 end
