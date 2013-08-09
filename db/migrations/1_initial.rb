@@ -13,6 +13,7 @@ Sequel.migration do
       String :solver
       String :competition
       String :puzzle
+      String :penalty
 
       Float :time
       String :youtube

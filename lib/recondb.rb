@@ -1,6 +1,7 @@
 require "sequel"
 require "yaml"
 
+require_relative "formatting_utils"
 require_relative "database"
 require_relative "solve"
 require_relative "average"

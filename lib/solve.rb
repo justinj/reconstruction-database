@@ -1,14 +1,33 @@
 module ReconDatabase 
   Sequel.extension :blank
   class Solve < Sequel::Model
+    include FormattingUtils
     many_to_one :average
 
     def filename
       "#{fileize solver}_#{fileize puzzle}_#{fileize time}_#{fileize competition}"
     end
 
-    private
+    def display_alone
+      case penalty
+      when ""
+        "#{format_time time}"
+      when "dnf"
+        "DNF(#{format_time time})"
+      when "+2"
+        "#{format_time(time + 2)}+"
+      end
+    end
 
+    def display_in_average
+      if self == average.best || self == average.worst
+        "(#{display_alone})"
+      else
+        display_alone
+      end
+    end
+
+    private
     def fileize(string)
       string.to_s.downcase.tr " .", "_"
     end

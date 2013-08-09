@@ -32,12 +32,25 @@ module ReconDatabase
       solve.time        = parse_time(post, which)
       solve.scramble    = parse_scramble(post, which)
       solve.solution    = parse_solution(post,which)
+      solve.penalty     = parse_penalty(post, which)
 
       solve.reconstructor = "Brest"
       solve.source = "brest_post"
       solve.source_content = post
 
       solve
+    end
+
+    def parse_penalty(post, which)
+      spoiler_tags = post.scan(/SPOILER.*?solve.*?\]/)
+      case spoiler_tags[which]
+      when /DNF/
+        "dnf"
+      when /\+/
+        "+2"
+      else
+        ""
+      end
     end
 
     def parse_solver(post)

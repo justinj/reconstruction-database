@@ -1,5 +1,4 @@
-require_relative "test_helper"
-
+require_relative "test_helper" 
 module ReconDatabase
   class BrestParserTest < Minitest::Test
     attr_reader :parser
@@ -86,6 +85,24 @@ assert_equal expected, solve.solution
 
     def test_5_solves
       assert_equal 5, solves.count
+    end
+  end
+
+  class PenaltyTest < Minitest::Test
+    attr_reader :parser, :solves
+
+    def setup
+      p "WTF"
+      @parser = BrestParser.new("test/fixtures/solve_with_dnf")
+      @solves = @parser.solves
+    end
+
+    def test_is_dnf
+      assert_equal "dnf", @solves.first.penalty
+    end
+
+    def test_is_not_dnf
+      assert_equal "", @solves[1].penalty
     end
   end
 end

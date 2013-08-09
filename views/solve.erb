@@ -1,5 +1,5 @@
 <h2>
-  <%= format_time(@solve.time) %>
+  <%= @solve.display_alone %>
   <%= @solve.puzzle %>
   solve by
   <%= @solve.solver %>
@@ -31,12 +31,12 @@
     <div class="col-lg-4">
       <h3> Average </h3>
       <div class="others_in_average well">
-        <% p @solve.average.solves.map(&:time) %>
         <% @solve.average.solves.each do |solve| %>
           <a href="/solve/<%= solve.id %>">
-            <%= format_time(solve.time) %> <br>
+            <%= solve.display_in_average %> <br>
           </a>
         <% end %>
+        = <%= @solve.average.result %>
         <br>
       </div>
     </div>

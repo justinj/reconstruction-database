@@ -1,21 +1,19 @@
 module ReconDatabase
   class Average < Sequel::Model
+    include FormattingUtils
     one_to_many :solves, class: Solve
 
     def result
-      p best(solves)
-      p worst(solves)
-
-      sum = solves.collect(&:time).inject(&:+) - best(solves).time - worst(solves).time
-      p sum
-      sum / (solves.count - 2)
+      sum = solves.collect(&:time).inject(&:+) - best.time - worst.time
+      format_time(sum / (solves.count - 2))
     end
 
-    def worst(solves)
-      solves.max_by(&:time)
+    def worst
+      dnf = solves.detect { |solve| solve.penalty == "dnf" }
+      dnf || solves.max_by(&:time)
     end
 
-    def best(solves)
+    def best
       solves.min_by(&:time)
     end
 

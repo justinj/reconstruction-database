@@ -6,7 +6,7 @@ module ReconDatabase
   class AverageTest < Minitest::Test
     def setup
       @solves = [
-        Solve.new(time: 11.91),
+        Solve.new(time: 11.91, penalty: "dnf"),
         Solve.new(time: 12.25),
         Solve.new(time: 7.65),
         Solve.new(time: 8.96),
@@ -22,9 +22,6 @@ module ReconDatabase
     end
 
     def test_average_result
-      # THE PROBLEM HERE
-      # is that we don't store penalties,
-      # so the 11.91 DNF is counted as just an 11.91
       assert_equal 10.13, @average.result
     end
   end
