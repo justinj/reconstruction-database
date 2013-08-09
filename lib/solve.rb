@@ -8,6 +8,17 @@ module ReconDatabase
       "#{fileize solver}_#{fileize puzzle}_#{fileize time}_#{fileize competition}"
     end
 
+    def effective_value
+      case penalty
+      when "dnf"
+        Float::INFINITY
+      when "+2"
+        time + 2
+      else
+        time
+      end
+    end
+
     def display_alone
       case penalty
       when ""

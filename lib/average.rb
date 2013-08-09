@@ -4,17 +4,17 @@ module ReconDatabase
     one_to_many :solves, class: Solve
 
     def result
-      sum = solves.collect(&:time).inject(&:+) - best.time - worst.time
+      sum = solves.collect(&:effective_value).inject(&:+) - best.effective_value - worst.effective_value
       format_time(sum / (solves.count - 2))
     end
 
     def worst
       dnf = solves.detect { |solve| solve.penalty == "dnf" }
-      dnf || solves.max_by(&:time)
+      dnf || solves.max_by(&:effective_value)
     end
 
     def best
-      solves.min_by(&:time)
+      solves.min_by(&:effective_value)
     end
 
     # seriously?
