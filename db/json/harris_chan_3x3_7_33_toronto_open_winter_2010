@@ -1,0 +1,9 @@
+{
+  "youtube": "1_mn87LQkEs",
+  "puzzle": "3x3",
+  "competition": "Toronto Open Winter 2013",
+  "solver": "Harris Chan",
+  "time": 7.33
+  "scramble": "B2 F2 R2 B2 D2 B2 D U2 B2 L2 U R' B' U' F2 U' B R2 U' L' F" ,
+  "solution": "z2 // inspection\nL2 F y Uw' R' F R2 Uw // cross\nL U' L' // 1st pair\nU R U R' L' U L // 2nd pair\nU2 R' U2 R2 U R' // 3rd pair\ny U R U' R' // 4th pair\nU2 F R U' R' U' R U R' F' // PLL\nU' // AUF"
+ 

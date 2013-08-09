@@ -23,4 +23,11 @@
 <div class="algorithm well">
   <%= format_solution(@solve.solution) %> <br>
 </div>
-Added <%= date_added(@solve) %>
+<div class="footnotes">
+  <div>
+    Added: <%= date_added(@solve) %>
+  </div>
+  <div>
+    Reconstructed by: <%= @solve.reconstructor %>
+  </div>
+</div>
