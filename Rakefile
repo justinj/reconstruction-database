@@ -27,7 +27,7 @@ task :clean_json do
   Dir.glob("db/posts/processed/*").each { |file| mv file, "db/posts/unprocessed" }
 end
 
-def handle_post(post, average)
+def process_post(post, average)
   average = ReconDatabase::Average.new
   average.save
   ReconDatabase::BrestParser.new(post, average).solves.each do |solve|
@@ -37,8 +37,8 @@ def handle_post(post, average)
   mv post, "db/posts/processed"
 end
 
-task :reimport do
-  unprocessed_posts = Dir.glob("db/posts/unprocessed/*")
-  mkdir "db/json" unless Dir.exist? "db/json"
-  unprocessed_posts.each_with_index { |post, average| handle_post(post, average) }
+task :import do
+  Dir.glob("db/posts/unprocessed/*").each_with_index do |post, average|
+    process_post(post, average)
+  end
 end
