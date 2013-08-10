@@ -9,7 +9,7 @@ module ReconDatabase
     end
 
     def worst
-      dnf = solves.detect { |solve| solve.penalty == "dnf" }
+      dnf = solves.detect(&:dnf?)
       dnf || solves.max_by(&:effective_value)
     end
 

@@ -15,6 +15,14 @@ module ReconDatabase
       end
     end
 
+    def dnf?
+      penalty == "dnf"
+    end
+
+    def plus_two?
+      penalty == "+2"
+    end
+
     def display_alone
       case penalty
       when ""
