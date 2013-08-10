@@ -10,3 +10,7 @@ require_relative "../lib/brest_parser"
 require_relative "../lib/solve"
 require_relative "../lib/form/dropdown"
 require_relative "../helpers/view_helpers"
+
+def fixture(filename)
+  "spec/fixtures/#{filename}"
+end

@@ -1,4 +1,4 @@
-require "test_helper"
+require_relative "spec_helper"
 
 module ReconDatabase
   module MoveCounts
