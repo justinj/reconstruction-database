@@ -1,5 +1,5 @@
 <h2>
-  <%= @solve.display_alone %>
+  <%= @solve.format %>
   <%= @solve.puzzle %>
   solve by
   <%= @solve.solver %>
@@ -31,20 +31,10 @@
     <div class="col-lg-4">
       <h3> Average </h3>
       <div class="others_in_average well">
-        <% @solve.average.solves.each do |solve| %>
-          <a href="/solve/<%= solve.id %>">
-            <%= solve.display_in_average %> <br>
-          </a>
-        <% end %>
-        = <%= @solve.average.result %>
-        <br>
+        <%= @solve.average.render %>
       </div>
     </div>
   <% end %>
-</div>
-
-<div class="stats">
-  Movecount: <%= @solve.movecount %>
 </div>
 
 <div class="footnotes">

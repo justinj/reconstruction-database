@@ -5,10 +5,7 @@ module ReconDatabase
     many_to_one :average
 
     def effective_value
-      case penalty
-      when "dnf"
-        0
-      when "+2"
+      if plus_two?
         time + 2
       else
         time
@@ -23,22 +20,13 @@ module ReconDatabase
       penalty == "+2"
     end
 
-    def display_alone
-      case penalty
-      when ""
-        "#{format_time time}"
-      when "dnf"
-        "DNF(#{format_time time})"
-      when "+2"
-        "#{format_time(time + 2)}+"
-      end
-    end
-
-    def display_in_average
-      if self == average.best || self == average.worst
-        "(#{display_alone})"
+    def format
+      if dnf?
+        "DNF(#{format_time(effective_value)})"
+      elsif plus_two?
+        "#{format_time(effective_value)}+"
       else
-        display_alone
+        format_time(effective_value)
       end
     end
 

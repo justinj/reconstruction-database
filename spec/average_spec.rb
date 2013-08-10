@@ -4,6 +4,14 @@ ReconDatabase::Average.db = Sequel::Model.db
 
 module ReconDatabase
   describe Average do
+
+    def with_times(*times)
+      average = Average.new
+      average.save
+      times.each { |time| average.add_solve(Solve.new(time: time)) }
+      average
+    end
+    
     before do
       @solves = [
         Solve.new(time: 11.91, penalty: "dnf"),
@@ -15,6 +23,32 @@ module ReconDatabase
       @average = Average.new
       @average.save
       @solves.each { |solve| @average.add_solve(solve) }
+    end
+
+    describe "calculations" do
+      describe "best" do
+        it "figures out the best solve" do
+          with_times(1,2,3).best.time.must_equal 1
+        end
+
+        it "considers penalties" do
+          average = with_times(1,2,3)
+          average.solves.first.penalty = "+2"
+          average.best.time.must_equal 2
+        end
+
+        it "considers dnfs" do
+          average = with_times(1,2,3)
+          average.solves.first.penalty = "dnf"
+          average.best.time.must_equal 2
+        end
+      end
+    end
+
+    describe "format" do
+      it "puts parens around the best and worst solves" do
+        with_times(1,2,3).format.must_equal "(1.00), 2.00, (3.00)"
+      end
     end
 
     it "gets all the solves in an average" do
