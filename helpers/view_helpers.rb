@@ -17,13 +17,5 @@ module ReconDatabase
         "at #{location}"
       end
     end
-
-    def parenthesize_if(words, parenthesize)
-      if parenthesize
-        "(#{words})"
-      else
-        words
-      end
-    end
   end
 end
