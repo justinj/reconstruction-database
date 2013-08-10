@@ -3,9 +3,9 @@ require_relative "test_helper"
 ReconDatabase::Solve.db = Sequel::Model.db
 
 module ReconDatabase
-  class SolveTest < Minitest::Test
+  describe Solve do
 
-    def setup
+    before do
       Solve.all.each { |solve| solve.destroy }
       @solves = [
         Solve.new(time: 10.00, solver: "Forte").save,
@@ -15,15 +15,15 @@ module ReconDatabase
       ]
     end
 
-    def test_request_ignores_blank_fields
-      assert_equal 1, Solve.request(solver: "Forte", competition: "").count
+    it "ignores blank fields" do
+      Solve.request(solver: "Forte", competition: "").count.must_equal 1
     end
 
-    def test_request_time
-      assert_equal 3, Solve.request("time-specifier" => "less",
-                                    "time-value" => "12.5").count
-      assert_equal 1, Solve.request("time-specifier" => "less",
-                                    "time-value" => "11").count
+    it "filters based on time" do
+      Solve.request("time-specifier" => "less",
+                    "time-value" => "12.5").count.must_equal 3
+      Solve.request("time-specifier" => "less",
+                    "time-value" => "11").count.must_equal 1
     end
   end
 end

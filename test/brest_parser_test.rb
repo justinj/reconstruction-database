@@ -1,38 +1,35 @@
 require_relative "test_helper" 
 module ReconDatabase
-  class BrestParserTest < Minitest::Test
+  describe BrestParser do
     attr_reader :parser
     attr_reader :solve
     attr_reader :non_333
     attr_reader :multiple
 
-    def setup
+    before do
       @parser = BrestParser.new("test/fixtures/feliks_588_wc_2013")
       @solve = @parser.solves.first
       @non_333 = BrestParser.new("test/fixtures/non_333_reconstruction").solves.first
       @multiple = BrestParser.new("test/fixtures/multiple_solves")
     end
 
-    def test_parse_solver
-      assert_equal "Feliks Zemdegs", solve.solver
+    it "parses the solver" do
+      solve.solver.must_equal "Feliks Zemdegs"
     end
 
-    def test_parse_time
-      assert_equal 5.88, solve.time
+    it "parses the time" do
+      solve.time.must_equal 5.88
     end
 
-    def test_parse_scramble
-      assert_equal "U' B2 L2 D2 F2 U L2 D' B' L' U' R F2 D2 F U' R D'", solve.scramble
+    it "parses the scramble" do
+      solve.scramble.must_equal "U' B2 L2 D2 F2 U L2 D' B' L' U' R F2 D2 F U' R D'"
     end
 
-    def test_parse_youtube
-      assert_equal "VF30pZM-twA", solve.youtube
+    it "parses the youtube video" do
+      solve.youtube.must_equal "VF30pZM-twA"
     end
 
-    def test_parse_stats
-    end
-
-    def test_parse_solution
+    it "parses the solution" do
       expected = "x' // inspection
 R D R D R' // cross
 U R U R' y' U' R' U R // 1st pair
@@ -42,69 +39,66 @@ U' L' U2 L U L' U2 L // 4th pair
 r U2' R' U' R U' r' // OLL(CP)
 U' R U' R U R U R U' R' U' R2 U' // EPLL"
 
-assert_equal expected, solve.solution
+      solve.solution.must_equal expected
     end
 
-    def test_parse_competition
-      assert_equal "World Rubik's Cube Championship 2013", solve.competition
+    it "parses the competition" do
+      solve.competition.must_equal "World Rubik's Cube Championship 2013"
     end
 
-    def test_puzzle
-      assert_equal "3x3", solve.puzzle
+    it "parses the puzzle" do
+      solve.puzzle.must_equal "3x3"
+      non_333.puzzle.must_equal "4x4"
     end
 
-    def test_non_333_puzzle
-      assert_equal "4x4", non_333.puzzle
+    it "parses multiple solves" do
+      multiple.solves.count.must_equal 2
     end
 
-    def test_multiple_solves
-      assert_equal 2, multiple.solves.count
+    it "finds the scrambles for multiple solves" do
+      multiple.solves[0].scramble.must_equal "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'"
+      multiple.solves[1].scramble.must_equal "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'"
     end
 
-    def test_multiple_finds_scrambles
-      assert_equal "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'", multiple.solves[0].scramble
-      assert_equal "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'", multiple.solves[1].scramble
+    it "finds the name for multiple solves" do
+      multiple.solves[0].solver.must_equal "Feliks Zemdegs"
+      multiple.solves[1].solver.must_equal "Feliks Zemdegs"
     end
 
-    def test_multiple_name
-      assert_equal "Feliks Zemdegs", multiple.solves[0].solver
-      assert_equal "Feliks Zemdegs", multiple.solves[1].solver
-    end
-
-    def test_multiple_times
-      assert_equal 8.39, multiple.solves[0].time
-      assert_equal 7.95, multiple.solves[1].time
+    it "parses multiple times" do
+      multiple.solves[0].time.must_equal 8.39
+      multiple.solves[1].time.must_equal 7.95
     end
   end
 
-  class TwobyTwoTest < Minitest::Test
+  describe "two by two reconstructions" do
     attr_reader :parser, :solves
     # These didn't parse properly at first
 
-    def setup
+    before do
       @parser = BrestParser.new("test/fixtures/5_2x2_solves")
       @solves = @parser.solves
     end
 
-    def test_5_solves
-      assert_equal 5, solves.count
+    it "can tell there are 5 solves" do
+      solves.count.must_equal 5
     end
   end
 
-  class PenaltyTest < Minitest::Test
+  describe "penalties" do
     attr_reader :parser, :solves
 
-    def setup
+    before do
       @parser = BrestParser.new("test/fixtures/solve_with_dnf")
       @solves = @parser.solves
     end
 
-    def test_is_dnf
-      assert_equal "dnf", @solves.first.penalty
+    it "can tell the first solve is a dnf" do
+      @solves.first.penalty.must_equal "dnf"
     end
 
-    def test_is_not_dnf
-      assert_equal "", @solves[1].penalty
+    it "can tell the second solve is not a dnf" do
+      @solves[1].penalty.must_equal ""
     end
   end
 end

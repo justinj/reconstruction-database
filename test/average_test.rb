@@ -3,8 +3,8 @@ require_relative "test_helper"
 ReconDatabase::Average.db = Sequel::Model.db
 
 module ReconDatabase
-  class AverageTest < Minitest::Test
-    def setup
+  describe Average do
+    before do
       @solves = [
         Solve.new(time: 11.91, penalty: "dnf"),
         Solve.new(time: 12.25),
@@ -17,12 +17,12 @@ module ReconDatabase
       @solves.each { |solve| @average.add_solve(solve) }
     end
 
-    def test_get_solves
-      assert_equal 5, @average.solves.count
+    it "gets all the solves in an average" do
+      @average.solves.count.must_equal 5
     end
 
-    def test_average_result
-      assert_equal "10.11", @average.result
+    it "calculates the average" do
+      @average.result.must_equal "10.11"
     end
   end
 end
