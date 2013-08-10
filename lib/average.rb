@@ -5,7 +5,7 @@ module ReconDatabase
 
     def result
       sum = solves.collect(&:effective_value).inject(&:+) - best.effective_value - worst.effective_value
-      format_time(sum / (solves.count - 2))
+      sum / (solves.count - 2)
     end
 
     def worst
