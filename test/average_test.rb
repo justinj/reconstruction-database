@@ -22,7 +22,7 @@ module ReconDatabase
     end
 
     def test_average_result
-      assert_equal 10.13, @average.result
+      assert_equal "10.11", @average.result
     end
   end
 end

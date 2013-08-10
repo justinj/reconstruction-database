@@ -14,7 +14,7 @@ module ReconDatabase
     end
 
     def best
-      solves.min_by(&:effective_value)
+      non_dnf_solves.min_by(&:effective_value)
     end
 
     # seriously?
@@ -24,6 +24,12 @@ module ReconDatabase
 
     def remove_solve(*args)
       remove_solf(*args)
+    end
+
+    private
+    
+    def non_dnf_solves
+      solves.reject { |solve| solve.penalty == "dnf" }
     end
   end
 end

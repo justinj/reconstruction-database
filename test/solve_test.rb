@@ -25,6 +25,5 @@ module ReconDatabase
       assert_equal 1, Solve.request("time-specifier" => "less",
                                     "time-value" => "11").count
     end
-
   end
 end

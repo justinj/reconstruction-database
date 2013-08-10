@@ -29,6 +29,9 @@ module ReconDatabase
       assert_equal "VF30pZM-twA", solve.youtube
     end
 
+    def test_parse_stats
+    end
+
     def test_parse_solution
       expected = "x' // inspection
 R D R D R' // cross
@@ -92,7 +95,6 @@ assert_equal expected, solve.solution
     attr_reader :parser, :solves
 
     def setup
-      p "WTF"
       @parser = BrestParser.new("test/fixtures/solve_with_dnf")
       @solves = @parser.solves
     end

@@ -4,14 +4,10 @@ module ReconDatabase
     include FormattingUtils
     many_to_one :average
 
-    def filename
-      "#{fileize solver}_#{fileize puzzle}_#{fileize time}_#{fileize competition}"
-    end
-
     def effective_value
       case penalty
       when "dnf"
-        Float::INFINITY
+        0
       when "+2"
         time + 2
       else
@@ -36,11 +32,6 @@ module ReconDatabase
       else
         display_alone
       end
-    end
-
-    private
-    def fileize(string)
-      string.to_s.downcase.tr " .", "_"
     end
 
     class << self
