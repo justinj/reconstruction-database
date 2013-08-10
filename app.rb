@@ -5,7 +5,7 @@ require_relative "lib/recondb"
 helpers ReconDatabase::ViewHelpers
 
 get "/" do
-  @solves = ReconDatabase::Solve.request(params)
+  @solves = ReconDatabase::Solve.request(params).order(Sequel.desc(:date_added))
   get_fields(params)
   erb :index
 end

@@ -24,18 +24,18 @@ module ReconDatabase
     def parse_single_solve(post, which)
       solve = Solve.new
 
-      solve.youtube     = parse_youtube(post)
-      solve.puzzle      = parse_puzzle(post)
-      solve.competition = parse_competition(post)
-      solve.solver      = parse_solver(post)
+      solve.youtube        = parse_youtube(post)
+      solve.puzzle         = parse_puzzle(post)
+      solve.competition    = parse_competition(post)
+      solve.solver         = parse_solver(post)
 
-      solve.time        = parse_time(post, which)
-      solve.scramble    = parse_scramble(post, which)
-      solve.solution    = parse_solution(post,which)
-      solve.penalty     = parse_penalty(post, which)
+      solve.time           = parse_time(post, which)
+      solve.scramble       = parse_scramble(post, which)
+      solve.solution       = parse_solution(post,which)
+      solve.penalty        = parse_penalty(post, which)
 
-      solve.reconstructor = "Brest"
-      solve.source = "brest_post"
+      solve.reconstructor  = "Brest"
+      solve.source         = "brest_post"
       solve.source_content = post
 
       solve
@@ -68,8 +68,8 @@ module ReconDatabase
       summary_line(post).fetch(2, "Unofficial").strip
     end
 
-    def parse_puzzle(tree)
-      description = summary_line(tree)[1]
+    def parse_puzzle(post)
+      description = summary_line(post)[1]
       if description.split(" ").count > 2
         fix_puzzle_name(extract_puzzle description)
       else
@@ -129,7 +129,7 @@ module ReconDatabase
     def parse_garron_link(link, prop)
       return "" if link.nil?
       parameter = link.first.split(/(&|\?)/).grep(/#{prop}=/).first
-        parameter["#{prop}="] = ""
+      parameter["#{prop}="] = ""
       parameter.gsub!("%0A", "\n")
       parameter.gsub!('"', "")
       parameter.tr("-_","' ")

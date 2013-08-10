@@ -71,5 +71,15 @@ module ReconDatabase
       end
     end
 
+    describe "saving" do
+      it "saves the added date" do
+        Timecop.freeze do
+          solve = Solve.new
+          solve.save
+          solve.date_added.must_be_close_to Time.now
+        end
+      end
+    end
+
   end
 end

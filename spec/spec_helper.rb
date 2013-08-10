@@ -1,4 +1,5 @@
 require "minitest/autorun"
+require "timecop"
 
 require_relative "../lib/recondb"
 

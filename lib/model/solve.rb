@@ -30,6 +30,11 @@ module ReconDatabase
       end
     end
 
+    def before_save
+      self.date_added ||= Time.now
+      super
+    end
+
     class << self
       def possible_values_for(field)
         select(field).group_by(field).map{|entry| entry[field]}.to_a
