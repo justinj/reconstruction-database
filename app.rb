@@ -15,7 +15,6 @@ get "/solve" do
 end
 
 get "/solve/:id" do
-  p params
   @solve = ReconDatabase::Solve.where(id: params[:id]).first
   erb :solve
 end
