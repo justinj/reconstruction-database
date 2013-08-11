@@ -9,8 +9,8 @@ solves:
       U R U R' L' U L // 2nd pair
       U2 R' U2 R2 U R' // 3rd pair
       y U R U' R' // 4th pair
-      U2 F R U' R' U' R U R' F' // pll
-      U' // auf
+      U2 F R U' R' U' R U R' F' // OLL(CP)
+      U' // AUF
     competition: Toronto Open Winter 2010
     puzzle: 3x3
     penalty:
