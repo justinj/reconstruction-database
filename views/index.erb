@@ -8,6 +8,7 @@
     <% end %>
 
     <%= ReconDatabase::Solver.queryer_html %>
+    <%= ReconDatabase::Competition.queryer_html %>
 
     <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -30,7 +31,7 @@
         <td> <%= solve.solver.name %> <br> </td>
         <td> <%= solve.puzzle %> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%= solve.format %> </a> </td>
-        <td> <%= solve.competition %> </td>
+        <td> <%= solve.competition.name %> </td>
         <td> <%= date_added(solve) %> </td>
       </tr>
     <% end %>

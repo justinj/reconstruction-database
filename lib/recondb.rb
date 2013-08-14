@@ -6,6 +6,7 @@ require_relative "database"
 
 require_relative "model/solve"
 require_relative "model/solver"
+require_relative "model/competition"
 require_relative "model/average"
 
 require_relative "brest_parser"

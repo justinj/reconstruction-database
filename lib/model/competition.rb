@@ -1,5 +1,5 @@
 module ReconDatabase
-  class Solver < Sequel::Model
+  class Competition < Sequel::Model
     one_to_many :solves, class: Solve
 
     def display_name
@@ -12,7 +12,7 @@ module ReconDatabase
       end
 
       def field_name
-        "Solver"
+        "Competition"
       end
 
       def query_name
@@ -20,12 +20,8 @@ module ReconDatabase
       end
 
       def filter(dataset, params)
-        solver = where(name: params["solver"]).first
-        if solver
-          dataset.where(solver: solver)
-        else
-          dataset
-        end
+        competition = where(name: params["competition"]).first
+        dataset.where(competition: competition)
       end
     end
   end

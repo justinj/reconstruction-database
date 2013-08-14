@@ -3,6 +3,7 @@ module ReconDatabase
   class Solve < Sequel::Model
     include FormattingUtils
     many_to_one :average
+    many_to_one :competition
     many_to_one :solver
 
     def effective_value
@@ -42,13 +43,13 @@ module ReconDatabase
       end
 
       def queryable_fields
-        %i(puzzle competition)
+        %i(puzzle)
       end
 
       def request(params)
         result = Solve
         result = Solver.filter(result, params)
-        # time_query(result, params)
+        result = Competition.filter(result, params)
         result
       end
 
