@@ -14,7 +14,7 @@ module ReconDatabase
     end
 
     it "parses the solver" do
-      solve.solver.must_equal "Feliks Zemdegs"
+      solve.solver.name.must_equal "Feliks Zemdegs"
     end
 
     it "parses the time" do

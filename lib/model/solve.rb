@@ -3,6 +3,7 @@ module ReconDatabase
   class Solve < Sequel::Model
     include FormattingUtils
     many_to_one :average
+    many_to_one :solver
 
     def effective_value
       if plus_two?
@@ -41,14 +42,14 @@ module ReconDatabase
       end
 
       def queryable_fields
-        %i(solver puzzle competition)
+        %i(puzzle competition)
       end
 
       def request(params)
-        result = where(queryable_fields.each_with_object({}) do |field, new_params|
-          new_params[field] = params[field] unless params[field].blank?
-        end)
-        time_query(result, params)
+        result = Solve
+        result = Solver.filter(result, params)
+        # time_query(result, params)
+        result
       end
 
       private

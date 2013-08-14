@@ -1,5 +1,4 @@
-require_relative "spec_helper"
-
+require_relative "spec_helper" 
 ReconDatabase::Solve.db = Sequel::Model.db
 
 module ReconDatabase
@@ -51,12 +50,16 @@ module ReconDatabase
 
     describe "request" do
 
+      def solver(name)
+        Solver.new(name)
+      end
+
       before do
         Solve.all.each { |solve| solve.destroy }
-        Solve.new(time: 10.00, solver: "Forte").save
-        Solve.new(time: 11.00, solver: "Kris").save
-        Solve.new(time: 12.00, solver: "Jon").save
-        Solve.new(time: 13.00, solver: "Thompson").save
+        Solve.new(time: 10.00, solver: solver("Forte")).save
+        Solve.new(time: 11.00, solver: solver("Kris")).save
+        Solve.new(time: 12.00, solver: solver("Jon")).save
+        Solve.new(time: 13.00, solver: solver("Thompson")).save
       end
 
       it "ignores blank fields" do

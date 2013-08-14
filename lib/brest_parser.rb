@@ -5,14 +5,11 @@ module ReconDatabase
     def initialize(filepath, average=0)
       @filepath = filepath
       @average = average
-      parse
+      @post = File.read(@filepath)
     end
 
-    private
-
-    def parse
-      @post = File.read(@filepath)
-      @solves = (0...number_of_solves).map { |i| parse_single_solve(@post, i) }
+    def solves
+      @solves ||= (0...number_of_solves).map { |i| parse_single_solve(@post, i) }
     end
 
     def number_of_solves

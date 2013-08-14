@@ -7,6 +7,8 @@
       <%= field.html %>
     <% end %>
 
+    <%= ReconDatabase::Solver.queryer_html %>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 
   </form>
@@ -25,7 +27,7 @@
     </tr>
     <% @solves.each do |solve| %>
       <tr>
-        <td> <%= solve.solver %> <br> </td>
+        <td> <%= solve.solver.name %> <br> </td>
         <td> <%= solve.puzzle %> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%= solve.format %> </a> </td>
         <td> <%= solve.competition %> </td>
