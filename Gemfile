@@ -6,7 +6,7 @@ gem 'sequel'
 gem 'sqlite3'
 
 group :development do
-  gem 'minitest'
+  # gem 'minitest'
 end
 
 
