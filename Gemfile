@@ -7,7 +7,6 @@ gem 'sqlite3'
 
 group :testing do
   gem 'minitest'
-  gem 'timecop'
 end
 
 ruby '2.0.0'
