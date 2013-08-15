@@ -3,12 +3,9 @@
 
   <form action="/" method="GET" >
 
-    <% @fields.each do |field| %>
-      <%= field.html %>
+    <% ReconDatabase::Solve.fields.each do |field| %>
+      <%= field.queryer_html params %>
     <% end %>
-
-    <%= ReconDatabase::Solver.queryer_html %>
-    <%= ReconDatabase::Competition.queryer_html %>
 
     <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -29,7 +26,7 @@
     <% @solves.each do |solve| %>
       <tr>
         <td> <%= solve.solver.name %> <br> </td>
-        <td> <%= solve.puzzle %> </td>
+        <td> <%= solve.puzzle.name %> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%= solve.format %> </a> </td>
         <td> <%= solve.competition.name %> </td>
         <td> <%= date_added(solve) %> </td>

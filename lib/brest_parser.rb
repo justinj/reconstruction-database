@@ -19,21 +19,22 @@ module ReconDatabase
     end
 
     def parse_single_solve(post, which)
-      solve = Solve.new
+      solve = {}
 
-      solve.youtube        = parse_youtube(post)
-      solve.puzzle         = parse_puzzle(post)
-      solve.competition    = parse_competition(post)
-      solve.solver         = parse_solver(post)
+      solve[:youtube]        = parse_youtube(post)
 
-      solve.time           = parse_time(post, which)
-      solve.scramble       = parse_scramble(post, which)
-      solve.solution       = parse_solution(post,which)
-      solve.penalty        = parse_penalty(post, which)
+      solve[:puzzle]         = parse_puzzle(post)
+      solve[:competition]    = parse_competition(post)
+      solve[:solver]         = parse_solver(post)
 
-      solve.reconstructor  = "Brest"
-      solve.source         = "brest_post"
-      solve.source_content = post
+      solve[:time]           = parse_time(post, which)
+      solve[:scramble]       = parse_scramble(post, which)
+      solve[:solution]       = parse_solution(post,which)
+      solve[:penalty]        = parse_penalty(post, which)
+
+      solve[:reconstructor]  = "Brest"
+      solve[:source]         = "brest_post"
+      solve[:source_content] = post
 
       solve
     end

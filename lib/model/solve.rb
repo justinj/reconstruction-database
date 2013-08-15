@@ -2,9 +2,11 @@ module ReconDatabase
   Sequel.extension :blank
   class Solve < Sequel::Model
     include FormattingUtils
+
     many_to_one :average
     many_to_one :competition
     many_to_one :solver
+    many_to_one :puzzle
 
     def effective_value
       if plus_two?
@@ -42,19 +44,18 @@ module ReconDatabase
         select(field).group_by(field).map{|entry| entry[field]}.to_a
       end
 
-      def queryable_fields
-        %i(puzzle)
+      def request(params)
+        fields.inject(Solve) do |result, field|
+          field.filter(result, params)
+        end
       end
 
-      def request(params)
-        result = Solve
-        result = Solver.filter(result, params)
-        result = Competition.filter(result, params)
-        result
+      def fields
+        [Solver, Competition, Puzzle, SolveTime]
       end
 
       private
-      
+
       def time_query(dataset, params)
         specifier = params["time-specifier"]
         value = params["time-value"]

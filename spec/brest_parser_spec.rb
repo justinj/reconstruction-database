@@ -14,19 +14,19 @@ module ReconDatabase
     end
 
     it "parses the solver" do
-      solve.solver.name.must_equal "Feliks Zemdegs"
+      solve[:solver].must_equal "Feliks Zemdegs"
     end
 
     it "parses the time" do
-      solve.time.must_equal 5.88
+      solve[:time].must_equal 5.88
     end
 
     it "parses the scramble" do
-      solve.scramble.must_equal "U' B2 L2 D2 F2 U L2 D' B' L' U' R F2 D2 F U' R D'"
+      solve[:scramble].must_equal "U' B2 L2 D2 F2 U L2 D' B' L' U' R F2 D2 F U' R D'"
     end
 
     it "parses the youtube video" do
-      solve.youtube.must_equal "VF30pZM-twA"
+      solve[:youtube].must_equal "VF30pZM-twA"
     end
 
     it "parses the solution" do
@@ -39,16 +39,16 @@ U' L' U2 L U L' U2 L // 4th pair
 r U2' R' U' R U' r' // OLL(CP)
 U' R U' R U R U R U' R' U' R2 U' // EPLL"
 
-      solve.solution.must_equal expected
+      solve[:solution].must_equal expected
     end
 
     it "parses the competition" do
-      solve.competition.must_equal "World Rubik's Cube Championship 2013"
+      solve[:competition].must_equal "World Rubik's Cube Championship 2013"
     end
 
     it "parses the puzzle" do
-      solve.puzzle.must_equal "3x3"
-      non_333.puzzle.must_equal "4x4"
+      solve[:puzzle].must_equal "3x3"
+      non_333[:puzzle].must_equal "4x4"
     end
 
     it "parses multiple solves" do
@@ -56,18 +56,18 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     end
 
     it "finds the scrambles for multiple solves" do
-      multiple.solves[0].scramble.must_equal "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'"
-      multiple.solves[1].scramble.must_equal "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'"
+      multiple.solves[0][:scramble].must_equal "B2 U2 R2 D U2 F2 L' D' B2 L2 R' B2 F' D L B' U' B U'"
+      multiple.solves[1][:scramble].must_equal "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'"
     end
 
     it "finds the name for multiple solves" do
-      multiple.solves[0].solver.must_equal "Feliks Zemdegs"
-      multiple.solves[1].solver.must_equal "Feliks Zemdegs"
+      multiple.solves[0][:solver].must_equal "Feliks Zemdegs"
+      multiple.solves[1][:solver].must_equal "Feliks Zemdegs"
     end
 
     it "parses multiple times" do
-      multiple.solves[0].time.must_equal 8.39
-      multiple.solves[1].time.must_equal 7.95
+      multiple.solves[0][:time].must_equal 8.39
+      multiple.solves[1][:time].must_equal 7.95
     end
   end
 
@@ -94,11 +94,11 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     end
 
     it "can tell the first solve is a dnf" do
-      @solves.first.penalty.must_equal "dnf"
+      @solves.first[:penalty].must_equal "dnf"
     end
 
     it "can tell the second solve is not a dnf" do
-      @solves[1].penalty.must_equal ""
+      @solves[1][:penalty].must_equal ""
     end
   end
 end

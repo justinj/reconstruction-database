@@ -48,32 +48,6 @@ module ReconDatabase
       end
     end
 
-    describe "request" do
-
-      def solver(name)
-        Solver.new(name)
-      end
-
-      before do
-        Solve.all.each { |solve| solve.destroy }
-        Solve.new(time: 10.00, solver: solver("Forte")).save
-        Solve.new(time: 11.00, solver: solver("Kris")).save
-        Solve.new(time: 12.00, solver: solver("Jon")).save
-        Solve.new(time: 13.00, solver: solver("Thompson")).save
-      end
-
-      it "ignores blank fields" do
-        Solve.request(solver: "Forte", competition: "").count.must_equal 1
-      end
-
-      it "filters based on time" do
-        Solve.request("time-specifier" => "less",
-                      "time-value" => "12.5").count.must_equal 3
-        Solve.request("time-specifier" => "less",
-                      "time-value" => "11").count.must_equal 1
-      end
-    end
-
     describe "saving" do
       it "saves the added date" do
         Timecop.freeze do

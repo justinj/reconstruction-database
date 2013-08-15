@@ -1,5 +1,5 @@
 module ReconDatabase
-  class Solver < Sequel::Model
+  class Puzzle < Sequel::Model
     extend Field
     one_to_many :solves, class: Solve
 

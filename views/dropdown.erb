@@ -1,10 +1,13 @@
 <label>
-  <%= title.capitalize %>
-  <select name="<%= title %>" class="form-control">
+  <% default = params[query_name] %>
+  <%= field_name %>
+  <select name="<%= query_name %>" class="form-control">
     <option value="">All</option>
-    <% potential_values.sort.each do |value| %>
-      <option value="<%= value %>"
-      <%= default_value == value ? ' selected="selected"' : "" %> ><%= value %></option>
+    <% all.each do |value| %>
+      <option value="<%= value.name %>"
+      <%= value.name == default ? ' selected="selected"' : "" %> >
+      <%= value.name %>
+      </option>
     <% end %>
   </select> 
 </label>
