@@ -40,10 +40,6 @@ module ReconDatabase
     end
 
     class << self
-      def possible_values_for(field)
-        select(field).group_by(field).map{|entry| entry[field]}.to_a
-      end
-
       def request(params)
         fields.inject(Solve) do |result, field|
           field.filter(result, params)
@@ -52,31 +48,6 @@ module ReconDatabase
 
       def fields
         [Solver, Competition, Puzzle, SolveTime]
-      end
-
-      private
-
-      def time_query(dataset, params)
-        specifier = params["time-specifier"]
-        value = params["time-value"]
-        unless specifier.blank? || value.blank?
-          dataset.where("time #{sign_for(specifier)} ?", value)
-        else
-          dataset
-        end
-      end
-
-      def sign_for(comparison)
-        case comparison
-        when "less"
-          "<"
-        when "greater"
-          ">"
-        when "equal"
-          "="
-        else
-          raise "bad comparison"
-        end
       end
     end
   end
