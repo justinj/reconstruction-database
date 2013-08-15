@@ -16,6 +16,7 @@ module ReconDatabase
 
         new_solve.time = solve[:time]
         new_solve.scramble = solve[:scramble]
+        new_solve.solution = solve[:solution]
         new_solve.penalty = solve[:penalty]
         new_solve.youtube = solve[:youtube]
 

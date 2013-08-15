@@ -5,7 +5,7 @@ require_relative "lib/recondb"
 helpers ReconDatabase::ViewHelpers
 
 get "/" do
-  @solves = ReconDatabase::Solve.request(params).order(Sequel.desc(:date_added))
+  @solves = ReconDatabase::Solve.request(params).sort_by { |s| -s[:date_added].to_i}
   erb :index
 end
 
