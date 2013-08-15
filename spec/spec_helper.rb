@@ -3,9 +3,17 @@ require "timecop"
 
 require_relative "../lib/recondb"
 
-Sequel.extension :migration
-Sequel::Model.db = Sequel.sqlite
-Sequel::Migrator.apply Sequel::Model.db, "db/migrations"
+def setup_db
+  Sequel.extension :migration
+  Sequel::Model.db = Sequel.sqlite
+  Sequel::Migrator.apply Sequel::Model.db, "db/migrations"
+
+  [ReconDatabase::Solve, ReconDatabase::Solver, ReconDatabase::Competition, ReconDatabase::Puzzle].each do |model|
+    model.db = Sequel::Model.db 
+  end
+end
+
+setup_db
 
 def fixture(filename)
   "spec/fixtures/#{filename}"

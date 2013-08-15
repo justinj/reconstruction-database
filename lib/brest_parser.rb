@@ -21,8 +21,6 @@ module ReconDatabase
     def parse_single_solve(post, which)
       solve = {}
 
-      solve[:youtube]        = parse_youtube(post)
-
       solve[:puzzle]         = parse_puzzle(post)
       solve[:competition]    = parse_competition(post)
       solve[:solver]         = parse_solver(post)
@@ -31,6 +29,8 @@ module ReconDatabase
       solve[:scramble]       = parse_scramble(post, which)
       solve[:solution]       = parse_solution(post,which)
       solve[:penalty]        = parse_penalty(post, which)
+      solve[:youtube]        = parse_youtube(post)
+
 
       solve[:reconstructor]  = "Brest"
       solve[:source]         = "brest_post"
