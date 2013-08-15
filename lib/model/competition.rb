@@ -6,5 +6,13 @@ module ReconDatabase
     def to_s
       name
     end
+
+    def at
+      if name == "Unofficial"
+        ""
+      else
+        "at #{name}"
+      end
+    end
   end
 end

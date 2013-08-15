@@ -10,12 +10,5 @@ module ReconDatabase
                     '<span class="comment">\1</span>')
     end
 
-    def at(location)
-      if location.nil? || location == "Unofficial"
-        ""
-      else
-        "at #{location}"
-      end
-    end
   end
 end
