@@ -5,7 +5,7 @@ gem 'rake'
 gem 'sequel'
 gem 'sqlite3'
 
-group :development, :testing do
+group :testing do
   gem 'minitest'
   gem 'timecop'
 end
