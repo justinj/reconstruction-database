@@ -1,0 +1,97 @@
+[QUOTE=Brest;888403][B]Yuhei Takagi[/B] - 32.41 3x3 with feet	WR - Tachikawa 3x3 Fest 2013
+
+[SPOILER=Video][youtubehd]1BNLzfBpIq4[/youtubehd][/SPOILER]     [SPOILER=1st solve]R2 B2 D2 L2 R2 U' R2 U2 R B D2 L F' R' F D F' D2
+
+U F R' F2 D F' L D' B D' [COLOR="gray"]// cross[/COLOR]
+U R U' R2 U R [COLOR="gray"]// 1st pair[/COLOR]
+R U' R' [COLOR="gray"]// 2nd pair[/COLOR]
+U L U' L' [COLOR="gray"]// 3rd pair[/COLOR]
+L' U2 L2 F' L' F [COLOR="gray"]// 4th pair[/COLOR]
+y' r' U' r R' U' R U r' U r [COLOR="gray"]// OLL[/COLOR]
+y2 U R2 U' R' U R U' y x R' U' L U' L' U' R U [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=U_F_R-_F2_D_F-_L_D-_B_D-_//_cross%0AU_R_U-_R2_U_R_//_1st_pair%0AR_U-_R-_//_2nd_pair%0AU_L_U-_L-_//_3rd_pair%0AL-_U2_L2_F-_L-_F_//_4th_pair%0Ay-_r-_U-_r_R-_U-_R_U_r-_U_r_//_OLL%0Ay2_U_R2_U-_R-_U_R_U-_y_x_R-_U-_L_U-_L-_U-_R_U_//_PLL&ini=R2_B2_D2_L2_R2_U-_R2_U2_R_B_D2_L_F-_R-_F_D_F-_D2&scheme=groybw"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	QTM	qtps	ETM	etps[/B]
+[COLOR="Red"]Total	35.63	61	1.71	100	2.81	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	QTM	ETM[/B]
+Cross+1	10.57	18	1.70	28	2.65		Cross+1/F2L	52.1%	51.4%	51.9%
+F2L	20.28	35	1.73	54	2.66		F2L/Total	56.9%	57.4%	54.0%
+LL	15.35	26	1.69	46	3.00		LL/Total	43.1%	42.6%	46.0%[/CODE]     [SPOILER=View as executed]R2 B2 D2 L2 R2 U' R2 U2 R B D2 L F' R' F D F' D2
+
+x' [COLOR="gray"]// inspection[/COLOR]
+F x F R' F F x F z' L' y x F x' L' F L' [COLOR="gray"]// cross[/COLOR]
+x' y (F y') F R' F F y' B y F [COLOR="gray"]// 1st pair[/COLOR]
+F R' y' b y L' z' L' [COLOR="gray"]// 2nd pair[/COLOR]
+y z R F R' y' y F' [COLOR="gray"]// 3rd pair[/COLOR]
+F' R' R' F z' F R' y' R' B [COLOR="gray"]// 4th pair[/COLOR]
+y y y' L' y R' B y' R' z' L' z y F x' F z' L' x' F y' z' F z' [COLOR="gray"]// OLL[/COLOR]
+z R F F R' y' R' y R F R' z' R' y' R' F R' F' R' B y F [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_//_inspection%0AF_x_F_R-_F_F_x_F_z-_L-_y_x_F_x-_L-_F_L-_//_cross%0Ax-_y_(F_y-)_F_R-_F_F_y-_B_y_F_//_1st_pair%0AF_R-_y-_b_y_L-_z-_L-_//_2nd_pair%0Ay_z_R_F_R-_y-_y_F-_//_3rd_pair%0AF-_R-_R-_F_z-_F_R-_y-_R-_B_//_4th_pair%0Ay_y_y-_L-_y_R-_B_y-_R-_z-_L-_z_y_F_x-_F_z-_L-_x-_F_y-_z-_F_z-_//_OLL%0Az_R_F_F_R-_y-_R-_y_R_F_R-_z-_R-_y-_R-_F_R-_F-_R-_B_y_F_//_PLL&ini=R2_B2_D2_L2_R2_U-_R2_U2_R_B_D2_L_F-_R-_F_D_F-_D2&scheme=groybw"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     [SPOILER=2nd solve]U2 B2 R2 U2 R F2 L2 R2 D2 R D R D' R' B U B' R2 D' R
+
+y2 [COLOR="gray"]// inspection[/COLOR]
+L F' R2 L2 D L [COLOR="gray"]// cross[/COLOR]
+y R' U2 R U' y R U R' [COLOR="gray"]// 1st pair[/COLOR]
+U R' U R U L' U L [COLOR="gray"]// 2nd pair[/COLOR]
+y U R2 U' R' U R2 [COLOR="gray"]// 3rd pair[/COLOR]
+R U2 R' U R U' R' [COLOR="gray"]// 4th pair[/COLOR]
+R U2 R2 U' R2 U' R2 U2 R [COLOR="gray"]// OLL[/COLOR]
+U' L' U R' U2 L U' L' U2 L R [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y2_//_inspection%0AL_F-_R2_L2_D_L_//_cross%0Ay_R-_U2_R_U-_y_R_U_R-_//_1st_pair%0AU_R-_U_R_U_L-_U_L_//_2nd_pair%0Ay_U_R2_U-_R-_U_R2_//_3rd_pair%0AR_U2_R-_U_R_U-_R-_//_4th_pair%0AR_U2_R2_U-_R2_U-_R2_U2_R_//_OLL%0AU-_L-_U_R-_U2_L_U-_L-_U2_L_R_//_PLL&ini=U2_B2_R2_U2_R_F2_L2_R2_D2_R_D_R_D-_R-_B_U_B-_R2_D-_R&scheme=groybw"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	QTM	qtps	ETM	etps[/B]
+[COLOR="Red"]Total	32.05	67	2.09	99	3.09	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	QTM	ETM[/B]
+Cross+1	9.39	16	1.70	27	2.88		Cross+1/F2L	42.9%	40.0%	40.9%
+F2L	21.90	40	1.83	66	3.01		F2L/Total	68.3%	59.7%	66.7%
+LL	10.15	27	2.66	33	3.25		LL/Total	31.7%	40.3%	33.3%[/CODE]     [SPOILER=View as executed]U2 B2 R2 U2 R F2 L2 R2 D2 R D R D' R' B U B' R2 D' R
+
+y [COLOR="gray"]// inspection[/COLOR]
+F R' z' y R' R' L' L' F L [COLOR="gray"]// cross[/COLOR]
+x' x' z' L' F F y' F R' z' y F x' F x y' R' [COLOR="gray"]// 1st pair[/COLOR]
+x' z' F x y' L' x' F y' F y F R' F y' B [COLOR="gray"]// 2nd pair[/COLOR]
+z' y z R F F R' y' R' B y F F [COLOR="gray"]// 3rd pair[/COLOR]
+F R' R' y' R' B y F R' F' [COLOR="gray"]// 4th pair[/COLOR]
+z' z F R' R' F F R' F F R' F F R' R' F [COLOR="gray"]// OLL[/COLOR]
+R' y R' F L' F F y' B y F' R' F F y' B F [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_//_inspection%0AF_R-_z-_y_R-_R-_L-_L-_F_L_//_cross%0Ax-_x-_z-_L-_F_F_y-_F_R-_z-_y_F_x-_F_x_y-_R-_//_1st_pair%0Ax-_z-_F_x_y-_L-_x-_F_y-_F_y_F_R-_F_y-_B_//_2nd_pair%0Az-_y_z_R_F_F_R-_y-_R-_B_y_F_F_//_3rd_pair%0AF_R-_R-_y-_R-_B_y_F_R-_F-_//_4th_pair%0Az-_z_F_R-_R-_F_F_R-_F_F_R-_F_F_R-_R-_F_//_OLL%0AR-_y_R-_F_L-_F_F_y-_B_y_F-_R-_F_F_y-_B_F_//_PLL&ini=U2_B2_R2_U2_R_F2_L2_R2_D2_R_D_R_D-_R-_B_U_B-_R2_D-_R&scheme=groybw"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     [SPOILER=3rd solve]B2 L2 U2 L2 R2 B F R2 B U2 F U' B' U2 B' R2 U L B' R2
+
+y' [COLOR="gray"]// inspection[/COLOR]
+D' L' R2 D R' [COLOR="gray"]// cross[/COLOR]
+U2 R' U2 R2 U R' [COLOR="gray"]// 1st pair[/COLOR]
+U L' U L U' y' R U' R' [COLOR="gray"]// 2nd pair[/COLOR]
+L U L' U y' L' U' L [COLOR="gray"]// 3rd pair[/COLOR]
+U2 R U' R' U R U R' [COLOR="gray"]// 4th pair[/COLOR]
+R' F2' L F L' F R [COLOR="gray"]// OLL(CP)[/COLOR]
+U R U' R U R U R U' R' U' R2 [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y-_//_inspection%0AD-_L-_R2_D_R-_//_cross%0AU2_R-_U2_R2_U_R-_//_1st_pair%0AU_L-_U_L_U-_y-_R_U-_R-_//_2nd_pair%0AL_U_L-_U_y-_L-_U-_L_//_3rd_pair%0AU2_R_U-_R-_U_R_U_R-_//_4th_pair%0AR-_F2-_L_F_L-_F_R_//_OLL(CP)%0AU_R_U-_R_U_R_U_R_U-_R-_U-_R2_//_EPLL&ini=B2_L2_U2_L2_R2_B_F_R2_B_U2_F_U-_B-_U2_B-_R2_U_L_B-_R2&scheme=groybw"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	QTM	qtps	ETM	etps[/B]
+[COLOR="Red"]Total	29.56	60	2.03	91	3.08	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	QTM	ETM[/B]
+Cross+1	5.41	15	2.77	17	3.14		Cross+1/F2L	27.1%	38.5%	29.3%
+F2L	19.94	39	1.96	58	2.91		F2L/Total	67.5%	65.0%	63.7%
+LL	9.62	21	2.18	33	3.43		LL/Total	32.5%	35.0%	36.3%[/CODE]     [SPOILER=View as executed]B2 L2 U2 L2 R2 B F R2 B U2 F U' B' U2 B' R2 U L B' R2
+
+y x [COLOR="gray"]// inspection[/COLOR]
+F' R' y' F F y' B R' [COLOR="gray"]// cross[/COLOR]
+F F R' F F R' R' F R' [COLOR="gray"]// 1st pair[/COLOR]
+x x' F L' F y' F x R' F R' y' R' [COLOR="gray"]// 2nd pair[/COLOR]
+x' x' y' F y' B R' z B R' y R' F [COLOR="gray"]// 3rd pair[/COLOR]
+x (x y) y' R' R' F R' y' R' B y F y' B R' [COLOR="gray"]// 4th pair[/COLOR]
+x' y y L' y R' R' F y' B R' B y B [COLOR="gray"]// OLL(CP)[/COLOR]
+x' (F y') x' F R' F y' B y F y' B y F R' F' R' F F [COLOR="gray"]// EPLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x_//_inspection%0AF-_R-_y-_F_F_y-_B_R-_//_cross%0AF_F_R-_F_F_R-_R-_F_R-_//_1st_pair%0Ax_x-_F_L-_F_y-_F_x_R-_F_R-_y-_R-_//_2nd_pair%0Ax-_x-_y-_F_y-_B_R-_z_B_R-_y_R-_F_//_3rd_pair%0Ax_(x_y)_y-_R-_R-_F_R-_y-_R-_B_y_F_y-_B_R-_//_4th_pair%0Ax-_y_y_L-_y_R-_R-_F_y-_B_R-_B_y_B_//_OLL(CP)%0Ax-_(F_y-)_x-_F_R-_F_y-_B_y_F_y-_B_y_F_R-_F-_R-_F_F_//_EPLL&ini=B2_L2_U2_L2_R2_B_F_R2_B_U2_F_U-_B-_U2_B-_R2_U_L_B-_R2&scheme=groybw"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     [SPOILER=Statistics][CODE]Mean (3/3)
+
+[B]Step	Time	QTM	qtps	ETM	etps[/B]
+[COLOR="red"]Total	32.41	62.67	1.93	96.67	2.98	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	QTM	ETM[/B]
+Cross+1	8.46	16.33	1.93	24.00	2.84		Cross+1/F2L	40.8%	43.0%	40.4%
+F2L	20.71	38.00	1.84	59.33	2.87		F2L/Total	63.9%	60.6%	61.4%
+LL	11.71	24.67	2.11	37.33	3.19		LL/Total	36.1%	39.4%	38.6%[/CODE]
+
+[CODE]Best from each field
+
+[B]Step	Time	QTM	qtps	ETM	etps[/B]
+[COLOR="red"]Total	29.56	60	2.09	91	3.09[/COLOR]
+
+Cross+1	5.41	15	2.77	17	3.14
+F2L	19.94	35	1.96	54	3.01
+LL	9.62	21	2.66	33	3.43[/CODE][/SPOILER][/QUOTE]
+
