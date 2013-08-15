@@ -1,0 +1,86 @@
+[QUOTE=Brest;884550][B]Cameron Stollery[/B] - 2.55 2x2 av5 - World Rubik's Cube Championship 2013
+
+[SPOILER=Video][youtubehd]8Xc-1lirhVw[/youtubehd][/SPOILER]     [SPOILER=1st solve]U2 R U' F' R2 U2 F' R2 F' U R'
+
+y x' [COLOR="gray"]// inspection[/COLOR]
+R' F R U R' [COLOR="gray"]// face[/COLOR]
+U R U (R' L') U' R U R' U' L U' [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x-_//_inspection%0AR-_F_R_U_R-_//_face%0AU_R_U_(R-_L-)_U-_R_U_R-_U-_L_U-_//_finish&ini=U2_R_U-_F-_R2_U2_F-_R2_F-_U_R-&cube=2x2x2"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="Red"]Total	2.36	16	6.78	16	6.78	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	1.04	5	4.81	5	4.81		Face/Total	44.1%	31.3%	31.3%
+Finish	1.32	11	8.33	11	8.33		Finish/Total	55.9%	68.8%	68.8%[/CODE][/SPOILER]     [SPOILER=2nd solve]R U' F' R' U2 R' U' F U' R U
+
+z' [COLOR="gray"]// inspection[/COLOR]
+F' R U2 F2 [COLOR="gray"]// face[/COLOR]
+R' U R U2 R2' F R F' R U' [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=z-_//_inspection%0AF-_R_U2_F2_//_face%0AR-_U_R_U2_R2-_F_R_F-_R_U-_//_finish&ini=R_U-_F-_R-_U2_R-_U-_F_U-_R_U&cube=2x2x2"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="Red"]Total	2.31	14	6.06	14	6.06	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	1.01	4	3.96	4	3.96		Face/Total	43.7%	28.6%	28.6%
+Finish	1.30	10	7.69	10	7.69		Finish/Total	56.3%	71.4%	71.4%[/CODE][/SPOILER]     [SPOILER=3rd solve]U' R U2 F' R' U R' F' U' F' R
+
+x' [COLOR="gray"]// inspection[/COLOR]
+U2 R2 U' R' [COLOR="gray"]// face[/COLOR]
+U' R' F' U' R U R' U' F U [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_//_inspection%0AU2_R2_U-_R-_//_face%0AU-_R-_F-_U-_R_U_R-_U-_F_U_//_finish&ini=U-_R_U2_F-_R-_U_R-_F-_U-_F-_R&cube=2x2x2"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="Red"]Total	2.85	19	6.67	19	6.67	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	1.18	9	7.63	9	7.63		Face/Total	41.4%	47.4%	47.4%
+Finish	1.67	10	5.99	10	5.99		Finish/Total	58.6%	52.6%	52.6%[/CODE]     [SPOILER=View as executed]U' R U2 F' R' U R' F' U' F' R
+
+x' [COLOR="gray"]// inspection[/COLOR]
+U2 R U' R R' U R U' R' [COLOR="gray"]// face[/COLOR]
+U' R' F' U' R U R' U' F U [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_//_inspection%0AU2_R_U-_R_R-_U_R_U-_R-_//_face%0AU-_R-_F-_U-_R_U_R-_U-_F_U_//_finish&ini=U-_R_U2_F-_R-_U_R-_F-_U-_F-_R&cube=2x2x2"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     [SPOILER=4th solve]U R' U2 F2 R2 U2 F' R2 F U' R2
+
+y2 x [COLOR="gray"]// inspection[/COLOR]
+F R U R' [COLOR="gray"]// face[/COLOR]
+U' R2 U2 R' U2 R2 U' [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y2_x_//_inspection%0AF_R_U_R-_//_face%0AU-_R2_U2_R-_U2_R2_U-_//_finish&ini=U_R-_U2_F2_R2_U2_F-_R2_F_U-_R2&cube=2x2x2"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="Red"]Total	6.60	14	2.12	22	3.33	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	0.65	4	6.15	4	6.15		Face/Total	9.8%	28.6%	18.2%
+Finish	3.95	10	2.53	18	4.56		Finish/Total	59.8%	71.4%	81.8%[/CODE]     [SPOILER=View as executed]U R' U2 F2 R2 U2 F' R2 F U' R2
+
+y2 x [COLOR="gray"]// inspection[/COLOR]
+F R U R' [COLOR="gray"]// face[/COLOR]
+U' R2 U U R' U2 R U' x y z' x' z y x' L U L' [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y2_x_//_inspection%0AF_R_U_R-_//_face%0AU-_R2_U_U_R-_U2_R_U-_x_y_z-_x-_z_y_x-_L_U_L-_//_finish&ini=U_R-_U2_F2_R2_U2_F-_R2_F_U-_R2&cube=2x2x2&scheme=grobBy"]alg.garron.us[/url][/COLOR][/SPOILER][/SPOILER]     [SPOILER=5th solve]F R2 F' U' R2 U' F2 U' F R2 U'
+
+y x2 [COLOR="gray"]// inspection[/COLOR]
+U R2 U' R' [COLOR="gray"]// face[/COLOR]
+U y R U L' U' L U R' U' R U R' U2 [COLOR="gray"]// finish[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=y_x2_//_inspection%0AU_R2_U-_R-_//_face%0AU_y_R_U_L-_U-_L_U_R-_U-_R_U_R-_U2_//_finish&ini=F_R2_F-_U-_R2_U-_F2_U-_F_R2_U-&cube=2x2x2"]alg.garron.us[/url][/COLOR]
+[Code][B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="Red"]Total	2.43	17	7.00	18	7.41	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	0.73	4	5.48	4	5.48		Face/Total	30.0%	23.5%	22.2%
+Finish	1.70	13	7.65	14	8.24		Finish/Total	70.0%	76.5%	77.8%[/CODE][/SPOILER]     [SPOILER=Statistics][CODE]Average (removing fastest and slowest solve)
+
+[B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="red"]Total	2.55	17.33	6.81	17.67	6.94	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	0.98	6.00	6.10	6.00	6.10		Face/Total	38.6%	34.6%	34.0%
+Finish	1.56	11.33	7.25	11.67	7.46		Finish/Total	61.4%	65.4%	66.0%[/CODE]
+
+[CODE]Mean (5/5)
+
+[B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="red"]Total	2.91	16.00	5.50	17.80	6.12	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	HTM	ETM[/B]
+Face	0.92	5.20	5.64	5.20	5.64		Face/Total	31.7%	32.5%	29.2%
+Finish	1.99	10.80	5.43	12.60	6.34		Finish/Total	68.3%	67.5%	70.8%[/CODE]
+
+[CODE]Best from each field
+
+[B]Step	Time	HTM	htps	ETM	etps[/B]
+[COLOR="red"]Total	2.31	14	7.00	14	7.41[/COLOR]
+
+Face	0.65	4	7.63	4	7.63
+Finish	1.30	10	8.33	10	8.33[/CODE][/SPOILER][/QUOTE]
+
