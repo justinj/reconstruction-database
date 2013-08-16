@@ -5,6 +5,7 @@ gem 'rake'
 gem 'sequel'
 gem 'sqlite3'
 gem 'sequel-crushyform'
+gem 'capistrano-rbenv'
 
 group :development do
   gem 'minitest'
