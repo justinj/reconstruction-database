@@ -10,5 +10,16 @@ module ReconDatabase
                     '<span class="comment">\1</span>')
     end
 
+    def tablify(stats)
+      stats = stats.dup.lines
+      # ugh, formatting this is terrible
+      stats[2] = "<td></td>"*5 + stats[2]
+      "<table class='statstable'>" + 
+      stats.map { |line| line.split /\t+/ }.map do |row|
+        "<tr><td>" + row.join("</td><td>") + "</td></tr>"
+      end.join("\n") + 
+        "</table>"
+    end
+
   end
 end

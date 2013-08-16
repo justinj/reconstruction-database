@@ -2,10 +2,9 @@ module ReconDatabase
   class BrestParser
     attr_reader :post, :name, :solves, :average
 
-    def initialize(filepath, average=0)
-      @filepath = filepath
+    def initialize(post, average=0)
       @average = average
-      @post = File.read(@filepath)
+      @post = post
     end
 
     def solves
@@ -58,9 +57,9 @@ module ReconDatabase
 
     def parse_time(post, which)
       times = post.scan /Total\s+(\d+\.\d+)[^%]/
-        if times && times[which]
-          times[which][0].to_f
-        end
+      if times && times[which]
+        times[which][0].to_f
+      end
     end
 
     def parse_competition(post)
@@ -104,9 +103,14 @@ module ReconDatabase
     end
 
     def parse_notes(post, which)
-      lines = post.lines.partition { |line| line =~ /\t/ }[which*2]
+      lines = every_other(post.lines.chunk { |line| (line =~ /\t/).nil? }.map{|_, rest| rest})
+      lines = lines[which]
       return "" unless lines
       notes = lines.join.gsub(/\s*\[SPOILER.*/,"").gsub(/\[.*?\]/, "").chomp
+    end
+
+    def every_other(enum)
+      enum.each_slice(2).map(&:last)
     end
 
     def parse_scramble(post, which)

@@ -15,6 +15,15 @@ h1 {
   font-size: 150%;
 }
 
+.notes {
+  font-family: courier;
+  font-size: 100%;
+}
+
+.notes td {
+  padding: 10px;
+}
+
 .youtube {
   margin-bottom: 50px;
 }
