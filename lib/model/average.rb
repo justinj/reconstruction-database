@@ -4,8 +4,24 @@ module ReconDatabase
     one_to_many :solves, class: Solve
 
     def result
-      sum = solves.collect(&:effective_value).inject(&:+) - best.effective_value - worst.effective_value
-      sum / (solves.count - 2)
+      if mean?
+        mean
+      else
+        avg
+      end
+    end
+
+    def mean?
+      solves.count == 3
+    end
+
+    def mean
+      solves.collect(&:effective_value).inject(&:+) / solves.count
+    end
+
+    def avg
+        sum = solves.collect(&:effective_value).inject(&:+) - best.effective_value - worst.effective_value
+        sum / (solves.count - 2)
     end
 
     def worst
@@ -45,7 +61,7 @@ module ReconDatabase
     end
 
     def format_solve(solve)
-      if solve == best || solve == worst
+      if !mean? && (solve == best || solve == worst)
         "(#{solve.format})"
       else
         solve.format

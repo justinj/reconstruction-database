@@ -36,18 +36,26 @@ module ReconDatabase
 
       describe "calculating average" do
         it "calculates it correctly" do
-          with_times(1, 2, 3).result.must_equal 2
+          with_times(1, 2, 3, 4).result.must_equal 2.5
         end
 
         it "ignores the best and worst times" do
-          with_times(1, 2, 100).result.must_equal 2
+          with_times(1, 2, 2, 100).result.must_equal 2
+        end
+
+        it "does a mean if there are exactly 3 times" do
+          with_times(1, 2, 6).result.must_equal 3
         end
       end
     end
 
     describe "format" do
       it "puts parens around the best and worst solves" do
-        with_times(1,2,3).format.must_equal "(1.00), 2.00, (3.00)"
+        with_times(1,2,3,4).format.must_equal "(1.00), 2.00, 3.00, (4.00)"
+      end
+
+      it "doesn't put parens for a mean" do
+        with_times(1,2,3).format.must_equal "1.00, 2.00, 3.00"
       end
     end
   end
