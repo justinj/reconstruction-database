@@ -84,7 +84,8 @@ task :yamlimport do
     average.save
     solves = YAML.load(File.read(file))["solves"]
     solves.each do |solve|
-      solve = ReconDatabase::Solve.new(solve)
+      solve = ReconDatabase::SolveFactory.from_hash(solve)
+      solve.date_added = Time.now.to_i
       average.add_solve(solve)
     end
     mkdir "db/manual_solves/processed" unless Dir.exist? "db/manual_solves/processed"
