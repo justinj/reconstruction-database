@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    dotenv (0.8.0)
     minitest (5.0.4)
     rack (1.5.2)
     rake (10.1.0)
@@ -18,7 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv
   minitest
   rake
   sequel
