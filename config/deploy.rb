@@ -7,15 +7,21 @@ set :repository,  "git@github.com:justinj/reconstruction-database.git"
 
 set :scm, :git
 
-role :web, "www"
-role :app, "www"
+task "production" do
+  role :web, "www"
+  role :app, "www"
+end
+
+task "staging" do
+  role :web, "stage"
+  role :app, "stage"
+end
 
 set :deploy_to, "/home/www/rcdb"
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :update do
-    run "echo $SHELL >> /home/www/asdf"
     run "cd #{current_path} && bundle install --deployment"
   end
   task :restart, :roles => :app, :except => { :no_release => true } do
