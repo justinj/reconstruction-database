@@ -16,5 +16,5 @@ end
 setup_db
 
 def fixture(filename)
-  "spec/fixtures/#{filename}"
+  File.read("spec/fixtures/#{filename}")
 end

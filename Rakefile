@@ -37,7 +37,7 @@ end
 def process_post(post, average)
   average = ReconDatabase::Average.new
   average.save
-  ReconDatabase::BrestParser.new(post, average).solves.each do |solve|
+  ReconDatabase::BrestParser.new(File.read(post), average).solves.each do |solve|
     solve = ReconDatabase::SolveFactory.from_hash(solve)
     solve.date_added = Time.now.to_i
     average.add_solve(solve)
@@ -47,6 +47,7 @@ end
 
 task :import do
   Dir.glob("db/posts/unprocessed/*").each_with_index do |post, average|
+    puts "Processing #{post}"
     process_post(post, average)
   end
 end

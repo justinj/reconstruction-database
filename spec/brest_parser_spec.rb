@@ -13,15 +13,6 @@ module ReconDatabase
       @multiple = BrestParser.new(fixture "multiple_solves")
     end
 
-    it "parses the notes" do
-      solve[:notes].must_equal %(Step	Time	STM	stps	ETM	etps
-Total	5.88	53	9.01	57	9.69		%
-							Step		Time	STM	ETM
-Cross+1	1.62	13	8.02	14	8.64		Cross+1/F2L	40.2%	39.4%	38.9%
-F2L	4.03	33	8.19	36	8.93		F2L/Total	68.5%	62.3%	63.2%
-LL	1.85	20	10.81	21	11.35		LL/Total	31.5%	37.7%	36.8%)
-    end
-
     it "parses the solver" do
       solve[:solver].must_equal "Feliks Zemdegs"
     end

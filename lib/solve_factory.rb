@@ -20,7 +20,8 @@ module ReconDatabase
         new_solve.penalty = solve[:penalty]
         new_solve.youtube = solve[:youtube]
 
-        new_solve.reconstructor = solve[:source]
+        new_solve.reconstructor = solve[:reconstructor]
+        new_solve.source = solve[:source]
         new_solve.source_content = solve[:source_content]
 
         new_solve

@@ -37,13 +37,6 @@
   <% end %>
 </div>
 
-<% if @solve.notes %>
-  <h3> Stats </h3>
-  <div class="notes well">
-    <%= tablify(@solve.notes) %>
-  </div>
-<% end %>
-
 <div class="footnotes">
   <div>
     Added: <%= date_added(@solve) %>

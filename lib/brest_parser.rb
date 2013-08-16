@@ -29,7 +29,7 @@ module ReconDatabase
       solve[:solution]       = parse_solution(post,which)
       solve[:penalty]        = parse_penalty(post, which)
       solve[:youtube]        = parse_youtube(post)
-      solve[:notes]          = parse_notes(post, which)
+      # solve[:notes]          = parse_notes(post, which)
 
 
       solve[:reconstructor]  = "Brest"
