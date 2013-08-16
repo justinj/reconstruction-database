@@ -11,6 +11,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :update do
+    run "cd #{current_path}"
     run "bundle install --deployment"
   end
   task :restart, :roles => :app, :except => { :no_release => true } do
