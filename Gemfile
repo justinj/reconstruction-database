@@ -4,6 +4,8 @@ gem 'sinatra'
 gem 'rake'
 gem 'sequel'
 gem 'sqlite3'
+gem 'sequel-crushyform'
+gem 'dotenv'
 
 group :development do
   gem 'minitest'

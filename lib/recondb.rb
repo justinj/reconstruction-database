@@ -2,8 +2,8 @@ require "sequel"
 require "yaml"
 
 require_relative "formatting_utils"
-require_relative "database"
 require_relative "field"
+require_relative "database"
 
 require_relative "model/solve"
 require_relative "model/solver"

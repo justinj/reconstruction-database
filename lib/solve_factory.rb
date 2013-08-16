@@ -1,7 +1,7 @@
 module ReconDatabase
   class SolveFactory
     class << self
-      def from_hash(solve)
+      def from_hash(solve, existing_solve = nil)
         solver = Solver.where(name: solve[:solver]).first || Solver.new(name: solve[:solver])
         solver.save
         puzzle = Puzzle.where(name: solve[:puzzle]).first || Puzzle.new(name: solve[:puzzle])
@@ -9,7 +9,7 @@ module ReconDatabase
         competition = Competition.where(name: solve[:competition]).first || Competition.new(name: solve[:competition])
         competition.save
 
-        new_solve = Solve.new
+        new_solve = existing_solve || Solve.new
         new_solve.solver = solver
         new_solve.puzzle = puzzle
         new_solve.competition = competition
