@@ -38,7 +38,7 @@ def process_post(post, average)
   average = ReconDatabase::Average.new
   average.save
   ReconDatabase::BrestParser.new(File.read(post), average).solves.each do |solve|
-    solve = ReconDatabase::SolveFactory.from_hash(solve)
+    solve = ReconDatabase::Solve.new(solve)
     solve.date_added = Time.now.to_i
     average.add_solve(solve)
   end

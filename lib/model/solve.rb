@@ -8,6 +8,13 @@ module ReconDatabase
     many_to_one :solver
     many_to_one :puzzle
 
+    def initialize(args={})
+      args[:puzzle] = Puzzle.find_or_create(name: args[:puzzle])
+      args[:competition] = Competition.find_or_create(name: args[:competition])
+      args[:solver] = Solver.find_or_create(name: args[:solver])
+      super(args)
+    end
+
     def effective_value
       if plus_two?
         time + 2
@@ -42,7 +49,7 @@ module ReconDatabase
     class << self
       def request(params)
         fields.inject(Solve) do |result, field|
-          field.filter(result, params)
+          field.filter_solves(result, params)
         end
       end
 

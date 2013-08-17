@@ -57,5 +57,12 @@ module ReconDatabase
         end
       end
     end
+
+    describe "creating" do
+      it "creates a new puzzle if it doesn't exist" do
+        Puzzle.where(name: "fake-puzzle").destroy
+        Solve.new(puzzle: "fake-puzzle").puzzle.name.must_equal "fake-puzzle"
+      end
+    end
   end
 end

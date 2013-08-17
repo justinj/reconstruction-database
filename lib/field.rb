@@ -12,7 +12,7 @@ module ReconDatabase
       field_name.downcase
     end
 
-    def filter(dataset, params)
+    def filter_solves(dataset, params)
       property = where(name: params[query_name]).first
       if params[query_name] && property
         dataset.where(query_name.to_sym => property)
