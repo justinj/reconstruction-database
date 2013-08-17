@@ -53,28 +53,19 @@ task :import do
 end
 
 task :newsolve do
-  average = ReconDatabase::Average.new
-
-  while STDIN.readline.chomp == "Y"
-    empty_hash = ReconDatabase::Solve.columns.each_with_object({}) do |column, hsh|
-      hsh[column] = ""
-    end
-
-    empty_hash.delete :id
-    empty_hash.delete :average_id
-
-    new_solve = ""
-
-    Tempfile.open("recon_database") do |f|
-      f.write(empty_hash.to_yaml)
-      f.flush
-      system "vim #{f.path}"
-      new_solve = File.read(f.path)
-    end
-
-    average.save
-    average.add_solve(YAML.load(new_solve))
-  end
+  puts <<EOF
+solves:
+  - :solver:
+    :time:
+    :scramble:
+    :solution:
+    :competition: Unofficial
+    :puzzle:
+    :penalty:
+    :youtube:
+    :source:
+    :reconstructor:
+EOF
 end
 
 task :yamlimport do
