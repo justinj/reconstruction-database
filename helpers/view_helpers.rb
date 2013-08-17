@@ -10,16 +10,21 @@ module ReconDatabase
                     '<span class="comment">\1</span>')
     end
 
-    def tablify(stats)
-      stats = stats.dup.lines
-      # ugh, formatting this is terrible
-      stats[2] = "<td></td>"*5 + stats[2]
-      "<table class='statstable'>" + 
-      stats.map { |line| line.split /\t+/ }.map do |row|
-        "<tr><td>" + row.join("</td><td>") + "</td></tr>"
-      end.join("\n") + 
-        "</table>"
+    def garronize(solve)
+      alg = garronize_alg(solve.solution)
+      ini = garronize_alg(solve.scramble)
+      puz = solve.puzzle.garronized_name
+      "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}" 
     end
 
+    private
+
+    def garronize_alg(alg)
+      alg.tr("' ", "-_").gsub("\n","%0A")
+    end
+
+    def cubic?(puzzle)
+      puzzle.name =~ /\dx\d/
+    end
   end
 end

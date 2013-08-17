@@ -6,6 +6,11 @@
   <%= @solve.competition.at %>
 </h2>
 
+<% if @solve.puzzle.garronizable? %>
+  <div class="garron">
+    <a href="<%= garronize(@solve) %>">View on alg.garron</a>
+  </div>
+<% end %>
 <div class="youtube">
   <% unless @solve.youtube.nil? || @solve.youtube.empty? %>
     <a href="http://www.youtube.com/watch?v=<%= @solve.youtube %>" target="_blank" >

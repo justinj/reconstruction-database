@@ -57,6 +57,5 @@ module ReconDatabase
         end
       end
     end
-
   end
 end
