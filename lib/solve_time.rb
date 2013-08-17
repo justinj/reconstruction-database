@@ -9,7 +9,7 @@ module ReconDatabase
         ERB.new(File.read("views/input.erb")).result(binding)
       end
 
-      def filter(result, params)
+      def filter_solves(result, params)
         specifier = params["time-specifier"]
         value = params["time-value"]
         unless specifier.blank? || value.blank?
