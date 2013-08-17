@@ -17,3 +17,21 @@ get "/solve/:id" do
   @solve = ReconDatabase::Solve.where(id: params[:id]).first
   erb :solve
 end
+
+get "/brest_post" do
+  erb :post_submission
+end
+
+post "/new_post" do
+  @solves = ReconDatabase::BrestParser.new(params["post-content"]).solves
+  erb :submission_form
+end
+
+get "/new_post" do
+  @solves = [{}]
+  erb :submission_form
+end
+
+post "/submit" do
+  params.to_yaml.to_s.gsub("\n", "<br>")
+end

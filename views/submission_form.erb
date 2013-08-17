@@ -1,0 +1,10 @@
+<form action="/submit" method="post">
+  <% @solves.each do |solve| %>
+    <% %i(solver puzzle competition time scramble solution penalty youtube reconstructor source source_content).each do |field| %>
+      <label><%= field.to_s.capitalize %></label>
+      <textarea name="<%=field%>" class="form-control"
+        rows="<%= solve[field].to_s.lines.count %>" ><%= solve[field] %></textarea>
+    <% end %>
+  <% end %>
+  <input type="submit" class="btn">
+</form>
