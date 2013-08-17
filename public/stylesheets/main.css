@@ -35,3 +35,8 @@ h1 {
 .footnotes {
   color: grey;
 }
+
+.record {
+  font-weight: bold;
+  text-align: center;
+}

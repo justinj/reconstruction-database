@@ -29,8 +29,8 @@
       <tr>
         <td> <%= solve.solver.name %> <br> </td>
         <td> <%= solve.puzzle.name %> </td>
-        <td> <%= solve.record %> </td>
-        <td> <%= solve.average.record %> </td>
+        <td> <div class="record"><%= solve.record %></div> </td>
+        <td> <div class="record"><%= solve.average.record %></div> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%= solve.format %> </a> </td>
         <td> <%= solve.competition.name %> </td>
         <td> <%= date_added(solve) %> </td>
