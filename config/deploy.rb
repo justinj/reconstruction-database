@@ -6,15 +6,8 @@ set :repository,  "git@github.com:justinj/reconstruction-database.git"
 
 set :scm, :git
 
-task "production" do
-  role :web, "www"
-  role :app, "www"
-end
-
-task "staging" do
-  role :web, "stage"
-  role :app, "stage"
-end
+role :web, "www"
+role :app, "www"
 
 set :rbenv_ruby_version, "2.0.0-p247"
 
@@ -23,6 +16,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
+    run "cd /home/www/rcdb/current && bundle install --deployment"
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
