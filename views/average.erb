@@ -4,4 +4,7 @@
   </a>
 <% end %>
 = <%= format_time result %>
+<% unless record.blank? %>
+  (<%= record %>)
+<% end %>
 <br>
