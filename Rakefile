@@ -75,7 +75,7 @@ task :yamlimport do
     average.save
     solves = YAML.load(File.read(file))["solves"]
     solves.each do |solve|
-      solve = ReconDatabase::SolveFactory.from_hash(solve)
+      solve = ReconDatabase::Solve.new(solve)
       solve.date_added = Time.now.to_i
       average.add_solve(solve)
     end
