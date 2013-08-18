@@ -1,5 +1,5 @@
 <p align="center">
-  ![Logo](https://raw.github.com/justinj/reconstruction-database/master/public/images/logo.png)
+  <img src="https://raw.github.com/justinj/reconstruction-database/master/public/images/logo.png">
 </p>
 
 RCDB
