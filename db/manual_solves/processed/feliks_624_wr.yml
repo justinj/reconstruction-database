@@ -1,0 +1,19 @@
+solves:
+  - :solver: Feliks Zemdegs
+    :time: 6.24
+    :scramble: L2 R2 F R2 B2 L2 D2 F' D' L' F' U2 B U2 L F2 D' B L2
+    :solution: |
+      z' y // inspection
+      r' D R U' D2 R D' // cross
+      U L U' L' // 1st pair
+      U y' R U R' // 2nd pair
+      U' R' U' R U' R' U R // 3rd pair
+      y U' R' U R U R' U' R // 4th pair
+      U' R' F R U R' U' F' U R // OLL
+      U // AUF
+    :competition: Kubaroo Open 2011
+    :puzzle: 3x3
+    :penalty:
+    :youtube: wIvHw17vuGU
+    :source: http://www.speedsolving.com/forum/showthread.php?29199-Feliks-Zemdegs-3x3x3-6-24-WR-amp-11-16-OH-WR&p=572543&viewfull=1#post572543
+    :reconstructor: Michael Gottlieb
