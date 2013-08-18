@@ -20,7 +20,7 @@ module ReconDatabase
     end
 
     def avg
-        sum = solves.collect(&:effective_value).inject(&:+) - best.effective_value - worst.effective_value
+        sum = solves.map(&:effective_value).map(&:to_f).inject(&:+) - best.effective_value - worst.effective_value
         sum / (solves.count - 2)
     end
 
@@ -42,18 +42,13 @@ module ReconDatabase
     end
 
     # seriously?
-    def add_solve(*args)
-      add_solf(*args)
-    end
-
-    def remove_solve(*args)
-      remove_solf(*args)
-    end
+    alias_method :add_solve, :add_solf
+    alias_method :remove_solve, :remove_solf
 
     private
     
     def non_dnf_solves
-      solves.reject { |solve| solve.penalty == "dnf" }
+      solves.reject(&:dnf?)
     end
 
     def formatted_solves

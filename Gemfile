@@ -9,7 +9,8 @@ gem 'capistrano-rbenv'
 
 group :development do
   gem 'minitest'
-  gem "timecop"
+  gem 'mocha'
+  gem 'timecop'
 end
 
 ruby '2.0.0'
