@@ -64,5 +64,28 @@ module ReconDatabase
         Solve.new(puzzle: "fake-puzzle").puzzle.name.must_equal "fake-puzzle"
       end
     end
+
+    describe "tagging" do
+      let(:solve) { Solve.create }
+      before do
+        Tag.each { |t| t.destroy }
+      end
+      it "lets you add tags" do
+        solve.tags.count.must_equal 0
+        solve.tag("pllskip")
+        solve.tags.count.must_equal 1
+      end
+
+      it "creates a new tag if one doesn't exist" do
+        solve.tag("pllskip")
+        Tag.count.must_equal 1
+      end
+
+      it "doesn't create a new tag if one exists" do
+        Tag.create(name: "pllskip")
+        solve.tag("pllskip")
+        Tag.count.must_equal 1
+      end
+    end
   end
 end

@@ -33,14 +33,18 @@
     </div>
   </div>
 
-  <% if @solve.average.solves.count >= 3 %>
-    <div class="col-lg-4">
+  <div class="col-lg-4">
+    <% if @solve.average.solves.count >= 3 %>
       <h3> Average </h3>
       <div class="others_in_average well">
         <%= @solve.average.render %>
       </div>
+    <% end %>
+    <div class="tags well">
+      <%= @solve.tags.map(&:name).join(", ") %>
     </div>
-  <% end %>
+  </div>
+
 </div>
 
 <div class="footnotes">

@@ -8,6 +8,8 @@ module ReconDatabase
     many_to_one :solver
     many_to_one :puzzle
 
+    many_to_many :tags
+
     def initialize(args={})
       args[:puzzle] = Puzzle.find_or_create(name: args[:puzzle])
       args[:competition] = Competition.find_or_create(name: args[:competition])
@@ -39,6 +41,11 @@ module ReconDatabase
       else
         format_time(effective_value)
       end
+    end
+
+    def tag(tag_name)
+      t = Tag.find_or_create(name: tag_name)
+      add_tag(t)
     end
 
     def before_save
