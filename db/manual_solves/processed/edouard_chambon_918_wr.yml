@@ -1,0 +1,19 @@
+solves:
+  - :solver: Edouard Chambon
+    :time: 9.18
+    :scramble: F2 L B2 L F2 L' R2 U' B R2 B' D F' L' B R2 U2 L F
+    :solution: |
+      y2 x' // inspection
+      R' U2' r' L' // cross
+      U2' y' R' U R // 1st pair
+      U2' L' U L y' U' R U R' // 2nd pair
+      U y R U R' U' y' R' U R // 3rd pair
+      U d R U' R' // 4th pair
+      R' U' F U R U' R' F' R // OLL
+      U // AUF
+    :competition: Murcia Open 2008
+    :puzzle: 3x3
+    :penalty:
+    :youtube: PLOT1Z_c1Dc
+    :source: http://www.speedsolving.com/forum/showthread.php?29123-The-reconstruction-thread&p=595793&viewfull=1#post595793
+    :reconstructor: Michael Gottlieb

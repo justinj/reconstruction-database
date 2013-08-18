@@ -1,0 +1,17 @@
+solves:
+  - :solver: Erik Akkersdijk
+    :time: 7.08
+    :scramble: D' R2 D L2 B2 L2 D' R2 F' L2 R' F D F' D' L' U2 F' R
+    :solution: |
+      y' x U' R2 x' U R' u // Cross
+      U' R U' R' // 1st pair
+      U' y' R U2 R' U' R U R' // 2nd pair
+      L' U L2 U' L' // 3rd pair
+      U L' U2 L U' L' U L U' // 4th pair
+      U' F R U R' U' R U R' U' F' U2 // OLL
+    :competition: Czech Open 2008
+    :puzzle: 3x3
+    :penalty:
+    :youtube: VzGjbjUPVUo
+    :source: http://archive.garron.us/solves/2008/erik_7_08.htm
+    :reconstructor: Lucas Garron
