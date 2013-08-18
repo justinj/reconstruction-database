@@ -1,0 +1,19 @@
+solves:
+  - :solver: Feliks Zemdegs
+    :time: 6.77
+    :scramble: R2 B2 D' L2 R2 D2 F2 U' F2 D' L2 U B' D2 L' U2 B F R U R
+    :solution: |
+      x // inspection
+      U2 R2 F U' L2 // cross
+      U R U' R' // 1st pair
+      U' y' R U2' R' U R U' R' // 2nd pair
+      y' U L' U' L U' L' U L // 3rd pair
+      U2 R U' R' U' y L' U L // 4th pair
+      r U R' U' L' U R U' x' // OLL
+      U R' U' R y R2 u R' U R U' R u' R2 // PLL
+    :competition: Melbourne Cube Day 2010
+    :puzzle: 3x3
+    :penalty:
+    :youtube: t32VQ2HeELA
+    :source: http://www.speedsolving.com/forum/showthread.php?25482-6-77-3x3-single-WR-Feliks-Zemdegs&p=484557&viewfull=1#post484557
+    :reconstructor: Feliks Zemdegs
