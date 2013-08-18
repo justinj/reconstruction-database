@@ -16,12 +16,18 @@ module ReconDatabase
     end
 
     def mean
-      solves.collect(&:effective_value).inject(&:+) / solves.count
+      sum / solves.count
     end
 
     def avg
-        sum = solves.map(&:effective_value).map(&:to_f).inject(&:+) - best.effective_value - worst.effective_value
-        sum / (solves.count - 2)
+      bestval = best.effective_value
+      worstval = worst.effective_value
+      trimmed_sum = sum - bestval - worstval
+      trimmed_sum / (solves.count - 2)
+    end
+
+    def sum
+      solves.map(&:effective_value).map(&:to_f).inject(&:+)
     end
 
     def worst
