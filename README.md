@@ -3,7 +3,7 @@ RCDB
 
 ![Logo](https://raw.github.com/justinj/reconstruction-database/master/public/images/logo.png)
 
-RCDB is a *R*e*c*onstruction *D*ata*b*ase.
+RCDB is a <b>R</b>e<b>c</b>onstruction <b>D</b>ata<b>b</b>ase.
 The goal is to document and categorize reconstructions of important or interesting solves of the Rubik's Cube and related puzzles.
 
 Contributing to RCDB
