@@ -1,0 +1,18 @@
+[QUOTE=Brest;890634][B]Kevin Costello III[/B] - 5.47 3x3 single (unofficial)
+
+[SPOILER=Video][youtubehd]l6HV0P_5loc[/youtubehd][/SPOILER]     R F2 L D' F D F L D F2 U2 R2 D2 B U2 L2 B D2 F2
+
+x' y' [COLOR="gray"]// inspection[/COLOR]
+(D U') r' D2' U R2 [COLOR="gray"]// Xcross[/COLOR]
+U R' U R2 U' R' [COLOR="gray"]// 3rd pair[/COLOR]
+y U R U R' [COLOR="gray"]// 4th pair[/COLOR]
+U2 F (R U R' U')2 F' [COLOR="gray"]// OLL[/COLOR]
+R U R' U' R' F R2 U' R' U' R U R' F' [COLOR="gray"]// PLL[/COLOR]
+[COLOR="gray"]View at [url="http://alg.garron.us/?alg=x-_y-_//_inspection%0A(D_U-)_r-_D2-_U_R2_//_Xcross%0AU_R-_U_R2_U-_R-_//_3rd_pair%0Ay_U_R_U_R-_//_4th_pair%0AU2_F_(R_U_R-_U-)2_F-_//_OLL%0AR_U_R-_U-_R-_F_R2_U-_R-_U-_R_U_R-_F-_//_PLL&ini=R_F2_L_D-_F_D_F_L_D_F2_U2_R2_D2_B_U2_L2_B_D2_F2"]alg.garron.us[/url][/COLOR]
+[CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="red"]Total	5.47	40	7.31	41	7.50	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	0.84	5	5.92	5	5.92		Cross+1/F2L	32.6%	33.3%	31.3%
+F2L	2.59	15	5.79	16	6.18		F2L/Total	47.3%	37.5%	39.0%
+LL	2.88	25	8.68	25	8.68		LL/Total	52.7%	62.5%	61.0%[/CODE][/QUOTE]
+
