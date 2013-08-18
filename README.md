@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/justinj/reconstruction-database.png?branch=master)](https://travis-ci.org/justinj/reconstruction-database)
+
 <p align="center">
   <img src="https://raw.github.com/justinj/reconstruction-database/master/public/images/logo.png">
 </p>
