@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/justinj/reconstruction-database.png?branch=master)](https://travis-ci.org/justinj/reconstruction-database)
+[![Code Climate](https://codeclimate.com/github/justinj/reconstruction-database.png)](https://codeclimate.com/github/justinj/reconstruction-database)
 
 <p align="center">
   <img src="https://raw.github.com/justinj/reconstruction-database/master/public/images/logo.png">
