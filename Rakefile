@@ -18,20 +18,10 @@ Rake::TestTask.new do |t|
   t.libs << "test"
   t.test_files = FileList['spec/*_spec.rb']
 end
-
-def migrate
+task :migrate do
   Sequel.extension :migration
   db = Sequel.sqlite "db/db.sqlite"
   Sequel::Migrator.apply db, "db/migrations"
-end
-
-task :migrate do
-  migrate
-end
-
-task :clean_json do
-  rm_rf "db/json"
-  Dir.glob("db/posts/processed/*").each { |file| mv file, "db/posts/unprocessed" }
 end
 
 def process_post(post, average)
