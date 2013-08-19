@@ -15,4 +15,12 @@ Contributing to RCDB
 ====================
 
 RCDB uses Ruby 2.0.0, so make sure you have that installed.
-You should be able to just clone down the repo and run `rake test` to run the specs.
+
+```shell
+$  git clone git@github.com:justinj/reconstruction-database.git
+$  cd reconstruction-database
+$  rake test
+$  shotgun app.rb
+```
+
+Then point your browser to `localhost:9393` and you should be good!
