@@ -12,13 +12,15 @@
     <a href="<%= garronize(@solve) %>">View on alg.garron</a>
   </div>
 <% end %>
+
 <% unless @solve.scramble.blank? %>
   <div class="ksim-link">
-    <a href="http://snk.digibase.ca/ksim.htm?alg=<%= @solve.scramble.gsub(/\s/,"") %>" target="_blank" >
+    <a href=<%= ksim_link(@solve) %> target="_blank" >
       Try scramble on kSim
     </a>
   </div>
 <% end %>
+
 <% unless @solve.youtube.nil? || @solve.youtube.empty? %>
   <div class="youtube">
     <a href="http://www.youtube.com/watch?v=<%= @solve.youtube %>" target="_blank" >

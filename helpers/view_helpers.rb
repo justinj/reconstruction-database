@@ -17,6 +17,10 @@ module ReconDatabase
       "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}" 
     end
 
+    def ksim_link(solve)
+      "http://snk.digibase.ca/ksim.htm?colours=white,lime,red,yellow,blue,orange&alg=#{@solve.scramble.gsub(/\s/,"")}"
+    end
+
     private
 
     def garronize_alg(alg)
