@@ -44,3 +44,7 @@ h1 {
   font-weight: bold;
   text-align: center;
 }
+
+.footer {
+  padding-bottom:20px;
+}
