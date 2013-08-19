@@ -20,7 +20,7 @@ module ReconDatabase
     end
 
     def link
-      "<a href=#{url}>#{name}</a>"
+      "<a href=#{url} target='_blank'>#{name}</a>"
     end
   end
 end

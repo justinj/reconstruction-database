@@ -27,7 +27,7 @@
     </tr>
     <% @solves.each do |solve| %>
       <tr>
-        <td> <%= solve.solver.name %> <br> </td>
+        <td> <%= solve.solver %> <br> </td>
         <td> <%= solve.puzzle.name %> </td>
         <td> <div class="record"><%= solve.record %></div> </td>
         <td> <div class="record"><%= solve.average.record %></div> </td>
