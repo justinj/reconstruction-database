@@ -27,7 +27,7 @@ module ReconDatabase
     end
 
     def sum
-      solves.map(&:effective_value).map(&:to_f).inject(&:+)
+      solves.map(&:effective_value).inject(&:+)
     end
 
     def worst

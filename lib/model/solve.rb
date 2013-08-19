@@ -19,9 +19,9 @@ module ReconDatabase
 
     def effective_value
       if plus_two?
-        time + 2
+        (time + 2).to_f
       else
-        time
+        time.to_f
       end
     end
 

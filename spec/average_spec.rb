@@ -8,7 +8,7 @@ module ReconDatabase
     def with_times(*times)
       average = Average.new
       average.save
-      solves = times.map { |time| stub(effective_value: time,
+      solves = times.map { |time| stub(effective_value: time.to_f,
                                        dnf?: false,
                                        format: "#{time}!!") }
       average.stubs(:solves).returns(solves)
