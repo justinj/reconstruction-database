@@ -55,6 +55,7 @@ solves:
     :youtube:
     :source:
     :reconstructor:
+    :record:
 EOF
 end
 
