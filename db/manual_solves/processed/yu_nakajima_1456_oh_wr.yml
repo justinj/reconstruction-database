@@ -1,0 +1,19 @@
+solves:
+  - :solver: Yu Nakajima
+    :time: 14.56
+    :scramble: B' U2 L2 R2 B' U2 D' R D2 F' L' B L' F2 L2 D2 B2 D' L'
+    :solution: 
+      y' z' R U' R' U' y R x' u' U' R y u' // Cross
+      U2' R' U R U' y z U' R U z' // 1st pair
+      U' R U' R' y R U R' // 2nd pair
+      U' R' U2' R z U' R U z' // 3rd pair
+      U R' U2' R U2' R' U R // 4th pair
+      R U2' R' U' R U' R' // OLL
+      U' // AUF
+    :competition: Tokyo Open 2008
+    :puzzle: 3x3OH
+    :penalty:
+    :youtube: dPjLF_ururc
+    :source: http://archive.garron.us/solves/2008/nakajima_OH_14_56.htm
+    :reconstructor: Jeremy Fleischmann
+    :record: WR

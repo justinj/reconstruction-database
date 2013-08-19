@@ -1,0 +1,19 @@
+solves:
+  - :solver: Shotaro Makisumi
+    :time: 23.76
+    :scramble: U2 L' B2 U2 F' L R2 U2 R2 B2 L2 B2 L F U B' D2 U' B U F' R B R' F
+    :solution: |
+       y2 z' U' R' U' R' U' z u2' y R' D2 // Cross
+       R U' R'2 U R // 1st pair
+       U' R U R' // 2nd pair
+       U' L' U' L // 3rd pair
+       L U' L' D' w R' U R // 4th pair
+       U B' R B R' U' R' U R // OLL
+       U R' F R' B2 R F' R' B2 R2 // PLL
+    :competition: Horace Mann 2005
+    :puzzle: 3x3OH
+    :penalty:
+    :youtube:
+    :source: http://makisumi.com/cube/records_detail.html
+    :reconstructor: Shotaro Makisumi
+    :record: WR

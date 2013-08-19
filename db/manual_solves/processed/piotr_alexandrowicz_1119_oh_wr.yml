@@ -1,0 +1,18 @@
+solves:
+  - :solver: Piotr Alexandrowicz
+    :time: 11.19
+    :scramble: D' L2 B2 L2 B2 D R2 B2 D2 R2 U B R D' U2 L D2 R' D' R'
+    :solution: |
+       x2 y2 L2 R F y  R2 y  D R' // Cross
+       y2  U L' U' L U' y  L U L' // 1st pair
+       U R U' R' U R U' R' // 2nd pair
+       U L' U L y  U2 L U L' // 3rd pair
+       y L2 U2 L U L' U L U2 L // CLS
+       U // AUF
+    :competition: Polish Nationals 2010
+    :puzzle: 3x3OH
+    :penalty:
+    :youtube:
+    :source: http://www.speedsolving.com/forum/showthread.php?23622-Polish-Nationals-2010-Live-Results&p=442548&viewfull=1#post442548
+    :reconstructor: Piotr Alexandrowicz
+    :record: WR
