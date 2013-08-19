@@ -13,7 +13,7 @@
   </div>
 <% end %>
 
-<% unless @solve.scramble.blank? %>
+<% if @solve.puzzle.name =~ /3x3/ && !@solve.scramble.blank? %>
   <div class="ksim-link">
     <a href=<%= ksim_link(@solve) %> target="_blank" >
       Try scramble on kSim
