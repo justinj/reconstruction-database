@@ -42,6 +42,10 @@ module ReconDatabase
         it "does a mean if there are exactly 3 times" do
           with_times(1, 2, 6).result.must_equal 3
         end
+
+        it "rounds properly" do
+          with_times(12.15, 14.53, 13.27, 12.58, 10.77).result.must_equal 12.67
+        end
       end
     end
 

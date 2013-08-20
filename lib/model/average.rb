@@ -23,7 +23,12 @@ module ReconDatabase
       bestval = best.effective_value
       worstval = worst.effective_value
       trimmed_sum = sum - bestval - worstval
-      trimmed_sum / (solves.count - 2)
+      average = trimmed_sum / (solves.count - 2)
+      round(average)
+    end
+
+    def round(average)
+      (average * 100.0).round / 100.0
     end
 
     def sum
