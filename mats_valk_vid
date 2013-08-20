@@ -1,0 +1,14 @@
+Rando (not part of avg)
+-----
+
+R2 U' F2 D2 L2 B2 D L' D' L2 F2 D' U2 B' R' B' D F' D' U2
+
+y2 z // inspection
+r D R D L D' // Cross
+L U L' U L U L' // Wrong 1st pair
+U R U R' U' L' U L // 2nd pair
+U R' U' R U' R' U R // 3rd pair
+R U2 R' U' R U R' // 4th pair
+y2 U R U' R' U y' R' U2 R U' x' R U' R' U // Fix 1st pair
+x U' R U R' U' R' F R U R U' R' F' // OLL
+U' x R' U R' D2 R U' R' D2 R2 // PLL
