@@ -24,3 +24,8 @@ $  shotgun app.rb
 ```
 
 Then point your browser to `localhost:9393` and you should be good!
+
+Thanks
+======
+
+Favicon was made by Kristopher De Asis
