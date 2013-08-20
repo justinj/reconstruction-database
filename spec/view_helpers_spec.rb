@@ -6,11 +6,14 @@ module ReconDatabase
     end
 
     it "creates garron links" do
-      garronize(Solve.new(scramble: "U' R", solution: "R'\nU", puzzle: "2x2"))
-        .must_equal "http://alg.garron.us/?alg=R-%0AU&ini=U-_R&cube=2x2x2"
+      solve = stub
 
-      garronize(Solve.new(scramble: "U' R", solution: "R'\nU", puzzle: "4x4"))
-        .must_equal "http://alg.garron.us/?alg=R-%0AU&ini=U-_R&cube=4x4x4"
+      solve.stubs(:solution).returns("R' U")
+      solve.stubs(:scramble).returns("U' R")
+      
+      solve.stubs(:puzzle).returns(stub(garronized_name: "2x2x2"))
+      garronize(solve)
+        .must_equal "http://alg.garron.us/?alg=R-_U&ini=U-_R&cube=2x2x2"
     end
   end
 end
