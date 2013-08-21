@@ -1,6 +1,14 @@
-<% [:solver, :competition, :puzzle].each do |field| %>
-  <b><%= field.capitalize %></b>: <%= @average.send(field) %> <br>
-<% end %>
+<form action="/average/update/<%= @average.id %>" method="post">
+  <% columns = @average.columns - [:id] %>
+  <% columns.each do |column| %>
+    <label><%= column.to_s.capitalize %></label>
+    <textarea name="average[<%= column %>]" class="form-control"
+      rows="<%= @average[column].to_s.lines.count %>" ><%= @average[column] %></textarea>
+  <% end %>
+
+  <br>
+  <input type="submit" value="Update" class="form-control">
+</form>
 
 <br>
 <table class="table table-bordered table-striped table-hover span8">
