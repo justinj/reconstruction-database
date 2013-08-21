@@ -31,6 +31,9 @@ module ReconDatabase
       end
 
       describe "calculating average" do
+        it "gives N/A when there aren't enough solves" do
+          with_times(1, 2).result.must_equal "N/A"
+        end
         it "calculates it correctly" do
           with_times(1, 2, 3, 4).result.must_equal 2.5
         end

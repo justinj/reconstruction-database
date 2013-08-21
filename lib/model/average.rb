@@ -6,8 +6,10 @@ module ReconDatabase
     def result
       if mean?
         mean
-      else
+      elsif average?
         avg
+      else
+        "N/A"
       end
     end
 
@@ -15,8 +17,12 @@ module ReconDatabase
       solves.count == 3
     end
 
+    def average?
+      solves.count > 3
+    end
+
     def mean
-      sum / solves.count
+      round(sum / solves.count)
     end
 
     def avg
