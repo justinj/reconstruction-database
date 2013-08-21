@@ -3,6 +3,18 @@ module ReconDatabase
     include FormattingUtils
     one_to_many :solves, class: Solve
 
+    def solver
+      solves.first.solver
+    end
+
+    def competition
+      solves.first.competition
+    end
+
+    def puzzle
+      solves.first.puzzle
+    end
+
     def result
       if mean?
         mean

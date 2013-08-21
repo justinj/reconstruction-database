@@ -1,0 +1,11 @@
+<div class="row">
+  <table class="table table-condensed table-bordered table-striped table-hover span8">
+    <% @averages.each do |average| %>
+      <tr>
+        <td>
+          <%= average.result %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

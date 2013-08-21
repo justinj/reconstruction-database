@@ -1,0 +1,29 @@
+<% [:solver, :competition, :puzzle].each do |field| %>
+  <b><%= field.capitalize %></b>: <%= @average.send(field) %> <br>
+<% end %>
+
+<br>
+<table class="table table-bordered table-striped table-hover span8">
+  <tr>
+    <th> Id </th>
+    <th> Time </th>
+    <th> Actions </th>
+  </tr>
+  <% @average.solves.each do |solve| %>
+    <tr>
+      <td> <%= solve.id %> </td>
+      <td> <%= solve.time %> </td>
+      <td>
+        <a href="/solve/edit/<%= solve.id %>">
+          Edit
+        </a>
+        |
+        <a href="/solve/delete/<%= solve.id %>">
+          Delete
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<a href="/solve/new/<%= @average.id %>">New</a>

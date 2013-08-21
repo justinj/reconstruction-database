@@ -1,0 +1,11 @@
+<form action="/solve/update/<%= @solve.id %>" method="post">
+  <% columns = @solve.columns - [:id] %>
+  <% columns.each do |column| %>
+    <label><%= column.to_s.capitalize %></label>
+    <textarea name="solve[<%= column %>]" class="form-control"
+      rows="<%= @solve[column].to_s.lines.count %>" ><%= @solve[column] %></textarea>
+  <% end %>
+
+  <br>
+  <input type="submit" value="Update" class="form-control">
+</form>
