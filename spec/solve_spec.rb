@@ -58,13 +58,6 @@ module ReconDatabase
       end
     end
 
-    describe "creating" do
-      it "creates a new puzzle if it doesn't exist" do
-        Puzzle.where(name: "fake-puzzle").destroy
-        Solve.new(puzzle: "fake-puzzle").puzzle.name.must_equal "fake-puzzle"
-      end
-    end
-
     describe "tagging" do
       let(:solve) { Solve.create }
       before do

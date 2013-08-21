@@ -1,11 +1,24 @@
+<a href="/average/new">New</a>
 <div class="row">
   <table class="table table-condensed table-bordered table-striped table-hover span8">
+    <tr>
+      <td> Solver </td>
+      <td> Times </td>
+      <td> Result </td>
+      <td> Actions </td>
+    </tr>
     <% @averages.each do |average| %>
       <tr>
-        <td>
-          <%= average.result %>
+        <td> <%= average.solver %> </td>
+        <td> <%= average.solves.map(&:time).join(", ") %> </td>
+        <td> <%= average.result %> </td>
+        <td> 
+          <a href="/average/edit/<%= average.id %>">Edit</a>
+          |
+          <a href="/average/delete/<%= average.id %>">Delete</a>
         </td>
       </tr>
     <% end %>
   </table>
 </div>
+

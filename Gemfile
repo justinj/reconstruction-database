@@ -12,6 +12,7 @@ group :development do
   gem 'minitest'
   gem 'mocha'
   gem 'timecop'
+  gem 'pry'
 end
 
 ruby '2.0.0'

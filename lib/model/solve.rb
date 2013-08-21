@@ -4,17 +4,19 @@ module ReconDatabase
     include FormattingUtils
 
     many_to_one :average
-    many_to_one :competition
-    many_to_one :solver
-    many_to_one :puzzle
 
     many_to_many :tags
 
-    def initialize(args={})
-      args[:puzzle] = Puzzle.find_or_create(name: args[:puzzle])
-      args[:competition] = Competition.find_or_create(name: args[:competition])
-      args[:solver] = Solver.find_or_create(name: args[:solver])
-      super(args)
+    def puzzle
+      average.puzzle
+    end
+
+    def competition
+      average.competition
+    end
+
+    def solver
+      average.solver
     end
 
     def effective_value
@@ -55,9 +57,14 @@ module ReconDatabase
 
     class << self
       def request(params)
-        fields.inject(Solve) do |result, field|
+        fields.inject(joined) do |result, field|
           field.filter_solves(result, params)
         end
+      end
+
+      # need to ask someone how to do this properly
+      def joined
+        Solve.join(Average.select(:solver_id, :puzzle_id, :competition_id, Sequel.as(:id, :average_id)), average_id: :average_id)
       end
 
       def fields

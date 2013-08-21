@@ -2,18 +2,9 @@ module ReconDatabase
   class Average < Sequel::Model
     include FormattingUtils
     one_to_many :solves, class: Solve
-
-    def solver
-      solves.first.solver
-    end
-
-    def competition
-      solves.first.competition
-    end
-
-    def puzzle
-      solves.first.puzzle
-    end
+    many_to_one :solver
+    many_to_one :puzzle
+    many_to_one :competition
 
     def result
       if mean?

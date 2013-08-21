@@ -1,6 +1,5 @@
 <label>
   <% default = where(name: params[query_name]).first %>
-  <% p default %>
   <%= field_name %>
   <select name="<%= query_name %>" class="form-control">
     <option value="" 

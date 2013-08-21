@@ -13,9 +13,9 @@ module ReconDatabase
     end
 
     def filter_solves(dataset, params)
-      property = where(name: params[query_name]).first
+      property = find(name: params[query_name])
       if params[query_name] && property
-        dataset.where(query_name.to_sym => property)
+        dataset.where((query_name + "_id").to_sym => property[:id])
       else
         dataset
       end
