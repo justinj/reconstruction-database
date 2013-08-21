@@ -31,10 +31,12 @@
 
 <div class="row">
   <div class="col-lg-8">
-    <h3>Scramble</h3>
-    <div class="algorithm well">
-      <%= @solve.scramble %> <br><br>
-    </div>
+    <% unless @solve.scramble.blank? %>
+      <h3>Scramble</h3>
+      <div class="algorithm well">
+        <%= @solve.scramble %> <br><br>
+      </div>
+    <% end %>
 
     <h3>Solution</h3>
     <div class="algorithm well">
