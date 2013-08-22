@@ -12,8 +12,10 @@ require_relative "model/puzzle"
 require_relative "model/competition"
 require_relative "model/average"
 require_relative "model/tag"
+require_relative "model/user"
 
 require_relative "solve_time"
 
 require_relative "brest_parser"
 require_relative "../helpers/view_helpers"
+require_relative "../helpers/helpers"

@@ -21,6 +21,15 @@ module ReconDatabase
       "http://snk.digibase.ca/ksim.htm?colours=white,lime,red,yellow,blue,orange&alg=#{@solve.scramble.gsub(/\s/,"")}"
     end
 
+    def ellipsize(text, max = 100)
+      text = text.to_s
+      if text.length <= max
+        text
+      else
+        text[0..max] + "..."
+      end
+    end
+
     private
 
     def garronize_alg(alg)

@@ -10,7 +10,7 @@ def setup_db
   Sequel::Model.db = Sequel.sqlite
   Sequel::Migrator.apply Sequel::Model.db, "db/migrations"
 
-  [ReconDatabase::Tag, ReconDatabase::Average, ReconDatabase::Solve, ReconDatabase::Solver, ReconDatabase::Competition, ReconDatabase::Puzzle].each do |model|
+  [ReconDatabase::User, ReconDatabase::Tag, ReconDatabase::Average, ReconDatabase::Solve, ReconDatabase::Solver, ReconDatabase::Competition, ReconDatabase::Puzzle].each do |model|
     model.db = Sequel::Model.db 
   end
   ReconDatabase::seed_db

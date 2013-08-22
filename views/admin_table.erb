@@ -1,0 +1,15 @@
+<% columns = @dataset.columns %>
+<table class="table">
+  <tr>
+    <% columns.each do |column| %>
+      <th> <%= column.capitalize %> </th>  
+    <% end %>
+  </tr>
+  <% @dataset.each do |entry| %>
+    <tr>
+      <% columns.each do |column| %>
+        <td> <%= ellipsize(entry[column] %> </td>  
+      <% end %>
+    </tr>
+  <% end %>
+</table>
