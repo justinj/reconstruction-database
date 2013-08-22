@@ -1,0 +1,12 @@
+<form action="/solve/submit" method="post">
+  <% @result.each_with_index do |solve, i| %>
+    Solve <%= i + 1 %>
+    <br><br>
+    <% solve.each do |column, val| %>
+      <label><%= column %></label>
+      <textarea name="solve_<%= i %>[<%= column %>]" class="form-control"
+        rows="<%= solve[column].to_s.lines.count %>" ><%= solve[column] %></textarea>
+    <% end %>
+  <% end %>
+  <input type="submit" value="Submit" class="form-control">
+</form>
