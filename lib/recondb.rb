@@ -1,5 +1,6 @@
 require "sequel"
 require "yaml"
+require "oauth"
 
 require_relative "formatting_utils"
 require_relative "field"

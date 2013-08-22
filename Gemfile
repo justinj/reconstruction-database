@@ -7,6 +7,7 @@ gem 'sequel'
 gem 'sqlite3'
 gem 'sequel-crushyform'
 gem 'capistrano-rbenv'
+gem 'oauth'
 
 group :development do
   gem 'minitest'

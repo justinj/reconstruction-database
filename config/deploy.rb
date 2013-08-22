@@ -11,7 +11,14 @@ role :app, "www"
 
 set :rbenv_ruby_version, "2.0.0-p247"
 
-set :deploy_to, "/home/www/rcdb"
+task :prod do
+  set :deploy_to, "/home/www/rcdb"
+end
+
+task :stage do
+  set :deploy_to, "/home/www/rcdb-stage"
+end
+
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
