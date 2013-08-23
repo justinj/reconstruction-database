@@ -2,6 +2,7 @@ require "sinatra"
 require "dotenv"
 require "logger"
 require "fileutils"
+require_relative "database"
 
 Dotenv.load
 
