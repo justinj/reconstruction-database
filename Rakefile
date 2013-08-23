@@ -3,10 +3,12 @@ require "json"
 require "tempfile"
 require "yaml"
 require "pp"
+require "dotenv"
+
+Dotenv.load
 
 task :sequel do
-  raise "Fix this for the new DB scheme"
-  system "sequel 'sqlite://db/db.sqlite'"
+  system "sequel '#{ENV["DB_URL"]}'"
 end
 
 Rake::TestTask.new do |t|
@@ -15,8 +17,7 @@ Rake::TestTask.new do |t|
 end
 
 task :migrate do
-  raise "Fix this for the new DB scheme"
   Sequel.extension :migration
-  db = Sequel.sqlite "db/db.sqlite"
+  db = Sequel.sqlite ENV["DB_URL"]
   Sequel::Migrator.apply db, "db/migrations"
 end
