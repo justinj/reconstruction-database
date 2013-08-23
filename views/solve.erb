@@ -63,3 +63,7 @@
     Reconstructed by: <%= @solve.reconstructor %>
   </div>
 </div>
+
+<% if current_user %>
+  <a href="/solve/edit/<%= @solve.id %>">Edit this solve</a> 
+<% end %>

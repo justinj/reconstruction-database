@@ -4,11 +4,8 @@ require "tempfile"
 require "yaml"
 require "pp"
 
-task :default do
-  sh "ruby app.rb"
-end
-
 task :sequel do
+  raise "Fix this for the new DB scheme"
   system "sequel 'sqlite://db/db.sqlite'"
 end
 
@@ -18,6 +15,7 @@ Rake::TestTask.new do |t|
 end
 
 task :migrate do
+  raise "Fix this for the new DB scheme"
   Sequel.extension :migration
   db = Sequel.sqlite "db/db.sqlite"
   Sequel::Migrator.apply db, "db/migrations"

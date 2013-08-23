@@ -18,14 +18,13 @@
       <a class="navbar-brand" href="/">Reconstruction&nbsp;Database</a>
     </div>
     <div class="container">
-      <div class="row">
-        <%= yield %>
-      </div>
-
       <% if current_user %>
         Logged in as <%= current_user.name %> <br>
         <a href="/logout">log out</a>
       <% end %>
+      <div class="row">
+        <%= yield %>
+      </div>
 
       <div class="row footer text-muted">
         <hr>

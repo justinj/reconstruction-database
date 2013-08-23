@@ -2,9 +2,12 @@ require "sinatra"
 require "dotenv"
 require "logger"
 require "fileutils"
-require_relative "database"
+require "sequel"
 
 Dotenv.load
+
+require_relative "lib/database"
+
 
 require_relative "lib/recondb"
 require_relative "routes/average"
