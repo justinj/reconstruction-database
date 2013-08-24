@@ -5,13 +5,15 @@
       <td> Solver </td>
       <td> Times </td>
       <td> Result </td>
+      <td> Hidden</td>
       <td> Actions </td>
     </tr>
-    <% @averages.each do |average| %>
+    <% @averages.reverse_each do |average| %>
       <tr>
         <td> <%= average.solver %> </td>
         <td> <%= average.solves.map(&:time).join(", ") %> </td>
         <td> <%= average.result %> </td>
+        <td> <%= "HIDDEN" unless average.visible? %> </td>
         <td> 
           <a href="/average/edit/<%= average.id %>">Edit</a>
           |

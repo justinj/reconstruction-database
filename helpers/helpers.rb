@@ -9,5 +9,11 @@ module ReconDatabase
         redirect "/"
       end
     end
+
+    def authenticate_root!
+      unless current_user && current_user.root?
+        redirect "/"
+      end
+    end
   end
 end

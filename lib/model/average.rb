@@ -6,6 +6,11 @@ module ReconDatabase
     many_to_one :puzzle
     many_to_one :competition
 
+    def initialize(args={})
+      args[:visible] = false if args[:visible].nil?
+      super
+    end
+
     def result
       if mean?
         mean
@@ -59,6 +64,14 @@ module ReconDatabase
 
     def render
       ERB.new(File.read("views/average.erb")).result(binding)
+    end
+
+    def publish
+      update(visible: true)
+    end
+
+    def visible?
+      visible == 1
     end
 
     # seriously?

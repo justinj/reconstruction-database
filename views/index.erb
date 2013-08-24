@@ -24,7 +24,7 @@
       <th> Competition </th>
       <th> Date Added </th>
     </tr>
-    <% @solves.each do |solve| %>
+    <% @solves.select { |solve| solve.average.visible? }.each do |solve| %>
       <tr>
         <td> <%= solve.solver %> <br> </td>
         <td> <%= solve.puzzle.name %> </td>

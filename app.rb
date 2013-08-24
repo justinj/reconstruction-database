@@ -24,24 +24,3 @@ get "/" do
   @solves = ReconDatabase::Solve.request(params).sort_by { |s| -s[:date_added].to_i}
   erb :index
 end
-
-FileUtils.mkdir "logs" unless File.exist? "logs"
-$LOGGER = Logger.new("logs/log", "weekly")
-
-get "/callback" do
-  $LOGGER.info params.to_s
-end
-
-get "/auth" do
-  @callback_url = "http://www.rcdb.justinjaffray.com/callback"
-  @consumer = OAuth::Consumer.new(ENV["GOOGLE_OAUTH_CLIENT"],
-                                  ENV["GOOGLE_OAUTH_SECRET"],
-                                  :site => "http://www.rcdb.justinjaffray.com")
-  @request_token = @consumer.get_request_token(:oauth_callback => @callback_url)
-  session[:request_token] = @request_token
-  redirect_to @request_token.authorize_url(:oauth_callback => @callback_url)
-end
-
-get "/dir" do
-  FileUtils.pwd
-end

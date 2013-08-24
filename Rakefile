@@ -4,6 +4,7 @@ require "tempfile"
 require "yaml"
 require "pp"
 require "dotenv"
+require "sequel"
 
 Dotenv.load
 
@@ -18,6 +19,6 @@ end
 
 task :migrate do
   Sequel.extension :migration
-  db = Sequel.sqlite ENV["DB_URL"]
+  db = Sequel.connect ENV["DB_URL"]
   Sequel::Migrator.apply db, "db/migrations"
 end

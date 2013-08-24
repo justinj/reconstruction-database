@@ -5,6 +5,10 @@ module ReconDatabase
       super
     end
 
+    def root?
+      name == "admin"
+    end
+
     def self.authenticate(args)
       name = args["username"]
       pw = encrypt(args["password"])

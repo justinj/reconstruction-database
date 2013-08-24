@@ -61,5 +61,19 @@ module ReconDatabase
         with_times(1,2,3).format.must_equal "1!!, 2!!, 3!!"
       end
     end
+
+
+    describe "publishing" do
+      let(:user) { User.new(name: "name", password: "pass") }
+      let(:average) { Average.new }
+      it "starts out hidden" do
+        average.visible?.must_equal false 
+      end
+
+      it "can be made public" do
+        average.publish
+        average.visible?.must_equal true
+      end
+    end
   end
 end
