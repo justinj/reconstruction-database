@@ -31,6 +31,6 @@ end
 post "/average/update/:id" do
   authenticate!
   id = params.delete("id")
-  ReconDatabase::Average.where(id: id).update(params["average"])
+  ReconDatabase::Average.first(id: id).update(params["average"])
   redirect "/average"
 end

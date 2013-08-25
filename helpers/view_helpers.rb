@@ -1,5 +1,11 @@
 module ReconDatabase
   module ViewHelpers
+    def text_input(title, value, name)
+  %(<label>#{title}</label>
+  <textarea name="#{name}" class="form-control"
+    rows="#{value.to_s.lines.count}" >#{value}</textarea>)
+    end
+
     def date_added(solve)
       solve.date_added.strftime("%b %-d, %Y")
     end

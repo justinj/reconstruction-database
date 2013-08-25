@@ -1,10 +1,9 @@
 <form action="/average/update/<%= @average.id %>" method="post">
-  <% columns = @average.columns - [:id] %>
-  <% columns.each do |column| %>
-    <label><%= column.to_s.capitalize %></label>
-    <textarea name="average[<%= column %>]" class="form-control"
-      rows="<%= @average[column].to_s.lines.count %>" ><%= @average[column] %></textarea>
-  <% end %>
+
+  <%= text_input("Record (WR, NAR, etc)", @average[:record], "average[average_record]") %>
+  <%= text_input("Solver", @average.solver, "average[solver]") %>
+  <%= text_input("Competition", @average.competition, "average[competition]") %>
+  <%= text_input("Puzzle", @average.puzzle, "average[puzzle]") %>
 
   <br>
   <input type="submit" value="Update" class="form-control">

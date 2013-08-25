@@ -74,6 +74,13 @@ module ReconDatabase
       visible == 1
     end
 
+    def update(args={})
+      args[:solver] = Solver.find_or_create(name: args.delete("solver"))
+      args[:competition] = Competition.find_or_create(name: args.delete("competition"))
+      args[:puzzle] = Puzzle.find_or_create(name: args.delete("puzzle"))
+      super
+    end
+
     # seriously?
     alias_method :add_solve, :add_solf
     alias_method :remove_solve, :remove_solf
