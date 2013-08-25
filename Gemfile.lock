@@ -36,6 +36,8 @@ GEM
     rack-protection (1.5.0)
       rack
     rake (10.1.0)
+    rvm-capistrano (1.4.4)
+      capistrano (>= 2.15.4)
     sequel (4.1.1)
     sequel-crushyform (0.1.4)
     sinatra (1.4.3)
@@ -58,6 +60,7 @@ DEPENDENCIES
   oauth
   pry
   rake
+  rvm-capistrano
   sequel
   sequel-crushyform
   sinatra
