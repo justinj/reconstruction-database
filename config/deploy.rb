@@ -1,5 +1,6 @@
 # config/deploy.rb
 require "rvm/capistrano"
+require "capistrano-unicorn"
 
 set :application, "rcdb"
 set :repository,  "git@github.com:justinj/reconstruction-database.git"
@@ -15,14 +16,14 @@ task :prod do
 end
 
 task :stage do
-  set :deploy_to, "/home/rails"
+  set :deploy_to, "/u/apps/rcdb"
 end
 
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "cd /home/rails/current && bundle install --deployment"
+    run "cd /home/rails/current && bundle install"
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end

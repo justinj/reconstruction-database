@@ -9,12 +9,14 @@ gem 'sequel-crushyform'
 gem 'capistrano-rbenv'
 gem 'oauth'
 gem 'rvm-capistrano'
+gem 'unicorn'
 
 group :development do
   gem 'minitest'
   gem 'mocha'
   gem 'timecop'
   gem 'pry'
+  gem 'capistrano-unicorn'
 end
 
 ruby '2.0.0'

@@ -12,6 +12,8 @@ GEM
     capistrano-rbenv (1.0.5)
       capistrano (< 3)
       capistrano-platform-resources (>= 0.1.3)
+    capistrano-unicorn (0.1.10)
+      capistrano
     coderay (1.0.9)
     dotenv (0.8.0)
     highline (1.6.19)
@@ -54,6 +56,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano-rbenv
+  capistrano-unicorn
   dotenv
   minitest
   mocha
