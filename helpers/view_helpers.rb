@@ -11,8 +11,9 @@ module ReconDatabase
     end
 
     def format_solution(solution)
-      solution = solution.to_s.gsub("\n", "<br>")
-      solution.gsub(/(\/\/.*?(<br>|$))/,
+      solution = h(solution.to_s).gsub("\n", "<br>")
+      delimiter = "&#x2F;&#x2F;"
+      solution.gsub(/(#{delimiter}.*?(<br>|$))/,
                     '<span class="comment">\1</span>')
     end
 

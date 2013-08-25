@@ -4,6 +4,10 @@ module ReconDatabase
       User.where(id: session[:user_id]).first
     end
 
+    def h(text)
+      Rack::Utils.escape_html(text)
+    end
+
     def authenticate!
       unless current_user
         redirect "/"

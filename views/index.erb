@@ -26,13 +26,13 @@
     </tr>
     <% @solves.select { |solve| solve.average.visible? }.each do |solve| %>
       <tr>
-        <td> <%= solve.solver %> <br> </td>
-        <td> <%= solve.puzzle.name %> </td>
-        <td> <div class="record"><%= solve.single_record %></div> </td>
-        <td> <div class="record"><%= solve.average.average_record %></div> </td>
-        <td> <a href="/solve/<%= solve.id %>"> <%= solve.format %> </a> </td>
-        <td> <%= solve.competition.name %> </td>
-        <td> <%= date_added(solve) %> </td>
+        <td> <%=h solve.solver %> <br> </td>
+        <td> <%=h solve.puzzle.name %> </td>
+        <td> <div class="record"><%=h solve.single_record %></div> </td>
+        <td> <div class="record"><%=h solve.average.average_record %></div> </td>
+        <td> <a href="/solve/<%= solve.id %>"> <%=h solve.format %> </a> </td>
+        <td> <%=h solve.competition.name %> </td>
+        <td> <%=h date_added(solve) %> </td>
       </tr>
     <% end %>
   </table>

@@ -1,21 +1,21 @@
 <h2>
-  <%= @solve.format %>
-  <%= @solve.single_record %>
-  <%= @solve.puzzle %>
+  <%=h @solve.format %>
+  <%=h @solve.single_record %>
+  <%=h @solve.puzzle %>
   solve by
   <%= @solve.solver.name_link %>
-  <%= @solve.competition.at %>
+  <%=h @solve.competition.at %>
 </h2>
 
 <% if @solve.puzzle.garronizable? %>
   <div class="garron">
-    <a href="<%= garronize(@solve) %>">View on alg.garron</a>
+    <a href="<%=h garronize(@solve) %>">View on alg.garron</a>
   </div>
 <% end %>
 
 <% if @solve.puzzle.name =~ /3x3/ && !@solve.scramble.blank? %>
   <div class="ksim-link">
-    <a href=<%= ksim_link(@solve) %> target="_blank" >
+    <a href=<%=h ksim_link(@solve) %> target="_blank" >
       Try scramble on kSim
     </a>
   </div>
@@ -23,7 +23,7 @@
 
 <% unless @solve.youtube.nil? || @solve.youtube.empty? %>
   <div class="youtube">
-    <a href="http://www.youtube.com/watch?v=<%= @solve.youtube %>" target="_blank" >
+    <a href="http://www.youtube.com/watch?v=<%=h @solve.youtube %>" target="_blank" >
       View on YouTube
     </a>
   </div>
@@ -34,7 +34,7 @@
     <% unless @solve.scramble.blank? %>
       <h3>Scramble</h3>
       <div class="algorithm well">
-        <%= @solve.scramble %> <br><br>
+        <%=h @solve.scramble %> <br><br>
       </div>
     <% end %>
 
@@ -57,10 +57,10 @@
 
 <div class="footnotes">
   <div>
-    Added: <%= date_added(@solve) %>
+    Added: <%=h date_added(@solve) %>
   </div>
   <div>
-    Reconstructed by: <%= @solve.reconstructor %>
+    Reconstructed by: <%=h @solve.reconstructor %>
   </div>
 </div>
 
