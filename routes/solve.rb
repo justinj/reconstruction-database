@@ -19,6 +19,13 @@ end
 
 ### authentication required
 
+get "/solve/new/:average_id" do
+  authenticate!
+  id = params[:average_id]
+  ReconDatabase::Solve.create(average_id: id)
+  redirect "/average/edit/#{id}"
+end
+
 get "/solve/edit/:id" do
   authenticate!
   @solve = ReconDatabase::Solve.where(id: params["id"]).first
