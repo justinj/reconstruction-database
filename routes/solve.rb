@@ -23,7 +23,14 @@ get "/solve/new/:average_id" do
   authenticate!
   id = params[:average_id]
   ReconDatabase::Solve.create(average_id: id)
-  redirect "/average/edit/#{id}"
+  redirect request.referrer
+end
+
+get "/solve/delete/:id" do
+  authenticate!
+  id = params[:id]
+  ReconDatabase::Solve.where(id: id).delete
+  redirect request.referrer
 end
 
 get "/solve/edit/:id" do
