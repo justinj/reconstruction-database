@@ -18,7 +18,8 @@ end
 
 get "/average/delete/:id" do
   authenticate!
-  @average = RCDB::Average.where(id: params[:id]).first
+  @entry = RCDB::Average.where(id: params[:id]).first
+  @delete_url = "/average/delete_confirm"
   erb :delete_confirm
 end
 

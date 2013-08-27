@@ -28,9 +28,15 @@ end
 
 get "/solve/delete/:id" do
   authenticate!
-  id = params[:id]
-  RCDB::Solve.where(id: id).delete
-  redirect request.referrer
+  @entry = RCDB::Solve.where(id: params[:id]).first
+  @delete_url = "/solve/delete_confirm"
+  erb :delete_confirm
+end
+
+get "/solve/delete_confirm/:id" do
+  authenticate!
+  RCDB::Solve.where(id: params[:id]).destroy
+  redirect "/average"
 end
 
 get "/solve/edit/:id" do

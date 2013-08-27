@@ -15,12 +15,14 @@ task :prod do
   set :deploy_to, "/home/rcdb"
 end
 
-after 'deploy:restart', 'unicorn:reload'
+set :unicorn_pid, "/home/unicorn/pids/unicorn.pid"
+after 'deploy:restart', 'unicorn:restart'
 
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "cd /home/rcdb/current && bundle install"
+    run "cp /home/rcdb/.env /home/rcdb/current"
   end
 end
