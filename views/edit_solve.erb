@@ -6,6 +6,11 @@
       rows="<%= @solve[column].to_s.lines.count %>" ><%= @solve[column] %></textarea>
   <% end %>
 
+  <label>Tags (separated by newlines)</label>
+  <% tags = @solve.tags.map(&:name).join("\n") %>
+  <textarea name="solve[tags]" class="form-control"
+    rows="<%= tags.lines.count %>" ><%= tags %></textarea>
+
   <br>
   <input type="submit" value="Update" class="form-control">
 </form>

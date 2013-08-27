@@ -1,5 +1,6 @@
 <label>
-  <% default = where(name: params[query_name]).first %>
+  <% default = first(name: params[query_name]) %>
+  <% default = nil if default.nil? || default.name == "" %>
   <%= field_name %>
   <select name="<%= query_name %>" class="form-control">
     <option value="" 
@@ -9,7 +10,7 @@
     >All</option>
     <% all.each do |value| %>
       <option value="<%= value.name %>"
-      <%= value == default ? ' selected="selected"' : "" %> >
+      <%= (value == default) ? ' selected="selected"' : "" %> >
       <%= value.name %>
       </option>
     <% end %>

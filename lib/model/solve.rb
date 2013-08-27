@@ -4,7 +4,6 @@ module RCDB
     include FormattingUtils
 
     many_to_one :average
-
     many_to_many :tags
 
     def puzzle
@@ -47,7 +46,12 @@ module RCDB
 
     def tag(tag_name)
       t = Tag.find_or_create(name: tag_name)
-      add_tag(t)
+      add_tag(t) unless tags.include? t
+    end
+
+    def tags=(tags_to_add)
+      remove_all_tags
+      tags_to_add.split("\n").map(&:chomp).each { |t| tag(t) }
     end
 
     def before_save
@@ -68,7 +72,7 @@ module RCDB
       end
 
       def fields
-        [Solver, Competition, Puzzle, SolveTime]
+        [Solver, Competition, Puzzle, SolveTime, Tag]
       end
     end
   end

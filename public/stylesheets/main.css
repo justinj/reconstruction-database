@@ -20,6 +20,10 @@ h1 {
   font-size: 100%;
 }
 
+.tags {
+  font-size: 150%;
+}
+
 .notes td {
   padding: 10px;
 }

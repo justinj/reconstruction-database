@@ -7,28 +7,6 @@
   <%=h @solve.competition.at %>
 </h2>
 
-<% if @solve.puzzle.garronizable? %>
-  <div class="garron">
-    <a href="<%=h garronize(@solve) %>">View on alg.garron</a>
-  </div>
-<% end %>
-
-<% if @solve.puzzle.name =~ /3x3/ && !@solve.scramble.blank? %>
-  <div class="ksim-link">
-    <a href=<%=h ksim_link(@solve) %> target="_blank" >
-      Try scramble on kSim
-    </a>
-  </div>
-<% end %>
-
-<% unless @solve.youtube.nil? || @solve.youtube.empty? %>
-  <div class="youtube">
-    <a href="http://www.youtube.com/watch?v=<%=h @solve.youtube %>" target="_blank" >
-      View on YouTube
-    </a>
-  </div>
-<% end %>
-
 <div class="row">
   <div class="col-lg-8">
     <% unless @solve.scramble.blank? %>
@@ -51,9 +29,15 @@
         <%= erb :average_sidebar %>
       </div>
     <% end %>
+    <h3>Tags</h3>
+    <div class="well tags">
+      <%= @solve.tags.map(&:name).join(", ") %>
+    </div>
   </div>
-
 </div>
+
+
+    <%= erb :solve_links %>
 
 <div class="footnotes">
   <div>

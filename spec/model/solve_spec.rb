@@ -60,10 +60,35 @@ module RCDB
       before do
         Tag.each { |t| t.destroy }
       end
+
       it "lets you add tags" do
         solve.tags.count.must_equal 0
         solve.tag("pllskip")
         solve.tags.count.must_equal 1
+      end
+
+      it "doesn't tag more than once" do
+        solve.tags.count.must_equal 0
+        solve.tag("pllskip")
+        solve.tag("pllskip")
+        solve.tags.count.must_equal 1
+      end
+
+      describe "tags=" do
+        it "lets you set a bunch of tags at once" do
+          tags = ["a", "b", "c"].join("\n")
+          solve.tags.count.must_equal 0
+          solve.tags = tags
+          solve.tags.count.must_equal 3
+        end
+
+        it "gets rid of old tags" do
+          solve.tag "d"
+          tags = ["a", "b", "c"].join("\n")
+          solve.tags.count.must_equal 1
+          solve.tags = tags
+          solve.tags.count.must_equal 3
+        end
       end
 
       it "creates a new tag if one doesn't exist" do
