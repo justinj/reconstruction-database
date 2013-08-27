@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   module FormattingUtils
     def format_time(time)
       if minutes(time) == "0"

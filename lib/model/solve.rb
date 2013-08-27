@@ -1,4 +1,4 @@
-module ReconDatabase 
+module RCDB 
   Sequel.extension :blank
   class Solve < Sequel::Model
     include FormattingUtils

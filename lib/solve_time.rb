@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   class SolveTime
     class << self
       def field_name

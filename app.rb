@@ -17,11 +17,11 @@ require_relative "routes/auth"
 
 use Rack::Session::Cookie, secret: ENV["SECRET"]
 
-helpers ReconDatabase::ViewHelpers
-helpers ReconDatabase::Helpers
-helpers ReconDatabase::FormattingUtils
+helpers RCDB::ViewHelpers
+helpers RCDB::Helpers
+helpers RCDB::FormattingUtils
 
 get "/" do
-  @solves = ReconDatabase::Solve.request(params).sort_by { |s| -s[:date_added].to_i}
+  @solves = RCDB::Solve.request(params).sort_by { |s| -s[:date_added].to_i}
   erb :index
 end

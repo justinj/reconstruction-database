@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-module ReconDatabase
+module RCDB
   describe Solver do
     describe "name link" do
       it "generates a link to the wca page when there's a wca id" do

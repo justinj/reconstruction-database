@@ -1,5 +1,5 @@
 require_relative "spec_helper" 
-module ReconDatabase
+module RCDB
   describe BrestParser do
     attr_reader :parser
     attr_reader :solve

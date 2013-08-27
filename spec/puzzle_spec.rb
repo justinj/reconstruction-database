@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   describe Puzzle do
     describe "garronization" do
       it "is garronizable if it's a cubic puzzle" do

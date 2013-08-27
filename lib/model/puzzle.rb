@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   class Puzzle < Sequel::Model
     extend Field
     one_to_many :solves, class: Solve

@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-module ReconDatabase
+module RCDB
   describe Tag do
   end
 end

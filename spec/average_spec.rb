@@ -1,8 +1,8 @@
 require_relative "spec_helper"
 
-ReconDatabase::Average.db = Sequel::Model.db
+RCDB::Average.db = Sequel::Model.db
 
-module ReconDatabase
+module RCDB
   describe Average do
 
     def with_times(*times)

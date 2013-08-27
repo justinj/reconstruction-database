@@ -8,7 +8,7 @@ get "/logout" do
 end
 
 post "/authenticate" do
-  user = ReconDatabase::User.authenticate(params)
+  user = RCDB::User.authenticate(params)
   if user
     session[:user_id] = user.id
     "Successfully logged in."

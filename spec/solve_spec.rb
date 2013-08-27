@@ -1,7 +1,7 @@
 require_relative "spec_helper" 
-ReconDatabase::Solve.db = Sequel::Model.db
+RCDB::Solve.db = Sequel::Model.db
 
-module ReconDatabase
+module RCDB
   describe Solve do
 
     let(:regular_solve) { Solve.new(time: 10.00) }

@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   class Average < Sequel::Model
     one_to_many :solves, class: Solve
     many_to_one :solver

@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   class BrestParser
     attr_reader :post, :name, :solves, :average
 

@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   class User < Sequel::Model
     def initialize(args={})
       args[:password] = User.encrypt(args[:password])

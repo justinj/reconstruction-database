@@ -1,6 +1,6 @@
-module ReconDatabase
+module RCDB
   describe ViewHelpers do
-    include ReconDatabase::ViewHelpers
+    include RCDB::ViewHelpers
 
     it "creates garron links" do
       solve = stub(solution: "R' U",

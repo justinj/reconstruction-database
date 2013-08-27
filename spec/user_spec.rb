@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-module ReconDatabase
+module RCDB
   describe User do
     before do
       @admin = User.create(name: "admin", password: "password", root: true)

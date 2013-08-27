@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   class Competition < Sequel::Model
     extend Field
     one_to_many :solves, class: Solve

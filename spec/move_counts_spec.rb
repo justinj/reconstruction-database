@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-module ReconDatabase
+module RCDB
   module MoveCounts
     def htm(alg)
       no_comments = remove_comments(alg)

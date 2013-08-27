@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   module ViewHelpers
     def text_input(title, value, name)
   %(<label>#{title}</label>

@@ -7,13 +7,13 @@ get "/solve/brest_submit" do
 end
 
 post "/solve/brest_parse" do
-  result = ReconDatabase::BrestParser.new(params["post_content"]).solves
+  result = RCDB::BrestParser.new(params["post_content"]).solves
   @result = result
   erb :brest_parse
 end
 
 get "/solve/:id" do
-  @solve = ReconDatabase::Solve.first(id: params[:id])
+  @solve = RCDB::Solve.first(id: params[:id])
   erb :solve
 end
 
@@ -22,27 +22,27 @@ end
 get "/solve/new/:average_id" do
   authenticate!
   id = params[:average_id]
-  ReconDatabase::Solve.create(average_id: id)
+  RCDB::Solve.create(average_id: id)
   redirect request.referrer
 end
 
 get "/solve/delete/:id" do
   authenticate!
   id = params[:id]
-  ReconDatabase::Solve.where(id: id).delete
+  RCDB::Solve.where(id: id).delete
   redirect request.referrer
 end
 
 get "/solve/edit/:id" do
   authenticate!
-  @solve = ReconDatabase::Solve.first(id: params["id"])
+  @solve = RCDB::Solve.first(id: params["id"])
   erb :edit_solve
 end
 
 post "/solve/update/:id" do
   authenticate!
   id = params["id"]
-  @solve = ReconDatabase::Solve.first(id: id)
+  @solve = RCDB::Solve.first(id: id)
   @solve.update(params["solve"])
   redirect "/solve/#{id}"
 end

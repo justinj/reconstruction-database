@@ -1,4 +1,4 @@
-module ReconDatabase
+module RCDB
   module Field
     def queryer_html(params)
       ERB.new(File.read("views/dropdown.erb")).result(binding)

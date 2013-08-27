@@ -2,7 +2,7 @@
 
   <form action="/" method="GET" >
 
-    <% ReconDatabase::Solve.fields.each do |field| %>
+    <% RCDB::Solve.fields.each do |field| %>
       <%= field.queryer_html params %>
     <% end %>
 
