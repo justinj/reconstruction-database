@@ -1,6 +1,5 @@
 module ReconDatabase
   class Average < Sequel::Model
-    include FormattingUtils
     one_to_many :solves, class: Solve
     many_to_one :solver
     many_to_one :puzzle

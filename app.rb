@@ -19,6 +19,7 @@ use Rack::Session::Cookie, secret: ENV["SECRET"]
 
 helpers ReconDatabase::ViewHelpers
 helpers ReconDatabase::Helpers
+helpers ReconDatabase::FormattingUtils
 
 get "/" do
   @solves = ReconDatabase::Solve.request(params).sort_by { |s| -s[:date_added].to_i}

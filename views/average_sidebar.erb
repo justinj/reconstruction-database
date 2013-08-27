@@ -4,7 +4,7 @@
     <%= average.format_solve(solve) %> <br>
   </a>
 <% end %>
-= <%= average.format_time average.result %>
+= <%= format_time average.result %>
 <% unless average.average_record.blank? %>
   (<%= average.average_record %>)
 <% end %>
