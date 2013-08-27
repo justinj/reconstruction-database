@@ -6,7 +6,7 @@ module ReconDatabase
     end
 
     def root?
-      name == "admin"
+      root == 1
     end
 
     def self.authenticate(args)

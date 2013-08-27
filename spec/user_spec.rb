@@ -3,8 +3,12 @@ require_relative "spec_helper"
 module ReconDatabase
   describe User do
     before do
-      User.create(name: "admin", password: "password")
+      @admin = User.create(name: "admin", password: "password", root: true)
+      @notroot = User.create(name: "not_root", password: "password", root: false)
     end
+
+    let(:admin) { @admin }
+    let(:notroot) { @notroot }
 
     def auth(name, pw)
       User.authenticate("username" => name, "password" => pw)
@@ -29,6 +33,13 @@ module ReconDatabase
       it "returns nil if the user didn't exist" do
         user = auth("tomfoolery", "not-password")
         user.must_be_nil
+      end
+    end
+
+    describe "root" do
+      it "is root if the column is set" do
+        admin.must_be :root?
+        notroot.wont_be :root?
       end
     end
   end
