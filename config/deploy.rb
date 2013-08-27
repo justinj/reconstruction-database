@@ -24,5 +24,6 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "cd /home/rcdb/current && bundle install"
     run "cp /home/rcdb/.env /home/rcdb/current"
+    run "cd /home/rcdb/current && rake migrate"
   end
 end
