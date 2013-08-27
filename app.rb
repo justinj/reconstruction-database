@@ -12,7 +12,7 @@ require_relative "lib/database"
 require_relative "lib/recondb"
 require_relative "routes/average"
 require_relative "routes/solve"
-require_relative "routes/admin"
+require_relative "routes/field"
 require_relative "routes/auth"
 
 use Rack::Session::Cookie, secret: ENV["SECRET"]

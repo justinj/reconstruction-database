@@ -1,0 +1,12 @@
+<% title = @entry.class.query_name %>
+<form action="/<%= title %>/update/<%= @entry.id %>" method="post">
+  <% columns = @entry.columns - [:id] %>
+  <% columns.each do |column| %>
+    <label><%= column.to_s.capitalize %></label>
+    <textarea name="entry[<%= column %>]" class="form-control"
+      rows="<%= @entry[column].to_s.lines.count %>" ><%= @entry[column] %></textarea>
+  <% end %>
+
+  <br>
+  <input type="submit" value="Update" class="form-control">
+</form>

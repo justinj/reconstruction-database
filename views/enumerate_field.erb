@@ -1,0 +1,24 @@
+<h1>List of <%= @model.field_name.capitalize %>s</h1>
+<% columns = @model.columns %>
+<table class="table table-condensed table-bordered table-striped table-hover span8">
+  <tr>
+    <% columns.each do |column| %>
+      <th><%= column.capitalize %></th>
+    <% end %>
+    <th>Actions</th>
+  </tr>
+  <% @model.each do |entry| %>
+    <tr>
+      <% columns.each do |column| %>
+        <td>
+          <%= entry[column] %> <br>
+        </td>
+      <% end %>
+      <td>
+        <a href="/<%= @model.query_name %>/edit/<%= entry.id %>">
+          Edit
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</table>
