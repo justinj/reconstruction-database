@@ -13,7 +13,7 @@ post "/solve/brest_parse" do
 end
 
 get "/solve/:id" do
-  @solve = ReconDatabase::Solve.where(id: params[:id]).first
+  @solve = ReconDatabase::Solve.first(id: params[:id])
   erb :solve
 end
 
@@ -35,14 +35,14 @@ end
 
 get "/solve/edit/:id" do
   authenticate!
-  @solve = ReconDatabase::Solve.where(id: params["id"]).first
+  @solve = ReconDatabase::Solve.first(id: params["id"])
   erb :edit_solve
 end
 
 post "/solve/update/:id" do
   authenticate!
   id = params["id"]
-  @solve = ReconDatabase::Solve.where(id: id).first
+  @solve = ReconDatabase::Solve.first(id: id)
   @solve.update(params["solve"])
   redirect "/solve/#{id}"
 end
