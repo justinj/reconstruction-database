@@ -48,7 +48,7 @@
     <% if @solve.average.solves.count >= 3 %>
       <h3> Average </h3>
       <div class="others_in_average well">
-        <%= @solve.average.render %>
+        <%= erb :average_sidebar %>
       </div>
     <% end %>
   </div>

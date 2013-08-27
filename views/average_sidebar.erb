@@ -1,0 +1,11 @@
+<% average = @solve.average %>
+<% average.solves.each do |solve| %>
+  <a href="/solve/<%= solve.id %>">
+    <%= average.format_solve(solve) %> <br>
+  </a>
+<% end %>
+= <%= average.format_time average.result %>
+<% unless average.average_record.blank? %>
+  (<%= average.average_record %>)
+<% end %>
+<br>

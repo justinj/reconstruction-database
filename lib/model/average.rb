@@ -62,12 +62,12 @@ module ReconDatabase
       formatted_solves.join ", "
     end
 
-    def render
-      ERB.new(File.read("views/average.erb")).result(binding)
-    end
-
-    def publish
-      update(visible: true)
+    def format_solve(solve)
+      if !mean? && (solve == best || solve == worst)
+        "(#{solve.format})"
+      else
+        solve.format
+      end
     end
 
     def visible?
@@ -93,14 +93,6 @@ module ReconDatabase
 
     def formatted_solves
       solves.map { |solve| format_solve(solve) }
-    end
-
-    def format_solve(solve)
-      if !mean? && (solve == best || solve == worst)
-        "(#{solve.format})"
-      else
-        solve.format
-      end
     end
   end
 end
