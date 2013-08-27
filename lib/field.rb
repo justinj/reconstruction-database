@@ -14,7 +14,7 @@ module RCDB
 
     def filter_solves(dataset, params)
       property = find(name: params[query_name])
-      if params[query_name] && property
+      if !params[query_name].blank? && property
         dataset.where((query_name + "_id").to_sym => property[:id])
       else
         dataset
