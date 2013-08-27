@@ -1,5 +1,3 @@
-require_relative "spec_helper"
-
 module RCDB
   describe Solver do
     describe "name link" do

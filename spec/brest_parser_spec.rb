@@ -1,4 +1,3 @@
-require_relative "spec_helper" 
 module RCDB
   describe BrestParser do
     attr_reader :parser

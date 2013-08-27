@@ -1,7 +1,3 @@
-require_relative "spec_helper"
-
-RCDB::Average.db = Sequel::Model.db
-
 module RCDB
   describe Average do
 

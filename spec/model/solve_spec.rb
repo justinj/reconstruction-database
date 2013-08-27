@@ -1,6 +1,3 @@
-require_relative "spec_helper" 
-RCDB::Solve.db = Sequel::Model.db
-
 module RCDB
   describe Solve do
 
