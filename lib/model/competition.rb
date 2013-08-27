@@ -4,7 +4,7 @@ module RCDB
     one_to_many :solves, class: Solve
 
     def to_s
-      name
+      name.to_s
     end
 
     def at

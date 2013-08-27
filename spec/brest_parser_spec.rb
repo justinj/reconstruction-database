@@ -8,12 +8,13 @@ module RCDB
     before do
       @parser = BrestParser.new(fixture "feliks_588_wc_2013")
       @solve = @parser.solves.first
-      @non_333 = BrestParser.new(fixture "non_333_reconstruction").solves.first
+      @non_333_parser = BrestParser.new(fixture "non_333_reconstruction")
+      @non_333 = @non_333_parser.solves.first
       @multiple = BrestParser.new(fixture "multiple_solves")
     end
 
     it "parses the solver" do
-      solve[:solver].must_equal "Feliks Zemdegs"
+      @parser.solver.must_equal "Feliks Zemdegs"
     end
 
     it "parses the time" do
@@ -42,12 +43,12 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     end
 
     it "parses the competition" do
-      solve[:competition].must_equal "World Rubik's Cube Championship 2013"
+      @parser.competition.must_equal "World Rubik's Cube Championship 2013"
     end
 
     it "parses the puzzle" do
-      solve[:puzzle].must_equal "3x3"
-      non_333[:puzzle].must_equal "4x4"
+      @parser.puzzle.must_equal "3x3"
+      @non_333_parser.puzzle.must_equal "4x4"
     end
 
     it "parses multiple solves" do
@@ -60,8 +61,7 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     end
 
     it "finds the name for multiple solves" do
-      multiple.solves[0][:solver].must_equal "Feliks Zemdegs"
-      multiple.solves[1][:solver].must_equal "Feliks Zemdegs"
+      @parser.solver.must_equal "Feliks Zemdegs"
     end
 
     it "parses multiple times" do

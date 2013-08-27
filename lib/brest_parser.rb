@@ -1,10 +1,15 @@
 module RCDB
   class BrestParser
     attr_reader :post, :name, :solves, :average
+    attr_reader :solver, :competition, :puzzle
 
     def initialize(post, average=0)
       @average = average
       @post = post
+
+      @puzzle                = parse_puzzle(post)
+      @competition           = parse_competition(post)
+      @solver                = parse_solver(post)
     end
 
     def solves
@@ -19,10 +24,6 @@ module RCDB
 
     def parse_single_solve(post, which)
       solve = {}
-
-      solve[:puzzle]         = parse_puzzle(post)
-      solve[:competition]    = parse_competition(post)
-      solve[:solver]         = parse_solver(post)
 
       solve[:time]           = parse_time(post, which)
       solve[:scramble]       = parse_scramble(post, which)

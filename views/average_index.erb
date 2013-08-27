@@ -1,4 +1,6 @@
-<a href="/average/new">New</a>
+<a href="/average/new">New</a> <br>
+<a href="/average/new_from_brest">New from Brest post</a>
+
 <div class="row">
   <table class="table table-condensed table-bordered table-striped table-hover span8">
     <tr>
@@ -10,7 +12,7 @@
     </tr>
     <% @averages.reverse_each do |average| %>
       <tr>
-        <td> <%= average.solver %> </td>
+        <td> <%= average.solver.to_s %> </td>
         <td> <%= average.solves.map(&:time).join(", ") %> </td>
         <td> <%= average.result %> </td>
         <td> <%= "HIDDEN" unless average.visible? %> </td>

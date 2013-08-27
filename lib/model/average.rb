@@ -73,11 +73,16 @@ module RCDB
       visible == 1
     end
 
-    def update(args={})
-      args[:solver] = Solver.find_or_create(name: args.delete("solver"))
-      args[:competition] = Competition.find_or_create(name: args.delete("competition"))
-      args[:puzzle] = Puzzle.find_or_create(name: args.delete("puzzle"))
-      super
+    def solver=(name)
+      super(Solver.find_or_create(name: name))
+    end
+
+    def competition=(name)
+      super(Competition.find_or_create(name: name))
+    end
+
+    def puzzle=(name)
+      super(Puzzle.find_or_create(name: name))
     end
 
     # seriously?

@@ -16,6 +16,23 @@ get "/average/new" do
   redirect "/average/edit/#{@average.id}"
 end
 
+get "/average/new_from_brest" do
+  authenticate!
+  erb :new_from_brest
+end
+
+post "/average/submit_brest_post" do
+  authenticate!
+  parser = RCDB::BrestParser.new(params["submission"]["content"])
+  p parser.solver
+  average = RCDB::Average.create(solver: parser.solver,
+                                  competition: parser.competition,
+                                  puzzle: parser.puzzle)
+
+  parser.solves.each { |solve| average.add_solve(solve) }
+  redirect "/average/edit/#{average.id}"
+end
+
 get "/average/delete/:id" do
   authenticate!
   @entry = RCDB::Average.where(id: params[:id]).first
@@ -25,7 +42,9 @@ end
 
 get "/average/delete_confirm/:id" do
   authenticate!
-  @average = RCDB::Average.where(id: params[:id]).destroy
+  @average = RCDB::Average.first(id: params[:id])
+  @average.remove_all_solves
+  @average.destroy
   redirect "/average"
 end
 
