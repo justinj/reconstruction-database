@@ -29,8 +29,6 @@ module RCDB
       solve[:solution]       = parse_solution(post,which)
       solve[:penalty]        = parse_penalty(post, which)
       solve[:youtube]        = parse_youtube(post)
-      # solve[:notes]          = parse_notes(post, which)
-
 
       solve[:reconstructor]  = "Brest"
       solve[:source]         = "brest_post"
@@ -100,13 +98,6 @@ module RCDB
       /\[youtubehd\](?<result>.*?)\[\/youtubehd\]/ =~ post 
 
       result
-    end
-
-    def parse_notes(post, which)
-      lines = every_other(post.lines.chunk { |line| (line =~ /\t/).nil? }.map{|_, rest| rest})
-      lines = lines[which]
-      return "" unless lines
-      notes = lines.join.gsub(/\s*\[SPOILER.*/,"").gsub(/\[.*?\]/, "").chomp
     end
 
     def every_other(enum)
