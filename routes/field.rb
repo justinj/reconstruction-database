@@ -16,4 +16,18 @@
     field.where(id: params[:id]).update(params["entry"])
     redirect "/#{field.query_name}"
   end
+
+  get "/#{field.query_name}/delete/:id" do
+    authenticate!
+    @entry = field.first(id: params[:id])
+    @delete_url = "/#{field.query_name}/delete_confirm"
+    erb :delete_confirm
+  end
+
+  get "/#{field.query_name}/delete_confirm/:id" do
+    authenticate!
+    @entry = field.first(id: params[:id])
+    @entry.destroy
+    redirect "/#{field.query_name}"
+  end
 end
