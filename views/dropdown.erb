@@ -8,7 +8,7 @@
       selected="selected"
     <% end %>
     >All</option>
-    <% all.each do |value| %>
+    <% order_by(:name).each do |value| %>
       <option value="<%= value.name %>"
       <%= (value == default) ? ' selected="selected"' : "" %> >
       <%= value.name %>
