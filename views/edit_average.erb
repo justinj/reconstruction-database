@@ -17,7 +17,7 @@
     <th> Time </th>
     <th> Actions </th>
   </tr>
-  <% @average.solves.each do |solve| %>
+  <% @average.solves.sort_by(&:position_in_average).each do |solve| %>
     <tr>
       <td> <%= solve.id %> </td>
       <td> <%= solve.time %> </td>

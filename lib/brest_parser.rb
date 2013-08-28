@@ -25,6 +25,7 @@ module RCDB
     def parse_single_solve(post, which)
       solve = {}
 
+      solve[:position_in_average] = which
       solve[:time]           = parse_time(post, which)
       solve[:scramble]       = parse_scramble(post, which)
       solve[:solution]       = parse_solution(post,which)

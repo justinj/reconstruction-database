@@ -1,5 +1,5 @@
 <% average = @solve.average %>
-<% average.solves.each do |solve| %>
+<% average.solves.sort_by(&:position_in_average).each do |solve| %>
   <a href="/solve/<%= solve.id %>">
     <%= average.format_solve(solve) %> <br>
   </a>
