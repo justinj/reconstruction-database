@@ -96,7 +96,7 @@ module RCDB
     end
 
     def parse_youtube(post)
-      /\[youtubehd\](?<result>.*?)\[\/youtubehd\]/ =~ post 
+      /\[youtube(hd)?\](?<result>.*?)\[\/youtube(hd)?\]/ =~ post 
 
       result
     end
