@@ -1,6 +1,6 @@
 <form action="/average/update/<%= @average.id %>" method="post">
 
-  <%= text_input("Record (WR, NAR, etc)", @average[:record], "average[average_record]") %>
+  <%= text_input("Record (WR, NAR, etc)", @average[:average_record], "average[average_record]") %>
   <%= text_input("Solver", @average.solver, "average[solver]") %>
   <%= text_input("Competition", @average.competition, "average[competition]") %>
   <%= text_input("Puzzle", @average.puzzle, "average[puzzle]") %>
