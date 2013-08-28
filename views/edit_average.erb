@@ -1,10 +1,10 @@
 <form action="/average/update/<%= @average.id %>" method="post">
 
-  <%= text_input("Record (WR, NAR, etc)", @average[:average_record], "average[average_record]") %>
-  <%= text_input("Solver", @average.solver, "average[solver]") %>
-  <%= text_input("Competition", @average.competition, "average[competition]") %>
-  <%= text_input("Puzzle", @average.puzzle, "average[puzzle]") %>
-  <%= text_input("Visible? (0 = no, 1 = yes)", @average.visible, "average[visible]") %>
+  <%= text_input("Record (WR, NAR, etc)", @average, :average_record) %>
+  <%= text_input("Solver", @average, :solver) %>
+  <%= text_input("Competition", @average, :competition) %>
+  <%= text_input("Puzzle", @average, :puzzle) %>
+  <%= text_input("Visible? (0 = no, 1 = yes)", @average, :visible) %>
 
   <br>
   <input type="submit" value="Update" class="form-control">

@@ -1,9 +1,9 @@
 module RCDB
   module ViewHelpers
-    def text_input(title, value, name)
-  %(<label>#{title}</label>
-  <textarea name="#{name}" class="form-control"
-    rows="#{value.to_s.lines.count}" >#{value}</textarea>)
+    def text_input(title, entry, field)
+      erb :column_editor, locals: {title: title, 
+                                   value: entry.send(field), 
+                                   field_name: field}
     end
 
     def date_added(solve)
