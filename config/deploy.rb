@@ -11,6 +11,10 @@ set :scm, :git
 role :web, "rcdb"
 role :app, "rcdb"
 
+set :default_environment, {
+  'RACK_ENV' => "production"
+}
+
 task :prod do
   set :deploy_to, "/home/rcdb"
 end
