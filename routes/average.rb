@@ -51,6 +51,6 @@ end
 post "/average/update/:id" do
   authenticate!
   id = params.delete("id")
-  RCDB::Average.first(id: id).update(params["average"])
+  RCDB::Average.first(id: id).update(params["model"])
   redirect "/average"
 end
