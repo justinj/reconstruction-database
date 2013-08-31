@@ -14,7 +14,11 @@ end
 
 get "/solve/:id" do
   @solve = RCDB::Solve.first(id: params[:id])
-  erb :solve
+  if @solve
+    erb :solve
+  else
+    not_found
+  end
 end
 
 ### authentication required

@@ -25,3 +25,7 @@ get "/" do
   @solves = RCDB::Solve.request(params).sort_by { |s| -s[:date_added].to_i}
   erb :index
 end
+
+not_found do
+  redirect "/"
+end
