@@ -7,21 +7,29 @@
     <% end %>
     <th>Actions</th>
   </tr>
+
   <% @model.each do |entry| %>
-    <tr>
-      <% columns.each do |column| %>
-        <td>
-          <%= entry[column] %> <br>
-        </td>
-      <% end %>
+    <% if entry.averages.empty? %>
+      <tr class="danger">
+    <% else %>
+      <tr>
+    <% end %>
+    <% columns.each do |column| %>
       <td>
-        <a href="/<%= @model.query_name %>/edit/<%= entry.id %>">
-          Edit
-        </a> |
-        <a href="/<%= @model.query_name %>/delete/<%= entry.id %>">
-          Delete
-        </a>
+        <%= entry[column] %> <br>
       </td>
-    </tr>
-  <% end %>
+    <% end %>
+    <td>
+      <a href="/<%= @model.query_name %>/edit/<%= entry.id %>">
+        Edit
+      </a> |
+      <a href="/<%= @model.query_name %>/delete/<%= entry.id %>">
+        Delete
+      </a>
+    </td>
+  </tr>
+<% end %>
 </table>
+<br>
+<br>
+Entries highlighted in red are unused.

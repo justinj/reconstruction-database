@@ -1,7 +1,7 @@
 module RCDB
   class Competition < Sequel::Model
     extend Field
-    one_to_many :solves, class: Solve
+    one_to_many :averages
 
     def to_s
       name.to_s
