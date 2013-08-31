@@ -6,7 +6,7 @@
 
   <label>Tags (separated by newlines)</label>
   <% tags = @solve.tags.map(&:name).join("\n") %>
-  <textarea name="solve[tags]" class="form-control"
+  <textarea name="model[tags]" class="form-control"
     rows="<%= tags.lines.count %>" ><%= tags %></textarea>
 
   <br>
