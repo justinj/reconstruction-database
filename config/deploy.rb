@@ -11,7 +11,7 @@ set :scm, :git
 role :web, "rcdb"
 role :app, "rcdb"
 
-set :app_env, "production"
+set :rails_env, "production"
 
 task :prod do
   set :deploy_to, "/home/rcdb"
