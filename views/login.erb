@@ -1,3 +1,9 @@
+<% if params["failure"] %>
+  <div class="alert alert-danger">
+    Failed to log in.
+  </div>
+<% end %>
+
 <form action="/authenticate" method="POST">
   <label>Username</label>
   <input name="username" type="text" class="form-control">  <br>
