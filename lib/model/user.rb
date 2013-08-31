@@ -1,8 +1,7 @@
 module RCDB
   class User < Sequel::Model
-    def initialize(args={})
-      args[:password] = User.encrypt(args[:password])
-      super
+    def password=(val)
+      super(User.encrypt(val))
     end
 
     def root?
