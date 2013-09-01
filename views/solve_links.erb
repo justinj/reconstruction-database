@@ -1,22 +1,29 @@
-<% if @solve.puzzle.garronizable? %>
-  <div class="garron">
-    <a href="<%=h garronize(@solve) %>">View on alg.garron</a>
-  </div>
-<% end %>
+<div class="solve-links">
+  <% if @solve.puzzle.garronizable? %>
+    <div class="garron">
+      <a href="<%=h garronize(@solve) %>">View on alg.garron</a>
+    </div>
+  <% end %>
 
-<% if @solve.puzzle.name =~ /3x3/ && !@solve.scramble.blank? %>
-  <div class="ksim-link">
-    <a href=<%=h ksim_link(@solve) %> target="_blank" >
-      Try scramble on kSim
+  <% if @solve.puzzle.name =~ /3x3/ && !@solve.scramble.blank? %>
+    <div class="ksim-link">
+      <a href=<%=h ksim_link(@solve) %> target="_blank" >
+        Try scramble on kSim
+      </a>
+    </div>
+  <% end %>
+
+  <% unless @solve.youtube.nil? || @solve.youtube.empty? %>
+    <div class="youtube">
+      <a href="http://www.youtube.com/watch?v=<%=h @solve.youtube %>" target="_blank" >
+        View on YouTube
+      </a>
+    </div>
+  <% end %>
+
+  <% unless @solve.average.source_url.blank? %>
+    <a href="<%= @solve.average.source_url %>">
+      View source
     </a>
-  </div>
-<% end %>
-
-<% unless @solve.youtube.nil? || @solve.youtube.empty? %>
-  <div class="youtube">
-    <a href="http://www.youtube.com/watch?v=<%=h @solve.youtube %>" target="_blank" >
-      View on YouTube
-    </a>
-  </div>
-<% end %>
-
+  <% end %>
+</div>
