@@ -1,6 +1,7 @@
 require "sequel"
 require "yaml"
 require "oauth"
+require "rack-flash"
 
 require_relative "formatting_utils"
 require_relative "field"

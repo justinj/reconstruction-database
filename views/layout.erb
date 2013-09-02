@@ -35,6 +35,13 @@
 
     <div class="container">
       <div class="row">
+        <% flash.keys.each do |key| %>
+          <div class="alert alert-<%= key %>">
+            <%= flash[key] %>
+          </div>
+        <% end %>
+      </div>
+      <div class="row">
         <%= yield %>
       </div>
 

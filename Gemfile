@@ -9,6 +9,7 @@ gem 'sequel-crushyform'
 gem 'oauth'
 gem 'rvm-capistrano'
 gem 'unicorn'
+gem 'rack-flash3'
 
 group :development do
   gem 'minitest'
@@ -16,6 +17,7 @@ group :development do
   gem 'timecop'
   gem 'pry'
   gem 'capistrano-unicorn'
+  gem 'shotgun'
 end
 
 ruby '2.0.0'

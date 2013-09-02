@@ -16,6 +16,7 @@ require_relative "routes/field"
 require_relative "routes/auth"
 
 use Rack::Session::Cookie, secret: ENV["SECRET"]
+use Rack::Flash
 
 helpers RCDB::ViewHelpers
 helpers RCDB::Helpers
