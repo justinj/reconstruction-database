@@ -11,6 +11,10 @@ RCDB
 RCDB is a <b>R</b>e<b>c</b>onstruction <b>D</b>ata<b>b</b>ase.
 The goal is to document and categorize reconstructions of important or interesting solves of the Rubik's Cube and related puzzles.
 
+[RCDB](http://www.rcdb.justinjaffray.com/)
+
+[SpeedSolving Thread](http://www.speedsolving.com/forum/showthread.php?43580-Reconstruction-Database-RCDB)
+
 Contributing to RCDB
 ====================
 
