@@ -31,7 +31,7 @@
     <% end %>
     <h3>Tags</h3>
     <div class="well tags">
-      <%= @solve.tags.map(&:name).join(", ") %>
+      <%= @solve.all_tags.map(&:name).join(", ") %>
     </div>
   </div>
 </div>

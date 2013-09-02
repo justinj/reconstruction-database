@@ -101,6 +101,11 @@ module RCDB
         solve.tag("pllskip")
         Tag.count.must_equal 1
       end
+
+      it "inherits tags from its average" do
+        solve.stubs(:average).returns(stub(tags: ["average_tag"]))
+        solve.all_tags.must_equal ["average_tag"]
+      end
     end
   end
 end

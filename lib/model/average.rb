@@ -1,9 +1,13 @@
 module RCDB
   class Average < Sequel::Model
+    include Taggable
+
     one_to_many :solves, class: Solve
     many_to_one :solver
     many_to_one :puzzle
     many_to_one :competition
+    many_to_many :tags
+
 
     def initialize(args={})
       args[:visible] = false if args[:visible].nil?

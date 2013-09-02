@@ -2,6 +2,7 @@ module RCDB
   Sequel.extension :blank
   class Solve < Sequel::Model
     include FormattingUtils
+    include Taggable
 
     many_to_one :average
     many_to_many :tags
@@ -44,14 +45,8 @@ module RCDB
       end
     end
 
-    def tag(tag_name)
-      t = Tag.find_or_create(name: tag_name)
-      add_tag(t) unless tags.include? t
-    end
-
-    def tags=(tags_to_add)
-      remove_all_tags
-      tags_to_add.split("\n").map(&:chomp).each { |t| tag(t) }
+    def all_tags
+      average.tags + tags
     end
 
     def before_save
@@ -68,7 +63,7 @@ module RCDB
 
       # need to ask someone how to do this properly
       def joined
-        Solve.join(Average.select(:solver_id, :puzzle_id, :competition_id, Sequel.as(:id, :average_id)), average_id: :average_id)
+        Solve.join(Average.select(:solver_id, :puzzle_id, :competition_id, Sequel.as(:id, :avg_id)), avg_id: :average_id)
       end
 
       def fields

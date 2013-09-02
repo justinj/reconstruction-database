@@ -5,6 +5,7 @@ require "rack-flash"
 
 require_relative "formatting_utils"
 require_relative "field"
+require_relative "taggable"
 
 require_relative "model/solve"
 require_relative "model/solver"
