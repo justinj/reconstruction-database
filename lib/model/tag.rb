@@ -13,15 +13,18 @@ module RCDB
           first(name: tag_name)
         end.compact
 
-        valid_solves = tags.inject(Solve) do |ds, tag|
-          ds.where(tags: tag)
-        end.map(&:id)
-
-        valid_averages = tags.inject(Average) do |ds, tag|
-          ds.where(tags: tag)
-        end.map(&:id)
+        valid_solves   = entries_with_matching_tags(Solve, tags)
+        valid_averages = entries_with_matching_tags(Average, tags)
 
         dataset.where(Sequel.|({id: valid_solves}, {average_id: valid_averages}))
+      end
+
+      private
+
+      def entries_with_matching_tags(model, tags)
+        tags.inject(model) do |ds, tag|
+          ds.where(tags: tag)
+        end.map(&:id)
       end
     end
   end
