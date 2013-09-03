@@ -21,7 +21,7 @@ module RCDB
           ds.where(tags: tag)
         end.map(&:id)
 
-        dataset.where(id: valid_solves).or(average_id: valid_averages)
+        dataset.where(Sequel.|({id: valid_solves}, {average_id: valid_averages}))
       end
     end
   end
