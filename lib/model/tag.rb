@@ -3,6 +3,10 @@ module RCDB
     many_to_many :solves, class: Solve, left_key: :tag_id, right_key: :solve_id
     many_to_many :averages, class: Average, left_key: :tag_id, right_key: :average_id
 
+    def name=(value)
+      super(value.downcase)
+    end
+
     class << self
       def queryer_html(params)
         ERB.new(File.read("views/tag_input.erb")).result(binding)
@@ -10,6 +14,7 @@ module RCDB
 
       def filter_solves(dataset, params)
         tags = extract_tags(params)
+        return [] unless tags
         solves_tags = full_solves_tags_table(tags)
 
         tags.inject(dataset) do |dataset, tag|
@@ -22,7 +27,7 @@ module RCDB
 
       def extract_tags(query_params)
         query_params["tags"].to_s.split(/\s+/).map do |tag_name|
-          first(name: tag_name)
+          first(name: tag_name.downcase) or return nil
         end.compact.map(&:id)
       end
 
