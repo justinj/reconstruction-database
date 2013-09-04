@@ -1,0 +1,9 @@
+data:
+   - id: 1
+     time: 5.00
+   - id: 2
+     time: 6.00
+     average_id: 2
+   - id: 3
+     time: 7.00
+     average_id: 2

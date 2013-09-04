@@ -51,55 +51,35 @@ module RCDB
           solve = Solve.new
           solve.save
           solve.date_added.must_be_close_to Time.now
+          solve.destroy
         end
       end
     end
 
     describe "tagging" do
       let(:solve) { Solve.create }
-      before do
-        Tag.each { |t| t.destroy }
+
+      after do
+        destroy_db
       end
 
       it "lets you add tags" do
-        solve.tags.count.must_equal 0
+        Tag.expects(:find_or_create).with(name: "pllskip").returns(Tag.new)
         solve.tag("pllskip")
-        solve.tags.count.must_equal 1
-      end
-
-      it "doesn't tag more than once" do
-        solve.tags.count.must_equal 0
-        solve.tag("pllskip")
-        solve.tag("pllskip")
-        solve.tags.count.must_equal 1
       end
 
       describe "tags=" do
         it "lets you set a bunch of tags at once" do
+          Tag.expects(:create).times(3).returns(Tag.new)
           tags = ["a", "b", "c"].join("\n")
-          solve.tags.count.must_equal 0
           solve.tags = tags
-          solve.tags.count.must_equal 3
         end
 
         it "gets rid of old tags" do
-          solve.tag "d"
           tags = ["a", "b", "c"].join("\n")
-          solve.tags.count.must_equal 1
+          solve.expects(:remove_all_tags)
           solve.tags = tags
-          solve.tags.count.must_equal 3
         end
-      end
-
-      it "creates a new tag if one doesn't exist" do
-        solve.tag("pllskip")
-        Tag.count.must_equal 1
-      end
-
-      it "doesn't create a new tag if one exists" do
-        Tag.create(name: "pllskip")
-        solve.tag("pllskip")
-        Tag.count.must_equal 1
       end
 
       it "inherits tags from its average" do

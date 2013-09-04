@@ -5,6 +5,10 @@ module RCDB
       @notroot = User.create(name: "not_root", password: "password", root: false)
     end
 
+    after do
+      destroy_db
+    end
+
     let(:admin) { @admin }
     let(:notroot) { @notroot }
 

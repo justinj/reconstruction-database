@@ -6,11 +6,11 @@ module RCDB
     attr_reader :multiple
 
     before do
-      @parser = BrestParser.new(fixture "feliks_588_wc_2013")
+      @parser = BrestParser.new(fixture_post "feliks_588_wc_2013")
       @solve = @parser.solves.first
-      @non_333_parser = BrestParser.new(fixture "non_333_reconstruction")
+      @non_333_parser = BrestParser.new(fixture_post "non_333_reconstruction")
       @non_333 = @non_333_parser.solves.first
-      @multiple = BrestParser.new(fixture "multiple_solves")
+      @multiple = BrestParser.new(fixture_post "multiple_solves")
     end
 
     it "parses the solver" do
@@ -75,7 +75,7 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     # These didn't parse properly at first
 
     before do
-      @parser = BrestParser.new(fixture "5_2x2_solves")
+      @parser = BrestParser.new(fixture_post "5_2x2_solves")
       @solves = @parser.solves
     end
 
@@ -88,7 +88,7 @@ U' R U' R U R U R U' R' U' R2 U' // EPLL"
     attr_reader :parser, :solves
 
     before do
-      @parser = BrestParser.new(fixture "solve_with_dnf")
+      @parser = BrestParser.new(fixture_post "solve_with_dnf")
       @solves = @parser.solves
     end
 

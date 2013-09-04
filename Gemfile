@@ -18,6 +18,8 @@ group :development do
   gem 'pry'
   gem 'capistrano-unicorn'
   gem 'shotgun'
+  gem 'simplecov'
+  gem 'sequel-fixture'
 end
 
 ruby '2.0.0'
