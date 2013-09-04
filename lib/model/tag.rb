@@ -9,22 +9,19 @@ module RCDB
       end
 
       def filter_solves(dataset, params)
-        tags = params["tags"].to_s.split(/s+/).map do |tag_name|
+        tags = params["tags"].to_s.split(/\s+/).map do |tag_name|
           first(name: tag_name)
-        end.compact
+        end.compact.map(&:id)
 
-        valid_solves   = entries_with_matching_tags(Solve, tags)
-        valid_averages = entries_with_matching_tags(Average, tags)
+        solves_with_average_tags = DB[:averages_tags].join(:solves, average_id: :average_id).select(:id, :tag_id)
 
-        dataset.where(Sequel.|({id: valid_solves}, {average_id: valid_averages}))
-      end
+        solves_tags = DB[:solves_tags].union(solves_with_average_tags)
+        solves_tags = solves_tags.where(tag_id: tags)
 
-      private
-
-      def entries_with_matching_tags(model, tags)
-        tags.inject(model) do |ds, tag|
-          ds.where(tags: tag)
-        end.map(&:id)
+        tags.inject(dataset) do |dataset, tag|
+          valid_solves = solves_tags.where(tag_id: tag).select(:solve_id)
+          dataset.where(id: valid_solves)
+        end
       end
     end
   end
