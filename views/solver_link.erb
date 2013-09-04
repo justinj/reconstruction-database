@@ -1,0 +1,5 @@
+<% if solver.wca_id.blank? %>
+  <%=h solver.name %>
+<% else %>
+  <a href='https://www.worldcubeassociation.org/results/p.php?i=<%=h solver.wca_id %>' target='_blank'><%=h solver.name %></a>
+<% end %>
