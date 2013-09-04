@@ -10,28 +10,32 @@ module RCDB
 
     private
 
+    def canonical_time(time)
+      time.to_f.to_s
+    end
+
     def minutes(time)
-      (time.to_s.split(".").first.to_i / 60).to_s
+      (canonical_time(time).split(".").first.to_i / 60).to_s
     end
 
     def seconds(time)
-      (time.to_s.split(".").first.to_i % 60).to_s
+      (canonical_time(time).split(".").first.to_i % 60).to_s
     end
 
     def hundredths(time)
-      time.to_s.split(".").last
+      pad_right(canonical_time(time).split(".").last)
     end
 
     def pad_left(num, num_digits = 2)
-      num = num.to_s
-      num = "0" + num until num.length >= num_digits
-      num[0...num_digits]
+      str_num = num.to_s
+      str_num = "0" + str_num until str_num.length >= num_digits
+      str_num[0...num_digits]
     end
 
     def pad_right(num, num_digits = 2)
-      num = num.to_s
-      num = num + "0" until num.length >= num_digits
-      num[0...num_digits]
+      str_num = num.to_s
+      str_num = str_num + "0" until str_num.length >= num_digits
+      str_num[0...num_digits]
     end
   end
 end
