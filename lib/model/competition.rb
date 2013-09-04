@@ -8,10 +8,10 @@ module RCDB
     end
 
     def at
-      if name == "Unofficial"
-        ""
-      else
+      if official?
         "at #{link}"
+      else
+        ""
       end
     end
 
@@ -20,6 +20,10 @@ module RCDB
     end
 
     private
+
+    def official?
+      name != "Unofficial"
+    end
 
     def url_code
       code || name.gsub(" ","")
