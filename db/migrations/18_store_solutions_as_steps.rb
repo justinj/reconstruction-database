@@ -3,7 +3,7 @@ require "json"
 
 
 def extract_steps(solution)
-  solution.lines.grep(%r(//)).each_with_index.map do |line, i|
+  (solution || "").lines.grep(%r(//)).each_with_index.map do |line, i|
     moves, explanation = line.chomp.split(%r$\s*//\s*$)
     {moves: moves,
       explanation: explanation,
