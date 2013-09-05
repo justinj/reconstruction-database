@@ -3,8 +3,6 @@ require "yaml"
 require "oauth"
 require "rack-flash"
 
-DB = Sequel::Model.db
-
 require_relative "formatting_utils"
 require_relative "field"
 require_relative "taggable"

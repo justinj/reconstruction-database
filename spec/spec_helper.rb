@@ -10,10 +10,12 @@ require "sequel"
 
 require "sequel-fixture"
 
+ENV["RACK_ENV"] = "test"
+
 Sequel::Fixture.path = File.join(File.dirname(__FILE__), "fixtures")
 
 Sequel.extension :migration
-Sequel::Model.db = Sequel.sqlite
+Sequel::Model.db = DB = Sequel.sqlite
 Sequel::Migrator.apply Sequel::Model.db, "db/migrations"
 
 # Sequel::Model.db.loggers << Logger.new($stdout)

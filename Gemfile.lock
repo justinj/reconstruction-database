@@ -44,6 +44,8 @@ GEM
       rack
     rack-protection (1.5.0)
       rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
     raindrops (0.11.0)
     rake (10.1.0)
     rvm-capistrano (1.4.4)
@@ -90,6 +92,7 @@ DEPENDENCIES
   oauth
   pry
   rack-flash3
+  rack-test
   rake
   rvm-capistrano
   sequel

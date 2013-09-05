@@ -20,6 +20,12 @@ module RCDB
       average.solver
     end
 
+    def solution
+      steps.sort_by(&:position_in_solve).map do |step|
+        "#{step.moves} // #{step.explanation}"
+      end.join("\n")
+    end
+
     def solution=(value)
       save
       remove_all_steps

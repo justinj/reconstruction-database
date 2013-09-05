@@ -5,6 +5,8 @@ module RCDB
     it "creates garron links" do
       solve = stub(solution: "R' U",
                    scramble: "U' R")
+
+      stubs(:render_solution).returns("R' U")
       
       solve.stubs(:puzzle).returns(stub(garronized_name: "2x2x2"))
       garronize(solve)

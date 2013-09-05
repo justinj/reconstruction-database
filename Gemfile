@@ -20,6 +20,7 @@ group :development do
   gem 'shotgun'
   gem 'simplecov'
   gem 'sequel-fixture'
+  gem 'rack-test'
 end
 
 ruby '2.0.0'

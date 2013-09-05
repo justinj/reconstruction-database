@@ -14,7 +14,7 @@ end
 
 Rake::TestTask.new do |t|
   t.libs << "test"
-  t.test_files = ["spec/spec_helper"] + FileList['spec/**/*_spec.rb']
+  t.test_files = ["spec/spec_helper"] + FileList['spec/**/*_spec.rb'] + FileList['spec/**/*_feature.rb']
 end
 
 task :migrate do
