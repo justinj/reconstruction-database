@@ -24,7 +24,6 @@ end
 post "/average/submit_brest_post" do
   authenticate!
   parser = RCDB::BrestParser.new(params["submission"]["content"])
-  p parser.solver
   average = RCDB::Average.create(solver: parser.solver,
                                   competition: parser.competition,
                                   puzzle: parser.puzzle)

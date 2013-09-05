@@ -21,6 +21,7 @@ module RCDB
     end
 
     def solution=(value)
+      save
       remove_all_steps
       extract_steps(value).each do |step|
         step = Step.new(step)
