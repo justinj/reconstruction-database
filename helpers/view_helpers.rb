@@ -10,13 +10,6 @@ module RCDB
       solve.date_added.strftime("%b %-d, %Y")
     end
 
-    def format_solution(solution)
-      solution = h(solution.to_s).gsub("\n", "<br>")
-      delimiter = "&#x2F;&#x2F;"
-      solution.gsub(/(#{delimiter}.*?(<br>|$))/,
-                    '<span class="comment">\1</span>')
-    end
-
     def garronize(solve)
       alg = garronize_alg(solve.solution)
       ini = garronize_alg(solve.scramble)

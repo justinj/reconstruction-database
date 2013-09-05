@@ -5,6 +5,7 @@ module RCDB
     include Taggable
 
     many_to_one :average
+    one_to_many :steps
     many_to_many :tags
 
     def puzzle
@@ -17,6 +18,14 @@ module RCDB
 
     def solver
       average.solver
+    end
+
+    def solution=(value)
+      remove_all_steps
+      extract_steps(value).each do |step|
+        step = Step.new(step)
+        add_step(step)
+      end
     end
 
     def effective_value
@@ -52,6 +61,17 @@ module RCDB
     def before_save
       self.date_added ||= Time.now
       super
+    end
+
+    private
+
+    def extract_steps(solution)
+      solution.lines.each_with_index.map do |line, i|
+        moves, explanation = line.chomp.split(%r$\s*//\s*$)
+        {moves: moves,
+          explanation: explanation,
+          position_in_solve: i}
+      end
     end
 
     class << self

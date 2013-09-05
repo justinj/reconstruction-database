@@ -1,6 +1,10 @@
 module RCDB
   describe Solve do
 
+    after do
+      destroy_db
+    end
+
     let(:regular_solve) { Solve.new(time: 10.00) }
     let(:plus_two_solve) { Solve.new(time: 10.00, penalty: "+2") }
     let(:dnf_solve) { Solve.new(time: 10.00, penalty: "dnf") }
@@ -59,10 +63,6 @@ module RCDB
     describe "tagging" do
       let(:solve) { Solve.create }
 
-      after do
-        destroy_db
-      end
-
       it "lets you add tags" do
         Tag.expects(:find_or_create).with(name: "pllskip").returns(Tag.new)
         solve.tag("pllskip")
@@ -85,6 +85,38 @@ module RCDB
       it "inherits tags from its average" do
         solve.stubs(:average).returns(stub(tags: ["average_tag"]))
         solve.all_tags.must_equal ["average_tag"]
+      end
+    end
+
+    describe "solutions" do
+      let(:solve) { Solve.create }
+      describe "setting the solution" do
+
+        it "creates a step" do
+          Step.expects(:new).with(moves: %(R U R' U'),
+                                  explanation: "Sexy move",
+                                  position_in_solve: 0)
+          solve.stubs(:add_step)
+          solve.solution = "R U R' U' // Sexy move"
+        end
+
+        it "creates a step for each line" do
+          Step.expects(:new).with(moves: %(U R U' R'),
+                                  explanation: "Inverse sexy move",
+                                  position_in_solve: 1)
+          Step.expects(:new).with(moves: %(R U R' U'),
+                                  explanation: "Sexy move",
+                                  position_in_solve: 0)
+          solve.stubs(:add_step)
+          solve.solution = 
+"R U R' U' // Sexy move
+U R U' R' // Inverse sexy move"
+        end
+      end
+
+      describe "getting the solution" do
+        it "returns a string" do
+        end
       end
     end
   end

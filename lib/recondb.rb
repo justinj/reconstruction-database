@@ -16,6 +16,8 @@ require_relative "model/competition"
 require_relative "model/average"
 require_relative "model/tag"
 require_relative "model/user"
+require_relative "model/step"
+
 
 require_relative "solve_time"
 
