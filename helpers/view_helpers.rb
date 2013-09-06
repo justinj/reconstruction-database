@@ -1,5 +1,31 @@
 module RCDB
   module ViewHelpers
+
+    def paginate(dataset)
+      page_num = params.fetch("page", 1).to_i
+      dataset.paginate(page_num, page_size)
+    end
+
+    def link(title, url, params)
+      query_string = params.map { |k, v| "#{k}=#{v}" }.join("&")
+      %(<a href="#{url}?#{query_string}">#{title}</a>)
+    end
+
+    def pagination_link(text, page = text)
+      link text, "/", params.merge("page" => page)
+    end
+
+    def pages_for(dataset)
+      # sequel will return an enumerator in an upcoming version
+      result = []
+      dataset.each_page(page_size) { |page| result << page }
+      result
+    end
+
+    def page_size
+      100
+    end
+
     def text_input(title, entry, field)
       erb :column_editor, locals: {title: title, 
                                    value: entry.send(field), 

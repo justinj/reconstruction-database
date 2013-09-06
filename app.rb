@@ -23,7 +23,7 @@ helpers RCDB::Helpers
 helpers RCDB::FormattingUtils
 
 get "/" do
-  @solves = RCDB::Solve.request(params).sort_by { |s| -s[:date_added].to_i}
+  @solves = RCDB::Solve.request(params).order_by(Sequel.desc(:date_added))
   erb :index
 end
 

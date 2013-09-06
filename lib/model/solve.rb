@@ -90,7 +90,7 @@ module RCDB
 
       # need to ask someone how to do this properly
       def joined
-        Solve.join(Average.select(:solver_id, :puzzle_id, :competition_id, Sequel.as(:id, :avg_id)), avg_id: :average_id)
+        Solve.join(Average.select(:visible, :solver_id, :puzzle_id, :competition_id, Sequel.as(:id, :avg_id)), avg_id: :average_id)
       end
 
       def fields

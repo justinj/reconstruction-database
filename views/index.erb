@@ -1,19 +1,15 @@
 <div class="row">
 
   <form action="/" method="GET" >
-
     <% RCDB::Solve.fields.each do |field| %>
       <%= field.queryer_html params %>
     <% end %>
-
     <button type="submit" class="btn btn-primary">Submit</button>
-
   </form>
 
   <br><br>
 </div>
 <div class="row">
-
   <table class="table table-condensed table-bordered table-striped table-hover span8">
     <tr>
       <th> Solver </th>
@@ -24,7 +20,7 @@
       <th> Competition </th>
       <th> Date Added </th>
     </tr>
-    <% @solves.select { |solve| solve.average.visible? }.each do |solve| %>
+    <% paginate(@solves).where(visible: 1).each do |solve| %>
       <tr>
         <td> <%=h solve.solver %> <br> </td>
         <td> <%=h solve.puzzle.name %> </td>
@@ -36,4 +32,7 @@
       </tr>
     <% end %>
   </table>
+
 </div>
+
+<%= erb :pager %>
