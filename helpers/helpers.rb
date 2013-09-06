@@ -7,6 +7,7 @@ module RCDB
     def h(text)
       Rack::Utils.escape_html(text)
     end
+    alias_method :escape_html, :h
 
     def authenticate!
       unless current_user
