@@ -11,6 +11,8 @@ gem 'rvm-capistrano'
 gem 'unicorn'
 gem 'rack-flash3'
 
+gem 'coveralls', require: false
+
 group :development do
   gem 'minitest'
   gem 'mocha'
