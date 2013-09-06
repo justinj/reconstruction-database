@@ -15,7 +15,7 @@ require_relative "routes/solve"
 require_relative "routes/field"
 require_relative "routes/auth"
 
-use Rack::Session::Cookie, secret: ENV["SECRET"]
+use Rack::Session::Cookie, secret: ENV.fetch("SECRET") { "Hidden!" }
 use Rack::Flash
 
 helpers RCDB::ViewHelpers
