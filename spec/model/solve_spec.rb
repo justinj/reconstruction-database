@@ -134,5 +134,12 @@ U R U' R' // Inverse sexy move"
         end
       end
     end
+
+    describe "visibility" do
+      it "is visible if it has a solution" do
+        Solve.create(solution: "R U R' U'").must_be :visible?
+        Solve.create(solution: "").wont_be :visible?
+      end
+    end
   end
 end

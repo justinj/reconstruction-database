@@ -3,6 +3,7 @@ require "yaml"
 require "oauth"
 require "rack-flash"
 require "forwardable"
+require "padrino-helpers"
 
 require_relative "formatting_utils"
 require_relative "field"

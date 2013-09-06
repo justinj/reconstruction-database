@@ -1,8 +1,7 @@
 <% average = @solve.average %>
 <% average.solves.sort_by(&:position_in_average).each do |solve| %>
-  <a href="/solve/<%= solve.id %>">
-    <%= average.format_solve(solve) %> <br>
-  </a>
+  <%= link_to average.format_solve(solve), "/solve/#{solve.id}", if: solve.visible? %>
+  <br>
 <% end %>
 = <%= format_time average.result %>
 <% unless average.average_record.blank? %>

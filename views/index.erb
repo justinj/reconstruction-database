@@ -20,7 +20,7 @@
       <th> Competition </th>
       <th> Date Added </th>
     </tr>
-    <% paginate(@solves).where(visible: 1).each do |solve| %>
+    <% paginate(@solves).where(visible: 1).entries.select(&:visible?).each do |solve| %>
       <tr>
         <td> <%=h solve.solver %> <br> </td>
         <td> <%=h solve.puzzle.name %> </td>

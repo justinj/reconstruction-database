@@ -10,6 +10,7 @@ gem 'oauth'
 gem 'rvm-capistrano'
 gem 'unicorn'
 gem 'rack-flash3'
+gem 'padrino-helpers'
 
 gem 'coveralls', require: false
 

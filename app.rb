@@ -21,6 +21,7 @@ use Rack::Flash
 helpers RCDB::ViewHelpers
 helpers RCDB::Helpers
 helpers RCDB::FormattingUtils
+helpers Padrino::Helpers
 
 get "/" do
   @solves = RCDB::Solve.request(params).order_by(Sequel.desc(:date_added))

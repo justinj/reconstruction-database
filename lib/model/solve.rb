@@ -55,6 +55,10 @@ module RCDB
       penalty == "+2"
     end
 
+    def visible?
+      steps.any? { |step| !step.blank? }
+    end
+
     def format
       if dnf?
         "DNF(#{format_time(effective_value)})"
