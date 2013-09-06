@@ -1,8 +1,12 @@
 module RCDB 
   Sequel.extension :blank
   class Solve < Sequel::Model
+    extend Forwardable
+    
     include FormattingUtils
     include Taggable
+
+    def_delegators :average, :puzzle, :solver, :competition
 
     many_to_one :average
     one_to_many :steps
@@ -22,7 +26,7 @@ module RCDB
 
     def solution
       steps.sort_by(&:position_in_solve).map do |step|
-        "#{step.moves} // #{step.explanation}"
+        "#{step.moves} #{puzzle.delimiter} #{step.explanation}"
       end.join("\n")
     end
 

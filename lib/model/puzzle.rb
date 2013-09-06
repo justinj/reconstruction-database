@@ -7,6 +7,10 @@ module RCDB
       name =~ /\dx\d/
     end
 
+    def delimiter
+      super || "//"
+    end
+
     def garronized_name
       d = name[0]
       "#{d}x#{d}x#{d}"

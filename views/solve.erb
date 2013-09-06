@@ -18,7 +18,7 @@
 
     <h3>Solution</h3>
     <div class="algorithm well">
-      <%= format_solution(@solve.solution) %>
+      <%= erb :solution, locals: { solve: @solve } %>
     </div>
   </div>
 

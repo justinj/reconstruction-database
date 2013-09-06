@@ -115,7 +115,22 @@ U R U' R' // Inverse sexy move"
       end
 
       describe "getting the solution" do
-        it "returns a string" do
+        it "returns the formatted solution" do
+          solve = Solve.new
+          solve.stubs(:puzzle).returns(stub(delimiter: "//"))
+          solve.stubs(:steps).returns([ stub(moves: "R", explanation: "move1", position_in_solve: 0),
+                                        stub(moves: "U", explanation: "move2", position_in_solve: 1)])
+
+          solve.solution.must_equal "R // move1\nU // move2"
+        end
+
+        it "uses the special delimiter if one is provided" do
+          solve = Solve.new
+          solve.stubs(:puzzle).returns(stub(delimiter: "-"))
+          solve.stubs(:steps).returns([ stub(moves: "R", explanation: "move1", position_in_solve: 0),
+                                        stub(moves: "U", explanation: "move2", position_in_solve: 1)])
+
+          solve.solution.must_equal "R - move1\nU - move2"
         end
       end
     end
