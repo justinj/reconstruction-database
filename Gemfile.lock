@@ -11,6 +11,13 @@ GEM
     capistrano-unicorn (0.1.10)
       capistrano
     coderay (1.0.9)
+    colorize (0.5.8)
+    coveralls (0.6.7)
+      colorize
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      thor
     descendants_tracker (0.0.1)
     discoverer (0.0.2)
       virtus
@@ -23,6 +30,7 @@ GEM
     metaclass (0.0.1)
     metafun (0.2.0)
     method_source (0.8.1)
+    mime-types (1.25)
     minitest (5.0.6)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
@@ -48,6 +56,8 @@ GEM
       rack (>= 1.0)
     raindrops (0.11.0)
     rake (10.1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rvm-capistrano (1.4.4)
       capistrano (>= 2.15.4)
     sequel (4.1.1)
@@ -71,6 +81,7 @@ GEM
     sub-setter (0.0.2)
     symbolmatrix (1.2.0)
       discoverer
+    thor (0.18.1)
     tilt (1.4.1)
     timecop (0.6.3)
     unicorn (4.6.3)
@@ -86,6 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano-unicorn
+  coveralls
   dotenv
   minitest
   mocha
