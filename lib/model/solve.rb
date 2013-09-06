@@ -24,6 +24,10 @@ module RCDB
       average.solver
     end
 
+    def position_in_average
+      super || -1
+    end
+
     def solution
       steps.sort_by(&:position_in_solve).map do |step|
         "#{step.moves} #{puzzle.delimiter} #{step.explanation}"
