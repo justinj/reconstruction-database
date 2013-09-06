@@ -1,9 +1,3 @@
-require_relative "../../app"
-require "rack/test"
-require "pp"
-
-settings.root = Dir.pwd
-
 describe "Adding a new Brest solve" do
   include Rack::Test::Methods
 

@@ -1,7 +1,10 @@
 require "logger"
 
+require 'simplecov'
 require 'coveralls'
-Coveralls.wear!
+
+SimpleCov.start
+# Coveralls.wear!
 
 require "minitest/autorun"
 require "mocha/setup"

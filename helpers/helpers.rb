@@ -1,7 +1,7 @@
 module RCDB
   module Helpers
     def current_user
-      User.where(id: session[:user_id]).first
+      User.first(id: session[:user_id])
     end
 
     def h(text)
