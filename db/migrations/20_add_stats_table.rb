@@ -29,9 +29,9 @@ Sequel.migration do
                             solve_id: solve[:id],
                             position: position,
                            )
-        rescue Exception
-          # If something goes wrong, this stat did not parse properly, so we'll leave it blank.
         end
+      rescue
+        # If something goes wrong, this stat did not parse properly, so we'll leave it blank.
       end
     end
   end
