@@ -23,6 +23,7 @@ RCDB uses Ruby 2.0.0, so make sure you have that installed.
 ```shell
 $  git clone git@github.com:justinj/reconstruction-database.git
 $  cd reconstruction-database
+$  bundle install
 $  rake test
 ```
 
