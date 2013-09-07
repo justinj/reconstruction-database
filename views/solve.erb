@@ -20,6 +20,31 @@
     <div class="algorithm well">
       <%= erb :solution, locals: { solve: @solve } %>
     </div>
+
+    <% unless @solve.stats.empty? %>
+      <h3>Stats</h3>
+      <% stats = @solve.stats.sort_by(&:position) %>
+      <table class="table table-bordered">
+        <tr>
+          <th>Step</th>
+          <th>Time</th>
+          <th>STM</th>
+          <th>stps</th>
+          <th>ETM</th>
+          <th>etps</th>
+        </tr>
+        <% stats.each do |stat| %>
+          <tr>
+            <td><%= stat.name %></td>
+            <td><%= stat.time %></td>
+            <td><%= stat.stm %></td>
+            <td><%= round(stat.stm / stat.time) %></td>
+            <td><%= stat.etm %></td>
+            <td><%= round(stat.etm / stat.time) %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
   </div>
 
   <div class="col-lg-4">

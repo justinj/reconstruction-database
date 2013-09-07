@@ -11,9 +11,10 @@ module RCDB
     many_to_one :average
     one_to_many :steps
     many_to_many :tags
+    one_to_many :stats
 
-    def stats=(value)
-      # implement me!
+    def stats=(_)
+      #TODO
     end
 
     def puzzle

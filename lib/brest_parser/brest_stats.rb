@@ -3,12 +3,19 @@ module RCDB
     attr_reader :total_time
 
     def self.parse(input)
-      plain_input = remove_bbcode(input)
+      @input = input
+      return {} unless input && !input.empty?
+      grepped_input = remove_bad_lines(input)
+      plain_input = remove_bbcode(grepped_input)
       field_lists = field_listify(plain_input)
       build_result(field_lists)
     end
 
     private
+
+    def self.remove_bad_lines(input)
+      input.lines.drop_while { |line| !(/Step/ =~ line) }.join("\n")
+    end
 
     def self.build_result(field_lists)
       headers = field_lists.shift
@@ -19,10 +26,11 @@ module RCDB
     end
 
     def self.valid_entry?(entry)
-      entry.empty?
+      entry && entry.empty?
     end
 
     def self.add_entry(hash, line, headers)
+      return if line.all?(&:nil?)
       with_header = headers.zip(line)
       title = with_header.shift.last
       hash[title] = Hash[with_header.map { |k, v| [k, v.to_f] }]

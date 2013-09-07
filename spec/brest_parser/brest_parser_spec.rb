@@ -72,6 +72,23 @@ solve[:solution].must_equal expected
       multiple.solves[1][:scramble].must_equal "D2 F' U2 L2 R' F' D' L' D L' R2 F2 R D L' R2 U F'"
     end
 
+    it "sends the right stats for multiple solves" do
+      BrestStats.unstub
+      BrestStats.expects(:parse).with('[CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="Red"]Total	8.39	59	7.03	66	7.87	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	2.27	15	6.61	16	7.05		Cross+1/F2L	48.3%	46.9%	44.4%
+F2L	4.70	32	6.81	36	7.66		F2L/Total	56.0%	54.2%	54.5%
+LL	3.69	27	7.32	30	8.13		LL/Total	44.0%	45.8%	45.5%[/CODE]')
+      BrestStats.expects(:parse).with('[CODE][B]Step	Time	STM	stps	ETM	etps[/B]
+[COLOR="Red"]Total	7.95	67	8.43	74	9.31	[/COLOR]	[B][SIZE="4"]%[/SIZE]
+							Step		Time	STM	ETM[/B]
+Cross+1	1.59	9	5.66	10	6.29		Cross+1/F2L	32.4%	25.0%	23.3%
+F2L	4.90	36	7.35	43	8.78		F2L/Total	61.6%	53.7%	58.1%
+LL	3.05	31	10.16	31	10.16		LL/Total	38.4%	46.3%	41.9%[/CODE]')
+      BrestParser.new(fixture_post "multiple_solves").solves
+    end
+
     it "finds the name for multiple solves" do
       @parser.solver.must_equal "Feliks Zemdegs"
     end
