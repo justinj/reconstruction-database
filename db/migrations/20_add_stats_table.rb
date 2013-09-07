@@ -16,8 +16,9 @@ Sequel.migration do
     end
 
     from(:solves).exclude(source_content: nil).each do |solve|
-      
-      RCDB::BrestParser.new(solve[:source_content]).solves[solve[:position_in_average]][:stats].each.with_index do |(name, values), position|
+
+      begin
+        RCDB::BrestParser.new(solve[:source_content]).solves[solve[:position_in_average]][:stats].each.with_index do |(name, values), position|
         time = values["Time"] 
         stm = values["STM"]
         etm = values["ETM"]
@@ -28,6 +29,9 @@ Sequel.migration do
                             solve_id: solve[:id],
                             position: position,
                            )
+        rescue Exception
+          # If something goes wrong, this stat did not parse properly, so we'll leave it blank.
+        end
       end
     end
   end
