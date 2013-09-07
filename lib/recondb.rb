@@ -20,7 +20,9 @@ require_relative "model/step"
 
 require_relative "solve_time"
 
-require_relative "brest_parser"
+require_relative "brest_parser/brest_parser"
+require_relative "brest_parser/brest_stats"
+
 require_relative "puzzle_renamer"
 require_relative "../helpers/view_helpers"
 require_relative "../helpers/helpers"
