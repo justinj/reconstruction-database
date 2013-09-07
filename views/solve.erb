@@ -21,7 +21,7 @@
       <%= erb :solution, locals: { solve: @solve } %>
     </div>
 
-    <% unless @solve.stats.empty? %>
+    <% unless true # @solve.stats.empty? %>
       <h3>Stats</h3>
       <% stats = @solve.stats.sort_by(&:position) %>
       <table class="table table-bordered">
