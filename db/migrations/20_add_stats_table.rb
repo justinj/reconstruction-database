@@ -21,17 +21,22 @@ Sequel.migration do
     end
 
     from(:solves).exclude(source_content: nil).each do |solve|
-      RCDB::BrestParser.new(solve[:source_content]).solves[solve[:position_in_average]][:stats].each.with_index do |(name, values), position|
-      time = values["TIME"]
-      id = from(:stat_sections).insert(name: name,
-                                       time: time,
-                                       solve_id: solve[:id],
-                                       position: position)
-      ["STM", "QTM", "ETM"].select { |metric| values.has_key? metric }.each do |name|
-        from(:stats).insert(stat_section_id: id,
-                            name: name,
-                            amount: values[name])
-      end
+      begin
+        RCDB::BrestParser.new(solve[:source_content]).solves[solve[:position_in_average]][:stats].each.with_index do |(name, values), position|
+        time = values["TIME"]
+        id = from(:stat_sections).insert(name: name,
+                                         time: time,
+                                         solve_id: solve[:id],
+                                         position: position)
+        ["STM", "QTM", "ETM"].select { |metric| values.has_key? metric }.each do |name|
+          from(:stats).insert(stat_section_id: id,
+                              name: name,
+                              amount: values[name])
+        end
+        end
+      rescue
+        # if there's a problem, we couldn't parse it, so let's ignore it
+        puts $!
       end
     end
   end
