@@ -4,6 +4,7 @@ module RCDB
 
     def tps
       return "" unless amount && stat_section.time
+      return "" if stat_section.time.zero?
       round(amount / stat_section.time)
     end
 
