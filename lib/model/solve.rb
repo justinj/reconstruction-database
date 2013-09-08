@@ -8,13 +8,17 @@ module RCDB
 
     def_delegators :average, :puzzle, :solver, :competition
 
-    many_to_one :average
-    one_to_many :steps
     many_to_many :tags
-    one_to_many :stats
 
-    def stats=(_)
-      #TODO
+    many_to_one :average
+
+    one_to_many :steps
+    one_to_many :stat_sections
+
+    def stats=(sections)
+      sections.each.with_index do |section, position|
+        add_stat_section(StatSection.create_from_post_data(section, position))
+      end
     end
 
     def puzzle

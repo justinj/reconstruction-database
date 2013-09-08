@@ -1,0 +1,26 @@
+<% sections = solve.stat_sections.sort_by(&:position) %>
+<% fields = sections.collect_concat(&:stats).map(&:name).uniq %>
+<table class="table table-bordered">
+  <tr>
+    <th>Step</th>
+    <th>Time</th>
+    <% fields.each do |field| %>
+      <th><%= field %></th>
+      <th><%= field[0] %>TPS</th>
+    <% end %>
+  </tr>
+
+  <% sections.each do |section| %>
+    <% fields.each_with_object(entries = {}) do |field, hsh| %>
+      <% hsh[field] = section.stats.detect { |stat| stat.name == field  }%>
+    <% end %>
+    <tr>
+      <td><%= section.name %></td>
+      <td><%= section.time %></td>
+      <% fields.each do |field| %>
+        <td><%= entries[field].amount %></td>
+        <td><%= entries[field].tps %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

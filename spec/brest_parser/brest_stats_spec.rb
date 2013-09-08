@@ -14,8 +14,8 @@ EOF
     let(:stats) { BrestStats.parse(input) }
 
     it "finds the times" do
-      stats["Total"]["Time"].must_equal 5.88
-      stats["Cross+1"]["Time"].must_equal 1.62
+      stats["Total"]["TIME"].must_equal 5.88
+      stats["Cross+1"]["TIME"].must_equal 1.62
     end
   end
 end

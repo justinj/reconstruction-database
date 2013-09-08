@@ -18,6 +18,7 @@ require_relative "model/tag"
 require_relative "model/user"
 require_relative "model/step"
 require_relative "model/stat"
+require_relative "model/stat_section"
 
 require_relative "solve_time"
 

@@ -40,7 +40,7 @@ module RCDB
     end
 
     def find_stats(post, which)
-      post.gsub("Code", "CODE").scan(/\[CODE\].*?\[\/CODE\]/m)[which]
+      post.scan(/\[CODE\].*?\[\/CODE\]/mi)[which]
     end
 
     def parse_penalty(post, which)

@@ -33,7 +33,7 @@ module RCDB
       return if line.all?(&:nil?)
       with_header = headers.zip(line)
       title = with_header.shift.last
-      hash[title] = Hash[with_header.map { |k, v| [k, v.to_f] }]
+      hash[title] = Hash[with_header.map { |k, v| [k.upcase, v.to_f] }]
     end
 
     def self.remove_bbcode(input)

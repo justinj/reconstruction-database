@@ -141,5 +141,17 @@ U R U' R' // Inverse sexy move"
         Solve.create(solution: "").wont_be :visible?
       end
     end
+
+    describe "adding stats" do
+      it "creates a StatSection for each thing given, with the right position" do
+        StatSection.expects(:create_from_post_data).with(1, 2)
+        StatSection.expects(:create_from_post_data).with(2, 0)
+        StatSection.expects(:create_from_post_data).with(3, 1)
+
+        solve = Solve.create
+        solve.stubs(:add_stat_section)
+        solve.stats = [2, 3, 1]
+      end
+    end
   end
 end

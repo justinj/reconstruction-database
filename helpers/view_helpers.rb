@@ -67,10 +67,6 @@ module RCDB
       end
     end
 
-    def round(number)
-      (number * 100.0).round / 100.0
-    end
-
     private
 
     def garronize_alg(alg)
