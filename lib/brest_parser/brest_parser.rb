@@ -97,7 +97,7 @@ module RCDB
     end
 
     def summary_line(post)
-      post.gsub(/\[.*?\]/, "").lines.first.split(/\s+-\s+/)
+      (post.gsub(/\[.*?\]/, "").lines.first || "").split(/\s+-\s+/)
     end
 
     def parse_youtube(post)
