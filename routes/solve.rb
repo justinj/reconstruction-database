@@ -54,5 +54,5 @@ post "/solve/update/:id" do
   id = params["id"]
   @solve = RCDB::Solve.first(id: id)
   @solve.update(params["model"])
-  redirect "/solve/#{id}"
+  redirect request.referrer
 end

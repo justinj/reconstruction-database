@@ -1,3 +1,6 @@
+<%= link_to "View solve", "/solve/#{@solve.id}" %> <br>
+<%= link_to "View average", "/average/edit/#{@solve.average.id}" %>
+
 <form action="/solve/update/<%= @solve.id %>" method="post">
   <% columns = @solve.columns - [:id] %>
   <% columns.each do |column| %>
