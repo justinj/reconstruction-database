@@ -27,7 +27,7 @@
         <td> <div class="record"><%=h solve.single_record %></div> </td>
         <td> <div class="record"><%=h solve.average.average_record %></div> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%=h solve.format %> </a> </td>
-        <td> <%=h solve.competition.name %> </td>
+        <td> <%=h solve.competition %> </td>
         <td> <%=h date_added(solve) %> </td>
       </tr>
     <% end %>

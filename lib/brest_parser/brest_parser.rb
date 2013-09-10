@@ -1,4 +1,4 @@
-module RCDB
+module RCDB 
   class BrestParser
     attr_reader :post, :name, :solves, :average
     attr_reader :solver, :competition, :puzzle
@@ -97,7 +97,9 @@ module RCDB
     end
 
     def summary_line(post)
-      (post.gsub(/\[.*?\]/, "").lines.first || "--").split(/\s+-\s+/)
+      result = post.gsub(/\[.*?\]/, "").lines.first.split(/\s+-\s+/)
+      result << "" while (result.count < 3)
+      result
     end
 
     def parse_youtube(post)
