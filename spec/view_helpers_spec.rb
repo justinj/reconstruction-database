@@ -32,5 +32,24 @@ module RCDB
         paginate(dataset)
       end
     end
+
+    describe "garron links" do
+      it "creates garron links for a solve" do
+        solve = stub(solution: "R U R' U'",
+                     scramble: "U R U' R'",
+                     puzzle: stub(garronized_name: "3x3"))
+        expected =  "http://alg.garron.us/?alg=R_U_R-_U-&ini=U_R_U-_R-&cube=3x3"
+        garronize(solve).must_equal expected
+      end
+
+      it "adds &displines=0 to solutions longer than 12 lines" do
+        solution = (["R"] * 13).join("\n")
+        solve = stub(solution: solution,
+                     scramble: "U",
+                     puzzle: stub(garronized_name: "3x3"))
+        expected =  "http://alg.garron.us/?alg=R%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR&ini=U&cube=3x3&displines=0"
+        garronize(solve).must_equal expected
+      end
+    end
   end
 end

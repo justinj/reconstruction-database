@@ -48,10 +48,15 @@ module RCDB
     end
 
     def garronize(solve)
-      alg = garronize_alg(solve.solution)
+      solution = solve.solution
+      alg = garronize_alg(solution)
       ini = garronize_alg(solve.scramble)
       puz = solve.puzzle.garronized_name
-      "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}" 
+      "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}#{displines(solution)}" 
+    end
+
+    def displines(solution)
+      solution.lines.count > 12 ? "&displines=0" : ""
     end
 
     def ksim_link(solve)
