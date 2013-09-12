@@ -13,8 +13,7 @@ module RCDB
       end
 
       def filter_solves(dataset, params)
-        tags = extract_tags(params)
-        return [] unless tags
+        tags = extract_tags(params) || []
         solves_tags = full_solves_tags_table(tags)
 
         tags.inject(dataset) do |dataset, tag|
