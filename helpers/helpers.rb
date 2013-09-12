@@ -9,6 +9,14 @@ module RCDB
     end
     alias_method :escape_html, :h
 
+    def chomp(input)
+      input = input.dup
+      %w(solver competition).each do |field|
+        input[field] &&= input[field].rstrip
+      end
+      input
+    end
+
     def authenticate!
       unless current_user
         redirect "/"

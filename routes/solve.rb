@@ -53,6 +53,7 @@ post "/solve/update/:id" do
   authenticate!
   id = params["id"]
   @solve = RCDB::Solve.first(id: id)
+  params["model"] = chomp(params["model"])
   @solve.update(params["model"])
   redirect request.referrer
 end
