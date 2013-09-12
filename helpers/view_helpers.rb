@@ -55,7 +55,9 @@ module RCDB
     end
 
     def ksim_link(solve)
-      "http://snk.digibase.ca/ksim.htm?colours=white,lime,red,yellow,blue,orange&alg=#{@solve.scramble.gsub(/\s/,"")}"
+      base_link = "http://snk.digibase.ca/ksim.htm?colours=white,lime,red,yellow,blue,orange&solve=#{solve.scramble.gsub(/\s/,"")},"
+      steps = solve.steps.sort_by(&:position_in_solve).map(&:moves).join(",").gsub(/\s/, "")
+      base_link + steps
     end
 
     def ellipsize(text, max = 100)
