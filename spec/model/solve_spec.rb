@@ -24,6 +24,10 @@ module RCDB
     end
 
     describe "formatting" do
+      it "is Solve # for nil" do
+        Solve.new(time: nil, position_in_average: 0).format.must_equal "Solve 1" 
+      end
+
       it "is just the time for no penalty" do
         regular_solve.format.must_equal "10.00"
       end

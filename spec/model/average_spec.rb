@@ -6,7 +6,9 @@ module RCDB
       average.save
       solves = times.map { |time| stub(effective_value: time.to_f,
                                        dnf?: false,
-                                       format: "#{time}!!") }
+                                       format: "#{time}!!",
+                                       has_time?: true
+                                      ) }
       average.stubs(:solves).returns(solves)
       average
     end

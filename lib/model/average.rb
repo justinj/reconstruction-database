@@ -14,6 +14,10 @@ module RCDB
       super
     end
 
+    def has_result?
+      solves.count { |solve| !solve.has_time? } <= 1
+    end
+
     def result
       if mean?
         mean
@@ -66,7 +70,7 @@ module RCDB
     end
 
     def format_solve(solve)
-      if !mean? && (solve == best || solve == worst)
+      if !mean? && (solve == best || solve == worst) && solve.has_time?
         "(#{solve.format})"
       else
         solve.format

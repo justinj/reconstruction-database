@@ -60,6 +60,10 @@ module RCDB
       end
     end
 
+    def has_time?
+      !time.blank?
+    end
+
     def dnf?
       penalty == "dnf"
     end
@@ -73,7 +77,9 @@ module RCDB
     end
 
     def format
-      if dnf?
+      if !has_time?
+        "Solve #{position_in_average + 1}"
+      elsif dnf?
         "DNF(#{format_time(effective_value)})"
       elsif plus_two?
         "#{format_time(effective_value)}+"

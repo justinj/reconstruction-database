@@ -3,7 +3,11 @@
   <%= link_to average.format_solve(solve), "/solve/#{solve.id}", if: solve.visible? %>
   <br>
 <% end %>
+
+<% if average.has_result? %>
 = <%= format_time average.result %>
+<% end %>
+
 <% unless average.average_record.blank? %>
   (<%= average.average_record %>)
 <% end %>
