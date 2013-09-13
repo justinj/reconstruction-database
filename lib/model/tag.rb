@@ -13,7 +13,7 @@ module RCDB
       end
 
       def filter_solves(dataset, params)
-        tags = extract_tags(params) || []
+        tags = extract_tags(params)
         solves_tags = full_solves_tags_table(tags)
 
         tags.inject(dataset) do |dataset, tag|
@@ -26,8 +26,8 @@ module RCDB
 
       def extract_tags(query_params)
         query_params["tags"].to_s.split(/\s+/).map do |tag_name|
-          first(name: tag_name.downcase) or return nil
-        end.compact.map(&:id)
+          first(name: tag_name.downcase) || nil
+        end.map { |tag| tag ? tag.id : -1 }
       end
 
       # We need to combine the table with average tags and solve tags to get
