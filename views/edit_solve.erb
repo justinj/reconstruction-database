@@ -2,6 +2,7 @@
 <%= link_to "View average", "/average/edit/#{@solve.average.id}" %>
 
 <form action="/solve/update/<%= @solve.id %>" method="post">
+  <input type="submit" value="Update" class="form-control">
   <% columns = @solve.columns - [:id] %>
   <% columns.each do |column| %>
     <%= text_input(column.capitalize, @solve, column) %>
