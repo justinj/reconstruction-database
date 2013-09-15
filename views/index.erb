@@ -1,5 +1,4 @@
-<div class="row">
-
+<div class="row center">
   <form action="/" method="GET" >
     <% RCDB::Solve.fields.each do |field| %>
       <%= field.queryer_html params %>
