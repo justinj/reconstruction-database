@@ -4,7 +4,9 @@
     <% RCDB::Solve.fields.each do |field| %>
       <%= field.queryer_html params %>
     <% end %>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="center">
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
   </form>
 
   <br><br>
@@ -35,4 +37,6 @@
 
 </div>
 
-<%= erb :pager %>
+<div class="center">
+  <%= erb :pager %>
+</div>

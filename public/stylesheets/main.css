@@ -2,6 +2,10 @@ h1 {
   color: black;
 }
 
+.center {
+  text-align: center;
+}
+
 .content {
   background-color: white;
 }
