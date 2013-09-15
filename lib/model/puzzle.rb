@@ -3,6 +3,10 @@ module RCDB
     extend Field
     one_to_many :averages
 
+    def self.field_name
+      "Event"
+    end
+
     def garronizable?
       name =~ /\dx\d/
     end
