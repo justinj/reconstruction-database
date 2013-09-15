@@ -86,6 +86,7 @@ module RCDB
     end
 
     def competition=(name)
+      name = "Unofficial" if name == ""
       super(Competition.find_or_create(name: name))
     end
 
