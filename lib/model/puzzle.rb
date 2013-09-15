@@ -6,6 +6,10 @@ module RCDB
     def self.field_name
       "Event"
     end
+    
+    def self.query_name
+      "puzzle"
+    end
 
     def garronizable?
       name =~ /\dx\d/
