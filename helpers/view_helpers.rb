@@ -52,7 +52,11 @@ module RCDB
       alg = garronize_alg(solution)
       ini = garronize_alg(solve.scramble)
       puz = solve.puzzle.garronized_name
-      "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}#{displines(solution)}" 
+      "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}#{garron_name solve}#{displines(solution)}" 
+    end
+
+    def garron_name(solve)
+      "&name=#{erb :solve_summary, locals: { solve: solve }}"
     end
 
     def displines(solution)

@@ -1,10 +1,5 @@
 <h2>
-  <%=h @solve.format %>
-  <%=h @solve.single_record %>
-  <%=h @solve.puzzle %>
-  solve by
-  <%= erb :solver_link, locals: { solver: @solve.solver } %>
-  <%= @solve.competition.at %>
+  <%= erb :solve_summary, locals: { solve: @solve } %>
 </h2>
 
 <div class="row">

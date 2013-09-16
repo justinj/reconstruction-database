@@ -1,0 +1,6 @@
+<%=h solve.format %>
+<%=h solve.single_record %>
+<%=h solve.puzzle %>
+solve by
+<%= erb :solver_link, locals: { solver: solve.solver } %>
+<%= solve.competition.at %>
