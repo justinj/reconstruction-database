@@ -16,7 +16,12 @@ module RCDB
     end
 
     def delimiter
-      super || "//"
+      delim = super
+      if delim.blank?
+        "//"
+      else
+        delim
+      end
     end
 
     def garronized_name
