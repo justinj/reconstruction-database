@@ -56,7 +56,11 @@ module RCDB
     end
 
     def garron_name(solve)
-      "&name=#{erb :solve_summary, locals: { solve: solve }}"
+      remove_tags "&name=#{erb :solve_summary, locals: { solve: solve }}"
+    end
+
+    def remove_tags(input)
+      input.gsub(/<.*?>/,"")
     end
 
     def displines(solution)

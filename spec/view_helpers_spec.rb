@@ -55,6 +55,19 @@ module RCDB
         .must_equal "http://alg.garron.us/?alg=R-_U&ini=U-_R&cube=2x2x2&name=result"
       end
 
+      it "removes links from names" do
+        solve = stub(solution: "R' U",
+                     scramble: "U' R")
+
+
+        stubs(:erb).returns("result<tag>")
+        stubs(:render_solution).returns("R' U")
+
+        solve.stubs(:puzzle).returns(stub(garronized_name: "2x2x2"))
+        garronize(solve)
+        .must_equal "http://alg.garron.us/?alg=R-_U&ini=U-_R&cube=2x2x2&name=result"
+      end
+
     end
   end
 end
