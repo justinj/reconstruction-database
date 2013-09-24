@@ -1,11 +1,13 @@
 <div class="row center">
   <form action="/" method="GET" >
+    <div class="form-inline">
     <% RCDB::Solve.fields.each do |field| %>
       <%= field.queryer_html params %>
     <% end %>
     <div class="center">
       <button type="submit" class="btn btn-primary btn-lg">Submit</button>
     </div>
+  </div>
   </form>
 
   <br><br>
