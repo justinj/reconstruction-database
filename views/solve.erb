@@ -34,6 +34,19 @@
       <%= @solve.all_tags.map(&:name).join(", ") %>
     </div>
   </div>
+
+</div>
+<div class="row">
+  <div class="col-lg-8">
+    <a href="#"><h3 class="link-header"
+        id="video-header">Video 
+        <span id="video-arrow" class="arrow glyphicon glyphicon-chevron-right"></span>
+    </h3></a>
+    <div id="video">
+      <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/<%= @solve.youtube %>" allowfullscreen frameborder="0">
+      </iframe>
+    </div>
+  </div>
 </div>
 
 

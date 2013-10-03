@@ -2,6 +2,15 @@ h1 {
   color: black;
 }
 
+.arrow {
+  font-size: 50%;
+  vertical-align: 2px;
+}
+
+.link-header {
+  color: black;
+}
+
 .center {
   text-align: center;
 }

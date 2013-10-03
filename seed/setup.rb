@@ -26,7 +26,8 @@ average = Average.create(solver: "Justin Jaffray",
 %w(10.00 11.00 12.00 13.00 14.00).each do |time|
   average.add_solve(Solve.create(time: time,
                                  scramble: "U R U' R'",
-                                 solution: "R U R' U' // solution"))
+                                 solution: "R U R' U' // solution",
+                                 youtube: "ygr5AHufBN4"))
 end
 
 User.create(name: "admin", password: "password")
