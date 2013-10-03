@@ -25,3 +25,7 @@ task :migrate do
   db = Sequel.connect ENV["DB_URL"]
   Sequel::Migrator.apply db, "db/migrations"
 end
+
+task :seed do
+  sh "ruby seed/setup.rb"
+end

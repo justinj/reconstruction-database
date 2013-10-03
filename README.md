@@ -20,6 +20,8 @@ Contributing to RCDB
 
 RCDB uses Ruby 2.0.0, so make sure you have that installed.
 
+You can clone the repo and verify that everything works by running the following commands in your shell:
+
 ```shell
 $  git clone git@github.com:justinj/reconstruction-database.git
 $  cd reconstruction-database
@@ -27,13 +29,25 @@ $  bundle install
 $  rake test
 ```
 
-If all the tests pass you should be good to run the server:
+You'll want to set up some sample data, so run the following command to set up a testing database:
+
+```shell
+$ rake seed
+```
+
+This will add some solves,
+and set up an admin account whose username is "admin" and whose password is "password"
+
+Once you've done that, and if all the tests pass,
+you should be good to run the server:
 
 ```shell
 $  bundle exec ruby app.rb
 ```
 
 Then point your browser to `localhost:4567` and you should be good!
+
+To login to the new admin account go to `localhost:4567/login`.
 
 Thanks
 ======
