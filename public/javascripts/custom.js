@@ -1,5 +1,4 @@
 $(function(){
-(function() {
 
   function tradeClass($elem, class1, class2) {
     if ($elem.hasClass(class1)) {
@@ -14,9 +13,8 @@ $(function(){
   $("#video").hide()
   $("#video-header").click(function() {
 
-    $("#video").toggle();
+    $("#video").slideToggle();
 
     tradeClass($("#video-arrow"), "glyphicon-chevron-right", "glyphicon-chevron-down");
   });
-})();
 });
