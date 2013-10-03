@@ -16,7 +16,7 @@
         <td> <%= average.solves.map(&:time).join(", ") %> </td>
         <td> <%= average.result %> </td>
         <td> <%= "HIDDEN" unless average.visible? %> </td>
-        <td> 
+        <td width="150px"> 
           <a href="/average/edit/<%= average.id %>">Edit</a>
           |
           <a href="/average/delete/<%= average.id %>">Delete</a>
