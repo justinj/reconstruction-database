@@ -13,7 +13,15 @@ post "/solve/brest_parse" do
 end
 
 get "/solve/:id" do
-  @solve = RCDB::Solve.first(id: params[:id])
+  get_solve(params["id"])
+end
+
+get %r{/(\d+)} do
+  get_solve(params[:captures].first)
+end
+
+def get_solve(id)
+  @solve = RCDB::Solve.first(id: id)
   if @solve
     erb :solve
   else
