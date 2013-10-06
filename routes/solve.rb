@@ -16,7 +16,7 @@ get "/solve/:id" do
   get_solve(params["id"])
 end
 
-get %r{/(\d+)} do
+get %r{^/(\d+)$} do
   get_solve(params[:captures].first)
 end
 
