@@ -12,6 +12,7 @@ module RCDB
     end
 
     def pagination_link(text, page = text)
+      params.keys.each { |key| params[key] = h(params[key]) }
       link text, "/", params.merge("page" => page)
     end
 
