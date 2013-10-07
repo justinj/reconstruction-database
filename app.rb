@@ -14,6 +14,7 @@ require_relative "routes/average"
 require_relative "routes/solve"
 require_relative "routes/field"
 require_relative "routes/auth"
+require_relative "routes/contributors"
 
 use Rack::Session::Cookie, secret: ENV.fetch("SECRET") { "Hidden!" }
 use Rack::Flash

@@ -1,0 +1,18 @@
+<h2>High Scores</h2>
+<table class="table">
+  <tr>
+    <th>Reconstructor</th>
+    <th>Reconstructions</th>
+  </tr>
+  <% entries = data.reject { |entry| entry[:reconstructor].blank? } %>
+  <% entries.sort_by { |entry| entry[:count] }.each do |entry| %>
+    <tr>
+      <td>
+        <%= entry[:reconstructor] %>
+      </td>
+      <td>
+        <%= entry[:count] %>
+      </td>
+    </tr>
+  <% end %>
+</table>
