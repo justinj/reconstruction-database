@@ -1,7 +1,9 @@
 <% solve.steps.sort_by { |step| step.position_in_solve }.each do |step| %>
   <%= step.moves %>
-  <span class="comment">
-    <%= solve.puzzle.delimiter %> <%= step.explanation %>
-  </span>
+  <% unless step.explanation.blank? %>
+    <span class="comment">
+      <%= solve.puzzle.delimiter %> <%= step.explanation %>
+    </span>
+  <% end %>
   <br>
 <% end %>
