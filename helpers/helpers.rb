@@ -4,6 +4,7 @@ module RCDB
       User.first(id: session[:user_id])
     end
 
+    module_function
     def h(text)
       Rack::Utils.escape_html(text)
     end
