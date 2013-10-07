@@ -5,7 +5,7 @@
     <th>Reconstructions</th>
   </tr>
   <% entries = data.reject { |entry| entry[:reconstructor].blank? } %>
-  <% entries.sort_by { |entry| entry[:count] }.each do |entry| %>
+  <% entries.sort_by { |entry| -entry[:count] }.each do |entry| %>
     <tr>
       <td>
         <%= entry[:reconstructor] %>
