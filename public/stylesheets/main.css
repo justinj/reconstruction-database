@@ -2,6 +2,12 @@ h1 {
   color: black;
 }
 
+.solve-index {
+  color: #AAAAAA;
+  text-align: right;
+  float: right;
+}
+
 .arrow {
   font-size: 50%;
   vertical-align: 2px;

@@ -1,6 +1,11 @@
 <% average = @solve.average %>
-<% average.solves.sort_by(&:position_in_average).each do |solve| %>
-  <%= link_to average.format_solve(solve), "/solve/#{solve.id}", if: solve.visible? %>
+<% average.solves.sort_by(&:position_in_average).each.with_index do |solve, index| %>
+  <%= "<b>" if solve == @solve %>
+    <%= link_to average.format_solve(solve), "/solve/#{solve.id}", if: solve.visible? %>
+  <%= "</b>" if solve == @solve %>
+  <span class="solve-index">
+    <%= index + 1 %>
+  </span>
   <br>
 <% end %>
 
