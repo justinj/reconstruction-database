@@ -2,7 +2,8 @@
   <%= step.moves %>
   <% unless step.explanation.blank? %>
     <span class="comment">
-      <%= solve.puzzle.delimiter %> <%= step.explanation %>
+      <%= solve.puzzle.delimiter unless step.moves.blank? %>
+      <%= step.explanation %>
     </span>
   <% end %>
   <br>
