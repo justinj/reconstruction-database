@@ -1,10 +1,20 @@
+<% entries = data.reject { |entry| entry[:reconstructor].blank? } %>
 <h2>High Scores</h2>
 <table class="table">
   <tr>
     <th>Reconstructor</th>
     <th>Reconstructions</th>
   </tr>
-  <% entries = data.reject { |entry| entry[:reconstructor].blank? } %>
+
+  <tr>
+    <td>
+      <b>Total</b>
+    </td>
+    <td>
+      <b><%= entries.inject(0) { |sum, entry| sum + entry[:count] } %></b>
+    </td>
+  </tr>
+
   <% entries.sort_by { |entry| -entry[:count] }.each do |entry| %>
     <tr>
       <td>
@@ -15,4 +25,5 @@
       </td>
     </tr>
   <% end %>
+
 </table>
