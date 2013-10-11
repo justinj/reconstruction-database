@@ -11,11 +11,6 @@
   </div>
   </form>
 
-  <% if @was_search %>
-    <% count = @solves.entries.select(&:visible?).count %>
-    <b><%= count %> <%= count == 1 ? "result" : "results" %></b>
-  <% end %>
-
   <br><br>
 </div>
 <div class="row">

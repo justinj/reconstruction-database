@@ -26,7 +26,6 @@ helpers Padrino::Helpers
 
 get "/" do
   @solves = RCDB::Solve.request(params).order_by(Sequel.desc(:date_added))
-  @was_search = params.reject { |k,v| v.blank? }.any?
   erb :index
 end
 
