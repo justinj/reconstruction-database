@@ -12,7 +12,8 @@
   </form>
 
   <% if @was_search %>
-    <b><%= @solves.count %> <%= @solves.count == 1 ? "result" : "results" %></b>
+    <% count = @solves.entries.select(&:visible?).count %>
+    <b><%= count %> <%= count == 1 ? "result" : "results" %></b>
   <% end %>
 
   <br><br>
