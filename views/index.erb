@@ -11,6 +11,10 @@
   </div>
   </form>
 
+  <% if @was_search %>
+    <b><%= @solves.count %> results</b>
+  <% end %>
+
   <br><br>
 </div>
 <div class="row">
