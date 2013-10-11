@@ -12,7 +12,7 @@
   </form>
 
   <% if @was_search %>
-    <b><%= @solves.count %> results</b>
+    <b><%= @solves.count %> <%= @solves.count == 1 ? "result" : "results" %></b>
   <% end %>
 
   <br><br>
