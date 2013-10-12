@@ -50,22 +50,37 @@ module RCDB
 
     def garronize(solve)
       solution = solve.solution
-      alg = garronize_alg(solution)
-      ini = garronize_alg(solve.scramble)
-      puz = solve.puzzle.garronized_name
-      "http://alg.garron.us/?alg=#{alg}&ini=#{ini}&cube=#{puz}#{garron_name solve}#{displines(solution)}" 
+      params = {
+        "alg" => garronize_alg(solution),
+        "ini" => garronize_alg(solve.scramble),
+        "animtype" => animtype(solve),
+        "cube" => solve.puzzle.garronized_name,
+        "name" => garron_name(solve),
+        "displines" => display_lines(solution),
+      }
+      garron_from_params(params)
+    end
+
+    def garron_from_params(params)
+      url_params = params.reject { |k, v| v.blank? }
+                         .map { |k, v| "#{k}=#{v}"}.join("&")
+      "http://alg.garron.us/?#{url_params}"
     end
 
     def garron_name(solve)
-      remove_tags "&name=#{erb :solve_summary, locals: { solve: solve }}"
+      remove_tags(erb :solve_summary, locals: { solve: solve })
     end
 
     def remove_tags(input)
       input.gsub(/<.*?>/,"")
     end
 
-    def displines(solution)
-      solution.lines.count > 12 ? "&displines=0" : ""
+    def display_lines(solution)
+      solution.lines.count > 12 ? "0" : ""
+    end
+    
+    def animtype(solve)
+      solve.scramble.blank? ? "solve" : ""
     end
 
     def ksim_link(solve)

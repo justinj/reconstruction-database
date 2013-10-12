@@ -43,6 +43,14 @@ module RCDB
         garronize(solve).must_equal expected
       end
 
+      it "adds &animtype=solve if there is no scramble" do
+        solve = stub(solution: "R",
+                     scramble: "",
+                     puzzle: stub(garronized_name: "3x3"))
+        expected =  "http://alg.garron.us/?alg=R&animtype=solve&cube=3x3&name=result"
+        garronize(solve).must_equal expected
+      end
+
       it "creates garron links" do
         solve = stub(solution: "R' U",
                      scramble: "U' R")
