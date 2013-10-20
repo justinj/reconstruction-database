@@ -37,6 +37,10 @@ module RCDB
       solve.date_added.strftime("%b %-d, %Y")
     end
 
+    def garronize(solve)
+      Garronizer.garronize(solve)
+    end
+
     def render_solution(solve)
       erb :solution, locals: { steps: solve.steps } 
     end
@@ -46,41 +50,6 @@ module RCDB
       delimiter = escape_html(delimiter)
         solution.gsub(/(#{delimiter}.*?(<br>|$))/,
                       '<span class="comment">\1</span>')
-    end
-
-    def garronize(solve)
-      solution = solve.solution
-      params = {
-        "alg" => garronize_alg(solution),
-        "ini" => garronize_alg(solve.scramble),
-        "animtype" => animtype(solve),
-        "cube" => solve.puzzle.garronized_name,
-        "name" => garron_name(solve),
-        "displines" => display_lines(solution),
-      }
-      garron_from_params(params)
-    end
-
-    def garron_from_params(params)
-      url_params = params.reject { |k, v| v.blank? }
-                         .map { |k, v| "#{k}=#{v}"}.join("&")
-      "http://alg.garron.us/?#{url_params}"
-    end
-
-    def garron_name(solve)
-      remove_tags(erb :solve_summary, locals: { solve: solve })
-    end
-
-    def remove_tags(input)
-      input.gsub(/<.*?>/,"")
-    end
-
-    def display_lines(solution)
-      solution.lines.count > 12 ? "0" : ""
-    end
-    
-    def animtype(solve)
-      solve.scramble.blank? ? "solve" : ""
     end
 
     def ksim_link(solve)
@@ -96,12 +65,6 @@ module RCDB
       else
         text[0..max] + "..."
       end
-    end
-
-    private
-
-    def garronize_alg(alg)
-      alg.tr("' ", "-_").gsub("\n","%0A")
     end
 
     def cubic?(puzzle)

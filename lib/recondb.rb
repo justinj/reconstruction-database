@@ -22,6 +22,7 @@ require_relative "model/stat_section"
 
 require_relative "solve_time"
 
+require_relative "garronizer"
 require_relative "brest_parser/brest_parser"
 require_relative "brest_parser/brest_stats"
 
