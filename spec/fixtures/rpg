@@ -1,0 +1,25 @@
+[QUOTE=Username;913746]Drew Brads - 8.05 3x3 av5 (unofficial)
+
+[spoiler='Video'][youtubehd]ZUJAM5JeaJE[/youtubehd][/spoiler][spoiler='1st solve']F D R U F' L D F2 U' R B2 R D2 L' B2 U2 D2 R' F2 R' 
+
+y' [color='#696969']// inspection[/color]
+D' R' D R D F2 D [color='#696969']// cross[/color]
+U2 R U' R' d R' U R [color='#696969']// 1st pair[/color]
+U2 R U' R' U' L' U' L [color='#696969']// 2nd pair[/color]
+y' U L' U2 L U L' U' L [color='#696969']// 3rd pair[/color]
+y U R U2 R2' F R F' [color='#696969']// 4th pair[/color]
+U2 x R2' D2 R U R' D2 R U' R B [color='#696969']// PLL[/color]
+[color='#696969']View at[/color] [url='http://alg.garron.us/?alg=y-_//_inspection%0AD-_R-_D_R_D_F2_D_//_cross%0AU2_R_U-_R-_d_R-_U_R_//_1st_pair%0AU2_R_U-_R-_U-_L-_U-_L_//_2nd_pair%0Ay-_U_L-_U2_L_U_L-_U-_L_//_3rd_pair%0Ay_U_R_U2_R2-_F_R_F-_//_4th_pair%0AU2_x_R2-_D2_R_U_R-_D2_R_U-_R_B_//_PLL&ini=F D R U F' L D F2 U' R B2 R D2 L' B2 U2 D2 R' F2 R']alg.garron.us[/url]
+[code]
+[b]Step	Time	HTM	HTPS	ETM	ETPS[/b]
+[color="red"]Total	8.03	49	6.10	52	6.48[/color]
+
+Cross+1	2.13	15	7.04	15	7.04
+F2L	5.68	38	6.69	40	7.04
+LL	2.35	11	4.68	12	5.11
+
+[b]Step		Time	HTM	ETM[/b]
+Cross+1/F2L	38%	39%	38%
+F2L/Total	71%	78%	77%
+LL/Total	29%	22%	23%
+[/code][/spoiler][/quote]

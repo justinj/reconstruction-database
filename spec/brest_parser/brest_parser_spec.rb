@@ -1,6 +1,7 @@
 module RCDB
   describe BrestParser do
     attr_reader :parser
+    attr_reader :rpg_parser
     attr_reader :solve
     attr_reader :non_333
     attr_reader :multiple
@@ -8,10 +9,15 @@ module RCDB
     before do
       BrestStats.stubs(:parse)
       @parser = BrestParser.new(fixture_post "feliks_588_wc_2013")
+      @rpg_parser = BrestParser.new(fixture_post "rpg")
       @solve = @parser.solves.first
       @non_333_parser = BrestParser.new(fixture_post "non_333_reconstruction")
       @non_333 = @non_333_parser.solves.first
       @multiple = BrestParser.new(fixture_post "multiple_solves")
+    end
+
+    it "parses RPG posts properly" do
+      rpg_parser.solves.first[:scramble].must_equal "F D R U F' L D F2 U' R B2 R D2 L' B2 U2 D2 R' F2 R'"
     end
 
     it "asks BrestParser to parse the stats" do

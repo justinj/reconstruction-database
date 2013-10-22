@@ -121,6 +121,7 @@ module RCDB
     end
 
     def nth_garron_link(post, n)
+      post = post.gsub('[/color]','')
       garron_links = post.scan(/View at \[url=(.*?)\]alg\.garron/)
       n = n * 2 if garron_links.count > number_of_solves # sometimes, every garron link appears twice
       garron_links[n]
