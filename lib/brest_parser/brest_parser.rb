@@ -44,7 +44,7 @@ module RCDB
     end
 
     def parse_penalty(post, which)
-      spoiler_tags = post.scan(/SPOILER.*?solve.*?\]/)
+      spoiler_tags = post.scan(/SPOILER.*?solve.*?\]/i)
       case spoiler_tags[which]
       when /DNF/
         "dnf"
