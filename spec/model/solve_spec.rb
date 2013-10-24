@@ -9,6 +9,10 @@ module RCDB
     let(:plus_two_solve) { Solve.new(time: 10.00, penalty: "+2") }
     let(:dnf_solve) { Solve.new(time: 10.00, penalty: "dnf") }
 
+    before do
+      Solve.any_instance.stubs(:puzzle).returns(stub(delimiter: "//"))
+    end
+
     describe "effective value" do
       it "is the time of the solve" do
         regular_solve.effective_value.must_equal 10.00

@@ -11,6 +11,10 @@ module RCDB
       "puzzle"
     end
 
+    def self.default
+      first(name: "3x3")
+    end
+
     def garronizable?
       name =~ /\dx\d/
     end

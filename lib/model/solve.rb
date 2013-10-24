@@ -6,7 +6,7 @@ module RCDB
     include FormattingUtils
     include Taggable
 
-    def_delegators :average, :puzzle, :solver, :competition
+    def_delegators :average, :solver, :competition
 
     many_to_many :tags
 
@@ -22,15 +22,7 @@ module RCDB
     end
 
     def puzzle
-      average.puzzle
-    end
-
-    def competition
-      average.competition
-    end
-
-    def solver
-      average.solver
+      average ? average.puzzle : Puzzle.default
     end
 
     def position_in_average
@@ -101,7 +93,7 @@ module RCDB
 
     def extract_steps(solution)
       solution.lines.each_with_index.map do |line, i|
-        moves, explanation = line.chomp.split(%r$\s*//\s*$)
+        moves, explanation = line.chomp.split(%r$\s*#{puzzle.delimiter}\s*$)
         {moves: moves,
           explanation: explanation,
           position_in_solve: i}
