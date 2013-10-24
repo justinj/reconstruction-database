@@ -8,6 +8,10 @@ module RCDB
     many_to_one :competition
     many_to_many :tags
 
+    def before_destroy
+      solves.each { |solve| solve.destroy }
+      super
+    end
 
     def initialize(args={})
       args[:visible] = false if args[:visible].nil?

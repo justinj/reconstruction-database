@@ -42,7 +42,6 @@ end
 get "/average/delete_confirm/:id" do
   authenticate!
   @average = RCDB::Average.first(id: params[:id])
-  @average.remove_all_solves
   @average.destroy
   redirect "/average"
 end
