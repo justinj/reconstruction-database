@@ -2,7 +2,7 @@
   <h3>Search</h3>
   <form action="/" method="GET" >
     <div class="form-inline">
-    <% RCDB::Solve.fields.each do |field| %>
+    <% RCDB::Solve.fields.select(&:visible?).each do |field| %>
       <%= field.queryer_html params %>
     <% end %>
     <div class="center">

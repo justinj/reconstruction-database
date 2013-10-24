@@ -1,5 +1,6 @@
 module RCDB
   class Tag < Sequel::Model
+    extend Queryable
     many_to_many :solves, class: Solve, left_key: :tag_id, right_key: :solve_id
     many_to_many :averages, class: Average, left_key: :tag_id, right_key: :average_id
 

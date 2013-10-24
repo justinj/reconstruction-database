@@ -6,6 +6,7 @@ require "forwardable"
 require "padrino-helpers"
 
 require_relative "formatting_utils"
+require_relative "queryable"
 require_relative "field"
 require_relative "taggable"
 

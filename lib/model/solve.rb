@@ -118,7 +118,7 @@ module RCDB
       end
 
       def fields
-        [Solver, Competition, Puzzle, SolveTime, Tag]
+        [Solver, Competition, Puzzle, SolveTime, Tag, Reconstructor]
       end
     end
   end

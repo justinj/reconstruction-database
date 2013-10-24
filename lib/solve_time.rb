@@ -1,6 +1,8 @@
 module RCDB
   class SolveTime
+    extend Queryable
     class << self
+
       def field_name
         "Time"
       end
