@@ -9,7 +9,7 @@
   </tr>
 
   <% @model.each do |entry| %>
-    <% if entry.averages.empty? %>
+    <% if entry.respond_to?(:averages) && entry.averages.empty? %>
       <tr class="danger">
     <% else %>
       <tr>

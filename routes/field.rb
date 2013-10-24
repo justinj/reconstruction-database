@@ -1,4 +1,4 @@
-[RCDB::Solver, RCDB::Competition, RCDB::Puzzle].each do |field|
+[RCDB::Reconstructor, RCDB::Solver, RCDB::Competition, RCDB::Puzzle].each do |field|
   get "/#{field.query_name}" do
     authenticate!
     @model = field
