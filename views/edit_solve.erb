@@ -4,9 +4,20 @@
 <form action="/solve/update/<%= @solve.id %>" method="post">
   <input type="submit" value="Update" class="form-control">
   <% columns = @solve.columns - [:id] %>
-  <% columns.each do |column| %>
-    <%= text_input(column.capitalize, @solve, column) %>
-  <% end %>
+  
+  <%= text_input("Average Id", @solve, :average_id) %>
+  <%= text_input("Scramble", @solve, :scramble) %>
+  <%= text_input("Solution", @solve, :solution) %>
+  <%= text_input("Penalty", @solve, :penalty) %>
+  <%= text_input("Time", @solve, :time) %>
+  <%= text_input("Youtube", @solve, :youtube) %>
+  <%= text_input("Source", @solve, :source) %>
+  <%= text_input("Source Content", @solve, :source_content) %>
+  <%= text_input("Date Added", @solve, :date_added) %>
+  <%= text_input("Single Record (WR, NAR, etc)", @solve, :single_record) %>
+  <%= text_input("Position in Average (starting at 0)", @solve, :position_in_average) %>
+  <%= text_input("Reconstructor", @solve, :reconstructor) %>
+
 
   <label>Tags (separated by newlines)</label>
   <% tags = @solve.tags.map(&:name).join("\n") %>

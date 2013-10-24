@@ -11,6 +11,7 @@ module RCDB
     many_to_many :tags
 
     many_to_one :average
+    many_to_one :reconstructor
 
     one_to_many :steps
     one_to_many :stat_sections
@@ -42,6 +43,10 @@ module RCDB
         step = Step.new(step)
         add_step(step)
       end
+    end
+
+    def reconstructor=(value)
+      super(Reconstructor.find_or_create(name: value.chomp))
     end
 
     def effective_value
