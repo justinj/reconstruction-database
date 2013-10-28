@@ -33,6 +33,12 @@ module RCDB
                                    field_name: field}
     end
 
+    def dropdown_input(title, entry, field)
+      erb :dropdown_editor, locals: {title: title, 
+                                   entry: entry, 
+                                   field_name: field}
+    end
+
     def date_added(solve)
       solve.date_added.strftime("%b %-d, %Y")
     end

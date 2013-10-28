@@ -3,7 +3,7 @@
   <%= text_input("Record (WR, NAR, etc)", @average, :average_record) %>
   <%= text_input("Solver", @average, :solver) %>
   <%= text_input("Competition", @average, :competition) %>
-  <%= text_input("Puzzle", @average, :puzzle) %>
+  <%= dropdown_input("Puzzle", @average, :puzzle) %>
   <%= text_input("Visible? (0 = no, 1 = yes)", @average, :visible) %>
   <%= text_input("Source URL", @average, :source_url) %>
   <%= text_input("Tags", @average, :tags) %>

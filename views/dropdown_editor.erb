@@ -1,0 +1,14 @@
+<label><%= title %></label>
+<select 
+  class="form-control"
+  name="model[<%= field_name %>]">
+  <% field_value = entry.public_send(field_name) %>
+  <% field_value.class.each do |entry| %>
+    <option 
+    value="<%= entry %>"
+    <% if field_value == entry %>
+      selected="selected"
+    <% end %>
+    ><%= entry.to_s %></option>
+  <% end %>
+</select><br>

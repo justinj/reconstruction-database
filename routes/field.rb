@@ -11,6 +11,12 @@
     erb :edit_field
   end
 
+  get "/#{field.query_name}/new" do
+    authenticate!
+    new_entry = field.create(name: "Unnamed")
+    redirect "/#{field.query_name}/edit/#{new_entry.id}"
+  end
+
   post "/#{field.query_name}/update/:id" do
     authenticate!
     field.where(id: params[:id]).update(params["entry"])
