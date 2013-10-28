@@ -17,7 +17,7 @@ module RCDB
     end
 
     def pluralize_word(word)
-      if word =~ /\w$/
+      if word =~ /[a-z]$/
         word + "s"
       else
         word
