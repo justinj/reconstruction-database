@@ -102,7 +102,7 @@ module RCDB
 
     def extract_steps(solution)
       solution.lines.each_with_index.map do |line, i|
-        moves, explanation = line.chomp.split(%r$\s+#{puzzle.delimiter}\s+$)
+        moves, explanation = line.chomp.split(%r$\s*#{puzzle.delimiter}\s+$)
         {moves: moves,
           explanation: explanation,
           position_in_solve: i}
