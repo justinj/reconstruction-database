@@ -75,7 +75,7 @@ module RCDB
 
     def format
       if !has_time?
-        "#{movecount} move"
+        "#{movecount} HTM"
       elsif dnf?
         "DNF(#{format_time(effective_value)})"
       elsif plus_two?
