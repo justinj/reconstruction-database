@@ -29,7 +29,7 @@ module RCDB
 
     describe "formatting" do
       it "is the movecount for 0" do
-        Solve.new(time: 0, position_in_average: 0, solution: "R U R' U'").format.must_equal "4 move" 
+        Solve.new(time: 0, position_in_average: 0, solution: "R U R' U'").format.must_equal "4 HTM" 
       end
 
       it "is just the time for no penalty" do
