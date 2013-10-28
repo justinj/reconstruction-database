@@ -3,3 +3,4 @@
 logs
 coverage
 db.sqlite
+deploy
