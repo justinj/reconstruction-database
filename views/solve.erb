@@ -59,9 +59,11 @@
   <div>
     Added: <%=h date_added(@solve) %>
   </div>
-  <div>
-    Reconstructed by: <%=h @solve.reconstructor %>
-  </div>
+  <% unless @solve.reconstructor.to_s.blank? %>
+    <div>
+      Reconstructed by: <%=h @solve.reconstructor %>
+    </div>
+  <% end %>
 </div>
 
 <% if current_user %>
