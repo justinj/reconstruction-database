@@ -20,7 +20,7 @@
       <th> Event </th>
       <th> Single </th>
       <th> Average </th>
-      <th> Time </th>
+      <th> Result </th>
       <th> Competition </th>
       <th> Date Added </th>
     </tr>
@@ -30,7 +30,7 @@
         <td> <%=h solve.puzzle.name %> </td>
         <td> <div class="record"><%=h solve.single_record %></div> </td>
         <td> <div class="record"><%=h solve.average.average_record %></div> </td>
-        <td> <a href="/solve/<%= solve.id %>"> <%=h solve.format %> </a> </td>
+        <td> <a href="/solve/<%= solve.id %>"> <%=h pluralize_word(solve.format) %> </a> </td>
         <td> <%=h solve.competition %> </td>
         <td> <%=h date_added(solve) %> </td>
       </tr>

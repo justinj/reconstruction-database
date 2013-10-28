@@ -58,7 +58,7 @@ module RCDB
     end
 
     def has_time?
-      !time.blank?
+      time != 0 && !time.blank?
     end
 
     def dnf?
@@ -75,7 +75,7 @@ module RCDB
 
     def format
       if !has_time?
-        "Solve #{position_in_average + 1}"
+        "#{movecount} move"
       elsif dnf?
         "DNF(#{format_time(effective_value)})"
       elsif plus_two?
@@ -83,6 +83,10 @@ module RCDB
       else
         format_time(effective_value)
       end
+    end
+
+    def movecount
+      solution.gsub(%r(//.*?$), "").split(/\s+/).count
     end
 
     def all_tags

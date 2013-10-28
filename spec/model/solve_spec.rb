@@ -28,8 +28,8 @@ module RCDB
     end
 
     describe "formatting" do
-      it "is Solve # for nil" do
-        Solve.new(time: nil, position_in_average: 0).format.must_equal "Solve 1" 
+      it "is the movecount for 0" do
+        Solve.new(time: 0, position_in_average: 0, solution: "R U R' U'").format.must_equal "4 move" 
       end
 
       it "is just the time for no penalty" do

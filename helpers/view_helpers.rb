@@ -16,6 +16,14 @@ module RCDB
       link text, "/", params.merge("page" => page)
     end
 
+    def pluralize_word(word)
+      if word =~ /\w$/
+        word + "s"
+      else
+        word
+      end
+    end
+
     def pages_for(dataset)
       # sequel will return an enumerator in an upcoming version
       result = []
