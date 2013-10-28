@@ -3,12 +3,12 @@ module RCDB
     class << self
       def garronize(solve)
         params = {
-          "alg" => escape_chars(solve.solution),
+          "alg" => escape_chars(solve.canonical_solution),
           "ini" => escape_chars(solve.scramble),
           "animtype" => animtype(solve),
           "cube" => solve.puzzle.garronized_name,
           "name" => garron_title(solve),
-          "displines" => display_lines(solve.solution),
+          "displines" => display_lines(solve.canonical_solution),
         }
         garron_url_from_params(params)
       end

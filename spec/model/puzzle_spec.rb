@@ -16,5 +16,12 @@ module RCDB
         Puzzle.new(name: "3x3Feet").garronized_name.must_equal "3x3x3"
       end
     end
+
+    describe "getting the solution" do
+      let(:puzzle) { Puzzle.new }
+      def format(solve)
+        puzzle.format(solve)
+      end
+    end
   end
 end

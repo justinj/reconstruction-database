@@ -19,6 +19,23 @@ module RCDB
       name =~ /\dx\d/
     end
 
+    # todo: polymorphize this
+    def format(solve)
+      case formatting_type
+      when "speed"
+        format_speed(solve)
+      when "moves"
+        format_moves(solve)
+      end
+    end
+
+    def format_speed(solve)
+    end
+
+    def format_moves(solve)
+      ""
+    end
+
     def delimiter
       delim = super
       if delim.blank?

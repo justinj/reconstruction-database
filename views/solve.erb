@@ -13,7 +13,7 @@
 
     <h3>Solution</h3>
     <div class="algorithm well">
-      <%= erb :solution, locals: { solve: @solve } %>
+      <%= erb @solve.view, locals: { solve: @solve } %>
     </div>
 
     <% unless @solve.stat_sections.empty? %>

@@ -4,7 +4,7 @@ module RCDB
       Garronizer.garronize(solve)
     end
     it "creates garron links for a solve" do
-      solve = stub(solution: "R U R' U'",
+      solve = stub(canonical_solution: "R U R' U'",
                    scramble: "U R U' R'",
                    solver: stub(name: "Justin"),
                    puzzle: stub(garronized_name: "3x3"))
@@ -14,7 +14,7 @@ module RCDB
 
     it "adds &displines=0 to solutions longer than 12 lines" do
       solution = (["R"] * 13).join("\n")
-      solve = stub(solution: solution,
+      solve = stub(canonical_solution: solution,
                    scramble: "U",
                    solver: stub(name: "Justin"),
                    puzzle: stub(garronized_name: "3x3"))
@@ -23,7 +23,7 @@ module RCDB
     end
 
     it "adds &animtype=solve if there is no scramble" do
-      solve = stub(solution: "R",
+      solve = stub(canonical_solution: "R",
                    scramble: "",
                    solver: stub(name: "Justin"),
                    puzzle: stub(garronized_name: "3x3"))
@@ -32,7 +32,7 @@ module RCDB
     end
 
     it "creates garron links" do
-      solve = stub(solution: "R' U",
+      solve = stub(canonical_solution: "R' U",
                    solver: stub(name: "Justin"),
                    scramble: "U' R")
 
@@ -45,7 +45,7 @@ module RCDB
     end
 
     it "removes links from names" do
-      solve = stub(solution: "R' U",
+      solve = stub(canonical_solution: "R' U",
                    solver: stub(name: "Justin"),
                    scramble: "U' R")
 

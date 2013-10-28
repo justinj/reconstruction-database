@@ -30,6 +30,10 @@ module RCDB
       super || 0
     end
 
+    def view
+      (puzzle.formatting_type+"_solution").to_sym
+    end
+
     def solution
       steps.sort_by(&:position_in_solve).map do |step|
         "#{step.moves} #{puzzle.delimiter} #{step.explanation}"
@@ -86,7 +90,12 @@ module RCDB
     end
 
     def movecount
-      solution.gsub(%r(//.*?$), "").split(/\s+/).count
+      canonical_solution.gsub(%r(//.*?$), "").split(/\s+/).count
+    end
+
+    def canonical_solution
+      sup = super
+      sup.blank? ? solution : sup
     end
 
     def all_tags

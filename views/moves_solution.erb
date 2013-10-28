@@ -1,0 +1,7 @@
+<% solve.steps.sort_by { |step| step.position_in_solve }.each do |step| %>
+  <% unless step.explanation.blank? %>
+    <span class="comment"><%= step.explanation %>:</span>
+  <% end %>
+  <%= step.moves %>
+  <br>
+<% end %>
