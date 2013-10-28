@@ -27,7 +27,7 @@ module RCDB
     end
 
     def position_in_average
-      super || -1
+      super || 0
     end
 
     def solution
