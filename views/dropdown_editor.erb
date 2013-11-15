@@ -2,7 +2,10 @@
 <select 
   class="form-control"
   name="model[<%= field_name %>]">
+  <% p entry %>
   <% field_value = entry.public_send(field_name) %>
+  <% p field_name %>
+  <% p field_value %>
   <% field_value.class.each do |entry| %>
     <option 
     value="<%= entry %>"

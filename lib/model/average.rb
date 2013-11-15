@@ -22,6 +22,10 @@ module RCDB
       solves.count { |solve| !solve.has_time? } <= 1
     end
 
+    def puzzle
+      super || Puzzle.default
+    end
+
     def result
       if mean?
         mean

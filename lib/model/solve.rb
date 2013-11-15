@@ -6,7 +6,7 @@ module RCDB
     include FormattingUtils
     include Taggable
 
-    def_delegators :average, :solver, :competition
+    def_delegators :average, :solver, :competition, :puzzle
 
     many_to_many :tags
 
