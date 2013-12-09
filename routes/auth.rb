@@ -13,7 +13,7 @@ post "/authenticate" do
   if user
     session[:user_id] = user.id
     flash[:success] = "Successfully logged in."
-    redirect "/"
+    redirect "/average"
   else
     flash[:danger] = "Failed to log in."
     redirect "/login"
