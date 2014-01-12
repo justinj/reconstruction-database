@@ -1,7 +1,7 @@
 <%= link_to "View solve", "/solve/#{@solve.id}" %> <br>
 <%= link_to "View average", "/average/edit/#{@solve.average.id}" %>
 
-<form action="/solve/update/<%= @solve.id %>" method="post">
+<form action="/solve/update/<%= @solve.id %>" method="post" id="editform">
   <input type="submit" value="Update" class="form-control">
   <% columns = @solve.columns - [:id] %>
   
@@ -19,6 +19,18 @@
   <%= text_input("Position in Average (starting at 0)", @solve, :position_in_average) %>
   <%= text_input("Reconstructor", @solve, :reconstructor) %>
 
+
+
+
+  <label>Stats</label>
+  <ol id="stat-sections">
+      <input type="hidden" name="model[edited_stats]" id="stats-input"></input>
+      <% @solve.stat_sections.sort_by(&:position).each do |section| %>
+          <%= erb :stat_section, locals: { section: section } %>
+      <% end %>
+  </ol>
+
+  <br>
 
   <label>Tags (separated by newlines)</label>
   <% tags = @solve.tags.map(&:name).join("\n") %>

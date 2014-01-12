@@ -1,3 +1,5 @@
+require "set"
+
 module RCDB 
   Sequel.extension :blank
   class Solve < Sequel::Model
@@ -20,6 +22,25 @@ module RCDB
       sections.each.with_index do |section, position|
         add_stat_section(StatSection.create_from_post_data(section, position))
       end
+    end
+
+    def before_destroy
+      stat_sections.each(&:destroy)
+    end
+
+    # when editing the stats the format is different than when parsing brest
+    # stuff
+    def edited_stats=(value)
+      by_id = {}
+      stat_sections.each do |section|
+        by_id[section.id] = section
+      end
+      sorted_sections = value.split("&section[]=").drop(1)
+      sorted_sections.map! { |res| by_id[res.to_i] }
+      sorted_sections.each.with_index { |section, i| section.position = i }
+      sorted_sections.map(&:save)
+      unused_sections = stat_sections - sorted_sections
+      unused_sections.each { |s| s.destroy }
     end
 
     def puzzle

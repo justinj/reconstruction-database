@@ -16,5 +16,9 @@ module RCDB
       end
       section
     end
+    
+    def before_destroy
+      stats.each(&:destroy)
+    end
   end
 end

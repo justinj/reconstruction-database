@@ -6,4 +6,4 @@
 
 <label><%= title %></label>
 <textarea name="model[<%= field_name %>]" class="form-control"
-  rows="<%= value.to_s.lines.count %>"><%= value %></textarea>
+  rows="<%= [value.to_s.lines.count, 10].min %>"><%= value %></textarea>

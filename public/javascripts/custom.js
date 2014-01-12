@@ -17,4 +17,15 @@ $(function(){
 
     tradeClass($("#video-arrow"), "glyphicon-chevron-right", "glyphicon-chevron-down");
   });
+
+
+  $("#stat-sections").sortable();
+  $(".delete-stat").click(function(e) {
+      $(e.target).parent().remove();
+  });
+
+  $("#editform").submit(function() {
+     $("#stats-input").val($("#stat-sections").sortable("serialize")); 
+     return true;
+  });
 });
