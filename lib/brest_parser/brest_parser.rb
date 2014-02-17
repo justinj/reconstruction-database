@@ -3,12 +3,13 @@ module RCDB
     attr_reader :post, :name, :solves, :average
     attr_reader :solver, :competition, :puzzle
 
-    def initialize(post, average = 0)
-      @average     = average
-      @post        = post
-      @puzzle      = PuzzleRenamer.rename(parse_puzzle(post))
-      @competition = parse_competition(post)
-      @solver      = parse_solver(post)
+    def initialize(reconstructor, post, average = 0)
+      @average       = average
+      @post          = post
+      @puzzle        = PuzzleRenamer.rename(parse_puzzle(post))
+      @competition   = parse_competition(post)
+      @solver        = parse_solver(post)
+      @reconstructor = reconstructor
     end
 
     def solves
@@ -31,7 +32,7 @@ module RCDB
       solve[:penalty]        = parse_penalty(post, which)
       solve[:youtube]        = parse_youtube(post)
 
-      solve[:reconstructor]  = "Brest"
+      solve[:reconstructor]  = @reconstructor
       solve[:source]         = "brest_post"
       solve[:source_content] = post
       solve[:stats]          = BrestStats.parse(find_stats(post, which))

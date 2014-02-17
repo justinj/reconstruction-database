@@ -20,7 +20,8 @@ describe "Adding a new Brest solve" do
 
     post_content = File.read("spec/fixtures/feliks_588_wc_2013")
     post "/average/submit_brest_post", 
-      :"submission[content]" => post_content
+      :"submission[content]" => post_content,
+      :"submission[reconstructor]" => "Brest"
 
     RCDB::Solve.count.must_equal 1
 

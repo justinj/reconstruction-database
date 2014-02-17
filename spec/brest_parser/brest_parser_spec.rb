@@ -8,12 +8,12 @@ module RCDB
 
     before do
       BrestStats.stubs(:parse)
-      @parser = BrestParser.new(fixture_post "feliks_588_wc_2013")
-      @rpg_parser = BrestParser.new(fixture_post "rpg")
+      @parser = BrestParser.new("Brest", fixture_post("feliks_588_wc_2013"))
+      @rpg_parser = BrestParser.new("Brest", fixture_post("rpg"))
       @solve = @parser.solves.first
-      @non_333_parser = BrestParser.new(fixture_post "non_333_reconstruction")
+      @non_333_parser = BrestParser.new("Brest", fixture_post("non_333_reconstruction"))
       @non_333 = @non_333_parser.solves.first
-      @multiple = BrestParser.new(fixture_post "multiple_solves")
+      @multiple = BrestParser.new("Brest", fixture_post("multiple_solves"))
     end
 
     it "parses RPG posts properly" do
@@ -28,7 +28,7 @@ module RCDB
 Cross+1	1.62	13	8.02	14	8.64		Cross+1/F2L	40.2%	39.4%	38.9%
 F2L	4.03	33	8.19	36	8.93		F2L/Total	68.5%	62.3%	63.2%
 LL	1.85	20	10.81	21	11.35		LL/Total	31.5%	37.7%	36.8%[/CODE]')
-      BrestParser.new(fixture_post "feliks_588_wc_2013").solves
+      BrestParser.new("Brest", fixture_post("feliks_588_wc_2013")).solves
     end
 
     it "parses the solver" do
@@ -92,7 +92,7 @@ LL	3.69	27	7.32	30	8.13		LL/Total	44.0%	45.8%	45.5%[/CODE]')
 Cross+1	1.59	9	5.66	10	6.29		Cross+1/F2L	32.4%	25.0%	23.3%
 F2L	4.90	36	7.35	43	8.78		F2L/Total	61.6%	53.7%	58.1%
 LL	3.05	31	10.16	31	10.16		LL/Total	38.4%	46.3%	41.9%[/CODE]')
-      BrestParser.new(fixture_post "multiple_solves").solves
+      BrestParser.new("Brest", fixture_post("multiple_solves")).solves
     end
 
     it "finds the name for multiple solves" do
@@ -109,7 +109,7 @@ LL	3.05	31	10.16	31	10.16		LL/Total	38.4%	46.3%	41.9%[/CODE]')
       # These didn't parse properly at first
 
       before do
-        @parser = BrestParser.new(fixture_post "5_2x2_solves")
+        @parser = BrestParser.new("Brest", fixture_post("5_2x2_solves"))
         @solves = @parser.solves
       end
 
@@ -122,7 +122,7 @@ LL	3.05	31	10.16	31	10.16		LL/Total	38.4%	46.3%	41.9%[/CODE]')
       attr_reader :parser, :solves
 
       before do
-        @parser = BrestParser.new(fixture_post "solve_with_dnf")
+        @parser = BrestParser.new("Brest", fixture_post("solve_with_dnf"))
         @solves = @parser.solves
       end
 
