@@ -8,30 +8,20 @@ module RCDB
                    scramble: "U R U' R'",
                    solver: stub(name: "Justin"),
                    puzzle: stub(garronized_name: "3x3"))
-      expected = "http://alg.garron.us/?alg=R_U_R-_U-&ini=U_R_U-_R-&cube=3x3&name=Justin"
+      expected = "http://alg.cubing.net/?alg=R_U_R-_U-&setup=U_R_U-_R-&type=reconstruction&puzzle=3x3&title=Justin"
       garronize(solve).must_equal expected
     end
 
-    it "adds &displines=0 to solutions longer than 12 lines" do
-      solution = (["R"] * 13).join("\n")
-      solve = stub(canonical_solution: solution,
-                   scramble: "U",
-                   solver: stub(name: "Justin"),
-                   puzzle: stub(garronized_name: "3x3"))
-      expected =  "http://alg.garron.us/?alg=R%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR%0AR&ini=U&cube=3x3&name=Justin&displines=0"
-      garronize(solve).must_equal expected
-    end
-
-    it "adds &animtype=solve if there is no scramble" do
+    it "changes the type if there is no scramble" do
       solve = stub(canonical_solution: "R",
                    scramble: "",
                    solver: stub(name: "Justin"),
                    puzzle: stub(garronized_name: "3x3"))
-      expected =  "http://alg.garron.us/?alg=R&animtype=solve&cube=3x3&name=Justin"
+      expected =  "http://alg.cubing.net/?alg=R&type=reconstruction-end-with-setup&puzzle=3x3&title=Justin"
       garronize(solve).must_equal expected
     end
 
-    it "creates garron links" do
+    it "creates garron links for other puzzles" do
       solve = stub(canonical_solution: "R' U",
                    solver: stub(name: "Justin"),
                    scramble: "U' R")
@@ -41,7 +31,7 @@ module RCDB
 
       solve.stubs(:puzzle).returns(stub(garronized_name: "2x2x2"))
       garronize(solve)
-      .must_equal "http://alg.garron.us/?alg=R-_U&ini=U-_R&cube=2x2x2&name=Justin"
+      .must_equal "http://alg.cubing.net/?alg=R-_U&setup=U-_R&type=reconstruction&puzzle=2x2x2&title=Justin"
     end
 
     it "removes links from names" do
@@ -54,7 +44,7 @@ module RCDB
 
       solve.stubs(:puzzle).returns(stub(garronized_name: "2x2x2"))
       garronize(solve)
-      .must_equal "http://alg.garron.us/?alg=R-_U&ini=U-_R&cube=2x2x2&name=Justin"
+      .must_equal "http://alg.cubing.net/?alg=R-_U&setup=U-_R&type=reconstruction&puzzle=2x2x2&title=Justin"
     end
 
   end
