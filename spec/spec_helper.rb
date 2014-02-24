@@ -11,6 +11,8 @@ gem "minitest"
 require "minitest/autorun"
 
 require "mocha/setup"
+require "uri"
+require "cgi"
 require "timecop"
 require "sequel"
 
