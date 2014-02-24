@@ -6,7 +6,10 @@ require 'coveralls'
 SimpleCov.start
 # Coveralls.wear!
 
+# weirdness http://stackoverflow.com/a/17858708
+gem "minitest"
 require "minitest/autorun"
+
 require "mocha/setup"
 require "timecop"
 require "sequel"
