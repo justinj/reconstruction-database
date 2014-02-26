@@ -25,7 +25,6 @@ helpers RCDB::FormattingUtils
 helpers Padrino::Helpers
 
 get "/" do
-  p params
   @solves = RCDB::Solve.request(params).order_by(Sequel.desc(:date_added))
   erb :index
 end

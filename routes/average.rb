@@ -51,7 +51,6 @@ post "/average/update/:id" do
   authenticate!
   id = params.delete("id")
   params["model"] = chomp(params["model"])
-  p params["model"]
   RCDB::Average.first(id: id).update(params["model"])
   redirect request.referrer
 end
