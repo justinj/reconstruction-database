@@ -29,3 +29,10 @@ end
 task :seed do
   sh "ruby seed/setup.rb"
 end
+
+task :cleanse_db do
+  require "./lib/database"
+  require "./lib/recondb"
+  RCDB::User.each { |u| u.destroy }
+  RCDB::User.create(name: "admin", password: "password", root: true)
+end
