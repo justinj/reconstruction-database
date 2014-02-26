@@ -1,12 +1,18 @@
 <div class="row span8 center" >
   <ul class="pagination">
+    <% PAGES_TO_SHOW = 10 %>
     <% current_page = params.fetch("page", 1).to_i %>
+    <% pages = pages_for(@solves) %>
+    <% page_count = pages.count %>
+    <% displayed_page = current_page - 1 %>
+    <% page_range = ((displayed_page - PAGES_TO_SHOW)..(displayed_page + PAGES_TO_SHOW)) %>
+    <% page_range = clamp_range(page_range, 0, page_count) %>
+    <% pages = pages[page_range] %>
     <% if current_page > 1 %>
       <li>
-      <%= pagination_link "&laquo;", current_page - 1 %>
+      <%= pagination_link "&laquo;", 0 %>
       </li>
     <% end %>
-    <% pages = pages_for(@solves) %>
     <% pages.each do |page| %>
       <li 
       <%= page.current_page == current_page ? 'class="active"' : "" %>
@@ -14,9 +20,9 @@
       <%= pagination_link page.current_page %>
       </li>
     <% end %>
-    <% if current_page < pages.count %>
+    <% if current_page + PAGES_TO_SHOW < page_count %>
       <li>
-      <%= pagination_link "&raquo;", current_page + 1 %>
+      <%= pagination_link "&raquo;", page_count %>
       </li>
     <% end %>
   </ul>

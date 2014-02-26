@@ -23,6 +23,10 @@ module RCDB
       result
     end
 
+    def clamp_range(range, min, max)
+      (([range.min, min].max)..([range.max, max].min))
+    end
+
     def page_size
       100
     end
