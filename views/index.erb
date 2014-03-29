@@ -2,13 +2,32 @@
   <h3>Search</h3>
   <form action="/" method="GET" >
     <div class="form-inline">
-    <% RCDB::Solve.fields.select(&:visible?).each do |field| %>
-      <%= field.queryer_html params %>
-    <% end %>
-    <div class="center">
-      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-    </div>
-  </div>
+        <%= erb :simple_dropdown,
+            locals: {
+                elements: ["All"] + RCDB::Solver.all.map(&:name),
+                title: "Solver",
+                name: "solver",
+                selected: params["solver"] } %>
+        <%= erb :simple_dropdown,
+            locals: {
+            elements: ["All", "Official", "Unofficial", ""] +
+                       RCDB::Competition.all.map(&:name)
+                        .reject { |c| c == "Unofficial" },
+                title: "Competition",
+                name: "competition",
+                selected: params["competition"] } %>
+        <%= erb :simple_dropdown,
+            locals: {
+                elements: ["All"] + RCDB::Puzzle.all.map(&:name),
+                title: "Event",
+                name: "puzzle",
+                selected: params["puzzle"] } %>
+        <%= RCDB::SolveTime.queryer_html params %>
+        <%= RCDB::Tag.queryer_html params %>
+        <div class="center">
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+      </div>
   </form>
 
   <br><br>

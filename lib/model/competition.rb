@@ -19,6 +19,16 @@ module RCDB
      "https://www.worldcubeassociation.org/results/c.php?i=#{url_code}"
     end
 
+    def self.filter_solves(dataset, params)
+      if params["competition"] == "Official"
+        # gross, TODO find a better way :(
+        unofficial_id = first(name: "Unofficial")[:id]
+        dataset.filter("competition_id != ?", unofficial_id)
+      else
+        super
+      end
+    end
+
     private
 
     def official?
