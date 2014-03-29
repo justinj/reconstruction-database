@@ -2,10 +2,6 @@ module RCDB
   module Field
     include Queryable
 
-    def queryer_html(params)
-      ERB.new(File.read("views/dropdown.erb")).result(binding)
-    end
-
     def field_name
       name.split("::").last
     end

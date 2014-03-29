@@ -23,10 +23,6 @@ module RCDB
         field.query_name.must_equal "test"
       end
 
-      it "creates a dropdown with its field_name" do
-        field.queryer_html({}).must_include "test"
-      end
-
       describe "filtering" do
         it "does nothing if there are no params for it" do
           dataset = mock

@@ -1,18 +1,10 @@
 <label>
-  <% default = first(name: params[query_name]) %>
-  <% default = nil if default.nil? || default.name == "" %>
-  <%= field_name %>
-  <select name="<%= query_name %>" class="form-control">
-    <option value="" 
-    <% unless default %>
-      selected="selected"
-    <% end %>
-    >All</option>
-    <% order_by(:name).reject { |val| val.name.blank? }.each do |value| %>
-      <option value="<%= value.name %>"
-      <%= (value == default) ? ' selected="selected"' : "" %> >
-      <%= value.name %>
-      </option>
-    <% end %>
-  </select> 
+    <%= title %>
+    <select name="<%= name %>" class="form-control">
+        <% elements.each do |element| %>
+            <option <%=
+                selected == element ?  'selected="selected"' : ""
+            %>><%= element %></option>
+        <% end %>
+    </select>
 </label>

@@ -2,13 +2,13 @@
   <h3>Search</h3>
   <form action="/" method="GET" >
     <div class="form-inline">
-        <%= erb :simple_dropdown,
+        <%= erb :dropdown,
             locals: {
                 elements: ["All"] + RCDB::Solver.all.map(&:name),
                 title: "Solver",
                 name: "solver",
                 selected: params["solver"] } %>
-        <%= erb :simple_dropdown,
+        <%= erb :dropdown,
             locals: {
             elements: ["All", "Official", "Unofficial", ""] +
                        RCDB::Competition.all.map(&:name)
@@ -16,7 +16,7 @@
                 title: "Competition",
                 name: "competition",
                 selected: params["competition"] } %>
-        <%= erb :simple_dropdown,
+        <%= erb :dropdown,
             locals: {
                 elements: ["All"] + RCDB::Puzzle.all.map(&:name),
                 title: "Event",
