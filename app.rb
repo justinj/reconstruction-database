@@ -3,7 +3,6 @@ require "dotenv"
 require "logger"
 require "fileutils"
 require "sequel"
-require "pry"
 
 Dotenv.load
 
@@ -35,10 +34,18 @@ get "/" do
       puzzle: params["puzzle"],
       time_specifier: params["time_specifier"],
       time_value: params["time_value"],
-      tags: params["tags"])
+      tags: params["tags"],
+      ip_hash: Digest::SHA1.hexdigest(request.ip)
+    )
   end
   @solves = RCDB::Solve.request(params).order_by(Sequel.desc(:date_added))
   erb :index
+end
+
+# HACK...
+get "/stats" do
+  authenticate!
+  erb :search_stats, locals: { searches: DB[:searches] }
 end
 
 not_found do

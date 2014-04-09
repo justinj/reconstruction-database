@@ -1,0 +1,15 @@
+<table class="stats-table">
+    <% columns = searches.columns %>
+    <tr>
+        <% columns.each do |column| %>
+            <td><%= column %></td>
+        <% end %>
+    </tr>
+    <% searches.each do |search| %>
+        <tr>
+            <% columns.each do |column| %>
+                <td><%= search[column] %></td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
