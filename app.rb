@@ -25,8 +25,8 @@ helpers RCDB::FormattingUtils
 helpers Padrino::Helpers
 
 get "/" do
-  # only check searches for non-logged in users
-  if !params.empty? && current_user.nil?
+  # only check searches for non-logged in users which are actually searches
+  if params.has_key?("solver") && current_user.nil?
     DB[:searches].insert(
       timestamp: Time.now.utc.to_i,
       solver: params["solver"],
