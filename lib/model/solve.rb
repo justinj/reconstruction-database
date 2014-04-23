@@ -147,6 +147,8 @@ module RCDB
       end
 
       # need to ask someone how to do this properly
+      # <cringe>
+      # paying for my past mistakes
       def joined
         Solve.join(
           :averages,
@@ -166,7 +168,7 @@ module RCDB
             solver_id_selected: :averages__solver_id
           )
           .join(
-            Solver.select(
+            Competition.select(
               Sequel.as(:name, :competition_name),
               Sequel.as(:id, :comp_id),
             ),
