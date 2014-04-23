@@ -44,6 +44,8 @@ get "/" do
         Sequel.like(Sequel.function(:UPPER, :solver_name), "%#{word.upcase}%"),
         Sequel.like(Sequel.function(:UPPER, :competition_name), "%#{word.upcase}%"),
         Sequel.like(Sequel.function(:UPPER, :puzzle_name), "%#{word.upcase}%"),
+        Sequel.like(Sequel.function(:UPPER, :single_record), "%#{word.upcase}%"),
+        Sequel.like(Sequel.function(:UPPER, :average_record), "%#{word.upcase}%"),
         Sequel.like(Sequel.function(:UPPER, :time), "%#{word.upcase}%")
       ))
     end
