@@ -43,14 +43,14 @@
       <th> Competition </th>
       <th> Date Added </th>
     </tr>
-    <% paginate(@solves).where(visible: 1).entries.select(&:visible?).each do |solve| %>
+    <% paginate(@solves).where(visible: 1).each do |solve| %>
       <tr>
-        <td> <%=h solve.solver %> <br> </td>
-        <td> <%=h solve.puzzle.name %> </td>
+        <td> <%=h solve[:solver_name] %> <br> </td>
+        <td> <%=h solve[:puzzle_name] %> </td>
         <td> <div class="record"><%=h solve.single_record %></div> </td>
-        <td> <div class="record"><%=h solve.average.average_record %></div> </td>
+        <td> <div class="record"><%=h solve[:average_record] %></div> </td>
         <td> <a href="/solve/<%= solve.id %>"> <%=h solve.format %> </a> </td>
-        <td> <%=h solve.competition %> </td>
+        <td> <%=h solve[:competition_name] %> </td>
         <td> <%=h date_added(solve) %> </td>
       </tr>
     <% end %>

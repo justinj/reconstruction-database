@@ -3,6 +3,7 @@ require "dotenv"
 require "logger"
 require "fileutils"
 require "sequel"
+require "pry"
 
 Dotenv.load
 
