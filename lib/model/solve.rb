@@ -1,4 +1,5 @@
 require "set"
+require "pry"
 
 module RCDB 
   Sequel.extension :blank
@@ -151,8 +152,14 @@ module RCDB
       # paying for my past mistakes
       def joined
         Solve.join(
-          :averages,
-          id: :average_id)
+          Average.select(
+            :id___average_id,
+            :puzzle_id,
+            :solver_id,
+            :competition_id,
+            :visible
+          ),
+          average_id: :average_id)
           .join(
             Puzzle.select(
               Sequel.as(:name, :puzzle_name),
@@ -165,14 +172,21 @@ module RCDB
               Sequel.as(:name, :solver_name),
               Sequel.as(:id, :solver_id_selected),
             ),
-            solver_id_selected: :averages__solver_id
+            solver_id_selected: :t1__solver_id
           )
           .join(
             Competition.select(
               Sequel.as(:name, :competition_name),
               Sequel.as(:id, :comp_id),
             ),
-            comp_id: :averages__competition_id
+            comp_id: :t1__competition_id
+          )
+          .join(
+            Reconstructor.select(
+              Sequel.as(:name, :reconstructor_name),
+              Sequel.as(:id, :recon_id),
+            ),
+            recon_id: :solves__reconstructor_id
           )
       end
 

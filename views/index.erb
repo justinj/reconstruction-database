@@ -1,31 +1,14 @@
 <div class="row center">
-  <h3>Search</h3>
-  <form action="/" method="GET" >
-    <div class="form-inline">
-        <%= erb :dropdown,
-            locals: {
-                elements: ["All"] + RCDB::Solver.all.map(&:name),
-                title: "Solver",
-                name: "solver",
-                selected: params["solver"] } %>
-        <%= erb :dropdown,
-            locals: {
-            elements: ["All", "Official", "Unofficial", ""] +
-                       RCDB::Competition.all.map(&:name)
-                        .reject { |c| c == "Unofficial" },
-                title: "Competition",
-                name: "competition",
-                selected: params["competition"] } %>
-        <%= erb :dropdown,
-            locals: {
-                elements: ["All"] + RCDB::Puzzle.all.map(&:name),
-                title: "Event",
-                name: "puzzle",
-                selected: params["puzzle"] } %>
-        <%= RCDB::SolveTime.queryer_html params %>
-        <%= RCDB::Tag.queryer_html params %>
+  <form action="/" method="GET">
+    <div class="form-group">
+        <input type="text"
+        class="form-control"
+        id="search-box"
+        name="query"
+        placeholder="Some ideas: 'Feliks Zemdegs 4x4', '7.08', 'Mats Valk Aachen'"
+        value="<%=h params["query"] %>"</input>
         <div class="center">
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          <button type="submit" class="search-button btn btn-primary btn-lg">Search</button>
         </div>
       </div>
   </form>
@@ -49,7 +32,7 @@
         <td> <%=h solve[:puzzle_name] %> </td>
         <td> <div class="record"><%=h solve.single_record %></div> </td>
         <td> <div class="record"><%=h solve[:average_record] %></div> </td>
-        <td> <a href="/solve/<%= solve.id %>"> <%=h solve.format %> </a> </td>
+        <td> <a href="/solve/<%= solve[:id] %>"> <%=h solve.format %> </a> </td>
         <td> <%=h solve[:competition_name] %> </td>
         <td> <%=h date_added(solve) %> </td>
       </tr>

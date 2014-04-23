@@ -16,7 +16,7 @@
   <% entries.sort_by { |entry| -entry[:count] }.each do |entry| %>
     <tr>
       <td>
-        <%= link_to entry[:reconstructor], "/?reconstructor=#{entry[:reconstructor]}" %>
+        <%= link_to entry[:reconstructor], "/?query=reconstructor:#{entry[:reconstructor].tr(" ", "-")}" %>
       </td>
       <td>
         <%= entry[:count] %>

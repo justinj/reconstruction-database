@@ -25,27 +25,37 @@ helpers RCDB::FormattingUtils
 helpers Padrino::Helpers
 
 get "/" do
-  # only check searches for non-logged in users which are actually searches
-  if params.has_key?("solver") && current_user.nil?
-    DB[:searches].insert(
+  unless params["query"].blank?
+    DB[:queries].insert(
       timestamp: Time.now.utc.to_i,
-      solver: params["solver"],
-      competition: params["competition"],
-      puzzle: params["puzzle"],
-      time_specifier: params["time_specifier"],
-      time_value: params["time_value"],
-      tags: params["tags"],
+      query: params["query"],
       ip_hash: Digest::SHA1.hexdigest(request.ip)
     )
   end
-  @solves = RCDB::Solve.request(params).order_by(Sequel.desc(:date_added))
+  query_words = params.fetch("query", "").split(/[\s,]+/)
+  @solves = RCDB::Solve.joined
+  query_words.each do |word|
+    if word =~ /^reconstructor:/
+        @solves = @solves.where(
+        Sequel.like(Sequel.function(:UPPER, :reconstructor_name), "%#{word.split(":")[1].upcase.tr("-", " ")}%")
+      )
+    else
+      @solves = @solves.where(Sequel.|(
+        Sequel.like(Sequel.function(:UPPER, :solver_name), "%#{word.upcase}%"),
+        Sequel.like(Sequel.function(:UPPER, :competition_name), "%#{word.upcase}%"),
+        Sequel.like(Sequel.function(:UPPER, :puzzle_name), "%#{word.upcase}%"),
+        Sequel.like(Sequel.function(:UPPER, :time), "%#{word.upcase}%")
+      ))
+    end
+  end
+  @solves = @solves.order_by(Sequel.desc(:date_added))
   erb :index
 end
 
 # HACK...
 get "/stats" do
   authenticate!
-  erb :search_stats, locals: { searches: DB[:searches] }
+  erb :search_stats, locals: { searches: DB[:queries] }
 end
 
 not_found do

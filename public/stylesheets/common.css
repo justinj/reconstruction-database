@@ -2,6 +2,16 @@ h1 {
   color: black;
 }
 
+.search-button {
+    margin-top: 20px;
+}
+
+#search-box {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .solve-index {
   color: #AAAAAA;
   text-align: right;
