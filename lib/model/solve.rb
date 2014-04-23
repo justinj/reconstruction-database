@@ -157,6 +157,7 @@ module RCDB
             :puzzle_id,
             :solver_id,
             :competition_id,
+            :average_record,
             :visible
           ),
           average_id: :average_id)
