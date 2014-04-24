@@ -8,9 +8,9 @@
     <% page_range = ((displayed_page - PAGES_TO_SHOW)..(displayed_page + PAGES_TO_SHOW)) %>
     <% page_range = clamp_range(page_range, 0, page_count) %>
     <% pages = pages[page_range] %>
-    <% if current_page > 1 %>
+    <% if page_range.min > 1 %>
       <li>
-      <%= pagination_link "&laquo;", 0 %>
+      <%= pagination_link "&laquo;", 1 %>
       </li>
     <% end %>
     <% pages.each do |page| %>
@@ -20,7 +20,7 @@
       <%= pagination_link page.current_page %>
       </li>
     <% end %>
-    <% if current_page + PAGES_TO_SHOW < page_count %>
+    <% if page_range.max < page_count %>
       <li>
       <%= pagination_link "&raquo;", page_count %>
       </li>
