@@ -32,25 +32,9 @@ get "/" do
       ip_hash: Digest::SHA1.hexdigest(request.ip)
     )
   end
-  query_words = params.fetch("query", "").split(/[\s,]+/)
   @solves = RCDB::Solve.joined
-  query_words.each do |word|
-    if word =~ /^reconstructor:/
-        @solves = @solves.where(
-        Sequel.like(Sequel.function(:UPPER, :reconstructor_name), "%#{word.split(":")[1].upcase.tr("-", " ")}%")
-      )
-    else
-      @solves = @solves.where(Sequel.|(
-        Sequel.like(Sequel.function(:UPPER, :solver_name), "%#{word.upcase}%"),
-        Sequel.like(Sequel.function(:UPPER, :competition_name), "%#{word.upcase}%"),
-        Sequel.like(Sequel.function(:UPPER, :puzzle_name), "%#{word.upcase}%"),
-        Sequel.like(Sequel.function(:UPPER, :single_record), "%#{word.upcase}%"),
-        Sequel.like(Sequel.function(:UPPER, :average_record), "%#{word.upcase}%"),
-        Sequel.like(Sequel.function(:UPPER, :time), "%#{word.upcase}%")
-      ))
-    end
-  end
-  @solves = @solves.order_by(Sequel.desc(:date_added))
+  query = RCDB::QueryParser.parse(params.fetch("query", ""))
+  @solves = RCDB::QueryParser.query_dataset(query, @solves)
   erb :index
 end
 

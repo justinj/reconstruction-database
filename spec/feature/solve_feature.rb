@@ -7,7 +7,6 @@ module RCDB
     end
 
     describe "when authenticated" do
-
       before do
         User.stubs(:first).returns(User.new)
       end
