@@ -51,6 +51,10 @@ module RCDB
       Garronizer.garronize(solve)
     end
 
+    def roofpig_form(solve)
+      RoofpigFormer.roofpig_form(solve)
+    end
+
     def render_solution(solve)
       erb :solution, locals: { steps: solve.steps } 
     end
