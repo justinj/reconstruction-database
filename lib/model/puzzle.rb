@@ -24,6 +24,10 @@ module RCDB
       name =~ /\dx\d/
     end
 
+    def roofpigable?
+      name == "3x3"
+    end
+
     def delimiter
       delim = super
       if delim.blank?
