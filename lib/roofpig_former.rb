@@ -13,7 +13,7 @@ module RCDB
         url_params = params
           .reject { |k, v| v.blank? }
           .map { |k, v| "#{k}=#{v}"}.join("|")
-        "#{url_params}"
+        url_params
       end
 
       def remove_comments(alg)
