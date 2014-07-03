@@ -1,9 +1,4 @@
 <div class="solve-links">
-  <% if @solve.puzzle.roofpigable? %>
-    <a href="https://github.com/larspetrus/Roofpig">Roofpig</a>
-    <div class="roofpig" data-config="<%= roofpig_form(@solve) %>"></div>
-  <% end %>
-
   <% if @solve.puzzle.garronizable? %>
     <div class="garron solve-link">
       <%= link_to "alg.cubing.net", garronize(@solve), target: "_blank" %>

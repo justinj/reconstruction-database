@@ -10,13 +10,18 @@ $(function(){
     }
   }
 
-  $("#video").hide()
-  $("#video-header").click(function() {
+  function setupDropdown(name) {
+    $("#" + name).hide()
+    $("#" + name + "-header").click(function() {
 
-    $("#video").slideToggle();
+      $("#" + name).slideToggle();
 
-    tradeClass($("#video-arrow"), "glyphicon-chevron-right", "glyphicon-chevron-down");
-  });
+      tradeClass($("#" + name + "-arrow"), "glyphicon-chevron-right", "glyphicon-chevron-down");
+    });
+  }
+
+  setupDropdown("video");
+  setupDropdown("roofpig");
 
 
   $("#stat-sections").sortable();
