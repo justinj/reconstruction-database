@@ -21,7 +21,7 @@ module RCDB
       end
 
       def escape_chars(alg)
-        alg.gsub("\n"," ")
+        alg.gsub("\n"," ").gsub(/[udlrfb]/) { |c| "#{c.upcase}w" }
       end
 
     end
