@@ -1,6 +1,7 @@
 <div class="solve-links">
   <% if @solve.puzzle.roofpigable? %>
-	  <div class="roofpig" data-config="<%= roofpig_form(@solve) %>"></div>
+    <a href="https://github.com/larspetrus/Roofpig">Roofpig</a>
+    <div class="roofpig" data-config="<%= roofpig_form(@solve) %>"></div>
   <% end %>
 
   <% if @solve.puzzle.garronizable? %>
