@@ -2,8 +2,11 @@ module RCDB
   class RoofpigFormer
     class << self
       def roofpig_form(solve)
+        alg = remove_parens(solve.canonical_solution)
+        alg = remove_comments(alg)
+        alg = escape_chars(alg)
         roofpig_config_from_params(
-          "alg" => escape_chars(remove_comments(solve.canonical_solution)),
+          "alg" => alg,
         )
       end
 
@@ -18,6 +21,10 @@ module RCDB
 
       def remove_comments(alg)
         alg.gsub(%r(//.*?$), "")
+      end
+
+      def remove_parens(alg)
+        alg.tr("()","")
       end
 
       def escape_chars(alg)
