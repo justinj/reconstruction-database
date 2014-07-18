@@ -7,6 +7,7 @@ module RCDB
         alg = escape_chars(alg)
         roofpig_config_from_params(
           "alg" => alg,
+          "colors" => "F:g B:b U:w D:y R:r L:o",
         )
       end
 
