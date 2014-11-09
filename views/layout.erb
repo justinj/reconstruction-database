@@ -7,6 +7,7 @@
     <link href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/dist/css/selectize.css">
     <link rel="icon" type="image/png" href="/favicon.ico">
 
     <title>CubeSolves</title>
@@ -14,9 +15,17 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="/dist/js/selectize.min.js"></script>
 
     <script src="/javascripts/custom.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+  
+      <%# this seems sketchy, but should be fine for now %>
+      var searchableOptions = [
+      <%= [ RCDB::Solver.select(:name).to_a,
+            RCDB::Competition.select(:name).to_a,
+            RCDB::Puzzle.select(:name).to_a ].flatten.map { |s| "\"#{s[:name]}\"" }.join(", ") %>
+      ];
 
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-44553015-1']);
