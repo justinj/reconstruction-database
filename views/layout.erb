@@ -24,7 +24,9 @@
       var searchableOptions = [
       <%= [ RCDB::Solver.select(:name).to_a,
             RCDB::Competition.select(:name).to_a,
-            RCDB::Puzzle.select(:name).to_a ].flatten.map { |s| "\"#{s[:name]}\"" }.join(", ") %>
+            RCDB::Tag.select(:name).to_a,
+            RCDB::Puzzle.select(:name).to_a ].flatten.map { |s| "\"#{s[:name].chomp}\"" }
+        .reject { |k| k.include? "http" }.uniq.join(", ") %>
       ];
 
       var _gaq = _gaq || [];
