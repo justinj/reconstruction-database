@@ -50,26 +50,30 @@ $(function(){
   };
 
   // annoyingly selectize doesn't seem to allow you to add things that aren't in the list
-  var vals = $("#search-box").val().split(",");
-  for (var i = 0; i < vals.length; i++) {
-    searchableOptions.push(vals[i]);
-  }
+  
+  var searchBox = $("#search-box");
+  if (searchBox.length > 0) {
+    var vals = searchBox.val().split(",");
+    for (var i = 0; i < vals.length; i++) {
+      searchableOptions.push(vals[i]);
+    }
 
-  $("#search-box").selectize({
-      persist: false,
-      maxItems: null,
-      valueField: "name",
-      labelField: "name",
-      searchField: ["name"],
-      options: searchableOptions.map(function(name) {
-        return {name: name};
-      }),
-      render: {
-        item: renderItem,
-        option: renderOption
-      },
-      create: function(input) {
-        return {name: input};
-      }
-  });
+    searchBox.selectize({
+        persist: false,
+        maxItems: null,
+        valueField: "name",
+        labelField: "name",
+        searchField: ["name"],
+        options: searchableOptions.map(function(name) {
+          return {name: name};
+        }),
+        render: {
+          item: renderItem,
+          option: renderOption
+        },
+        create: function(input) {
+          return {name: input};
+        }
+    });
+  }
 });
