@@ -1,5 +1,6 @@
 module RCDB
   class StatSection < Sequel::Model
+    many_to_one :solve
     one_to_many :stats
 
     def self.create_from_post_data(data, position)

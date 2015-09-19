@@ -3,6 +3,10 @@ require "yaml"
 require "oauth"
 require "rack-flash"
 require "forwardable"
+
+module Padrino
+  IGNORE_NO_RENDERING_ENGINE = true
+end
 require "padrino-helpers"
 
 require_relative "formatting_utils"

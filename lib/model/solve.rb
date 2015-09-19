@@ -27,6 +27,7 @@ module RCDB
 
     def before_destroy
       stat_sections.each(&:destroy)
+      steps.each(&:destroy)
     end
 
     # when editing the stats the format is different than when parsing brest
