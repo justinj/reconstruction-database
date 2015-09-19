@@ -1,4 +1,7 @@
 Are you <em>sure</em> you want to delete this? <br>
 <%= @entry.values %>
 <br>
-<a href="<%= @delete_url %>/<%= @entry.id %>">Yes, I am a destructive person</a>
+<form method="POST" action="<%= @delete_url %>/<%= @entry.id %>">
+  <input type="submit" value="Yes, I am a destructive person" />
+</form>
+<%# <a href="<%= @delete_url %1>/<%= @entry.id %1>">Yes, I am a destructive person</a> %>

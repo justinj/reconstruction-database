@@ -45,7 +45,7 @@ get "/solve/delete/:id" do
   erb :delete_confirm
 end
 
-get "/solve/delete_confirm/:id" do
+post "/solve/delete_confirm/:id" do
   authenticate!
   RCDB::Solve.where(id: params[:id]).destroy
   redirect "/average"
