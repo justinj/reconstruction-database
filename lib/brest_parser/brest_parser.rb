@@ -5,11 +5,18 @@ module RCDB
 
     def initialize(reconstructor, post, average = 0)
       @average       = average
-      @post          = post
+      @post          = prepare_post(post)
       @puzzle        = PuzzleRenamer.rename(parse_puzzle(post))
       @competition   = parse_competition(post)
       @solver        = parse_solver(post)
       @reconstructor = reconstructor
+    end
+
+    # alg.cubing.net is more common than alg.garron.us now
+    def prepare_post(post)
+      post
+        .gsub("alg.cubing.net", "alg.garron.us")
+        .gsub("setup", "ini")
     end
 
     def solves
@@ -106,6 +113,12 @@ module RCDB
     def parse_youtube(post)
       /\[youtube(hd)?\](?<result>.*?)\[\/youtube(hd)?\]/ =~ post 
 
+      if result.blank?
+        /\[url\](?<result>.*?)\[\/url\]/ =~ post 
+        # we just want the id
+        /=(?<result>.*?)\Z/ =~ result
+      end
+
       result
     end
 
@@ -123,7 +136,7 @@ module RCDB
 
     def nth_garron_link(post, n)
       post = post.gsub('[/color]','')
-      garron_links = post.scan(/View at \[url=(.*?)\]alg\.garron/)
+      garron_links = post.scan(/View at \[url=(.*?)\]alg\.garron/i)
       n = n * 2 if garron_links.count > number_of_solves # sometimes, every garron link appears twice
       garron_links[n]
     end
@@ -141,6 +154,7 @@ module RCDB
       parameter = link.first.split(/(&|\?)/).grep(/#{prop}=/).first
       parameter["#{prop}="] = ""
       parameter.gsub!("%0A", "\n")
+      parameter.gsub!("%2F", "/")
       parameter.gsub!('"', "")
       parameter.tr("-_","' ")
     end
