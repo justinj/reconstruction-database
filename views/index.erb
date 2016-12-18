@@ -1,15 +1,15 @@
 <div class="row center">
   <form action="/" method="GET">
     <div class="form-group">
+        <div class="center">
+          <button type="submit" class="search-button btn btn-primary btn-lg">Search</button>
+        </div>
         <input type="text"
         class="form-control"
         id="search-box"
         name="query"
         placeholder="Some ideas: 'Feliks Zemdegs 4x4', '7.08', 'Mats Valk Aachen'"
         value="<%=h params["query"] %>"</input>
-        <div class="center">
-          <button type="submit" class="search-button btn btn-primary btn-lg">Search</button>
-        </div>
       </div>
   </form>
 
