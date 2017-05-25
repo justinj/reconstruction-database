@@ -30,7 +30,7 @@
     erb :delete_confirm
   end
 
-  get "/#{field.query_name}/delete_confirm/:id" do
+  post "/#{field.query_name}/delete_confirm/:id" do
     authenticate!
     @entry = field.first(id: params[:id])
     @entry.destroy
