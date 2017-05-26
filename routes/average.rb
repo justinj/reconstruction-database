@@ -40,7 +40,7 @@ get "/average/delete/:id" do
   erb :delete_confirm
 end
 
-get "/average/delete_confirm/:id" do
+post "/average/delete_confirm/:id" do
   authenticate!
   @average = RCDB::Average.first(id: params[:id])
   @average.destroy
